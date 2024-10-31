@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Select</title>
+    <link rel="stylesheet" href="./header.css">
+</head>
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div class="menu-toggle" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- メニュー -->
+    <nav id="menu" class="hidden">
+        <ul>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">SEARCH</a></li>
+            <li><a href="#">FAVORITE</a></li>
+            <li><a href="#">LOGOUT</a></li>
+            <li><a href="#">LOGIN</a></li>
+        </ul>
+    </nav>
+
+    <div class="back">
+        <h2>Car Select</h2>
+    </div>
+
+    <script>
+        // ハンバーガーメニューの動作
+        const menuToggle = document.getElementById('menuToggle');
+        const menu = document.getElementById('menu');
+        
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
+        });
+    </script>
+</body>
+</html>
