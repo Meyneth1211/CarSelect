@@ -7,6 +7,6 @@
 </head>
     <link rel="stylesheet" href="../css/top.css">
 <body>
-    
+    スライドショー
 </body>
 </html>
