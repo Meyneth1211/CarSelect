@@ -8,6 +8,10 @@
 body {
     text-align: center;
     background: #18191f;
+    box-shadow: 2px 2px #00000080 ,10px 1px 12px #00000080,
+    2px 2px 10px #00000080,2px 2px 3px #00000080,inset 2px 2px 1px #00000080,
+    inset 2px 2px 10px #00000080,inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080;
 }
 
 /*ロゴ要素*/
@@ -23,7 +27,7 @@ body {
 /* ハンバーガーメニューのスタイル */
 .menu-toggle {
     position: absolute;
-    top: 42px;
+    top: 45px;
     left: 60px;
     cursor: pointer;
     z-index: 1000; /* メニューが他の要素より上に表示されるように */
