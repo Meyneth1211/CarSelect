@@ -2,7 +2,7 @@ name: AutoDeploy Test
 on:
   push:
     branches:
-      - DeployTest
+      - main
     paths-ignore:
       - '.devcontainer/**'
       - '.github/**'
