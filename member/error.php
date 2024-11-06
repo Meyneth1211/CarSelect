@@ -11,15 +11,7 @@ if (empty($_SESSION['error_message'])) {
 $error_message = $_SESSION['error_message'];
 unset($_SESSION['error_message']); // エラーメッセージを一度表示した後削除
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>エラーメッセージ</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+
     <div class="error-container">
         <h2>エラーメッセージ</h2>
         <div class="error-message">
