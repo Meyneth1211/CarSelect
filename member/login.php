@@ -1,11 +1,13 @@
-<?php require('../header/header.php'); ?>
+<?php 
+session_start(); // これを最初に記述
+require('../header/header.php'); 
+?>
  
 <div class="login">
     <div class="login-card">
         <h2>ログイン</h2>
         <form class="login-form" action="top.php" method="post">
             <?php
-            session_start();
             require_once '../DBconnect.php';
             $pdo = getDb();
 
