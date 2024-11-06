@@ -15,8 +15,8 @@
         if(!empty($_SESSION['name'])){
             
         }else{
-            echo '<div class="Error-Message">EmailかPasswordが違います</div><br>';
-            echo '<div class="Error-Message"><a href="login.php">戻る</a></div>';
+            echo '<div class="error-message">EmailかPasswordが違います</div><br>';
+            echo '<a class="return-button" href="login.php">戻る</a>';
             exit;
         }
     }
@@ -35,7 +35,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<a href="login.php">戻る</a>';
+        echo '<a class="return-button" href="login.php">戻る</a>';
         exit;
     }
 ?>
