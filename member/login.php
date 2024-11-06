@@ -3,7 +3,7 @@
     <div class="login">
         <div class="login-card">
             <h2>ログイン</h2>
-            <form class="login-form" action="">
+            <form class="login-form" action="top.php" method="">
                 <input class="mail" type="text" placeholder="Email">
                 <input class="pass" type="password" placeholder="Password">
                 <div class="top"></div>
