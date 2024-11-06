@@ -1,12 +1,12 @@
 *{
     box-sizing: border-box;
 }
-.login{
+.create{
     place-items: center;
     margin-top: 12vh;
 }
 
-.login-card{
+.create-card{
     position: relative;
     z-index: 3;
     width: 100%;
@@ -18,25 +18,25 @@
     border: 5px solid #333;
 }
 
-.login-card:hover{
+.create-card:hover{
     border: 5px solid #0ef;
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-.login-card > h2{
+.create-card > h2{
     font-size: 36px;
     font-weight: 600;
     margin: 0 0 12px;
     color: #fff;
 }
 
-.login-card > h3{    
+.create-card > h3{    
     color: rgba(0,0,0,0.38);
     margin: 0 0 30px;
     font-weight: 500;
     font-size: lrem;
 }
-.login-form{
+.create-form{
     width: 100%;
     margin: 0;
     margin-top: 30px;
@@ -44,11 +44,11 @@
     gap: 16px;
     margin-top: 20px;
 }
-.login-form > input, .login-form > button{
+.create-form > input, .create-form > button{
     width: 100%;
     height: 50px;
 }
-.login-form > input{
+.create-form > input{
     border: 2px solid #333;
     font-family: inherit;
     font-size: 15px;
@@ -56,11 +56,11 @@
     border-radius: 1.25rem;
     transition: all 0.375s;
 }
-.login-form > input:hover{
+.create-form > input:hover{
     border: 2px solid #0ef;
     box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
 }
-.login-form > button{
+.create-form > button{
     cursor: pointer;
     width: 100%;
     padding: 0 16px;
@@ -76,7 +76,7 @@
     transition: all 0.375s;
 }
 
-.mail, .pass{
+.name, .mail, .pass, .address{
     background-color: #18191F;
     caret-color: #fff;
 }
@@ -96,7 +96,7 @@
     margin-top: 40px;
 }
 
-.login-form > button:hover{
+.create-form > button:hover{
     background: #10449A;
 }
 
@@ -104,10 +104,10 @@
     body{
         padding: 0;
     }
-    .login-card{
+    .create-card{
         margin: 0;
         width: 600px;
-        height: 500px;
+        height: 650px;
     }
 }
     
