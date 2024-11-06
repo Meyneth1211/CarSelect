@@ -24,8 +24,8 @@
                 }
             }
             ?>
-            <input class="mail" type="text" name="mail" placeholder="Email"> 
-            <input class="pass" type="password" name="pass" placeholder="Password">
+            <input class="mail" name="mail" type="text" placeholder="Email">
+            <input class="pass" name="pass" type="password" placeholder="Password">
             <input class="button-1" type="submit" value="ログイン">
         </form>
         <form class="login-form" action="signup.php" method="post">
