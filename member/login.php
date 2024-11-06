@@ -12,7 +12,7 @@ require('../header/header.php');
             $pdo = getDb();
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (empty($_POST['mail']) || empty($_POST['pass'])) {
+                if (empty($_POST['mail']) && empty($_POST['pass'])) {
                     echo '<div class="error-message">EmailとPasswordを入力してください</div><br>';
                 } else {
                     $sql = $pdo->prepare('SELECT * FROM user WHERE user_mail = ? AND user_password = ?');
