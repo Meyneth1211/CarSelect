@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once 'DbManager.php';
+    require_once '../DBconnect.php';
     $pdo = getDb();
 
     //メールアドレスとパスワードが入力されているか確認
