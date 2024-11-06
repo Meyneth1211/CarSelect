@@ -5,3 +5,15 @@
     place-items: center;
     margin-top: 12vh;
 }
+
+.card-card{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background-color: rgba(33, 4, 4, 0.562);
+    text-align: center;
+    border: 5px solid #333;
+}
