@@ -8,6 +8,7 @@
     <p>カード名義<input class="card-name" type="text" name="cardname" maxlength="50"></p>
     <p>有効期限<input class="card-kigen" type="text" name="cardkigen" maxlength="2" size="4">/<input type="text" maxlength="2" size="4"></p>
     <p><input class="card-button" type="submit" onclick="location.href='./kounyuu.html'" value="送信"></p>
+    </form>
         </div>
     </div>
 </body>
