@@ -35,7 +35,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<a href="tina10-2_logout.php">戻る</a>';
+        echo '<a href="login.php">戻る</a>';
         exit;
     }
 ?>
