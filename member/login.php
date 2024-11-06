@@ -12,8 +12,10 @@ require('../header/header.php');
             $pdo = getDb();
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                if (empty($_POST['mail']) && empty($_POST['pass'])) {
-                    echo '<div class="error-message">EmailとPasswordを入力してください</div><br>';
+                if (empty($_POST['mail']) || empty($_POST['pass'])) {
+                    $_SESSION['error_message'] = "EmailとPasswordを入力してください";
+                    header("Location: error.php"); // エラー画面にリダイレクト
+                    exit;
                 } else {
                     $sql = $pdo->prepare('SELECT * FROM user WHERE user_mail = ? AND user_password = ?');
                     $sql->execute([$_POST['mail'], $_POST['pass']]);
@@ -25,8 +27,9 @@ require('../header/header.php');
                         header("Location: top.php"); // ログイン成功時にトップページへリダイレクト
                         exit;
                     } else {
-                        echo '<div class="error-message">EmailかPasswordが違います</div><br>';
-                        echo '<div class="error-message"><a href="login.php">戻る</a></div>';
+                        $_SESSION['error_message'] = "EmailかPasswordが違います";
+                        header("Location: error.php"); // エラー画面にリダイレクト
+                        exit;
                     }
                 }
             }
