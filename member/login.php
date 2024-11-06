@@ -9,7 +9,7 @@
                 <div class="top"></div>
                 <input class="button-1" type="submit" value="ログイン">
             </form>
-            <form class="login-form" action="login-next.php" method="post">
+            <form class="login-form" action="signup.php" method="post">
                     <input class="button-2" type="submit" value="アカウント新規作成">
             </form>
         </div>
