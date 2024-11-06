@@ -76,13 +76,13 @@
     transition: all 0.375s;
 }
 
-.mail, .pass{
+.card-no, .card-name, .card-cord, .card-kigen{
     background-color: #18191F;
     caret-color: #fff;
 }
 
 
-.button{
+.cardbutton{
     background-color: red;
     color: #fff;
 }
