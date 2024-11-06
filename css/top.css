@@ -1,27 +1,6 @@
-/* エラーメッセージのスタイル */
-.error-message {
-    background-color: #f8d7da;  /* 背景色（薄い赤） */
-    color: #721c24;              /* 文字色（濃い赤） */
-    border: 1px solid #f5c6cb;   /* 枠線（薄い赤） */
-    padding: 15px;               /* 内側の余白 */
-    margin: 20px 0;              /* 上下の余白 */
-    border-radius: 5px;          /* 角を丸くする */
-    font-size: 16px;             /* 文字サイズ */
-    font-family: Arial, sans-serif; /* フォント */
+.error-message{
+    color: #fff;
 }
 
-/* 戻るボタンのスタイル */
-.return-button {
-    background-color: #f0f0f0;  /* 背景色（灰色） */
-    color: #721c24;              /* 文字色（濃い赤） */
-    padding: 10px 20px;          /* 内側の余白 */
-    text-decoration: none;       /* 下線なし */
-    border-radius: 5px;          /* 角を丸くする */
-    border: 1px solid #f5c6cb;   /* 枠線（薄い赤） */
-    font-size: 16px;             /* 文字サイズ */
-}
 
-.return-button:hover {
-    background-color: #e2e3e5;  /* ホバー時に背景色を変更 */
-    color: #004085;              /* ホバー時に文字色を変更 */
-}
+
