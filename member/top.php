@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarSelect</title>
-</head>
+<?php require('../header/header.php'); ?>
     <link rel="stylesheet" href="../css/top.css">
 <body>
-    スライドショー
+    <div class="brand">
+        <img src="" alt="">
+    </div>
 </body>
 </html>
