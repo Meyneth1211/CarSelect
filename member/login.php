@@ -4,8 +4,8 @@
         <div class="login-card">
             <h2>ログイン</h2>
             <form class="login-form" action="top.php" method="post">
-                <input class="mail" type="text" placeholder="Email">
-                <input class="pass" type="password" placeholder="Password">
+                <input class="mail" name="mail" type="text" placeholder="Email">
+                <input class="pass" name="pass" type="password" placeholder="Password">
                 <div class="top"></div>
                 <input class="button-1" type="submit" value="ログイン">
             </form>
