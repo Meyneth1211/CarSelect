@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start(); // セッション開始は最初に記述
-require('../header/header.php'); 
+require('../header/header.php'); // 必ずこの行も最初に記述
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once '../DBconnect.php';
