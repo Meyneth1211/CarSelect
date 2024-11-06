@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Select</title>
-    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login-next.css">
 </head>
 <body>
     <!-- ハンバーガーメニュー -->
@@ -14,14 +16,14 @@
         <div class="bar"></div>
     </div>
 
-    <!-- メニュー -->
+    <!-- メニュー classを追加-->
     <nav id="menu" class="hidden">
         <ul>
-            <li><a href="#">TOP</a></li>
-            <li><a href="#">SEARCH</a></li>
-            <li><a href="#">FAVORITE</a></li>
-            <li><a href="#">LOGOUT</a></li>
-            <li><a href="#">LOGIN</a></li>
+            <li><a class="nenu-link" href="#">TOP</a></li>
+            <li><a class="nenu-link" href="#">SEARCH</a></li>
+            <li><a class="nenu-link" href="#">FAVORITE</a></li>
+            <li><a class="nenu-link" href="#">LOGOUT</a></li>
+            <li><a class="nenu-link" href="#">LOGIN</a></li>
         </ul>
     </nav>
 
@@ -38,4 +40,3 @@
             menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
         });
     </script>
-
