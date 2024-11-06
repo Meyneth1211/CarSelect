@@ -1,28 +1,33 @@
 <?php 
-session_start(); // これを最初に記述
+session_start(); // セッション開始を最初に記述
 require('../header/header.php'); 
 ?>
  
-<div class="login">
+<div class="login"> 
     <div class="login-card">
         <h2>ログイン</h2>
-        <form class="login-form" action="top.php" method="post">
+        <form class="login-form" action="" method="post">
             <?php
             require_once '../DBconnect.php';
             $pdo = getDb();
 
-            if (!empty($_POST['mail']) && !empty($_POST['pass'])) {
-                $sql = $pdo->prepare('SELECT * from user where user_mail=? and user_password=?');
-                $sql->execute([$_POST['mail'], $_POST['pass']]);
-                $row = $sql->fetch();
-
-                if ($row) {
-                    $_SESSION['mail'] = $row['user_mail'];
-                    $_SESSION['name'] = $row['user_name'];
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty($_POST['mail']) || empty($_POST['pass'])) {
+                    echo '<div class="Error-Message">EmailとPasswordを入力してください</div><br>';
                 } else {
-                    echo '<div class="Error-Message">EmailかPasswordが違います</div><br>';
-                    echo '<div class="Error-Message"><a href="login.php">戻る</a></div>';
-                    exit;
+                    $sql = $pdo->prepare('SELECT * FROM user WHERE user_mail = ? AND user_password = ?');
+                    $sql->execute([$_POST['mail'], $_POST['pass']]);
+                    $row = $sql->fetch();
+
+                    if ($row) {
+                        $_SESSION['mail'] = $row['user_mail'];
+                        $_SESSION['name'] = $row['user_name'];
+                        header("Location: top.php"); // ログイン成功時にトップページへリダイレクト
+                        exit;
+                    } else {
+                        echo '<div class="Error-Message">EmailかPasswordが違います</div><br>';
+                        echo '<div class="Error-Message"><a href="login.php">戻る</a></div>';
+                    }
                 }
             }
             ?>
