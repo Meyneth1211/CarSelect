@@ -6,7 +6,7 @@
     <title>Car Select</title>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/login-next.css">
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
     <!-- ハンバーガーメニュー -->
