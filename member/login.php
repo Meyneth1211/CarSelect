@@ -1,5 +1,5 @@
 <?php 
-session_start(); // セッション開始を最初に記述
+session_start(); // セッション開始は最初に記述
 require('../header/header.php'); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,14 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // ユーザー認証
     try {
         $sql = $pdo->prepare('SELECT * FROM user WHERE user_mail = ? AND user_password = ?');
         $sql->execute([$_POST['mail'], $_POST['pass']]);
         $row = $sql->fetch();
 
         if ($row) {
-            // ログイン成功時、セッションにユーザー情報を保存
             $_SESSION['mail'] = $row['user_mail'];
             $_SESSION['name'] = $row['user_name'];
             header("Location: top.php"); // トップページへリダイレクト
@@ -38,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<div class="login"> 
+<!-- HTMLコンテンツ -->
+<div class="login">
     <div class="login-card">
         <h2>ログイン</h2>
         <form class="login-form" action="" method="post">
