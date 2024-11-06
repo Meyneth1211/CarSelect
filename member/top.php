@@ -14,8 +14,8 @@
         if(!empty($_SESSION['name'])){
             
         }else{
-            echo 'EmailかPasswordが違います<br>';
-            echo '<a href="login.php">戻る</a>';
+            echo '<div class="Error-Message">EmailかPasswordが違います</div><br>';
+            echo '<div class="Error-Message"><a href="login.php">戻る</a></div>';
             exit;
         }
     }
