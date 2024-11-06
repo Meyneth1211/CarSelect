@@ -5,10 +5,10 @@
 
     //メールアドレスとパスワードが入力されているか確認
     if(!empty($_POST['mail'])&&!empty($_POST['password'])){
-        $sql=$pdo->prepare('SELECT * from user where mail=? and password=?');
+        $sql=$pdo->prepare('SELECT * from user where user_mail=? and user_password=?');
         $sql->execute([$_POST['mail'],$_POST['password']]);
         foreach($sql as $row){
-            $_SESSION['mail'] = $row['mail'];
+            $_SESSION['mail'] = $row['user_mail'];
             $_SESSION['name'] = $row['user_name'];
         }
         if(!empty($_SESSION['name'])){
