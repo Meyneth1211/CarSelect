@@ -1,4 +1,5 @@
-<body>
+<?php require('../header/header.php'); ?>
+
     <h2>カード情報</h2>
     <p>カード番号<input type="text" name="cardno" maxlength="16"></p>
     <p>セキュリティコード<input type="text" name="cardpass" maxlength="3" size="5"></p>
