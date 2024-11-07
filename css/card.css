@@ -30,7 +30,7 @@
     color: #fff;
 }
 
-.card-card > h3{    
+.card-card h3{    
     color: rgba(0,0,0,0.38);
     margin: 0 0 30px;
     font-weight: 500;
@@ -44,11 +44,11 @@
     gap: 16px;
     margin-top: 20px;
 }
-.card-form > input, .card-form > button{
+.card-form input, .card-form button{
     width: 100%;
     height: 50px;
 }
-.card-form > input{
+.card-form input{
     border: 2px solid #333;
     font-family: inherit;
     font-size: 15px;
@@ -56,11 +56,11 @@
     border-radius: 1.25rem;
     transition: all 0.375s;
 }
-.card-form > input:hover{
+.card-form input:hover{
     border: 2px solid #0ef;
     box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
 }
-.card-form > button{
+.card-form button{
     cursor: pointer;
     width: 100%;
     padding: 0 16px;
