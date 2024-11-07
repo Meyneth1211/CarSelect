@@ -23,7 +23,7 @@
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-.card-card > h2{
+.card-card h2{
     font-size: 36px;
     font-weight: 600;
     margin: 0 0 12px;
