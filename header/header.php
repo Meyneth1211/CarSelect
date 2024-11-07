@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/top.css">
 </head>
 <body>
     <!-- ハンバーガーメニュー -->
