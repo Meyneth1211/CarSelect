@@ -4,7 +4,7 @@
     require_once '../DBconnect.php';
     $pdo = getDb();
 
-    //メールアドレスとパスワードが入力されているか確認
+    /*メールアドレスとパスワードが入力されているか確認
     if(!empty($_POST['mail'])&&!empty($_POST['pass'])){
         $sql=$pdo->prepare('SELECT * from user where user_mail=? and user_password=?');
         $sql->execute([$_POST['mail'],$_POST['pass']]);
@@ -19,11 +19,11 @@
             echo '<a class="return-button" href="login.php">戻る</a>';
             exit;
         }
-    }
+    }*/
 ?>
 <?php
     //メールアドレスとパスワードが入力されているか確認
-    $error = [];
+    /*$error = [];
     if(empty($_SESSION['name'])){
         echo '    <div class="toukou1">';
         if(empty($_POST['mail'])){
@@ -37,7 +37,7 @@
         }
         echo '<a class="return-button" href="login.php">戻る</a>';
         exit;
-    }
+    }*/
 ?>
 <div id="slider"></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
