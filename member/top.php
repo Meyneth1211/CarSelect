@@ -38,7 +38,7 @@
         }
         echo '<a class="return-button" href="login.php">戻る</a>';
         exit;
-    }
+    }s
         */
 ?>
 <div id="slider"></div>
