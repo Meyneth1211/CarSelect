@@ -2,7 +2,7 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の動画と画像
-				{ src: './img/slide1.png',//動画が再生されなかった場合の代替画像
+				{ src: '../img/slide1.png',//動画が再生されなかった場合の代替画像
 				 video:{
 					 src: [//mp4で動画が再生されない時のことを考えて複数の形式の動画を設定
 						 './video/movie.mp4',
@@ -13,8 +13,8 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 					 mute: true,//動画の音を鳴らさない
 				 }
 				},
-				{src: './img/slide2.png'},
-				{src: './img/slide3.png'}
+				{src: '../img/slide2.png'},
+				{src: '../img/slide3.png'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
