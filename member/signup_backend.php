@@ -45,8 +45,8 @@ if(isset($_POST['name']) AND isset($_POST['mail']) AND isset($_POST['pass'])){
         echo 'そのメールアドレスは既に登録されています。<br>';
         echo '<a href="login.php">ログイン画面へ戻る</a>';
     }else{
-        $sql = $pdo->prepare('INSERT INTO user (user_mail, user_password, user_name) VALUES (?,?,?)');
-        $result = $sql->execute([$_POST['mail'], $_POST['pass'], $_POST['name']]);
+        $sql = $pdo->prepare('INSERT INTO user (user_mail, user_password, user_name, user_address) VALUES (?,?,?,?)');
+        $result = $sql->execute([$_POST['mail'], $_POST['pass'], $_POST['name'], $_POST['address']]);
         if($result){
             echo '登録しました。<br>';
             echo '<a href="login.php">ログイン画面へ戻る</a>';
