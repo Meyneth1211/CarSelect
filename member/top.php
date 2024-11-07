@@ -1,4 +1,5 @@
 <?php
+/*
     session_start();
     require('../header/header.php');
     require_once '../DBconnect.php';
@@ -37,12 +38,12 @@
         }
         echo '<a class="return-button" href="login.php">戻る</a>';
         exit;
-    }
+    }s
+        */
 ?>
 <div id="slider"></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
-<!--自作のJS-->
 <script src="../js/slide.js"></script>
 </body>
 </html>
