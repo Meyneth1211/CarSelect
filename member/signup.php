@@ -3,7 +3,7 @@
     <div class="create">
         <div class="create-card">
             <h2>新規会員登録</h2>
-            <form class="create-form" action="top.php" method="post">
+            <form class="create-form" action="signup_backend.php" method="post">
                 <input class="name" name="name" type="text" placeholder="name">
                 <input class="mail" name="mail" type="email" placeholder="Email">
                 <input class="pass" name="pass" type="password" placeholder="Password">
