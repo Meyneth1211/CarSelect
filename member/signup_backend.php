@@ -5,15 +5,15 @@
     $pdo = getDb();
     $error = []; //エラー配列作成
     if(empty($_POST['name'])){
-        $error[] = '名前を入力してください';
+        $error[] = '名前を入力してね！';
     }
     if(empty($_POST['email'])){
-        $error[] = 'メールアドレスを入力してください';
+        $error[] = 'メールアドレスを入力してね！';
     }
     if(empty($_POST['pass'])){
-        $error[] = 'パスワードを入力してください';
+        $error[] = 'パスワードを入力してね！';
     }
     if(empty($_POST['address'])){
-        $error[] = '住所を入力してください';
+        $error[] = '住所を入力してね！';
     }
 ?>
