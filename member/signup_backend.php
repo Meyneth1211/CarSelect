@@ -8,7 +8,7 @@
     if(empty($_POST['name'])){
         $error[] = '名前を入力してね！';
     }
-    if(empty($_POST['email'])){
+    if(empty($_POST['mail'])){
         $error[] = 'メールアドレスを入力してね！';
     }
     if(empty($_POST['pass'])){
