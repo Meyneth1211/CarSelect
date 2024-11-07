@@ -13,6 +13,7 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 					 mute: true,//動画の音を鳴らさない
 				 }
 				},
+                {src: '../img/slide1.jpg'},
 				{src: '../img/slide2.jpg'},
 				{src: '../img/slide3.jpg'}
 			];
