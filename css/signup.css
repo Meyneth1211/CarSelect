@@ -80,6 +80,7 @@
 .name, .mail, .pass, .address{
     background-color: #18191F;
     caret-color: #fff;
+    color: #fff;
 }
 
 
