@@ -18,7 +18,7 @@
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-    
+    </div>
 
     <!-- メニュー classを追加-->
     <nav id="menu" class="hidden">
@@ -30,7 +30,6 @@
             <li><a class="nenu-link" href="#">LOGIN</a></li>
         </ul>
     </nav>
-    </div>
 
     <div class="back">
         <h2>Car Select</h2>
