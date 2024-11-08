@@ -1,8 +1,8 @@
 <?php require('../header/header.php'); ?>
     <div class="card">
-        <div class="card-card">
     <form class="card-form" action="">
     <h2>カード情報</h2>
+    <div class="card-card">
     <p>カード番号<input class="card-no"type="text" name="cardno" maxlength="16"></p>
     <p>セキュリティコード<input class="card-cord"type="text" name="cardpass" maxlength="3" size="5"></p>
     <p>カード名義<input class="card-name" type="text" name="cardname" maxlength="50"></p>
