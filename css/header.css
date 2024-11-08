@@ -27,7 +27,7 @@ body {
     top: 45px;
     left: 60px;
     cursor: pointer;
-    z-index: 1000; /* メニューが他の要素より上に表示されるように */
+    z-index: 9999; /* メニューが他の要素より上に表示されるように */
 }
 
 /*ハンバーガーマーク*/
@@ -51,6 +51,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 9998;
     align-items: center;
     transform: translateX(-100%); /* デフォルトでメニューを非表示にする */
     transition: transform 0.5s ease-in-out; /* スライドイン・アウトのアニメーション */
