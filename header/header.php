@@ -23,11 +23,11 @@
     <!-- メニュー classを追加-->
     <nav id="menu" class="hidden">
         <ul>
-            <li><a class="nenu-link" href="#">TOP</a></li>
+            <li><a class="nenu-link" href="../member/top.php">TOP</a></li>
             <li><a class="nenu-link" href="#">SEARCH</a></li>
             <li><a class="nenu-link" href="#">FAVORITE</a></li>
-            <li><a class="nenu-link" href="#">LOGOUT</a></li>
-            <li><a class="nenu-link" href="#">LOGIN</a></li>
+            <li><a class="nenu-link" href="../member/login.php">LOGOUT</a></li>
+            <li><a class="nenu-link" href="../member/login.php">LOGIN</a></li>
         </ul>
     </nav>
 
