@@ -19,12 +19,10 @@
             echo '<a class="return-button" href="login.php">戻る</a>';
             exit;
         }
-<<<<<<< Updated upstream
     }
     $pdo = null;
 =======
     }*/
->>>>>>> Stashed changes
 ?>
 <?php
     //メールアドレスとパスワードが入力されているか確認
