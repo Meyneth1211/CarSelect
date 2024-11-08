@@ -55,6 +55,7 @@ nav {
     transform: translateX(-100%); /* デフォルトでメニューを非表示にする */
     transition: transform 0.5s ease-in-out; /* スライドイン・アウトのアニメーション */
     background-color: rgba(33, 4, 4, 0.562);
+    z-index: 1000;
 }
 
 nav ul {
