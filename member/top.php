@@ -16,7 +16,7 @@
             
         }else{
             echo '<div class="error-message">EmailかPasswordが違います</div><br>';
-            echo '<a class="return-button" href="login.php">戻る</a>';
+            echo '<a class="return-button" href="logout.php">戻る</a>';
             exit;
         }
     }
@@ -36,7 +36,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<a class="return-button" href="login.php">戻る</a>';
+        echo '<a class="return-button" href="logout.php">戻る</a>';
         exit;
     }
 ?>
