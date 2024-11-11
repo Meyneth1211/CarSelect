@@ -26,15 +26,11 @@
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-.e{
-    margin-bottom: 30px;
-}
-
 @media (width >= 500PX){
     .error-card{
         margin: 0;
         width: 400px;
-        height: 300px;
+        height: 350px;
     }
 }
 
