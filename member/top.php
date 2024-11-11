@@ -28,10 +28,10 @@
     if(empty($_SESSION['name'])){
         echo '    <div class="toukou1">';
         if(empty($_POST['mail'])){
-            $error[] = 'メールアドレスを入力してください';
+            $error[] = '<div class="error-message">メールアドレスを入力してください</div><br>';
         }
         if(empty($_POST['pass'])){
-            $error[] = 'パスワードを入力してください';
+            $error[] = '<div class="error-message">パスワードを入力してください</div><br>';
         }
         foreach($error as $e){
             echo $e.'<br>';
