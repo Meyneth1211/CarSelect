@@ -36,7 +36,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<a class="return-button" href="logout.php">戻る</a></div></div>';
+        echo '<form class="login-form" action="top.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
         exit;
     }
 ?>
