@@ -26,9 +26,8 @@
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-.return-button{
-    background-color: red;
-    color: #fff;
+.e{
+    margin-bottom: 30px;
 }
 
 @media (width >= 500PX){
