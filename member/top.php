@@ -26,7 +26,7 @@
     //メールアドレスとパスワードが入力されているか確認
     $error = [];
     if(empty($_SESSION['name'])){
-        echo '    <div class="toukou1">';
+        echo '<div class="login"><div class="login-card">';
         if(empty($_POST['mail'])){
             $error[] = '<div class="error-message">メールアドレスを入力してください</div><br>';
         }
@@ -36,7 +36,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<a class="return-button" href="logout.php">戻る</a>';
+        echo '<a class="return-button" href="logout.php">戻る</a></div></div>';
         exit;
     }
 ?>
