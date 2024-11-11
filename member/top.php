@@ -26,7 +26,7 @@
     //メールアドレスとパスワードが入力されているか確認
     $error = [];
     if(empty($_SESSION['name'])){
-        echo '<div class="login"><div class="login-card">';
+        echo '<div class="error-back"><div class="error-card">';
         if(empty($_POST['mail'])){
             $error[] = '<div class="error-message">メールアドレスを入力してください</div><br>';
         }
