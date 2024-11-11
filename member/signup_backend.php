@@ -38,7 +38,7 @@ if(isset($_POST['name']) AND isset($_POST['mail']) AND isset($_POST['pass'])){
     $sql3->execute([$_POST['mail'], $_POST['pass'], $_POST['name']]);
     echo '<form class="login-form" action="signup.php" method="post">';
     if($sql3->rowCount() > 0){
-        echo '既に登録されています。<br>';
+        echo '<div class="error-message">既に登録されています</div>';
         echo '<input class="button-1" type="submit" value="ログイン画面へ戻る">';
     }elseif($sql2->rowCount() > 0){
         echo 'その名前は既に使われています。<br>';
@@ -50,8 +50,8 @@ if(isset($_POST['name']) AND isset($_POST['mail']) AND isset($_POST['pass'])){
         $sql = $pdo->prepare('INSERT INTO user (user_mail, user_password, user_name, user_address) VALUES (?,?,?,?)');
         $result = $sql->execute([$_POST['mail'], $_POST['pass'], $_POST['name'], $_POST['address']]);
         if($result){
-            echo '登録しました。<br>';
-            echo '<a href="login.php">ログイン画面へ戻る</a>';
+            echo '<div class="error-message">登録しました</div>';
+            echo '<input class="button-1" type="submit" value="ログイン画面へ戻る">';
         }
     }
     echo '</form>';
