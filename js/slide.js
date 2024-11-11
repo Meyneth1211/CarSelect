@@ -4,8 +4,8 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
 				{ src: '../img/slide1.jpg'},
-				{ src: '../img/slide4.jpg'},
-				{ src: '../img/slide5.jpg'}
+				{ src: '../img/slide2.jpg'},
+				{ src: '../img/slide3.jpg'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
