@@ -3,7 +3,7 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
-				{ src: '../img/slide1.lpg'},
+				{ src: '../img/slide1.jpg'},
 				{ src: '../img/slide2.jpg'},
 				{ src: '../img/slide3.jpg'}
 			];
