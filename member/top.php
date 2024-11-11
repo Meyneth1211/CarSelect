@@ -15,7 +15,7 @@
         if(!empty($_SESSION['name'])){
             
         }else{
-            echo '<div class="error-message">EmailかPasswordが違います</div><br>';
+            echo '<div class="error-message">EmailかPasswordが違います</div>';
             echo '<a class="return-button" href="logout.php">戻る</a>';
             exit;
         }
@@ -28,10 +28,10 @@
     if(empty($_SESSION['name'])){
         echo '<div class="error-back"><div class="error-card">';
         if(empty($_POST['mail'])){
-            $error[] = '<div class="error-message">メールアドレスを入力してください</div><br>';
+            $error[] = '<div class="error-message">メールアドレスを入力してください</div>';
         }
         if(empty($_POST['pass'])){
-            $error[] = '<div class="error-message">パスワードを入力してください</div><br>';
+            $error[] = '<div class="error-message">パスワードを入力してください</div>';
         }
         foreach($error as $e){
             echo $e.'<br>';
