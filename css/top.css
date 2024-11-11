@@ -2,6 +2,7 @@
 /*☟☟ログイン失敗時のCSS*/
 .error-message{
     color: #fff;
+    font-size: 20px;
 }
 
 .error-back{
