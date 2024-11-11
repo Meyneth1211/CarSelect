@@ -22,7 +22,7 @@
         echo '<p>'.$e.'</p>';
     }
     if(!empty($error)){
-        echo '<form class="login-form" action="signup.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
+        echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
         exit;
     }
 //既に登録されているか確認の処理
