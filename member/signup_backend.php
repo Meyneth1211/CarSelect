@@ -19,7 +19,7 @@
         $error[] = '<div class="error-message">住所を入力してね！</div>';
     }
     foreach($error as $e){
-        echo '<p>'.$e.'</p><br>';
+        echo '<p>'.$e.'</p>';
     }
     if(!empty($error)){
         echo '<form class="login-form" action="signup.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
