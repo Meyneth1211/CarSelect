@@ -36,6 +36,7 @@ if(isset($_POST['name']) AND isset($_POST['mail']) AND isset($_POST['pass'])){
     //ユーザーが登録されているか確認
     $sql3 = $pdo->prepare('SELECT * FROM user WHERE user_mail = ? AND user_password = ? AND user_name = ?');
     $sql3->execute([$_POST['mail'], $_POST['pass'], $_POST['name']]);
+    echo '<form class="login-form" action="signup.php" method="post">';
     if($sql3->rowCount() > 0){
         echo '既に登録されています。<br>';
         echo '<a href="login.php">ログイン画面へ戻る</a>';
@@ -53,6 +54,7 @@ if(isset($_POST['name']) AND isset($_POST['mail']) AND isset($_POST['pass'])){
             echo '<a href="login.php">ログイン画面へ戻る</a>';
         }
     }
+    echo '</form>';
     $pdo = null;
 }
        
