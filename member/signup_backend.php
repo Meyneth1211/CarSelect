@@ -5,23 +5,24 @@
     $pdo = getDb();
     //名前、メアド、パスワード、住所入力しているか確認の処理
     $error = []; //エラー配列作成
+    echo '<div class="error-back"><div class="error-card">';
     if(empty($_POST['name'])){
-        $error[] = '名前を入力してね！';
+        $error[] = '<div class="error-message">名前を入力してね！</div>';
     }
     if(empty($_POST['mail'])){
-        $error[] = 'メールアドレスを入力してね！';
+        $error[] = '<div class="error-message">メールアドレスを入力してね！</div>';
     }
     if(empty($_POST['pass'])){
-        $error[] = 'パスワードを入力してね！';
+        $error[] = '<div class="error-message">パスワードを入力してね！</div>';
     }
     if(empty($_POST['address'])){
-        $error[] = '住所を入力してね！';
+        $error[] = '<div class="error-message">住所を入力してね！</div>';
     }
     foreach($error as $e){
         echo '<p>'.$e.'</p>';
     }
     if(!empty($error)){
-        echo '<a href="signup.php">会員登録画面へ戻る</a>';
+        echo '<form class="login-form" action="signup.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
         exit;
     }
 //既に登録されているか確認の処理
