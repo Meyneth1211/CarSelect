@@ -7,16 +7,16 @@
     $error = []; //エラー配列作成
     echo '<div class="error-back"><div class="error-card">';
     if(empty($_POST['name'])){
-        $error[] = '<div class="error-message">名前を入力してね！</div>';
+        $error[] = '<div class="error-message">名前を入力してください</div>';
     }
     if(empty($_POST['mail'])){
-        $error[] = '<div class="error-message">メールアドレスを入力してね！</div>';
+        $error[] = '<div class="error-message">メールアドレスを入力してください</div>';
     }
     if(empty($_POST['pass'])){
-        $error[] = '<div class="error-message">パスワードを入力してね！</div>';
+        $error[] = '<div class="error-message">パスワードを入力してください</div>';
     }
     if(empty($_POST['address'])){
-        $error[] = '<div class="error-message">住所を入力してね！</div>';
+        $error[] = '<div class="error-message">住所を入力してください</div>';
     }
     foreach($error as $e){
         echo '<p>'.$e.'</p>';
