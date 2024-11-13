@@ -1,6 +1,9 @@
 <?php require('../header/header.php'); 
 
-echo $_POST['daihatu'];
+if (isset($_POST['daihatsu_x'])) {
+  // Daihatsuの画像を表示
+  echo '<img src="../img/Daihatsu.png" alt="Daihatsu">';
+}
 
 ?>
 
