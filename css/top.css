@@ -36,8 +36,11 @@
 }
 
 /*☝☝ログイン失敗時のCSSここまで*/
-h1{
-    color: #fff;
+
+.car-log {
+    
 }
 
-
+.car-log img{
+    width: 20%;
+}
