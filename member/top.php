@@ -51,7 +51,7 @@
     <img src="../img/Honda.png" alt="">
 </div>
 <div class="car-logo2">
-    <img src="../img/Porsche.png" alt="" width="60%">
+    <img src="../img/Porsche.png" alt="" width="-50%">
     <img src="../img/Lexus.png" alt="">
     <img src="../img/Lamborghini.png" alt="">
     <img src="../img/BMW.png" alt="">
