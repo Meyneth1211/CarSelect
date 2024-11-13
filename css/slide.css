@@ -1,5 +1,5 @@
 #slider {
-    width: 80%;
+    width: 40%;
     height: 85vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     z-index: 999;
 }
