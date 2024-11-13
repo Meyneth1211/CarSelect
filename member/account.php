@@ -15,9 +15,9 @@ if (isset($_SESSION['user_id'])) {
 
     if ($user) {
         echo '<h2>アカウント情報</h2>';
-        echo '<p>メールアドレス: ' . htmlspecialchars($user['user_mail'], ENT_QUOTES, 'UTF-8') . '</p>';
-        echo '<p>パスワード: ' . htmlspecialchars($user['user_password'], ENT_QUOTES, 'UTF-8') . '</p>';
-        echo '<p>住所: ' . htmlspecialchars($user['user_address'], ENT_QUOTES, 'UTF-8') . '</p>';
+        echo '<p>メールアドレス: ' . $user['user_mail'] . '</p>';
+        echo '<p>パスワード: ' . $user['user_password'] . '</p>';
+        echo '<p>住所: ' . $user['user_address'] . '</p>';
     } else {
         echo 'アカウント情報が見つかりませんでした。';
     }
