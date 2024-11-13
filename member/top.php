@@ -43,7 +43,11 @@
     }
 ?>
 <form action="search.php" method="post">
-<div id="slider"></div>
+<ul class="slider">
+<li class="slider-item slider-item01"></li>
+<li class="slider-item slider-item02"></li>
+<li class="slider-item slider-item03"></li>
+</ul>
 <div class="car-logo">
     <input type="image" name="daihatu" src="../img/Daihatsu.png"  alt="" width="200px" height="auto">
     <input type="image" name="subaru" src="../img/Subaru.png"  alt="" width="200px" height="auto">
