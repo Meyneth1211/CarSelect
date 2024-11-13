@@ -49,3 +49,12 @@
 .car-logo input[type="image"] {
     
 }
+
+.car-logo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    padding: 0 20px;
+    padding-top: 50px;
+}
