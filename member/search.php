@@ -4,16 +4,16 @@
   <!-- ブランド -->
   <div class="brands-title">ブランド</div>
   <div class="brands">
-    <img src="Toyota.png" alt="Toyota">
-    <img src="Mazda.png" alt="Mazda">
-    <img src="Lexus.png" alt="Lexus">
-    <img src="Honda.png" alt="Honda">
-    <img src="Porsche.png" alt="Porsche">
-    <img src="Ferrari.png" alt="Ferrari">
-    <img src="Lamborghini.png" alt="Lamborghini">
-    <img src="BMW.png" alt="BMW">
-    <img src="Subaru.png" alt="Subaru">
-    <img src="Daihatsu.png" alt="Daihatsu">
+    <img src="../img/Toyota.png" alt="Toyota">
+    <img src="../img/Mazda.png" alt="Mazda">
+    <img src="../img/Lexus.png" alt="Lexus">
+    <img src="../img/Honda.png" alt="Honda">
+    <img src="../img/Porsche.png" alt="Porsche">
+    <img src="../img/Ferrari.png" alt="Ferrari">
+    <img src="../img/Lamborghini.png" alt="Lamborghini">
+    <img src="../img/BMW.png" alt="BMW">
+    <img src="../img/Subaru.png" alt="Subaru">
+    <img src="../img/Daihatsu.png" alt="Daihatsu">
   </div>
 
   <!-- 価格 -->
