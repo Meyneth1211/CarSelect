@@ -10,7 +10,7 @@
     <p class="mclass">有効期限<input class="card-kigen" type="text" name="cardkigen1" maxlength="2" size="4">/<input class="card-kigen2" type="text" maxlength="2" size="4"></p>
     </div>
     <div class="c-button">
-    <p><input class="card-button" type="submit" onclick="location.href='./kounyuu.html'" value="送信"></p>
+    <p><input class="card-button" type="submit" onclick="location.href='./kounyuu.php'" value="送信"></p>
     </div>
     </form>
         </div>
