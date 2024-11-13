@@ -4,16 +4,16 @@
   <!-- ブランド -->
   <div class="brands-title">ブランド</div>
   <div class="brands">
-    <img src="../img/Toyota.png" alt="Toyota">
-    <img src="../img/Mazda.png" alt="Mazda">
-    <img src="../img/Lexus.png" alt="Lexus">
-    <img src="../img/Honda.png" alt="Honda">
-    <img src="../img/Porsche.png" alt="Porsche">
-    <img src="../img/Ferrari.png" alt="Ferrari">
-    <img src="../img/Lamborghini.png" alt="Lamborghini">
-    <img src="../img/BMW.png" alt="BMW">
-    <img src="../img/Subaru.png" alt="Subaru">
-    <img src="../img/Daihatsu.png" alt="Daihatsu">
+    <img src="../img/Toyota.png" alt="Toyota" width="75" height="50">
+    <img src="../img/Mazda.png" alt="Mazda" width="75" height="50">
+    <img src="../img/Lexus.png" alt="Lexus" width="75" height="50">
+    <img src="../img/Honda.png" alt="Honda" width="75" height="50">
+    <img src="../img/Porsche.png" alt="Porsche" width="75" height="50">
+    <img src="../img/Ferrari.png" alt="Ferrari" width="75" height="50">
+    <img src="../img/Lamborghini.png" alt="Lamborghini" width="75" height="50">
+    <img src="../img/BMW.png" alt="BMW" width="75" height="50">
+    <img src="../img/Subaru.png" alt="Subaru" width="75" height="50">
+    <img src="../img/Daihatsu.png" alt="Daihatsu" width="75" height="50">
   </div>
 
   <!-- 価格 -->

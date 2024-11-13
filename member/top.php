@@ -45,5 +45,19 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
 <script src="../js/slide.js"></script>
+<div class="car-logo">
+    <img src="../img/Toyota.png" alt="">
+    <img src="../img/Daihatsu.png" alt="">
+    <img src="../img/Mazda.png" alt="">
+    <img src="../img/Subaru.png" alt="">
+    <img src="../img/Honda.png" alt="">
+</div>
+<div class="car-logo2">
+    <img src="../img/Porsche.png" alt="" width="">
+    <img src="../img/Lexus.png" alt="">
+    <img src="../img/Lamborghini.png" alt="">
+    <img src="../img/BMW.png" alt="">
+    <img src="../img/Ferrari.png" alt="">
+</div>
 </body>
 </html>
