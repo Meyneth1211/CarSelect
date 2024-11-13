@@ -1,35 +1,33 @@
 <?php require('../header/header.php'); ?>
 
-<div class="header">Car Select</div>
-
-<div class="container">
+<div class="search">
   <!-- ブランド -->
-  <div class="section-title">ブランド</div>
+  <div class="brands-title">ブランド</div>
   <div class="brands">
-    <img src="Toyota.png" alt="Toyota">
-    <img src="Mazda.png" alt="Mazda">
-    <img src="Lexus.png" alt="Lexus">
-    <img src="Honda.png" alt="Honda">
-    <img src="Porsche.png" alt="Porsche">
-    <img src="Ferrari.png" alt="Ferrari">
-    <img src="Lamborghini.png" alt="Lamborghini">
-    <img src="BMW.png" alt="BMW">
-    <img src="Subaru.png" alt="Subaru">
-    <img src="Daihatsu.png" alt="Daihatsu">
+    <img src="../img/Toyota.png" alt="Toyota">
+    <img src="../img/Mazda.png" alt="Mazda">
+    <img src="../img/Lexus.png" alt="Lexus">
+    <img src="../img/Honda.png" alt="Honda">
+    <img src="../img/Porsche.png" alt="Porsche">
+    <img src="../img/Ferrari.png" alt="Ferrari">
+    <img src="../img/Lamborghini.png" alt="Lamborghini">
+    <img src="../img/BMW.png" alt="BMW">
+    <img src="../img/Subaru.png" alt="Subaru">
+    <img src="../img/Daihatsu.png" alt="Daihatsu">
   </div>
 
   <!-- 価格 -->
-  <div class="section-title">価格</div>
+  <div class="price-title">価格</div>
   <div class="price-range">
-    <button>〜30万円</button>
-    <button>〜50万円</button>
-    <button>〜100万円</button>
-    <button>〜200万円</button>
-    <button>200万円以上〜</button>
+    <input type="radio" name="price" value="30">～30万円</option>
+    <input type="radio" name="price" value="50">～50万円</option>
+    <input type="radio" name="price" value="100">～100万円</option>
+    <input type="radio" name="price" value="200">～200万円</option>
+    <input type="radio" name="price" value="200over">200万円～</option>
   </div>
 
   <!-- ボディタイプ -->
-  <div class="section-title">ボディタイプ</div>
+  <div class="body-type-title">ボディタイプ</div>
   <div class="body-type">
     <img src="sedan-icon.png" alt="Sedan">
     <img src="suv-icon.png" alt="SUV">
@@ -38,7 +36,7 @@
   </div>
 
   <!-- カラー -->
-  <div class="section-title">カラー</div>
+  <div class="color-title">カラー</div>
   <div class="color-options">
     <button style="background-color: black; color: white;">ブラック</button>
     <button style="background-color: white; color: black;">ホワイト</button>

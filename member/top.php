@@ -15,35 +15,47 @@
         if(!empty($_SESSION['name'])){
             
         }else{
-            echo '<div class="error-message">EmailかPasswordが違います</div>';
-            echo '<a class="return-button" href="logout.php">戻る</a>';
+            echo '<div class="error-message">EmailかPasswordが違います</div><br>';
+            echo '<a class="return-button" href="login.php">戻る</a>';
             exit;
         }
     }
-    $pdo = null;
 ?>
 <?php
     //メールアドレスとパスワードが入力されているか確認
     $error = [];
     if(empty($_SESSION['name'])){
-        echo '<div class="error-back"><div class="error-card">';
+        echo '    <div class="toukou1">';
         if(empty($_POST['mail'])){
-            $error[] = '<div class="error-message">メールアドレスを入力してください</div>';
+            $error[] = 'メールアドレスを入力してください';
         }
         if(empty($_POST['pass'])){
-            $error[] = '<div class="error-message">パスワードを入力してください</div>';
+            $error[] = 'パスワードを入力してください';
         }
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
+        echo '<a class="return-button" href="login.php">戻る</a>';
         exit;
     }
 ?>
 <div id="slider"></div>
-<h1>テスト</h1>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
 <script src="../js/slide.js"></script>
+<div class="car-logo">
+    <img src="../img/Toyota.png" alt="">
+    <img src="../img/Daihatsu.png" alt="">
+    <img src="../img/Mazda.png" alt="">
+    <img src="../img/Subaru.png" alt="">
+    <img src="../img/Honda.png" alt="">
+</div>
+<div class="car-logo2">
+    <img src="../img/Porsche.png" alt="" width="-50%">
+    <img src="../img/Lexus.png" alt="">
+    <img src="../img/Lamborghini.png" alt="">
+    <img src="../img/BMW.png" alt="">
+    <img src="../img/Ferrari.png" alt="">
+</div>
 </body>
 </html>
