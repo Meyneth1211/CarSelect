@@ -21,7 +21,7 @@
   
   .slider-item {
       width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
-      height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+      height:84vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
       background-repeat: no-repeat;/*背景画像をリピートしない*/
       background-position: center;/*背景画像の位置を中央に*/
       background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
