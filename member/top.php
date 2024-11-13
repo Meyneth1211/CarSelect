@@ -9,6 +9,7 @@
         $sql=$pdo->prepare('SELECT * from user where user_mail=? and user_password=?');
         $sql->execute([$_POST['mail'],$_POST['pass']]);
         foreach($sql as $row){
+            $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['mail'] = $row['user_mail'];
             $_SESSION['name'] = $row['user_name'];
         }

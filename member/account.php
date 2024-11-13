@@ -1,8 +1,5 @@
 <?php
-// セッションの開始
 session_start();
-
-// データベース接続ファイルをインクルード（例: DBconnect.php）
 require_once 'DBconnect.php';
 $pdo = getDb();
 
