@@ -84,13 +84,8 @@
 }
 
 
-.guestbutton-1{
+.guestbutton{
     background-color: red;
-    color: #fff;
-}
-
-.guestbutton-2{
-    background-color: rgba(33, 4, 4, 0.562);
     color: #fff;
 }
 
