@@ -45,18 +45,18 @@
 <form action="search.php" method="post">
 <div id="slider"></div>
 <div class="car-logo">
-<input type="image" name="daihatu" src="../img/Daihatsu.png"  alt="">
-    <img src="../img/Daihatsu.png" alt="">
-    <img src="../img/Mazda.png" alt="">
-    <img src="../img/Subaru.png" alt="">
-    <img src="../img/Honda.png" alt="">
+    <input type="image" name="daihatu" src="../img/Daihatsu.png"  alt="" width="100px" height="auto">
+    <input type="image" name="subaru" src="../img/Subaru.png"  alt="" width="100px" height="auto">
+    <input type="image" name="matuda" src="../img/Mazda.png"  alt="" width="100px" height="auto">
+    <input type="image" name="toyota" src="../img/Toyota.png"  alt="" width="100px" height="auto">
+    <input type="image" name="honda" src="../img/Honda.png"  alt="" width="100px" height="auto">
 </div>
 <div class="car-logo2">
-    <img src="../img/Porsche.png" alt="" width="">
-    <img src="../img/Lexus.png" alt="">
-    <img src="../img/Lamborghini.png" alt="">
-    <img src="../img/BMW.png" alt="">
-    <img src="../img/Ferrari.png" alt="">
+    <input type="image" name="porsche" src="../img/Porsche.png"  alt="" width="100px" height="auto">
+    <input type="image" name="lexus" src="../img/Lexus.png"  alt="" width="100px" height="auto">
+    <input type="image" name="lambo" src="../img/Lamborghini.pg"  alt="" width="100px" height="auto">
+    <input type="image" name="bmw" src="../img/BMW.png"  alt="" width="100px" height="auto">
+    <input type="image" name="ferrari" src="../img/Ferrari.png"  alt="" width="100px" height="auto">
 </div>
 </form>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
