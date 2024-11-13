@@ -8,16 +8,17 @@
     if(!empty($_POST['mail'])&&!empty($_POST['pass'])){
         $sql=$pdo->prepare('SELECT * from user where user_mail=? and user_password=?');
         $sql->execute([$_POST['mail'],$_POST['pass']]);
-        foreach($sql as $row){
-            $_SESSION['user_id'] = $user['user_id'];
-            $_SESSION['mail'] = $row['user_mail'];
-            $_SESSION['name'] = $row['user_name'];
-        }
-        if(!empty($_SESSION['name'])){
-            
-        }else{
+        $user = $sql->fetch(PDO::FETCH_ASSOC);
+
+        // ユーザーが存在する場合
+        if ($user) {
+            $_SESSION['user_id'] = $user['user_id']; // セッションにユーザーIDを保存
+            $_SESSION['mail'] = $user['user_mail'];
+            $_SESSION['name'] = $user['user_name'];
+        } else {
+            // ログイン失敗時のエラーメッセージ表示
             echo '<div class="error-message">EmailかPasswordが違います</div>';
-            echo '<a class="return-button" href="logout.php">戻る</a>';
+            echo '<a class="return-button" href="login.php">戻る</a>';
             exit;
         }
     }
