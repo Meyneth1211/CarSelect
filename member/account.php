@@ -15,7 +15,7 @@ if (isset($_SESSION['user_id'])) {
 
     if ($user) {
         echo '<div class="error-back"><div class="error-card">';
-        echo '<h2 class="error-message">アカウント情報</h2>';
+        echo '<h2 class="account-message">アカウント情報</h2>';
         echo '<p class="error-message">メールアドレス: ' . $user['user_mail'] . '</p>';
         echo '<p class="error-message">パスワード: ' . $user['user_password'] . '</p>';
         echo '<p class="error-message">住所: ' . $user['user_address'] . '</p>';
