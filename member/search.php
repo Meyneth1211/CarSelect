@@ -19,13 +19,11 @@
   <!-- 価格 -->
   <div class="price-title">価格</div>
   <div class="price-range">
-  <select name="price">
-    <option value="30">〜30万円</option>
-    <option value="50">〜50万円</option>
-    <option value="100">〜100万円</option>
-    <option value="200">〜200万円</option>
-    <option value="200over">200万円以上～</option>
-  </select>
+    <input type="radio" name="price" value="30">～30万円</option>
+    <input type="radio" name="price" value="50">～50万円</option>
+    <input type="radio" name="price" value="100">～100万円</option>
+    <input type="radio" name="price" value="200">～200万円</option>
+    <input type="radio" name="price" value="200over">200万円～</option>
   </div>
 
   <!-- ボディタイプ -->
