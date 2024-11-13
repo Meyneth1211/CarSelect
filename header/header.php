@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/top.css">
     <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/guest.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link rel="stylesheet" type="text/css" href="../css/slide.css">
-    <link rel="stylesheet" type="../css/guest.css">
+
 </head>
 <body>
     <!-- ハンバーガーメニュー -->
