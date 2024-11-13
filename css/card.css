@@ -78,15 +78,30 @@
 
 .mclass{
     margin-top: 20px;
+    margin-left: 50px;
     text-align: center;
     text-align: left;
 }
 
-.card-no, .card-name, .card-cord, .card-kigen{
+.card-no, .card-name, .card-cord, .card-kigen, .card-kigen2{
     background-color: #18191F;
     color: #fff;
 }
 
+.card-no{
+    margin-left: 80px;
+}
+
+.card-cord{
+    margin-left: 20px;
+}
+.card-name{
+    margin-left: 80px;
+}
+
+.card-kigen{
+    margin-left: 95px;
+}
 
 .card-button{
     background-color: red;
