@@ -76,6 +76,10 @@
     transition: all 0.375s;
 }
 
+.mclass{
+    margin-top: 20px;
+}
+
 .card-no, .card-name, .card-cord, .card-kigen{
     background-color: #18191F;
     color: #fff;
