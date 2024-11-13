@@ -8,15 +8,17 @@
     if(!empty($_POST['mail'])&&!empty($_POST['pass'])){
         $sql=$pdo->prepare('SELECT * from user where user_mail=? and user_password=?');
         $sql->execute([$_POST['mail'],$_POST['pass']]);
-        foreach($sql as $row){
-            $_SESSION['mail'] = $row['user_mail'];
-            $_SESSION['name'] = $row['user_name'];
-        }
-        if(!empty($_SESSION['name'])){
-            
-        }else{
+        $user = $sql->fetch(PDO::FETCH_ASSOC);
+
+        // ユーザーが存在する場合
+        if ($user) {
+            $_SESSION['user_id'] = $user['user_id']; // セッションにユーザーIDを保存
+            $_SESSION['mail'] = $user['user_mail'];
+            $_SESSION['name'] = $user['user_name'];
+        } else {
+            // ログイン失敗時のエラーメッセージ表示
             echo '<div class="error-message">EmailかPasswordが違います</div>';
-            echo '<a class="return-button" href="logout.php">戻る</a>';
+            echo '<a class="return-button" href="login.php">戻る</a>';
             exit;
         }
     }
@@ -40,13 +42,10 @@
         exit;
     }
 ?>
+<form action="search.php" method="post">
 <div id="slider"></div>
-<h1>テスト</h1>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
-<script src="../js/slide.js"></script>
 <div class="car-logo">
-    <img src="../img/Toyota.png" alt="">
+<input type="image" name="daihatu" src="../img/Daihatsu.png"  alt="">
     <img src="../img/Daihatsu.png" alt="">
     <img src="../img/Mazda.png" alt="">
     <img src="../img/Subaru.png" alt="">
@@ -59,5 +58,9 @@
     <img src="../img/BMW.png" alt="">
     <img src="../img/Ferrari.png" alt="">
 </div>
+</form>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+<script src="../js/slide.js"></script>
 </body>
 </html>

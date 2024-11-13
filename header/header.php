@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="../css/account.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
     <link rel="stylesheet" type="text/css" href="../css/slide.css">
 </head>
@@ -26,6 +27,7 @@
             <li><a class="nenu-link" href="../member/top.php">TOP</a></li>
             <li><a class="nenu-link" href="#">SEARCH</a></li>
             <li><a class="nenu-link" href="#">FAVORITE</a></li>
+            <li><a class="nenu-link" href="../member/account.php">ACCOUNT</a></li>
             <li><a class="nenu-link" href="../member/logout.php">LOGOUT</a></li>
             <li><a class="nenu-link" href="../member/logout.php">LOGIN</a></li>
         </ul>

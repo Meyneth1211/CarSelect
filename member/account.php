@@ -1,36 +1,29 @@
 <?php
-// セッションの開始
 session_start();
-
-// データベース接続ファイルをインクルード（例: DBconnect.php）
-require_once 'DBconnect.php';
+require('../header/header.php');
+require_once '../DBconnect.php';
 $pdo = getDb();
 
-// ログインしているユーザーのIDをセッションから取得
+// セッションにユーザーIDがあるか確認
 if (isset($_SESSION['user_id'])) {
-    $userId = $_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];
 
-    // ユーザーのパスワード、メールアドレス、住所を取得
-    $sql = "SELECT password, email, address FROM user WHERE user_id = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$userId]);
-
-    // 結果を取得
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    // ユーザー情報を取得
+    $sql = $pdo->prepare('SELECT user_mail, user_password, user_address FROM user WHERE user_id = ?');
+    $sql->execute([$user_id]);
+    $user = $sql->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        // パスワード、メールアドレス、住所を出力
-        echo "パスワード: " . $user['password'] . "<br>";
-        echo "メールアドレス: " . $user['email']. "<br>";
-        echo "住所: " . $user['address'] . "<br>";
+        echo '<div class="account-back"><div class="account-card">';
+        echo '<h2 class="account-message">アカウント情報</h2>';
+        echo '<p class="error-message">メールアドレス: ' . $user['user_mail'] . '</p>';
+        echo '<p class="error-message">パスワード: ' . $user['user_password'] . '</p>';
+        echo '<p class="error-message">住所: ' . $user['user_address'] . '</p>';
+        echo '</div></div>';
     } else {
-        echo "ユーザー情報が見つかりませんでした。";
+        echo 'アカウント情報が見つかりませんでした。';
     }
 } else {
-    echo "ログインしてください。";
+    echo 'ログインしてください。';
 }
-
-$pdo = null;
 ?>
-</body>
-</html>

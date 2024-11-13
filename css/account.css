@@ -1,16 +1,14 @@
-@charset "utf-8";
-/*☟☟ログイン失敗時のCSS*/
-.error-message{
+.account-message{
     color: #fff;
-    font-size: 20px;
+    font-size: 40px;
 }
 
-.error-back{
+.account-back{
     place-items: center;
     margin-top: 12vh;
 }
 
-.error-card{
+.account-card{
     position: relative;
     z-index: 3;
     width: 100%;
@@ -22,26 +20,15 @@
     border: 5px solid #333;
 }
 
-.error-card:hover{
+.account-card:hover{
     border: 5px solid #0ef;
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
 @media (width >= 500PX){
-    .error-card{
+    .account-card{
         margin: 0;
         width: 400px;
         height: 300px;
     }
-}
-
-/*☝☝ログイン失敗時のCSSここまで*/
-
-.car-log {
-    
-}
-
-.car-logo img{
-    width: 100px;
-    height: auto;
 }
