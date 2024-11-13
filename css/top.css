@@ -37,8 +37,13 @@
 
 /*☝☝ログイン失敗時のCSSここまで*/
 
-.car-logo input{
-    margin-top: 20px;
-    margin-left: 30px;
+.car-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.car-logo input[type="image"] {
     
 }
