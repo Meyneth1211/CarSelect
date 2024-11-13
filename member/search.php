@@ -4,49 +4,50 @@
   <!-- ブランド -->
   <div class="brands-title">ブランド</div>
   <div class="brands" select name="blands" id="blands">
-  <select name="blands">
-    <option value="Toyota" class="Toyota"></option>
-    <option value="Mazda" class="Mazda"></option>
-    <option value="Lexus" class="Lexus"></option>
-    <option value="Honda" class="Honda"></option>
-    <option value="Porsche" class="Porsche"></option>
-    <option value="Ferrari" class="Ferrari"></option>
-    <option value="Lamborghini" class="Lamborghini"></option>
-    <option value="BMW" class="BMW"></option>
-    <option value="Daihatsu" class="Daihatsu"></option>
-    <option value="Subaru" class="Subaru"></option>
-  </select>
+  <form method="blands" action="">
+    <label><input type="checkbox" name="blands[]" value="Toyota"></label>
+    <label><input type="checkbox" name="blands[]" value="Mazda"></label>
+    <label><input type="checkbox" name="blands[]" value="Lexus"></label>
+    <label><input type="checkbox" name="blands[]" value="Honda"></label>
+    <label><input type="checkbox" name="blands[]" value="Porsche"></label>
+    <label><input type="checkbox" name="blands[]" value="Ferrari"></label>
+    <label><input type="checkbox" name="blands[]" value="Lamborghini"></label>
+    <label><input type="checkbox" name="blands[]" value="BMW"></label>
+    <label><input type="checkbox" name="blands[]" value="Daihatsu"></label>
+    <label><input type="checkbox" name="blands[]" value="Subaru"></label>  </form>
   </div>
 
   <!-- 価格 -->
   <div class="price-title">価格</div>
   <div class="price-range">
+  <form method="price" action="">
     <input type="radio" name="price" value="30">～30万円</option>
     <input type="radio" name="price" value="50">～50万円</option>
     <input type="radio" name="price" value="100">～100万円</option>
     <input type="radio" name="price" value="200">～200万円</option>
     <input type="radio" name="price" value="200over">200万円～</option>
+  </form>
   </div>
 
   <!-- ボディタイプ -->
   <div class="body-type-title">ボディタイプ</div>
   <div class="body-type">
-  <select name="body-type">
-    <option value="Sedan" class="Sedan"></option>
-    <option value="SUV" class="SUV"></option>
-    <option value="Wagon" class="Wagon"></option>
-    <option value="Compact" class="Compact"></option>
-    <option value="Light" class="Light"></option>
-  </select>
+  <form method="body-type" action="">
+    <label><input type="checkbox" name="body-type[]" value="Sedan"></label>
+    <label><input type="checkbox" name="body-type[]" value="SUV"></label>
+    <label><input type="checkbox" name="body-type[]" value="Wagon"></label>
+    <label><input type="checkbox" name="body-type[]" value="Conpact"></label>
+    <label><input type="checkbox" name="body-type[]" value="Light"></label>
+  </form>
   </div>
 
   <!-- カラー -->
   <div class="color-title">カラー</div>
   <div class="color-options">
-  <select name="color">
-    <option value="Black" class="Black"></option>
-    <option value="White" class="White"></option>
-  </select>
+  <form method="color" action="">
+    <label><input type="checkbox" name="color[]" value="Black"></label>
+    <label><input type="checkbox" name="color[]" value="White"></label>
+  </form>
   </div>
 
   <!-- 車のリスト -->
