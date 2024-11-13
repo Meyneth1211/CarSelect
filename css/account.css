@@ -28,7 +28,7 @@
 @media (width >= 500PX){
     .account-card{
         margin: 0;
-        width: 400px;
-        height: 300px;
+        width: 650px;
+        height: 350px;
     }
 }
