@@ -14,10 +14,12 @@ if (isset($_SESSION['user_id'])) {
     $user = $sql->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        echo '<h2>アカウント情報</h2>';
-        echo '<p>メールアドレス: ' . $user['user_mail'] . '</p>';
-        echo '<p>パスワード: ' . $user['user_password'] . '</p>';
-        echo '<p>住所: ' . $user['user_address'] . '</p>';
+        echo '<div class="account-back"><div class="account-card">';
+        echo '<h2 class="account-message">アカウント情報</h2>';
+        echo '<p class="error-message">メールアドレス: ' . $user['user_mail'] . '</p>';
+        echo '<p class="error-message">パスワード: ' . $user['user_password'] . '</p>';
+        echo '<p class="error-message">住所: ' . $user['user_address'] . '</p>';
+        echo '</div></div>';
     } else {
         echo 'アカウント情報が見つかりませんでした。';
     }
