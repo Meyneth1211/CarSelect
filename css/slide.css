@@ -25,6 +25,7 @@
       background-repeat: no-repeat;/*背景画像をリピートしない*/
       background-position: center;/*背景画像の位置を中央に*/
       background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+      object-fit: cover;
   }
   
   /*矢印の設定*/
