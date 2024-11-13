@@ -1,4 +1,8 @@
-<?php require('../header/header.php'); ?>
+<?php require('../header/header.php'); 
+
+echo $_POST['daihatu'];
+
+?>
 
 <div class="search">
   <!-- ブランド -->
