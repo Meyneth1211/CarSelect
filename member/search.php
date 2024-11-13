@@ -3,17 +3,19 @@
 <div class="search">
   <!-- ブランド -->
   <div class="brands-title">ブランド</div>
-  <div class="brands">
-    <img src="../img/Toyota.png" alt="Toyota" width="60" height="50">
-    <img src="../img/Mazda.png" alt="Mazda" width="60" height="50">
-    <img src="../img/Lexus.png" alt="Lexus" width="60" height="50">
-    <img src="../img/Honda.png" alt="Honda" width="60" height="50">
-    <img src="../img/Porsche.png" alt="Porsche" width="60" height="50">
-    <img src="../img/Ferrari.png" alt="Ferrari" width="60" height="50">
-    <img src="../img/Lamborghini.png" alt="Lamborghini" width="60" height="50">
-    <img src="../img/BMW.png" alt="BMW" width="60" height="50">
-    <img src="../img/Subaru.png" alt="Subaru" width="60" height="50">
-    <img src="../img/Daihatsu.png" alt="Daihatsu" width="60" height="50">
+  <div class="brands" select name="blands" id="blands">
+  <select name="blands">
+    <option value="Toyota" class="Toyota"></option>
+    <option value="Mazda" class="Mazda"></option>
+    <option value="Lexus" class="Lexus"></option>
+    <option value="Honda" class="Honda"></option>
+    <option value="Porsche" class="Porsche"></option>
+    <option value="Ferrari" class="Ferrari"></option>
+    <option value="Lamborghini" class="Lamborghini"></option>
+    <option value="BMW" class="BMW"></option>
+    <option value="Daihatsu" class="Daihatsu"></option>
+    <option value="Subaru" class="Subaru"></option>
+  </select>
   </div>
 
   <!-- 価格 -->
@@ -29,17 +31,22 @@
   <!-- ボディタイプ -->
   <div class="body-type-title">ボディタイプ</div>
   <div class="body-type">
-    <img src="sedan-icon.png" alt="Sedan">
-    <img src="suv-icon.png" alt="SUV">
-    <img src="wagon-icon.png" alt="Wagon">
-    <img src="coupe-icon.png" alt="Coupe">
+  <select name="body-type">
+    <option value="Sedan" class="Sedan"></option>
+    <option value="SUV" class="SUV"></option>
+    <option value="Wagon" class="Wagon"></option>
+    <option value="Compact" class="Compact"></option>
+    <option value="Light" class="Light"></option>
+  </select>
   </div>
 
   <!-- カラー -->
   <div class="color-title">カラー</div>
   <div class="color-options">
-    <button style="background-color: black; color: white;">ブラック</button>
-    <button style="background-color: white; color: black;">ホワイト</button>
+  <select name="color">
+    <option value="Black" class="Black"></option>
+    <option value="White" class="White"></option>
+  </select>
   </div>
 
   <!-- 車のリスト -->
