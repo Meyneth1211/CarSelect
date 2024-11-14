@@ -46,6 +46,7 @@ if (isset($_POST['daihatu_x'])) {
     </label>
     <label for="checkbox1">選択肢1</label>
     </form>
+    
   <!-- テスト終了 -->
   <form>
   <div class="checkbox-container">

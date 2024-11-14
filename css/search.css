@@ -1,4 +1,4 @@
-.search{
-    place-items: center;
-    margin-top: 12vh;
-}
+/* チェックボックスを非表示にする */
+.checkbox-container input[type="checkbox"] {
+    display: none;
+  }
