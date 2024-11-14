@@ -36,7 +36,7 @@
     </nav>
 
     <div class="back">
-        <a href="https://aso2301389.hippy.jp/carselect/member/top.php">Car Select</a>
+        <h2>Car Select</h2>
     </div>
 
     <script>
