@@ -36,7 +36,7 @@ if (isset($_POST['daihatu_x'])) {
 
 <div class="search">
   <!-- ブランド -->
-  <div class="brands-title"><h2>ブランド</h2></div>
+  <div class="title"><h2>ブランド</h2></div>
   <div class="checkbox-container">
   <label>
     <input type="checkbox" name="brands[]" value="Toyota">
@@ -81,14 +81,23 @@ if (isset($_POST['daihatu_x'])) {
   </div>
 
   <!-- 価格 -->
-  <div class="price-title">価格</div>
+  <div class="title"><h2>価格</h2></div>
   <div class="price-range">
   <form method="price" action="">
-    <input type="radio" name="price" value="30">～30万円</option>
-    <input type="radio" name="price" value="50">～50万円</option>
-    <input type="radio" name="price" value="100">～100万円</option>
-    <input type="radio" name="price" value="200">～200万円</option>
-    <input type="radio" name="price" value="200over">200万円～</option>
+  <input type="radio" name="price" value="30" id="price-30" hidden>
+    <button type="button" onclick="selectPrice('price-30')">～30万円</button>
+
+    <input type="radio" name="price" value="50" id="price-50" hidden>
+    <button type="button" onclick="selectPrice('price-50')">～50万円</button>
+
+    <input type="radio" name="price" value="100" id="price-100" hidden>
+    <button type="button" onclick="selectPrice('price-100')">～100万円</button>
+
+    <input type="radio" name="price" value="200" id="price-200" hidden>
+    <button type="button" onclick="selectPrice('price-200')">～200万円</button>
+
+    <input type="radio" name="price" value="200over" id="price-200over" hidden>
+    <button type="button" onclick="selectPrice('price-200over')">200万円～</button>
   </form>
   </div>
 
