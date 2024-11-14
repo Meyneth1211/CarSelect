@@ -82,24 +82,27 @@ if (isset($_POST['daihatu_x'])) {
 
   <!-- 価格 -->
   <div class="title"><h2>価格</h2></div>
-  <div class="price-range">
-  <form method="price" action="">
-  <input type="radio" name="price" value="30" id="price-30" hidden>
-    <button type="button" onclick="selectPrice('price-30')">～30万円</button>
+<div class="price-range">
+  <form method="post" action="">
+    <input type="radio" name="price" value="30" id="price-30" hidden>
+    <button type="button" onclick="selectPrice('price-30', '～30万円', this)">～30万円</button>
 
     <input type="radio" name="price" value="50" id="price-50" hidden>
-    <button type="button" onclick="selectPrice('price-50')">～50万円</button>
+    <button type="button" onclick="selectPrice('price-50', '～50万円', this)">～50万円</button>
 
     <input type="radio" name="price" value="100" id="price-100" hidden>
-    <button type="button" onclick="selectPrice('price-100')">～100万円</button>
+    <button type="button" onclick="selectPrice('price-100', '～100万円', this)">～100万円</button>
 
     <input type="radio" name="price" value="200" id="price-200" hidden>
-    <button type="button" onclick="selectPrice('price-200')">～200万円</button>
+    <button type="button" onclick="selectPrice('price-200', '～200万円', this)">～200万円</button>
 
     <input type="radio" name="price" value="200over" id="price-200over" hidden>
-    <button type="button" onclick="selectPrice('price-200over')">200万円～</button>
+    <button type="button" onclick="selectPrice('price-200over', '200万円～', this)">200万円～</button>
   </form>
-  </div>
+</div>
+<!-- もし価格が選択されていなければこれを表示 -->
+<div id="selected-price">選択された価格: なし</div>
+
 
   <!-- ボディタイプ -->
   <div class="body-type-title">ボディタイプ</div>
