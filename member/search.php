@@ -36,7 +36,7 @@ if (isset($_POST['daihatu_x'])) {
 
 <div class="search">
   <!-- ブランド -->
-  <div class="brands-title">ブランド</div>
+  <div class="brands-title"><h2>ブランド</h2></div>
   <div class="checkbox-container">
   <label>
     <input type="checkbox" name="brands[]" value="Toyota">
