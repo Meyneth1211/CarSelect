@@ -1,9 +1,35 @@
 <?php require('../header/header.php'); 
 
-if (isset($_POST['daihatu_x'])) {
   // Daihatsuの画像を表示
-  echo '<h1>Daihatsuの画像</h1>';
+if (isset($_POST['daihatu_x'])) {
   echo '<img src="../img/Daihatsu.png" alt="Daihatsu">';
+  // Subaruの画像を表示
+}else if (isset($_POST['subaru_x'])) {
+  echo '<img src="../img/Subaru.png" alt="Subaru">';
+  // Mazdaの画像を表示
+}else if (isset($_POST['matuda_x'])) {
+  echo '<img src="../img/Mazda.png" alt="Mazda">';
+  // Toyotaの画像を表示
+}else if (isset($_POST['toyota_x'])) {
+  echo '<img src="../img/Toyota.png" alt="Toyota">';
+  // Hondaの画像を表示
+}else if (isset($_POST['honda_x'])) {
+  echo '<img src="../img/Honda.png" alt="Honda">';
+  // Porscheの画像を表示
+}else if (isset($_POST['porsche_x'])) {
+  echo '<img src="../img/Porsche.png" alt="Porsche">';
+  // Lexusの画像を表示
+}else if (isset($_POST['lexus_x'])) {
+  echo '<img src="../img/Lexus.png" alt="Lexus">';
+  // Lamborghiniの画像を表示
+}else if (isset($_POST['lambo_x'])) {
+  echo '<img src="../img/Lamborghini.png" alt="Lamborghini">';
+  // BMWの画像を表示
+}else if (isset($_POST['bmw_x'])) {
+  echo '<img src="../img/BMW.png" alt="BMW">';
+  // Ferrariの画像を表示+
+}else if (isset($_POST['ferrari_x'])) {
+  echo '<img src="../img/Ferrari.png" alt="Ferrari">';
 }
 
 ?>
