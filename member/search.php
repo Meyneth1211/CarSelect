@@ -105,7 +105,7 @@ if (isset($_POST['daihatu_x'])) {
 
 
   <!-- ボディタイプ -->
-  <div class="title">ボディタイプ</div>
+  <div class="title"><h2>ボディタイプ</h2></div>
   <div class="body-type">
   <form method="body-type" action="">
     <label>
