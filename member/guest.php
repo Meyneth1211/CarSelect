@@ -1,5 +1,5 @@
 <?php require('../header/header.php'); ?>
-</body>
+<body>
     <div class="guestcreate">
         <div class="guestcreate-card">
             <h2>ゲスト登録</h2>
@@ -12,4 +12,5 @@
             </form>
         </div>
     </div>
+</body>
 </html>
