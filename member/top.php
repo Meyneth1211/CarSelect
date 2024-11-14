@@ -51,7 +51,7 @@
 <div class="car-logo">
     <input type="image" name="daihatu" src="../img/Daihatsu.png"  alt="" width="150px" height="auto">
     <input type="image" name="subaru" src="../img/Nissan.png"  alt="" width="180px" height="auto">
-    <input type="image" name="matuda" src="../img/Mazda.png"  alt="" width="150px" height="auto">
+    <input type="image" name="matuda" src="../img/Mazda.png"  alt="" width="170px" height="auto">
     <input type="image" name="toyota" src="../img/Toyota.png"  alt="" width="150px" height="auto">
     <input type="image" name="honda" src="../img/Honda.png"  alt="" width="180px" height="auto">
 </div>
