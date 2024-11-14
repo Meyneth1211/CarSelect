@@ -1,9 +1,10 @@
-/*ブランドの文字のスタイル*/
+/*すべてのtitle文字のスタイル*/
 .title h2{
   color: #fff;
+  padding-top: 50px;
 }
 
-/*チェックボックスの幅*/
+/*ブランドのチェックボックスの幅*/
 .checkbox-container {
     margin-bottom: 10px;
     display: flex;
@@ -11,7 +12,7 @@
     align-items: center;
     gap: 20px;
   }
-/* チェックボックスを非表示にする */
+/* ブランドのチェックボックスを非表示にする */
 .checkbox-container input[type="checkbox"] {
     display: none;
   }
@@ -22,7 +23,7 @@
     cursor: pointer;
   }
 
-  /* チェック時の画像に枠を追加する */
+  /* ブランドのチェック時の画像に枠を追加する */
   .checkbox-container input[type="checkbox"]:checked + img {
     border: 2px solid #007bff;
     border-radius: 4px;
@@ -59,3 +60,34 @@
       font-size: 10px;
       font-family:'メイリオ','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;
     }
+
+/*ボディタイプのチェックボックスの幅*/
+.body-type {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+/* ボディタイプのチェックボックスを非表示にする */
+.body-type input[type="checkbox"] {
+  display: none;
+}
+
+.body-type label {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* ボディタイプのチェック時の画像に枠を追加する */
+.body-type input[type="checkbox"]:checked + img {
+  border: 2px solid #007bff;
+  border-radius: 4px;
+}
+
+/* 画像のサイズ調整 */
+.body-type img {
+  width: 80px; /* 必要に応じてサイズを調整 */
+  height: auto;
+}
