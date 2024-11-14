@@ -38,17 +38,46 @@ if (isset($_POST['daihatu_x'])) {
   <!-- ブランド -->
   <div class="brands-title">ブランド</div>
   <div class="checkbox-container">
-    <label><input type="checkbox" name="blands[]" value="Toyota"></label>
-    <label><input type="checkbox" name="blands[]" value="Mazda"></label>
-    <label><input type="checkbox" name="blands[]" value="Lexus"></label>
-    <label><input type="checkbox" name="blands[]" value="Honda"></label>
-    <label><input type="checkbox" name="blands[]" value="Porsche"></label>
-    <label><input type="checkbox" name="blands[]" value="Ferrari"></label>
-    <label><input type="checkbox" name="blands[]" value="Lamborghini"></label>
-    <label><input type="checkbox" name="blands[]" value="BMW"></label>
-    <label><input type="checkbox" name="blands[]" value="Daihatsu"></label>
-    <label><input type="checkbox" name="blands[]" value="Nissan"></label>  
-  </form>
+  <label>
+    <input type="checkbox" name="brands[]" value="Toyota">
+    <img src="../img/Toyota.png" alt="Toyota">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Mazda">
+    <img src="../img/Mazda.png" alt="Mazda">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Lexus">
+    <img src="../img/Lexus.png" alt="Lexus">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Honda">
+    <img src="../img/Honda.png" alt="Honda">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Porsche">
+    <img src="../img/Porsche.png" alt="Porsche">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Ferrari">
+    <img src="../img/Ferrari.png" alt="Ferrari">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Lamborghini">
+    <img src="../img/Lamborghini.png" alt="Lamborghini">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="BMW">
+    <img src="../img/BMW.png" alt="BMW">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Daihatsu">
+    <img src="../img/Daihatsu.png" alt="Daihatsu">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Nissan">
+    <img src="../img/Nissan.png" alt="Nissan" width="150px">
+  </label>
   </div>
 
   <!-- 価格 -->
