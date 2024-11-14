@@ -105,14 +105,29 @@ if (isset($_POST['daihatu_x'])) {
 
 
   <!-- ボディタイプ -->
-  <div class="body-type-title">ボディタイプ</div>
+  <div class="title">ボディタイプ</div>
   <div class="body-type">
   <form method="body-type" action="">
-    <label><input type="checkbox" name="body-type[]" value="Sedan"></label>
-    <label><input type="checkbox" name="body-type[]" value="SUV"></label>
-    <label><input type="checkbox" name="body-type[]" value="Wagon"></label>
-    <label><input type="checkbox" name="body-type[]" value="Conpact"></label>
-    <label><input type="checkbox" name="body-type[]" value="Light"></label>
+    <label>
+      <input type="checkbox" name="body-type[]" value="Sedan">
+      <img src="../img/セダン.png" alt="セダン" width="100px">
+    </label>
+    <label>
+      <input type="checkbox" name="body-type[]" value="SUV">
+      <img src="../img/SUV.png" alt="SUV" width="100px">
+    </label>
+    <label>
+      <input type="checkbox" name="body-type[]" value="Wagon">
+      <img src="../img/トラック.png" alt="ワゴン" width="100px">
+    </label>
+    <label>
+      <input type="checkbox" name="body-type[]" value="Conpact">
+      <img src="../img/ワンボックスカー.png" alt="コンパクト" width="100px">
+    </label>
+    <label>
+      <input type="checkbox" name="body-type[]" value="Light">
+      <img src="../img/スポーツカー.png" alt="スポーツカー" width="100px">
+    </label>
   </form>
   </div>
 
