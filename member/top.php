@@ -56,11 +56,11 @@
     <input type="image" name="honda" src="../img/Honda.png"  alt="" width="200px" height="auto">
 </div>
 <div class="car-logo2">
-    <input type="image" name="porsche" src="../img/Porsche.png"  alt="" width="200px" height="auto">
-    <input type="image" name="lexus" src="../img/Lexus.png"  alt="" width="200px" height="auto">
-    <input type="image" name="lambo" src="../img/Lamborghini.png"  alt="" width="200px" height="auto">
-    <input type="image" name="bmw" src="../img/BMW.png"  alt="" width="200px" height="auto">
-    <input type="image" name="ferrari" src="../img/Ferrari.png"  alt="" width="200px" height="auto">
+    <input type="image" name="porsche" src="../img/Porsche.png"  alt="" width="150px" height="auto">
+    <input type="image" name="lexus" src="../img/Lexus.png"  alt="" width="150px" height="auto">
+    <input type="image" name="lambo" src="../img/Lamborghini.png"  alt="" width="150px" height="auto">
+    <input type="image" name="bmw" src="../img/BMW.png"  alt="" width="150px" height="auto">
+    <input type="image" name="ferrari" src="../img/Ferrari.png"  alt="" width="150px" height="auto">
 </div>
 </form>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
