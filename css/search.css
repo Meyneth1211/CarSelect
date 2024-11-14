@@ -88,6 +88,6 @@
 
 /* 画像のサイズ調整 */
 .body-type img {
-  width: 50px; /* 必要に応じてサイズを調整 */
+  width: 65px; /* 必要に応じてサイズを調整 */
   height: auto;
 }
