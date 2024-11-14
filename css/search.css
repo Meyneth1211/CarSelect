@@ -1,3 +1,9 @@
+/*ブランドの文字のスタイル*/
+.brands title {
+  color: #fff;
+}
+
+/*チェックボックスの幅*/
 .checkbox-container {
     margin-bottom: 10px;
     display: flex;
