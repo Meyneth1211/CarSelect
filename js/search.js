@@ -18,4 +18,5 @@ function selectPrice(id, priceLabel, buttonElement) {
 
     // 選択された価格を表示
     document.getElementById('selected-price').innerText = `選択された価格: ${priceLabel}`;
+    document.getElementById('selected-price').style.color = "#fff";  // フォント色の変更
   }
