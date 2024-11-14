@@ -110,23 +110,23 @@ if (isset($_POST['daihatu_x'])) {
   <form method="body-type" action="">
     <label>
       <input type="checkbox" name="body-type[]" value="Sedan">
-      <img src="../img/セダン.png" alt="セダン" width="50px">
+      <img src="../img/セダン.png" alt="セダン" width="40px">
     </label>
     <label>
       <input type="checkbox" name="body-type[]" value="SUV">
-      <img src="../img/SUV.png" alt="SUV" width="50px">
+      <img src="../img/SUV.png" alt="SUV" width="40px">
     </label>
     <label>
       <input type="checkbox" name="body-type[]" value="Wagon">
-      <img src="../img/トラック.png" alt="ワゴン" width="50px">
+      <img src="../img/トラック.png" alt="ワゴン" width="30px">
     </label>
     <label>
       <input type="checkbox" name="body-type[]" value="Conpact">
-      <img src="../img/ワンボックスカー.png" alt="コンパクト" width="50px">
+      <img src="../img/ワンボックスカー.png" alt="コンパクト" width="30px">
     </label>
     <label>
       <input type="checkbox" name="body-type[]" value="Light">
-      <img src="../img/スポーツカー.png" alt="スポーツカー" width="50px">
+      <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
     </label>
   </form>
   </div>
