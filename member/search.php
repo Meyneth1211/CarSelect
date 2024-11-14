@@ -3,9 +3,9 @@
   // Daihatsuの画像を表示
 if (isset($_POST['daihatu_x'])) {
   echo '<img src="../img/Daihatsu.png" alt="Daihatsu">';
-  // Subaruの画像を表示
-}else if (isset($_POST['subaru_x'])) {
-  echo '<img src="../img/Subaru.png" alt="Subaru">';
+  // Nissanの画像を表示
+}else if (isset($_POST['nissan_x'])) {
+  echo '<img src="../img/Nissan.png" alt="Nissan">';
   // Mazdaの画像を表示
 }else if (isset($_POST['matuda_x'])) {
   echo '<img src="../img/Mazda.png" alt="Mazda">';
@@ -59,7 +59,7 @@ if (isset($_POST['daihatu_x'])) {
     <label><input type="checkbox" name="blands[]" value="Lamborghini"></label>
     <label><input type="checkbox" name="blands[]" value="BMW"></label>
     <label><input type="checkbox" name="blands[]" value="Daihatsu"></label>
-    <label><input type="checkbox" name="blands[]" value="Subaru"></label>  
+    <label><input type="checkbox" name="blands[]" value="Nissan"></label>  
   </form>
   </div>
 
