@@ -5,7 +5,7 @@ if (isset($_POST['daihatu_x'])) {
   echo '<img src="../img/Daihatsu.png" alt="Daihatsu">';
   // Nissanの画像を表示
 }else if (isset($_POST['nissan_x'])) {
-  echo '<img src="../img/Nissan.png" alt="Nissan">';
+  echo '<img src="../img/Nissan.png" alt="Nissan" width="150px">';
   // Mazdaの画像を表示
 }else if (isset($_POST['matuda_x'])) {
   echo '<img src="../img/Mazda.png" alt="Mazda">';
