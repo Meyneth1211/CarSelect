@@ -1,7 +1,9 @@
 .checkbox-container {
-    display: flex;
-    align-items: center;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 /* チェックボックスを非表示にする */
 .checkbox-container input[type="checkbox"] {
