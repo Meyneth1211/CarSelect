@@ -21,11 +21,11 @@ if (isset($_SESSION['user_id'])) {
         echo '<p class="account-message2">住所: ' . $user['user_address'] . '</p><br>';
         echo '</div></div>';
     } else {
-        echo 'アカウント情報が見つかりませんでした。';
+        echo 'アカウント情報が見つかりませんでした';
     }
 } else {
     echo '<div class="error-back"><div class="error-card">';
-    echo '<div class="account-message3">ログインしてください。</div>';
+    echo '<div class="account-message3">ログインしてください</div>';
     echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="ログインする"></form></div></div>';
 }
 ?>
