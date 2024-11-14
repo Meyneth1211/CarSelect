@@ -40,7 +40,7 @@ if (isset($_POST['daihatu_x'])) {
   <div class="checkbox-container">
   <label>
     <input type="checkbox" name="brands[]" value="Toyota">
-    <img src="../img/Toyota.png" alt="Toyota" >
+    <img src="../img/Toyota.png" alt="Toyota" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Mazda">
@@ -76,7 +76,7 @@ if (isset($_POST['daihatu_x'])) {
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Nissan">
-    <img src="../img/Nissan.png" alt="Nissan" width="150px">
+    <img src="../img/Nissan.png" alt="Nissan" width="100px">
   </label>
   </div>
 
