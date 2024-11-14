@@ -40,39 +40,39 @@ if (isset($_POST['daihatu_x'])) {
   <div class="checkbox-container">
   <label>
     <input type="checkbox" name="brands[]" value="Toyota">
-    <img src="../img/Toyota.png" alt="Toyota">
+    <img src="../img/Toyota.png" alt="Toyota" >
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Mazda">
-    <img src="../img/Mazda.png" alt="Mazda">
+    <img src="../img/Mazda.png" alt="Mazda" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Lexus">
-    <img src="../img/Lexus.png" alt="Lexus">
+    <img src="../img/Lexus.png" alt="Lexus" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Honda">
-    <img src="../img/Honda.png" alt="Honda">
+    <img src="../img/Honda.png" alt="Honda" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Porsche">
-    <img src="../img/Porsche.png" alt="Porsche">
+    <img src="../img/Porsche.png" alt="Porsche" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Ferrari">
-    <img src="../img/Ferrari.png" alt="Ferrari">
+    <img src="../img/Ferrari.png" alt="Ferrari" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Lamborghini">
-    <img src="../img/Lamborghini.png" alt="Lamborghini">
+    <img src="../img/Lamborghini.png" alt="Lamborghini" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="BMW">
-    <img src="../img/BMW.png" alt="BMW">
+    <img src="../img/BMW.png" alt="BMW" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Daihatsu">
-    <img src="../img/Daihatsu.png" alt="Daihatsu">
+    <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="Nissan">
