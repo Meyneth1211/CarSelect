@@ -3,12 +3,12 @@
     <div class="guestcreate">
         <div class="guestcreate-card">
             <h2>ゲスト登録</h2>
-            <form class="guestcreate-form" action="" method="post">
+            <form class="guestcreate-form" action="card.php" method="post">
                 <input class="guestname" name="name" type="text" placeholder="name">
                 <input class="guestmail" name="mail" type="email" placeholder="Email">
                 <input class="guestaddress" name="address" type="text" placeholder="address">
                 <div class="guesttop"></div>
-                <input class="guestbutton" type="submit" action="card.php" value="登録">
+                <input class="guestbutton" type="submit" value="登録">
             </form>
         </div>
     </div>
