@@ -101,7 +101,7 @@ if (isset($_POST['daihatu_x'])) {
   </form>
 </div>
 <!-- もし価格が選択されていなければこれを表示 -->
-<div class="select-color" id="selected-price">選択された価格: なし</div>
+<div class="select-color" id="selected-price"><p>選択された価格: なし</p></div>
 
 
   <!-- ボディタイプ -->
