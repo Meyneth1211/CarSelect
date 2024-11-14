@@ -45,7 +45,7 @@
     cursor: pointer;
     border-radius: 4px;
     color: #333;
-    font-family: 'ＭＳ Ｐ明朝', serif;
+    font-family:'メイリオ','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;
   }
 
   /* 選択されているボタンにスタイルを追加 */
