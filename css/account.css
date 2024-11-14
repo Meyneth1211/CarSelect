@@ -1,6 +1,7 @@
 .account-message{
     color: #fff;
     font-size: 40px;
+    border-bottom: double 6px #fff;
 }
 
 .account-back{
