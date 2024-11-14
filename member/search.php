@@ -37,21 +37,7 @@ if (isset($_POST['daihatu_x'])) {
 <div class="search">
   <!-- ブランド -->
   <div class="brands-title">ブランド</div>
-  <div class="brands" select name="blands" id="blands">
-  <form method="blands" action="">
-  <!-- テスト -->
-    <form>
-    <input type="checkbox" id="checkbox1">
-    <label class="checkmark" for="checkbox1">
-      <img src="../img/Daihatsu.png" alt="">
-    </label>
-    <label for="checkbox1"></label>
-    </form>
-
-  <!-- テスト終了 -->
-  <form>
   <div class="checkbox-container">
-  </div>
     <label><input type="checkbox" name="blands[]" value="Toyota"></label>
     <label><input type="checkbox" name="blands[]" value="Mazda"></label>
     <label><input type="checkbox" name="blands[]" value="Lexus"></label>
