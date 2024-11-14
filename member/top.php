@@ -53,7 +53,7 @@
     <input type="image" name="subaru" src="../img/Subaru.png"  alt="" width="200px" height="auto">
     <input type="image" name="matuda" src="../img/Mazda.png"  alt="" width="150px" height="auto">
     <input type="image" name="toyota" src="../img/Toyota.png"  alt="" width="150px" height="auto">
-    <input type="image" name="honda" src="../img/Honda.png"  alt="" width="200px" height="auto">
+    <input type="image" name="honda" src="../img/Honda.png"  alt="" width="180px" height="auto">
 </div>
 <div class="car-logo2">
     <input type="image" name="porsche" src="../img/Porsche.png"  alt="" width="170px" height="auto">
