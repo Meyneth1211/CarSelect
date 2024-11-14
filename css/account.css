@@ -4,6 +4,12 @@
     border-bottom: double 6px #fff;
 }
 
+.account-message2{
+    color: #fff;
+    font-size: 20px;
+}
+
+
 .account-back{
     place-items: center;
     margin-top: 12vh;
