@@ -7,3 +7,21 @@
 .checkbox-container input[type="checkbox"] {
     display: none;
   }
+
+  .checkbox-container label {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  /* チェック時の画像に枠を追加する */
+  .checkbox-container input[type="checkbox"]:checked + img {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+  }
+
+  /* 画像のサイズ調整 */
+  .checkbox-container img {
+    width: 80px; /* 必要に応じてサイズを調整 */
+    height: auto;
+  }
