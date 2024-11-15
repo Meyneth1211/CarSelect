@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+.kounyuu{
+    place-items: center;
+    margin-top: 12vh;
+}
+
+.kounyuu{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background-color: rgba(33, 4, 4, 0.562);
+    text-align: center;
+    border: 5px solid #333;
+} 
+
+.kounyuu:hover{
+    border: 5px solid #0ef;
+    box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+
+.kounyuu h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: #fff;
+}
+
+.kounyuu h3{    
+    color: rgba(0,0,0,0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: lrem;
+}
+
+.kounyuu-form{
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.card-button1{
+    width: 65%;
+    height: 40px;
+}
+
+.card-button2{
+    width: 65%;
+    height: 40px;
+}
+
+.kounyuu-form input{
+    border: 2px solid #333;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
+}
+.kounyuu-form input:hover{
+    border: 2px solid #0ef;
+    box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+.kounyuu-form button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background: #216ce7;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: lrem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+.kounyuu{
+    background-color: #18191F;
+    color: #fff;
+}
+
+.kounyuu-button2{
+    background-color: red;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.p-color p{
+    color: #fff;
+}
+
+.kounyuu-form > button:hover{
+    background: #10449A;
+}
+
+@media (width >= 500PX){
+    body{
+        padding: 0;
+    }
+    .kounyuu{
+        margin: 0;
+        width: 600px;
+        height: 500px;
+    }
+}

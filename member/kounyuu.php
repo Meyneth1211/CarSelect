@@ -1,5 +1,7 @@
 <?php require('../header/header.php'); ?>
-<body>
-    <input type="button" onclick="location.href='./kounyuu.php'" value="戻る">
-    <input type="button" onclick="location.href='./kounyuu.php'" value="購入確定">
-</body>
+<div class="kounyuu">
+<form class="kounyuu-form" action="kounyuu_kanryou.php" method="post">
+    <input class="kounyuu-button1" type="submit" value="戻る">
+    <input class="kounyuu-button2" type="submit" value="購入確定">
+</form>
+</div>
