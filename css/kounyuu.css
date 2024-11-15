@@ -6,7 +6,7 @@
     margin-top: 12vh;
 }
 
-.kounyuu{
+.kounyuu-card{
     position: relative;
     z-index: 3;
     width: 100%;
@@ -18,19 +18,19 @@
     border: 5px solid #333;
 } 
 
-.kounyuu:hover{
+.kounyuu-card:hover{
     border: 5px solid #0ef;
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-.kounyuu h2{
+.kounyuu-card h2{
     font-size: 36px;
     font-weight: 600;
     margin: 0 0 12px;
     color: #fff;
 }
 
-.kounyuu h3{    
+.kounyuu-card h3{    
     color: rgba(0,0,0,0.38);
     margin: 0 0 30px;
     font-weight: 500;
@@ -82,11 +82,6 @@
     text-align: center;
     letter-spacing: 2px;
     transition: all 0.375s;
-}
-
-.kounyuu{
-    background-color: #18191F;
-    color: #fff;
 }
 
 .kounyuu-button2{
