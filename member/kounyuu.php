@@ -1,4 +1,5 @@
 <?php require('../header/header.php'); ?>
+<body>
 <div class="kounyuu">
     <div class="kounyuu-card">
     <form class="kounyuu-form" action="" method="post">
@@ -7,3 +8,5 @@
     </form>
 </div>
 </div>
+</body>
+</html>
