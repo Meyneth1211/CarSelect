@@ -30,29 +30,13 @@
     color: #fff;
 }
 
-.kounyuu-card h3{    
-    color: rgba(0,0,0,0.38);
-    margin: 0 0 30px;
-    font-weight: 500;
-    font-size: lrem;
-}
-
-.kounyuu-form{
-    width: 100%;
-    margin: 0;
-    margin-top: 30px;
-    display: grid;
-    gap: 16px;
-    margin-top: 20px;
-}
-
-.card-button1{
-    width: 65%;
+.kounyuu-button1{
+    width: 35%;
     height: 40px;
 }
 
-.card-button2{
-    width: 65%;
+.kounyuu-button2{
+    width: 35%;
     height: 40px;
 }
 
@@ -64,6 +48,7 @@
     border-radius: 1.25rem;
     transition: all 0.375s;
 }
+
 .kounyuu-form input:hover{
     border: 2px solid #0ef;
     box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
@@ -88,10 +73,6 @@
     background-color: red;
     color: #fff;
     margin-top: 20px;
-}
-
-.p-color p{
-    color: #fff;
 }
 
 .kounyuu-form > button:hover{
