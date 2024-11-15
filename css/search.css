@@ -91,3 +91,49 @@
   width: 65px; /* 必要に応じてサイズを調整 */
   height: auto;
 }
+
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  background-color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.color-button input[type="checkbox"] {
+  display: none;
+}
+
+.color-button input[type="checkbox"]:checked + label,
+.color-button input[type="checkbox"]:checked {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.color-button:first-of-type {
+  background-color: black;
+}
+
+.color-button:last-of-type {
+  background-color: white;
+  color: black;
+}
+
+.color-button input[type="checkbox"]:checked + .color-button:first-of-type {
+  background-color: black;
+  color: white;
+}
+
+.color-button input[type="checkbox"]:checked + .color-button:last-of-type {
+  background-color: white;
+  color: black;
+}
