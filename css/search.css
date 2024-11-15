@@ -92,48 +92,45 @@
   height: auto;
 }
 
+
+
+/*ここからテスト */
+/* ボタン全体の配置と間隔 */
 .color-options {
-  display: flex;
-  gap: 10px;
+  display: flex;         /* 横並びに配置 */
+  gap: 10px;             /* ボタン間のスペース */
 }
 
+/* ボタン風のラベルスタイル */
 .color-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  color: white;
-  background-color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 20px;    /* ボタンの内側余白 */
+  border-radius: 5px;    /* ボタンの角を丸める */
+  cursor: pointer;       /* マウスカーソルをポインターにする */
+  font-size: 16px;       /* テキストサイズ */
+  transition: 0.3s;      /* 色変更のアニメーション */
 }
 
+/* 初期スタイル（ブラックボタン） */
+.color-button:nth-of-type(1) {
+  background-color: black; /* 背景色を黒に */
+  color: white;            /* テキストを白に */
+}
+
+/* 初期スタイル（ホワイトボタン） */
+.color-button:nth-of-type(2) {
+  background-color: white; /* 背景色を白に */
+  color: black;            /* テキストを黒に */
+  border: 1px solid black; /* 黒のボーダーを追加 */
+}
+
+/* チェックボックスを非表示 */
 .color-button input[type="checkbox"] {
-  display: none;
+  display: none;           /* チェックボックスを非表示にする */
 }
 
-.color-button input[type="checkbox"]:checked + label,
-.color-button input[type="checkbox"]:checked {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-}
-
-.color-button:first-of-type {
-  background-color: black;
-}
-
-.color-button:last-of-type {
-  background-color: white;
-  color: black;
-}
-
-.color-button input[type="checkbox"]:checked + .color-button:first-of-type {
-  background-color: black;
-  color: white;
-}
-
-.color-button input[type="checkbox"]:checked + .color-button:last-of-type {
-  background-color: white;
-  color: black;
+/* チェックされたときのスタイル */
+.color-button input[type="checkbox"]:checked + span {
+  background-color: white; /* 背景色を白に変更 */
+  color: black;            /* テキストを黒に変更 */
+  border: 1px solid black; /* 黒のボーダーを追加 */
 }
