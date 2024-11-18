@@ -95,10 +95,14 @@
 
 
 /*ここからテスト */
+
 .color-options {
   display: flex;
-  gap: 10px;
+  gap: 10px; /* ボタン間の間隔を調整 */
+  justify-content: center; /* 親コンテナ内で中央寄せ */
+  align-items: center; /* 垂直方向に中央寄せ */
 }
+
 
 .color-options input[type="checkbox"] {
   display: none; /* チェックボックスを非表示にする */
