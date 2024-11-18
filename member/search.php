@@ -39,7 +39,7 @@ if (isset($_POST['daihatu_x'])) {
   <div class="title"><h2>ブランド</h2></div>
   <div class="checkbox-container">
   <label>
-    <input type="checkbox" name="brands[]" value="Toyota">
+    <input type="checkbox" name="brands[]" value="Toyota" checked>
     <img src="../img/Toyota.png" alt="Toyota" width="100px">
   </label>
   <label>
