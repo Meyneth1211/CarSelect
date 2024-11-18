@@ -1,4 +1,4 @@
-<?php
+<?php require('../header/header.php'); 
 // 初期化
 $selected_brands = [];
 
