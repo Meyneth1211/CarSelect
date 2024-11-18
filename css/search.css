@@ -97,8 +97,9 @@
 /*ここからテスト */
 
 .color-options {
-  display: flex;
-  gap: 10px;
+  display: flex; /* 子要素を横並びにする */
+  justify-content: center; /* 横方向の中央揃え */
+  margin: 20px 0; /* 上下に余白を追加 */
 }
 
 .color-options input[type="checkbox"] {
@@ -109,7 +110,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 400px;
   height: 40px;
   font-size: 16px;
   font-weight: bold;
@@ -131,6 +132,7 @@
   background-color: white;
   color: black;
   border: 2px solid black;
+  margin: 20px auto;
 }
 
 /* チェック時のスタイル */
@@ -138,7 +140,6 @@ input[type="checkbox"]:checked + label {
   background-color: gray;
   color: white;
 }
-
 
 
 
