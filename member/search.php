@@ -6,9 +6,8 @@ $selected_brands = [];
 
 // POSTデータが送信されている場合
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // 送信された車ブランドを配列に格納
     if (isset($_POST['brands'])) {
-        $selected_brands = $_POST['brands']; // 配列として受け取る
+        $selected_brands = $_POST['brands']; // 送信されたブランドを配列として格納
     }
 }
 ?>
@@ -58,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </label>
   </div>
 </form>
+
 
 
 
