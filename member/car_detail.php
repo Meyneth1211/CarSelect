@@ -20,7 +20,7 @@
             $output=$stmt->fetch();
             var_dump($output);
             foreach ($output as $row) {
-                echo '<img src="'. $row['image']. '">';
+                echo '<img src="',$row['image'],'">';
             }
             $pdo=null;
         ?>
