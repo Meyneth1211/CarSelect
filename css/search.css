@@ -96,28 +96,23 @@
 
 /*ここからテスト */
 
-/* 親コンテナを中央揃えで横並び */
 .color-options {
-  display: flex; /* 子要素を横並びにする */
-  gap: 20px; /* 各アイテムの間隔を指定 */
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center; /* 縦方向の中央揃え */
-  margin: 20px 0; /* 上下に余白を追加 */
+  display: flex; /* 子要素を横並びに */
+  gap: 10px; /* 各ボタンの間隔 */
+  justify-content: flex-start; /* 必要に応じて中央寄せ: center */
+  align-items: center; /* ボタンの垂直方向を揃える */
 }
 
-/* 子要素ごとにデザインを適用 */
 .color-item {
-  display: flex;
-  flex-direction: column; /* 子要素を縦に並べたい場合はこれを残す */
-  align-items: center; /* 中央揃え */
+  display: flex; /* チェックボックスとラベルを横並びに */
+  flex-direction: column; /* 必要なら縦並びに調整も可能 */
+  align-items: center; /* コンテンツを中央に揃える */
 }
 
-/* チェックボックスは非表示 */
 .color-options input[type="checkbox"] {
-  display: none;
+  display: none; /* デフォルトのチェックボックスを非表示 */
 }
 
-/* ラベルのスタイル設定 */
 .color-options label {
   display: flex;
   align-items: center;
@@ -132,25 +127,24 @@
   text-align: center;
 }
 
-/* ブラックボタンのスタイル */
+/* ブラックラベルのデフォルトデザイン */
 .color-item input[type="checkbox"]#black + label {
   background-color: black;
   color: white;
 }
 
-/* ホワイトボタンのスタイル */
+/* ホワイトラベルのデフォルトデザイン */
 .color-item input[type="checkbox"]#white + label {
   background-color: white;
   color: black;
   border: 2px solid black;
 }
 
-/* チェックされた時のスタイル */
+/* チェックされたときのデザイン */
 input[type="checkbox"]:checked + label {
   background-color: gray;
   color: white;
 }
-
 
 
 
