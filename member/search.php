@@ -4,17 +4,17 @@ $selected_brands = [];
 
 // POSTデータが送信されている場合
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // 送信された車ブランドを配列に格納
-    foreach ($_POST as $key => $value) {
-        // 画像ボタンで送信されたブランドを配列に追加
-        $selected_brands[] = $value;
+    // 送信されたブランド名を配列に格納
+    if (isset($_POST['brand'])) {
+        $selected_brands[] = $_POST['brand'];
     }
 }
 ?>
+
 <div class="search"></div>
-  <form action="search.php" method="post">
-      <div class="title"><h2>ブランド</h2></div>
-      <div class="checkbox-container">
+<form action="search.php" method="post">
+    <div class="title"><h2>ブランド</h2></div>
+    <div class="checkbox-container">
         <label>
             <input type="checkbox" name="brands[]" value="Toyota" <?php echo (in_array('Toyota', $selected_brands)) ? 'checked' : ''; ?>>
             <img src="../img/Toyota.png" alt="Toyota" width="100px">
@@ -56,9 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <img src="../img/Nissan.png" alt="Nissan" width="100px">
         </label>
     </div>
-  </form>
+</form>
 
-</div>
 
   <!-- 価格 -->
   <div class="title"><h2>価格</h2></div>
