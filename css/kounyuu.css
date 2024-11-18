@@ -1,12 +1,9 @@
-*{
-    box-sizing: border-box;
-}
 .kounyuu{
     place-items: center;
     margin-top: 12vh;
 }
 
-.kounyuu-card{
+.login-card{
     position: relative;
     z-index: 3;
     width: 100%;
@@ -16,31 +13,39 @@
     background-color: rgba(33, 4, 4, 0.562);
     text-align: center;
     border: 5px solid #333;
-} 
+}
 
-.kounyuu-card:hover{
+.login-card:hover{
     border: 5px solid #0ef;
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-.kounyuu-card h2{
+.login-card > h2{
     font-size: 36px;
     font-weight: 600;
     margin: 0 0 12px;
     color: #fff;
 }
 
-.kounyuu-button1{
-    width: 35%;
-    height: 40px;
+.login-card > h3{    
+    color: rgba(0,0,0,0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: lrem;
 }
-
-.kounyuu-button2{
-    width: 35%;
-    height: 40px;
+.login-form{
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
 }
-
-.kounyuu-form input{
+.login-form > input, .login-form > button{
+    width: 100%;
+    height: 50px;
+}
+.login-form > input{
     border: 2px solid #333;
     font-family: inherit;
     font-size: 15px;
@@ -48,12 +53,11 @@
     border-radius: 1.25rem;
     transition: all 0.375s;
 }
-
-.kounyuu-form input:hover{
+.login-form > input:hover{
     border: 2px solid #0ef;
     box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
 }
-.kounyuu-form button{
+.login-form > button{
     cursor: pointer;
     width: 100%;
     padding: 0 16px;
@@ -69,13 +73,17 @@
     transition: all 0.375s;
 }
 
-.kounyuu-button2{
+.button-1{
     background-color: red;
     color: #fff;
-    margin-top: 20px;
 }
 
-.kounyuu-form > button:hover{
+.button-2{
+    background-color: rgba(33, 4, 4, 0.562);
+    color: #fff;
+}
+
+.login-form > button:hover{
     background: #10449A;
 }
 
@@ -83,9 +91,11 @@
     body{
         padding: 0;
     }
-    .kounyuu{
+    .login-card{
         margin: 0;
         width: 600px;
         height: 500px;
     }
 }
+
+
