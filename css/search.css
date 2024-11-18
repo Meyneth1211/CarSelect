@@ -100,6 +100,10 @@
   gap: 10px;
 }
 
+.color-options input[type="checkbox"] {
+  display: none; /* チェックボックスを非表示にする */
+}
+
 .color-options label {
   display: flex;
   align-items: center;
@@ -109,31 +113,29 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  border: none;
   border-radius: 5px;
-  color: #fff;
-  background-color: black;
+  border: 2px solid transparent; /* ボーダーのデフォルトを透明に */
+  transition: all 0.3s ease;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.color-options input[type="checkbox"] {
-  display: none;
-}
-
+/* ブラックボタンのデフォルトスタイル */
 .color-brack label {
   background-color: black;
   color: white;
 }
 
+/* ホワイトボタンのデフォルトスタイル */
 .color-white label {
   background-color: white;
   color: black;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
-.color-options input[type="checkbox"]:checked + label {
+/* チェック時のスタイル */
+input[type="checkbox"]:checked + label {
   background-color: gray;
   color: white;
 }
+
 
