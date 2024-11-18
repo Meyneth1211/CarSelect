@@ -97,15 +97,20 @@
 /*ここからテスト */
 
 .color-options {
-  display: flex;
-  gap: 10px; /* ボタン間の間隔を調整 */
-  justify-content: center; /* 親コンテナ内で中央寄せ */
-  align-items: center; /* 垂直方向に中央寄せ */
+  display: flex; /* 子要素を横並びに */
+  gap: 10px; /* 各ボタンの間隔 */
+  justify-content: flex-start; /* 必要に応じて中央寄せ: center */
+  align-items: center; /* ボタンの垂直方向を揃える */
 }
 
+.color-item {
+  display: flex; /* チェックボックスとラベルを横並びに */
+  flex-direction: column; /* 必要なら縦並びに調整も可能 */
+  align-items: center; /* コンテンツを中央に揃える */
+}
 
 .color-options input[type="checkbox"] {
-  display: none; /* チェックボックスを非表示にする */
+  display: none; /* デフォルトのチェックボックスを非表示 */
 }
 
 .color-options label {
@@ -118,28 +123,28 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  border: 2px solid transparent; /* ボーダーのデフォルトを透明に */
   transition: all 0.3s ease;
   text-align: center;
 }
 
-/* ブラックボタンのデフォルトスタイル */
-.color-brack label {
+/* ブラックラベルのデフォルトデザイン */
+.color-item input[type="checkbox"]#black + label {
   background-color: black;
   color: white;
 }
 
-/* ホワイトボタンのデフォルトスタイル */
-.color-white label {
+/* ホワイトラベルのデフォルトデザイン */
+.color-item input[type="checkbox"]#white + label {
   background-color: white;
   color: black;
   border: 2px solid black;
 }
 
-/* チェック時のスタイル */
+/* チェックされたときのデザイン */
 input[type="checkbox"]:checked + label {
   background-color: gray;
   color: white;
 }
+
 
 
