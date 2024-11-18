@@ -50,19 +50,20 @@
   </ul>
 
   <div class="car-logo">
-    <input type="image" name="brands[]" value="Daihatsu" src="../img/Daihatsu.png" alt="Daihatsu" width="150px" height="auto">
-    <input type="image" name="brands[]" value="Nissan" src="../img/Nissan.png" alt="Nissan" width="180px" height="auto">
-    <input type="image" name="brands[]" value="Mazda" src="../img/Mazda.png" alt="Mazda" width="170px" height="auto">
-    <input type="image" name="brands[]" value="Toyota" src="../img/Toyota.png" alt="Toyota" width="150px" height="auto">
-    <input type="image" name="brands[]" value="Honda" src="../img/Honda.png" alt="Honda" width="180px" height="auto">
+    <input type="image" src="" alt="">
+    <input type="image" name="brands" value="Daihatsu" src="../img/Daihatsu.png" alt="Daihatsu" width="150px" height="auto">
+    <input type="image" name="brands" value="Nissan" src="../img/Nissan.png" alt="Nissan" width="180px" height="auto">
+    <input type="image" name="brands" value="Mazda" src="../img/Mazda.png" alt="Mazda" width="170px" height="auto">
+    <input type="image" name="brands" value="Toyota" src="../img/Toyota.png" alt="Toyota" width="150px" height="auto">
+    <input type="image" name="brands" value="Honda" src="../img/Honda.png" alt="Honda" width="180px" height="auto">
   </div>
 
   <div class="car-logo2">
-    <input type="image" name="brands[]" value="Porsche" src="../img/Porsche.png" alt="Porsche" width="170px" height="auto">
-    <input type="image" name="brands[]" value="Lexus" src="../img/Lexus.png" alt="Lexus" width="170px" height="auto">
-    <input type="image" name="brands[]" value="Lamborghini" src="../img/Lamborghini.png" alt="Lamborghini" width="170px" height="auto">
-    <input type="image" name="brands[]" value="BMW" src="../img/BMW.png" alt="BMW" width="170px" height="auto">
-    <input type="image" name="brands[]" value="Ferrari" src="../img/Ferrari.png" alt="Ferrari" width="170px" height="auto">
+    <input type="image" name="brands" value="Porsche" src="../img/Porsche.png" alt="Porsche" width="170px" height="auto">
+    <input type="image" name="brands" value="Lexus" src="../img/Lexus.png" alt="Lexus" width="170px" height="auto">
+    <input type="image" name="brands" value="Lamborghini" src="../img/Lamborghini.png" alt="Lamborghini" width="170px" height="auto">
+    <input type="image" name="brands" value="BMW" src="../img/BMW.png" alt="BMW" width="170px" height="auto">
+    <input type="image" name="brands" value="Ferrari" src="../img/Ferrari.png" alt="Ferrari" width="170px" height="auto">
   </div>
 </form>
 
