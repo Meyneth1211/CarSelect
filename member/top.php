@@ -86,7 +86,6 @@
             <img src="../img/Nissan.png" alt="Nissan" width="100px">
         </label>
     </div>
-    <input type="submit" value="検索">
 </form>
 
 
