@@ -137,17 +137,16 @@ if (isset($_POST['daihatu_x'])) {
 </div>
 <div class="color-options">
   <form class="car-color-button" method="color" action="">
-    <div class="color-item">
+    <div class="color-brack">
       <input type="checkbox" id="black" name="color[]" value="Black" />
       <label for="black">ブラック</label>
     </div>
-    <div class="color-item">
+    <div class="color-white">
       <input type="checkbox" id="white" name="color[]" value="White" />
       <label for="white">ホワイト</label>
     </div>
   </form>
 </div>
-
 
 
 
