@@ -95,42 +95,45 @@
 
 
 /*ここからテスト */
-/* ボタン全体の配置と間隔 */
 .color-options {
-  display: flex;         /* 横並びに配置 */
-  gap: 10px;             /* ボタン間のスペース */
+  display: flex;
+  gap: 10px;
 }
 
-/* ボタン風のラベルスタイル */
-.color-button {
-  padding: 10px 20px;    /* ボタンの内側余白 */
-  border-radius: 5px;    /* ボタンの角を丸める */
-  cursor: pointer;       /* マウスカーソルをポインターにする */
-  font-size: 16px;       /* テキストサイズ */
-  transition: 0.3s;      /* 色変更のアニメーション */
+.color-options label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: black;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 初期スタイル（ブラックボタン） */
-.color-button:nth-of-type(1) {
-  background-color: black; /* 背景色を黒に */
-  color: white;            /* テキストを白に */
+.color-options input[type="checkbox"] {
+  display: none;
 }
 
-/* 初期スタイル（ホワイトボタン） */
-.color-button:nth-of-type(2) {
-  background-color: white; /* 背景色を白に */
-  color: black;            /* テキストを黒に */
-  border: 1px solid black; /* 黒のボーダーを追加 */
+.color-brack label {
+  background-color: black;
+  color: white;
 }
 
-/* チェックボックスを非表示 */
-.color-button input[type="checkbox"] {
-  display: none;           /* チェックボックスを非表示にする */
+.color-white label {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
 
-/* チェックされたときのスタイル */
-.color-button input[type="checkbox"]:checked + span {
-  background-color: white; /* 背景色を白に変更 */
-  color: black;            /* テキストを黒に変更 */
-  border: 1px solid black; /* 黒のボーダーを追加 */
+.color-options input[type="checkbox"]:checked + label {
+  background-color: gray;
+  color: white;
 }
+
