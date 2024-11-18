@@ -7,8 +7,9 @@
   </div>
   <div class="checkbox-container">
     <label>
-      <p style="color: white;"><?php $_POST['brands']; ?></p>
-      <!-- <input type="checkbox" name="brands[]" value="Toyota" <? (isset($_POST['brands'])) ? 'checkd' : null ?>> -->
+      
+      <p style="color: white;"><?php $_POST['Daihatsu']; ?></p>
+      <input type="checkbox" name="brands[]" value="Toyota" <?= (isset($_POST['Daihatsu'])) ? 'checkd' : null ?>>
       <img src="../img/Toyota.png" alt="Toyota" width="100px">
     </label>
     <label>

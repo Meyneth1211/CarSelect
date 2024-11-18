@@ -51,7 +51,7 @@
 
   <div class="car-logo">
     <input type="image" src="" alt="">
-    <input type="image" name="brands" value="Daihatsu" src="../img/Daihatsu.png" alt="Daihatsu" width="150px" height="auto">
+    <input type="image" name="Daihatsu" value="Daihatsu" src="../img/Daihatsu.png" alt="Daihatsu" width="150px" height="auto">
     <input type="image" name="" value="Nissan" src="../img/Nissan.png" alt="Nissan" width="180px" height="auto">
     <input type="image" name="" value="Mazda" src="../img/Mazda.png" alt="Mazda" width="170px" height="auto">
     <input type="image" name="" value="Toyota" src="../img/Toyota.png" alt="Toyota" width="150px" height="auto">
