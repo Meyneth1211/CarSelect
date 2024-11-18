@@ -13,52 +13,52 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<div class="search"></div>
 <form action="search.php" method="post">
-    <div class="title"><h2>ブランド</h2></div>
-    <div class="checkbox-container">
-        <label>
-            <input type="checkbox" name="brands[]" value="Toyota" <?php echo (in_array('Toyota', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Toyota.png" alt="Toyota" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Mazda" <?php echo (in_array('Mazda', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Mazda.png" alt="Mazda" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Lexus" <?php echo (in_array('Lexus', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Lexus.png" alt="Lexus" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Honda" <?php echo (in_array('Honda', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Honda.png" alt="Honda" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Porsche" <?php echo (in_array('Porsche', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Porsche.png" alt="Porsche" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Ferrari" <?php echo (in_array('Ferrari', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Ferrari.png" alt="Ferrari" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Lamborghini" <?php echo (in_array('Lamborghini', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Lamborghini.png" alt="Lamborghini" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="BMW" <?php echo (in_array('BMW', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/BMW.png" alt="BMW" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Daihatsu" <?php echo (in_array('Daihatsu', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Nissan" <?php echo (in_array('Nissan', $selected_brands)) ? 'checked' : ''; ?>>
-            <img src="../img/Nissan.png" alt="Nissan" width="100px">
-        </label>
-    </div>
+  <div class="title"><h2>ブランド</h2></div>
+  <div class="checkbox-container">
+    <label>
+        <input type="checkbox" name="brands[]" value="Toyota" <?php echo (in_array('Toyota', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Toyota.png" alt="Toyota" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Mazda" <?php echo (in_array('Mazda', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Mazda.png" alt="Mazda" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Lexus" <?php echo (in_array('Lexus', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Lexus.png" alt="Lexus" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Honda" <?php echo (in_array('Honda', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Honda.png" alt="Honda" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Porsche" <?php echo (in_array('Porsche', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Porsche.png" alt="Porsche" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Ferrari" <?php echo (in_array('Ferrari', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Ferrari.png" alt="Ferrari" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Lamborghini" <?php echo (in_array('Lamborghini', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Lamborghini.png" alt="Lamborghini" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="BMW" <?php echo (in_array('BMW', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/BMW.png" alt="BMW" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Daihatsu" <?php echo (in_array('Daihatsu', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
+    </label>
+    <label>
+        <input type="checkbox" name="brands[]" value="Nissan" <?php echo (in_array('Nissan', $selected_brands)) ? 'checked' : ''; ?>>
+        <img src="../img/Nissan.png" alt="Nissan" width="100px">
+    </label>
+  </div>
 </form>
+
 
 
   <!-- 価格 -->
