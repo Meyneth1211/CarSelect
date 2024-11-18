@@ -1,61 +1,50 @@
-<?php 
-session_start(); // セッション開始
-require('../header/header.php'); 
+<?php require('../header/header.php'); ?>
 
-// POSTデータが送信されている場合、選択されたブランドをセッションに保存
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['brands'])) {
-    $_SESSION['brands'] = $_POST['brands']; // セッションに選択されたブランドを保存
-}
-?>
-
-<form action="search.php" method="post">
-    <div class="checkbox-container">
-        <!-- 各ブランドに対するチェックボックス -->
-        <label>
-            <input type="checkbox" name="brands[]" value="Toyota" <?php echo (isset($_SESSION['brands']) && in_array('Toyota', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Toyota.png" alt="Toyota" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Mazda" <?php echo (isset($_SESSION['brands']) && in_array('Mazda', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Mazda.png" alt="Mazda" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Lexus" <?php echo (isset($_SESSION['brands']) && in_array('Lexus', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Lexus.png" alt="Lexus" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Honda" <?php echo (isset($_SESSION['brands']) && in_array('Honda', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Honda.png" alt="Honda" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Porsche" <?php echo (isset($_SESSION['brands']) && in_array('Porsche', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Porsche.png" alt="Porsche" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Ferrari" <?php echo (isset($_SESSION['brands']) && in_array('Ferrari', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Ferrari.png" alt="Ferrari" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Lamborghini" <?php echo (isset($_SESSION['brands']) && in_array('Lamborghini', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Lamborghini.png" alt="Lamborghini" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="BMW" <?php echo (isset($_SESSION['brands']) && in_array('BMW', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/BMW.png" alt="BMW" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Daihatsu" <?php echo (isset($_SESSION['brands']) && in_array('Daihatsu', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
-        </label>
-        <label>
-            <input type="checkbox" name="brands[]" value="Nissan" <?php echo (isset($_SESSION['brands']) && in_array('Nissan', $_SESSION['brands'])) ? 'checked' : ''; ?>>
-            <img src="../img/Nissan.png" alt="Nissan" width="100px">
-        </label>
-    </div>
-    <input type="submit" value="検索">
-</form>
-
-
+<div class="search">
+  <!-- ブランド -->
+  <div class="title"><h2>ブランド</h2></div>
+  <div class="checkbox-container">
+  <label>
+    <input type="checkbox" name="brands[]" value="Toyota" checked>
+    <img src="../img/Toyota.png" alt="Toyota" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Mazda">
+    <img src="../img/Mazda.png" alt="Mazda" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Lexus">
+    <img src="../img/Lexus.png" alt="Lexus" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Honda">
+    <img src="../img/Honda.png" alt="Honda" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Porsche">
+    <img src="../img/Porsche.png" alt="Porsche" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Ferrari">
+    <img src="../img/Ferrari.png" alt="Ferrari" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Lamborghini">
+    <img src="../img/Lamborghini.png" alt="Lamborghini" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="BMW">
+    <img src="../img/BMW.png" alt="BMW" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Daihatsu">
+    <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
+  </label>
+  <label>
+    <input type="checkbox" name="brands[]" value="Nissan">
+    <img src="../img/Nissan.png" alt="Nissan" width="100px">
+  </label>
+</div>
 
   <!-- 価格 -->
   <div class="title"><h2>価格</h2></div>
