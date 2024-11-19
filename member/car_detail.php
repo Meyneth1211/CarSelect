@@ -17,7 +17,7 @@
             $sql="select image from image where car_id = ? and is_primary = '1'";
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$item]);
-            $output=$stmt->fetchall();
+            $output=$stmt->fetchall(PDO::FETCH_ASSOC);
             var_dump($output);
             foreach ($output as $row) {
                 echo '<img src="',$row['image'],'">';
