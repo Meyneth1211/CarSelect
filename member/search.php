@@ -1,54 +1,5 @@
 <?php require('../header/header.php'); ?>
 
-<?php
-// 送信されたデータ（選択された画像ボタン）を取得
-$selectedImages = array();
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    foreach ($_POST as $key => $value) {
-        // 画像の名前をキーとして、選択されていたかどうかを保存
-        if (strpos($key, 'image') !== false) {
-            $selectedImages[$key] = true;
-        }
-    }
-}
-?>
-
-<form action="search.php" method="post">
-    <label>
-        <input type="checkbox" name="image1" <?php echo isset($selectedImages['image1']) ? 'checked' : ''; ?>>
-        <img src="images/square1.png" alt="Square 1">
-    </label><br>
-    
-    <label>
-        <input type="checkbox" name="image2" <?php echo isset($selectedImages['image2']) ? 'checked' : ''; ?>>
-        <img src="images/square2.png" alt="Square 2">
-    </label><br>
-    
-    <label>
-        <input type="checkbox" name="image3" <?php echo isset($selectedImages['image3']) ? 'checked' : ''; ?>>
-        <img src="images/square3.png" alt="Square 3">
-    </label><br>
-    
-    <label>
-        <input type="checkbox" name="image4" <?php echo isset($selectedImages['image4']) ? 'checked' : ''; ?>>
-        <img src="images/square4.png" alt="Square 4">
-    </label><br>
-    
-    <label>
-        <input type="checkbox" name="image5" <?php echo isset($selectedImages['image5']) ? 'checked' : ''; ?>>
-        <img src="images/square5.png" alt="Square 5">
-    </label><br>
-    
-    <label>
-        <input type="checkbox" name="image6" <?php echo isset($selectedImages['image6']) ? 'checked' : ''; ?>>
-        <img src="images/square6.png" alt="Square 6">
-    </label><br>
-
-    <input type="submit" value="Submit">
-</form>
-
-
-
 <div class="search">
   <!-- ブランド -->
   <div class="title"><h2>ブランド</h2></div>
