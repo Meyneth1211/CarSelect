@@ -42,12 +42,14 @@
         exit;
     }
 ?>
-<form action="search.php" method="post">
   <ul class="slider">
     <li class="slider-item slider-item01"></li>
     <li class="slider-item slider-item02"></li>
     <li class="slider-item slider-item03"></li>
   </ul>
+
+<form action="search.php" method="post">
+
 
   <div class="car-logo">
     <input type="image" src="" alt="">
