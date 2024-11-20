@@ -1,5 +1,8 @@
 <?php require('../header/header.php'); ?>
 
+<!-- formタグはここより開始 絞り込み内容は全て一括で送信 -->
+<form action="#" method="get">
+
 <div class="search">
   <!-- ブランド -->
   <div class="title"><h2>ブランド</h2></div>
@@ -49,7 +52,6 @@
   <!-- 価格 -->
   <div class="title"><h2>価格</h2></div>
 <div class="price-range">
-  <form method="post" action="">
     <input type="radio" name="price" value="30" id="price-30" hidden>
     <button type="button" onclick="selectPrice('price-30', '～400万円', this)">～400万円</button>
 
@@ -64,7 +66,6 @@
 
     <input type="radio" name="price" value="200over" id="price-200over" hidden>
     <button type="button" onclick="selectPrice('price-200over', '1000万円～', this)">1000万円～</button>
-  </form>
 </div>
 <!-- もし価格が選択されていなければこれを表示 -->
 <div class="select-color" id="selected-price"><p>選択された価格: なし</p></div>
@@ -73,7 +74,6 @@
   <!-- ボディタイプ -->
   <div class="title"><h2>ボディタイプ</h2></div>
   <div class="body-type">
-  <form method="body-type" action="">
     <label>
       <input type="checkbox" name="body-type[]" value="Sedan">
       <img src="../img/セダン.png" alt="セダン" width="30px">
@@ -94,7 +94,6 @@
       <input type="checkbox" name="body-type[]" value="Light">
       <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
     </label>
-  </form>
   </div>
 
   <!-- カラー -->
@@ -102,7 +101,6 @@
   <h2>カラー</h2>
 </div>
 <div class="color-options">
-  <form class="car-color-button" method="color" action="">
     <div class="color-brack">
       <input type="checkbox" id="black" name="color[]" value="Black" />
       <label for="black">ブラック</label>
@@ -114,8 +112,10 @@
     <div class="submit">
       <input type="submit" value="この条件で絞り込む">
     </div>
-  </form>
 </div>
+
+<!-- form終了タグで絞り込み内容を一括送信 -->
+</form>
 
   <!-- 車のリスト -->
   <div class="car-list">
