@@ -13,6 +13,7 @@
     background-color: rgba(33, 4, 4, 0.562);
     text-align: center;
     border: 5px solid #333;
+    color:#fff;
 }
 
 .Purchase_confirmed:hover{
@@ -89,7 +90,7 @@
     .Purchase_confirmed{
         margin: 0;
         width: 600px;
-        height: 500px;
+        height: 300px;
     }
 }
 
