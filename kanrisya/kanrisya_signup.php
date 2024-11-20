@@ -1,17 +1,18 @@
 <?php require('../kanrisya/kanrisya_header.php'); 
 ?>
-<h1>管理者登録</h1>
-<div class="login">
-        <div class="login-card">
-            <h2>ログイン</h2>
-            <form class="login-form" action="top.php" method="post">
-                <input class="mail" name="mail" type="text" placeholder="Email">
-                <input class="pass" name="pass" type="password" placeholder="Password">
+</body>
+    <div class="create">
+        <div class="create-card">
+            <h2>管理者登録</h2>
+            <form class="create-form" action="signup_backend.php" method="post">
+                <input class="mail" name="mail" type="email" placeholder="Email" required>
+                <input class="pass" name="pass" type="password" placeholder="Password" required>
                 <div class="top"></div>
-                <input class="button-1" type="submit" value="ログイン">
+                <input class="button-1" type="submit" value="登録">
             </form>
-            <form class="login-form" action="signup.php" method="post">
-                    <input class="button-2" type="submit" value="アカウント新規作成">
+            <form class="create-form" action="login.php" method="post">
+                    <input class="button-2" type="submit" value="ログイン画面へ戻る">
             </form>
         </div>
     </div>
+</html>
