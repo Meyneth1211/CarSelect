@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="back">
-        <h1><a href="./kanrisya_top.php">Car Select</a></h1>
+        <h2>Car Select</h2>
     </div>
 
 </body>
