@@ -122,7 +122,7 @@
 <!-- 車のリスト -->
 <?php
   if (isset($_GET['s'])) {
-    return;
+    die();
   }
   echo 'セット済';
 ?>
