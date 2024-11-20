@@ -111,14 +111,11 @@
       <input type="checkbox" id="white" name="color[]" value="White" />
       <label for="white">ホワイト</label>
     </div>
+    <div class="submit">
+      <input type="submit" value="この条件で絞り込む">
+    </div>
   </form>
 </div>
-
-<div class="narrowdown">
-  <input type="submit" value="この条件で絞り込む">
-</div>
-
-
 
   <!-- 車のリスト -->
   <div class="car-list">
