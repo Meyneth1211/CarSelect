@@ -19,7 +19,7 @@
     border: 5px solid #333;
 }
 
-.create input{
+.create input.name{
     padding-bottom: 20px;
 }
 
