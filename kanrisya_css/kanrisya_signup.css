@@ -19,6 +19,10 @@
     border: 5px solid #333;
 }
 
+.create input{
+    padding-bottom: 20px;
+}
+
 .create-card:hover{
     border: 5px solid #0ef;
     box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
@@ -53,7 +57,7 @@
     border: 2px solid #333;
     font-family: inherit;
     font-size: 15px;
-    padding: 0 16 20px;
+    padding: 0 16px;
     border-radius: 1.25rem;
     transition: all 0.375s;
 }
