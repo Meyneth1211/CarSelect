@@ -79,7 +79,7 @@
     transition: all 0.375s;
 }
 
-.name, .mail, .pass, .address{
+.mail, .pass{
     background-color: #ffffff;
     caret-color: #fff;
     color: #fff;
