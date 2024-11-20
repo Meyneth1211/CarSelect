@@ -135,12 +135,6 @@
   margin: 20px auto;
 }
 
-/* 絞り込むボタンのスタイル(仮) */
-.submit {
-  background-color: #e71313;
-  color: black;
-}
-
 /* チェック時のスタイル */
 input[type="checkbox"]:checked + label {
   background-color: gray;
