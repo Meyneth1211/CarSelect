@@ -77,23 +77,23 @@
   <div class="title"><h2>ボディタイプ</h2></div>
   <div class="body-type">
     <label>
-      <input type="checkbox" name="body-type[]" value="Sedan">
+      <input type="checkbox" name="bodytype[]" value="Sedan">
       <img src="../img/セダン.png" alt="セダン" width="30px">
     </label>
     <label>
-      <input type="checkbox" name="body-type[]" value="SUV">
+      <input type="checkbox" name="bodytype[]" value="SUV">
       <img src="../img/SUV.png" alt="SUV" width="30px">
     </label>
     <label>
-      <input type="checkbox" name="body-type[]" value="Wagon">
+      <input type="checkbox" name="bodytype[]" value="Wagon">
       <img src="../img/トラック.png" alt="ワゴン" width="25px">
     </label>
     <label>
-      <input type="checkbox" name="body-type[]" value="Conpact">
+      <input type="checkbox" name="bodytype[]" value="Conpact">
       <img src="../img/ワンボックスカー.png" alt="コンパクト" width="23x">
     </label>
     <label>
-      <input type="checkbox" name="body-type[]" value="Light">
+      <input type="checkbox" name="bodytype[]" value="Light">
       <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
     </label>
   </div>
@@ -121,10 +121,20 @@
 
 <!-- 車のリスト -->
 <?php
-  if (isset($_GET['s'])) {
+  if (!isset($_GET['s'])) {
     die();
   }
-  echo 'セット済';
+  $brands=$_GET['brands'];
+  $price=$_GET['price'];
+  $bodytype=$_GET['bodytype'];
+  $color=$_GET['color'];
+  var_dump($brands);
+  echo '<br>';
+  var_dump($price);
+  echo '<br>';
+  var_dump($bodytype);
+  echo '<br>';
+  var_dump($color);
 ?>
   <div class="car-list">
     <div class="car-item">
