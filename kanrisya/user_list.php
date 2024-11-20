@@ -18,7 +18,7 @@ if (isset($_GET['status'])) {
 
 // ユーザー一覧の表示
 $sql = $pdo->query('SELECT user_name, user_mail, user_address FROM user');
-echo '<form method="post" action="user_delete.php">';
+echo '<form method="post" action="delete_user.php">';
 echo '<table border="1">';
 echo '<tr><th>名前</th><th>メールアドレス</th><th>住所</th><th>ユーザ削除ボタン</th></tr>';
 foreach ($sql as $row) {
