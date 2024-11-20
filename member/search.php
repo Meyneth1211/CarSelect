@@ -1,8 +1,10 @@
 <?php require('../header/header.php'); ?>
 
-<!-- formタグはここより開始 絞り込み内容は全て一括で送信 -->
+<!-- formタグはここより開始 action欄を空にすることでこのページ自身に送信 -->
 <form action="" method="get">
 
+<!-- 検索のリクエストが行われたことを判定する変数 -->
+<input type="hidden" name="s">
 <div class="search">
   <!-- ブランド -->
   <div class="title"><h2>ブランド</h2></div>
@@ -114,13 +116,19 @@
     </div>
 </div>
 
-<!-- form終了タグで絞り込み内容を一括送信 -->
+<!-- 絞り込み内容を一括送信するためここにform終了タグ -->
 </form>
 
-  <!-- 車のリスト -->
+<!-- 車のリスト -->
+<?php
+  if (isset($_GET['s'])) {
+    return;
+  }
+  echo 'セット済';
+?>
   <div class="car-list">
     <div class="car-item">
-      <img src="lexus-ux300e.jpg" alt="UX300e">
+      <img src="lexus-ux300e.jpg">
       <div class="car-info">
         <h3>UX300e</h3>
         <p>7,000,000円</p>
@@ -128,7 +136,7 @@
       <div class="favorite-icon">♡</div>
     </div>
     <div class="car-item">
-      <img src="lexus-ux300e.jpg" alt="UX300e">
+      <img src="lexus-ux300e.jpg">
       <div class="car-info">
         <h3>UX300e</h3>
         <p>7,000,000円</p>
