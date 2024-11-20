@@ -1,7 +1,7 @@
 <?php require('../header/header.php'); ?>
 
 <!-- formタグはここより開始 絞り込み内容は全て一括で送信 -->
-<form action="#" method="get">
+<form action="" method="get">
 
 <div class="search">
   <!-- ブランド -->
