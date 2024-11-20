@@ -12,5 +12,3 @@
         <h2><a class="logo_link" href="kanrisya_top">Car Select</a></h2>
     </div>
 
-</body>
-</html>
