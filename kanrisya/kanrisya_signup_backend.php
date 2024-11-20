@@ -6,9 +6,6 @@
     //名前、メアド、パスワード、住所入力しているか確認の処理
     $error = []; //エラー配列作成
     echo '<div class="error-back"><div class="error-card">';
-    if(empty($_POST['name'])){
-        $error[] = '<div class="error-message">名前を入力してください</div>';
-    }
     if(empty($_POST['mail'])){
         $error[] = '<div class="error-message">メールアドレスを入力してください</div>';
     }
