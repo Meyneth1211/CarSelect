@@ -14,7 +14,7 @@
     margin: 0 20px;
     padding: 70px 30px 44px;
     border-radius: 1.25rem;
-    background-color: rgba(33, 4, 4, 0.562);
+    background-color: rgba(0, 0, 0, 0.562);
     text-align: center;
     border: 5px solid #333;
 }
@@ -78,7 +78,7 @@
 }
 
 .name, .mail, .pass, .address{
-    background-color: #18191F;
+    background-color: #ffffff;
     caret-color: #fff;
     color: #fff;
 }
@@ -90,7 +90,7 @@
 }
 
 .button-2{
-    background-color: rgba(33, 4, 4, 0.562);
+    background-color: rgba(0, 0, 0, 0.562);
     color: #fff;
 }
 
