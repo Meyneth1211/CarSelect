@@ -4,7 +4,7 @@
     <div class="create">
         <div class="create-card">
             <h2>管理者登録</h2>
-            <form class="create-form" action="signup_backend.php" method="post">
+            <form class="create-form" action="kanrisya_signup_backend.php" method="post">
                 <input class="mail" name="mail" type="email" placeholder="Email" required>
                 <input class="pass" name="pass" type="password" placeholder="Password" required>
                 <input class="button-1" type="submit" value="登録">
