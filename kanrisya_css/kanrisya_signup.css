@@ -79,11 +79,6 @@
     transition: all 0.375s;
 }
 
-.mail, .pass{
-    background-color: #ffffff;
-    caret-color: #fff;
-    color: #fff;
-}
 
 
 .button-1{
