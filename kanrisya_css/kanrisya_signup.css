@@ -19,9 +19,6 @@
     border: 5px solid #333;
 }
 
-.create input.name{
-    padding-bottom: 20px;
-}
 
 .create-card:hover{
     border: 5px solid #0ef;
@@ -58,6 +55,7 @@
     font-family: inherit;
     font-size: 15px;
     padding: 0 16px;
+    margin-bottom: 15px;
     border-radius: 1.25rem;
     transition: all 0.375s;
 }
@@ -113,8 +111,7 @@
     .create-card{
         margin: 0;
         width: 600px;
-        height: 50
-        0px;
+        height: 500px;
     }
 }
     
