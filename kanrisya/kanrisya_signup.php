@@ -1,4 +1,5 @@
-
+<?php require('../kanrisya/kanrisya_header.php'); 
+?>
 <h1>管理者登録</h1>
 <div class="login">
         <div class="login-card">
