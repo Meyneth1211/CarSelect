@@ -1,0 +1,1 @@
+<?php require('kanrisya_header.php'); ?>
