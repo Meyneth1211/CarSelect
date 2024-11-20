@@ -11,14 +11,17 @@
 
     <div class="car_image">
         <?php
+            //GETメソッドによる値受け渡し
+            //URLのクエリパラメータからitemという変数名で車IDを取得
+            $item=$_GET['item'];
+            //DB接続し前述の車IDに一致する画像のURLを取得
             require_once '../DBconnect.php';
             $pdo=getDB();
-            $item=$_GET['item'];
             $sql="select image from image where car_id = ? and is_primary = '1'";
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$item]);
             $output=$stmt->fetchall(PDO::FETCH_ASSOC);
-            var_dump($output);
+            //var_dump($output);
             foreach ($output as $row) {
                 echo '<img src="',$row['image'],'">';
             }
