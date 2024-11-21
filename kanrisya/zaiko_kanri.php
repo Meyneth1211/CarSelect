@@ -9,7 +9,7 @@ $pdo = getDb();
 <?php
 
 // SQLでデータを取得
-$sql = $pdo->query('SELECT car_id, brand, car_name FROM car'); // car_idも取得
+$sql = $pdo->query('SELECT car_id, brand, car_name, color FROM car'); // car_idも取得
 
 // 一覧表示用のHTML
 echo '<h1>車のブランドと名前一覧</h1>';
@@ -17,6 +17,7 @@ echo '<table border="1">';
 echo '<tr>
         <th>brand</th>
         <th>car_name</th>
+        <th>color</th>
         <th>操作</th>
       </tr>';
 
@@ -25,6 +26,7 @@ foreach ($sql as $row) {
     echo '<tr>';
     echo '<td>' . htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td>' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td>' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td>';
     // 編集ボタン
     echo '<form style="display: inline;" method="get" action="zaiko_hensyuu.php">';
