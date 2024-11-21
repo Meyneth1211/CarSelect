@@ -30,20 +30,28 @@
   }
 
   /*カラーラジオボタンのスタイル変更*/
-  label {
+  label .black{
     display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            text-align: center;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: center;
   }
 
-  .label .black{
+label .white{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: center;
+}
 
-  }
 
  /* 選択されているボタンのスタイル */
   input[type="radio"]:checked + label {
