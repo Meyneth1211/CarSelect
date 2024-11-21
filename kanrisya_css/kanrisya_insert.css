@@ -94,3 +94,10 @@
   width: 65px; /* 必要に応じてサイズを調整 */
   height: auto;
 }
+
+/*テキストエリアのサイズ固定*/
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+}
