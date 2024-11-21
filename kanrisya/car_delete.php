@@ -24,6 +24,9 @@ $pdo = getDb();
         echo '<p style="color: red;">不正なアクセスです。</p>';
     }
     ?>
+    
+    <input type="button" onclick="location.href='user_list'" value="一覧画面へ戻る">
+    <input type="button" onclick="location.href='kanrisya_top'" value="トップページへ戻る">
 
 </body>
 </html>
