@@ -1,5 +1,5 @@
-<?php require('../kanrisya/kanrisya_header.php'); 
-?>
+<?php require('../kanrisya/kanrisya_header.php'); ?>
+
 </body>
     <div class="kanrisya_login">
         <div class="kanrisya_login_card">

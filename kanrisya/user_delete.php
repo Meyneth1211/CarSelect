@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 ?>
 
-<div class="container">
+    <div class="container">
         <h1 class="page-title">ユーザー削除処理</h1>
 
         <?php

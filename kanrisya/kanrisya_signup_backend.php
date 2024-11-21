@@ -1,24 +1,26 @@
 <?php
     session_start();
-    require('../header/header.php');
+    require('../kanrisya/kanrisya_header.php');
     require_once '../DBconnect.php';
     $pdo = getDb();
     //名前、メアド、パスワード、住所入力しているか確認の処理
     $error = []; //エラー配列作成
-    echo '<div class="error-back"><div class="error-card">';
+    echo '<div class="container">';
     if(empty($_POST['mail'])){
-        $error[] = '<div class="error-message">メールアドレスを入力してください</div>';
+        $error[] = '<div class="message success">メールアドレスを入力してください</div>';
     }
     if(empty($_POST['pass'])){
-        $error[] = '<div class="error-message">パスワードを入力してください</div>';
+        $error[] = '<div class="message success">パスワードを入力してください</div>';
     }
     foreach($error as $e){
         echo '<p>'.$e.'</p>';
     }
     if(!empty($error)){
-        echo '<form class="login-form" action="kanrisya_signup.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
+        echo '<form class="button-group" action="kanrisya_signup.php" method="post"><input class="nav-button" type="submit" value="戻る"></form>';
         exit;
     }
+    echo '</div>';
+
 //既に登録されているか確認の処理
 if(isset($_POST['mail']) AND isset($_POST['pass'])){
         //メールアドレスが登録されているか確認
