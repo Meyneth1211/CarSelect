@@ -53,10 +53,9 @@
     text-align: center;
 }
 
-/*blackのクリック時のスタイル変更*/
-.black:active {
-  background-color: rgb(141, 137, 137); /* 背景色を黒に */
-  color: rgb(0, 0, 0); /* テキストカラーを白に */
+.color-button input[type="radio"]:checked+label{
+  background: #676867;
+  color: #000000;
 }
 
 /* カラーボタンのラジオボタンを非表示にする */
