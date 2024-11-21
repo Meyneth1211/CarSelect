@@ -96,6 +96,8 @@ require_once '../DBconnect.php';
         <input type="radio" id="white" name="color" value="ホワイト">
         <label for="option2" class="white">WHITE</label>
       </div>
+
+    <input type="submit" name="send" value="登録">
     </form>
 </body>
 </html>
