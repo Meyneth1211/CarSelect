@@ -53,3 +53,4 @@ foreach ($sql as $row) {
 }
 echo '</table>';
 ?>
+<button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
