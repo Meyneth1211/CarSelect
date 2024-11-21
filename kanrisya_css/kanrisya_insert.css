@@ -1,4 +1,4 @@
-/*ブランドのチェックボックスの幅*/
+/*ブランドのラジオボタンの幅*/
 .radio-images {
     margin-bottom: 10px;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
     gap: 20px;
   }
-/* ブランドのチェックボックスを非表示にする */
+/* ブランドのラジオボタンを非表示にする */
 .radio-images input[type="radio"] {
     display: none;
   }
@@ -17,7 +17,7 @@
     cursor: pointer;
   }
 
-  /* ブランドのチェック時の画像に枠を追加する */
+  /* ブランドの選択時の画像に枠を追加する */
   .radio-images input[type="radio"]:checked + img {
     border: 2px solid #007bff;
     border-radius: 4px;
@@ -28,3 +28,26 @@
     width: 80px; /* 必要に応じてサイズを調整 */
     height: auto;
   }
+
+  /*カラーラジオボタンのスタイル変更*/
+  .label {
+    display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            text-align: center;
+  }
+
+  .label .black{
+
+  }
+
+ /* 選択されているボタンのスタイル */
+  input[type="radio"]:checked + label {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
