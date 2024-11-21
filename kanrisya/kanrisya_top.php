@@ -6,7 +6,7 @@
 
     //メールアドレスとパスワードが入力されているか確認
     if(!empty($_POST['mail'])&&!empty($_POST['pass'])){
-        $sql=$pdo->prepare('SELECT * from user where admin_mail=? and admin_password=?');
+        $sql=$pdo->prepare('SELECT * from admin where admin_mail=? and admin_password=?');
         $sql->execute([$_POST['mail'],$_POST['pass']]);
         $user = $sql->fetch(PDO::FETCH_ASSOC);
 
