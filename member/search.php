@@ -137,7 +137,7 @@
     }
   }
   
-  
+  /*
   var_dump($brands);
   echo '<br>';
   var_dump($price);
@@ -145,7 +145,7 @@
   var_dump($bodytype);
   echo '<br>';
   var_dump($color);
-  
+  */
   
 ?>
 
