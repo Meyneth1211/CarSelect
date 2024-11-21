@@ -14,7 +14,6 @@
         if ($user) {
             $_SESSION['user_id'] = $user['admin_id']; // セッションにユーザーIDを保存
             $_SESSION['mail'] = $user['admin_mail'];
-            $_SESSION['name'] = $user['admin_name'];
         } else {
             // ログイン失敗時のエラーメッセージ表示
             echo '<div class="container"><div class="message success">EmailかPasswordが違います</div>';
