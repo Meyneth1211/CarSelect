@@ -144,7 +144,7 @@
         $suffix.='price >= 10000000 ';
         $first=false;
       }else{
-        $suffix.='price <= ' . $price;
+        $suffix.='price <= ' . $price . ' ';
         $first=false;
       }
     }
@@ -155,7 +155,7 @@
         $suffix.='AND ';
       }
       $bodytype=$_GET['bodytype'];
-      $suffix.='bodytype IN(' . implode(',',$bodytype) . ') ';
+      $suffix.='body_type IN(' . implode(',',$bodytype) . ') ';
       $first=false;
     }
     if (isset($_GET['color'])) {
