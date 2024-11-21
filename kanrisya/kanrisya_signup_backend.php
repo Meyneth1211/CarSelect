@@ -29,19 +29,19 @@ if(isset($_POST['mail']) AND isset($_POST['pass'])){
     //ユーザーが登録されているか確認
     $sql3 = $pdo->prepare('SELECT * FROM admin WHERE admin_mail = ? AND admin_password = ?');
     $sql3->execute([$_POST['mail'], $_POST['pass']]);
-    echo '<form class="login-form" action="login.php" method="post">';
+    echo '<form class="container" action="kanrisya_login.php" method="post">';
     if($sql3->rowCount() > 0){
-        echo '<div class="error-message">既に登録されています</div>';
-        echo '<input class="button-1" type="submit" value="ログイン画面へ戻る">';
+        echo '<div class="message success">既に登録されています</div>';
+        echo '<input class="nav-button" type="submit" value="ログイン画面へ戻る">';
     }elseif($sql->rowCount() > 0){
-        echo 'そのメールアドレスは既に登録されています。<br>';
-        echo '<input class="button-1" type="submit" value="ログイン画面へ戻る">';
+        echo '<div class="message success">そのメールアドレスは既に登録されています</div>';
+        echo '<input class="nav-button" type="submit" value="ログイン画面へ戻る">';
     }else{
         $sql = $pdo->prepare('INSERT INTO admin (admin_mail, admin_password) VALUES (?,?)');
         $result = $sql->execute([$_POST['mail'], $_POST['pass']]);
         if($result){
-            echo '<div class="error-message">登録しました</div>';
-            echo '<input class="button-1" type="submit" value="ログイン画面へ戻る">';
+            echo '<div class="message success">登録しました</div>';
+            echo '<input class="nav-button" type="submit" value="ログイン画面へ戻る">';
         }
     }
     echo '</form>';
