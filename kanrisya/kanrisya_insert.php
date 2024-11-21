@@ -60,12 +60,17 @@ require_once '../DBconnect.php';
     </div>
     
     <p>値段</p>
-    <input type="text" name="insert-price"><br><br>
+        <input type="text" name="insert-price"><br><br>
     
     <p>詳細</p>
-    <textarea name="insert-detail" id=""></textarea><br><br>
+        <textarea name="insert-detail" id=""></textarea><br><br>
 
-    
+    <p></p>
+        <input type="radio" id="black" name="options" value="black">
+        <label for="option1" class="black">BLACK</label>
+        <input type="radio" id="white" name="options" value="white">
+        <label for="option2" class="white">WHITE</label>
+
     </form>
 </body>
 </html>
