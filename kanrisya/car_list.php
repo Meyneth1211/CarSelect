@@ -9,7 +9,7 @@ $pdo = getDb();
 <?php
 
 // SQLでデータを取得
-$sql = $pdo->query('SELECT car_id, brand, car_name, color FROM car'); // car_idも取得
+$sql = $pdo->query('SELECT car_id, brand, car_name, color, stock FROM car'); // car_idも取得
 
 // 一覧表示用のHTML
 echo '<h1>車のブランドと名前一覧</h1>';
