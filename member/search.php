@@ -116,6 +116,7 @@
 <div class="submit">
       <input type="submit" value="この条件で絞り込む">
 </div>
+</div>
 
 <!-- 絞り込み内容を一括送信するためここにform終了タグ -->
 </form>
@@ -137,7 +138,6 @@
     }
   }
   
-  /*
   var_dump($brands);
   echo '<br>';
   var_dump($price);
@@ -145,7 +145,6 @@
   var_dump($bodytype);
   echo '<br>';
   var_dump($color);
-  */
   
 ?>
 
