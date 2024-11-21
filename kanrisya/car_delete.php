@@ -25,7 +25,7 @@ $pdo = getDb();
     }
     ?>
     
-    <input type="button" onclick="location.href='user_list'" value="一覧画面へ戻る">
+    <input type="button" onclick="location.href='car_list'" value="一覧画面へ戻る">
     <input type="button" onclick="location.href='kanrisya_top'" value="トップページへ戻る">
 
 </body>
