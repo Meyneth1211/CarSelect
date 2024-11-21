@@ -64,4 +64,33 @@
   display: none;
 }
 
- 
+/*ボディタイプのチェックボックスの幅*/
+.body-type {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+/* ボディタイプのラジオボタンを非表示にする */
+.body-type input[type="radio"] {
+  display: none;
+}
+
+.body-type label {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* ボディタイプのチェック時の画像に枠を追加する */
+.body-type input[type="radio"]:checked + img {
+  border: 2px solid #e71313;
+  border-radius: 4px;
+}
+
+/* 画像のサイズ調整 */
+.body-type img {
+  width: 65px; /* 必要に応じてサイズを調整 */
+  height: auto;
+}
