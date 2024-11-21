@@ -14,6 +14,7 @@
         if ($user) {
             $_SESSION['user_id'] = $user['admin_id']; // セッションにユーザーIDを保存
             $_SESSION['mail'] = $user['admin_mail'];
+            $_SESSION['pass'] = $user['admin_password'];
         } else {
             // ログイン失敗時のエラーメッセージ表示
             echo '<div class="container"><div class="message success">EmailかPasswordが違います</div>';
@@ -27,7 +28,7 @@
 <?php
     //メールアドレスとパスワードが入力されているか確認
     $error = [];
-    if(empty($_SESSION['name'])){
+    if(empty($_SESSION['id'])){
         echo '<div class="container">';
         if(empty($_POST['mail'])){
             $error[] = '<div class="message success">メールアドレスを入力してください</div>';
