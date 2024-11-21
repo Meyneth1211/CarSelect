@@ -5,7 +5,6 @@
     $pdo = getDb();
     //名前、メアド、パスワード、住所入力しているか確認の処理
     $error = []; //エラー配列作成
-    echo '<div class="container">';
     if(empty($_POST['mail'])){
         $error[] = '<div class="message success">メールアドレスを入力してください</div>';
     }
@@ -16,7 +15,7 @@
         echo '<p>'.$e.'</p>';
     }
     if(!empty($error)){
-        echo '<form class="nav-button" action="kanrisya_signup.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
+        echo '<form class="nav-button" action="kanrisya_signup.php" method="post"><input class="nav-button" type="submit" value="戻る"></form>';
         exit;
     }
     
