@@ -27,5 +27,6 @@ foreach ($sql as $row) {
 echo '</table>';
 echo '</form>';
 ?>
+    <input type="button" onclick="location.href='kanrisya_top'" value="トップページへ戻る">
 </body>
 </html>
