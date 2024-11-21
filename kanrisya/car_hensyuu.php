@@ -91,5 +91,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
     </table>
     <button class="save-button" type="submit">更新確定</button>
-    <button class="back-button" type="button" onclick="location.href=\'car_list.php\'">キャンセル</button>
+    <button class="back-button" type="button" onclick="location.href='car_list.php'">キャンセル</button>
 </form>
