@@ -115,3 +115,7 @@
 .delete-button:hover {
     background-color: #c0392b;
 }
+
+.top-back-button{
+    margin-top: 30px;
+}
