@@ -124,18 +124,18 @@
 <!-- 車のリスト -->
 <?php
   if (isset($_GET['s'])) {
-    echo '検索リクエストを確認、条件部分のSQL文を初期化';
+    //echo '検索リクエストを確認、条件部分のSQL文を初期化';
     $suffix='';
     $first=true;
     if (isset($_GET['brands'])) {
-      echo 'brandsパラメータの存在を確認';
+      //echo 'brandsパラメータの存在を確認';
       $brands=$_GET['brands'];
       $suffix.='brand IN(' . implode(',',$brands) . ') ';
       $first=false;
     }
 
     if (isset($_GET['price'])) {
-      echo 'priceパラメータの存在を確認';
+      //echo 'priceパラメータの存在を確認';
       $price=$_GET['price'];
       if (!$first) {
         $suffix.='AND ';
@@ -150,7 +150,7 @@
     }
 
     if (isset($_GET['bodytype'])) {
-      echo 'bodytypeパラメータの存在を確認';
+      //echo 'bodytypeパラメータの存在を確認';
       if (!$first) {
         $suffix.='AND ';
       }
@@ -159,7 +159,7 @@
       $first=false;
     }
     if (isset($_GET['color'])) {
-      echo 'colorパラメータの存在を確認';
+      //echo 'colorパラメータの存在を確認';
       if (!$first) {
         $suffix.='AND ';
       }
@@ -173,19 +173,19 @@
     
     $suffix.=';';
   }
-  
+  /*
   var_dump($brands);
   echo '<br>';
-  var_dump($price);
-  echo '<br>';
-  var_dump($bodytype);
-  echo '<br>';
-  var_dump($color);
-  echo '<br><br>';
-
+  */
   $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
   $sql.= $suffix;
-  echo $sql;
+  //echo $sql;
+  require_once '../DBconnect.php';
+  $pdo=getDB();
+  $stmt=$pdo->prepare($sql);
+  $stmt->execute();
+  $result=$stmt->fetchall(PDO::FETCH_ASSOC);
+  var_dump($result);
 
 ?>
 
