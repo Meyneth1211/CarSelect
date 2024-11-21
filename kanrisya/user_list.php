@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 ?>
 
-<h1>ユーザー削除画面です！</h1>
+<h1 class="page-title">ユーザー削除画面です！</h1>
 
 <?php
         // ユーザー一覧の表示
