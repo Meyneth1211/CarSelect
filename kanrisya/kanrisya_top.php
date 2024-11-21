@@ -18,7 +18,7 @@
         } else {
             // ログイン失敗時のエラーメッセージ表示
             echo '<div class="container"><div class="message success">EmailかPasswordが違います</div>';
-            echo '<a class="return-button" href="kanrisya_login.php">戻る</a></div>';
+            echo '<form action="kanrisya_login.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
             exit;
         }
     }
@@ -39,7 +39,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<form action="login.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
+        echo '<form action="kanrisya_login.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
         exit;
     }
 ?>
