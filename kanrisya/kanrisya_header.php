@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_header.css">
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_signup.css">
-    <title>Document</title>
+    <title>Car Select kanrisya</title>
 </head>
 <body>
     <div class="back">
