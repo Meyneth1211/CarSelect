@@ -1,4 +1,4 @@
-<?php require('kanrisya_session.php'); ?>
+<?php require('kanrisya_header.php'); ?>
 
 <div class="kanrisya_login">
         <div class="kanrisya_login_card">
