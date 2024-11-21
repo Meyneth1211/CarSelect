@@ -73,6 +73,6 @@
 }
 
 /* 隙間調整 */
-.kanrisya_login_top {
-    margin: 20px 0; /* ボタン間の余白 */
+.kanrisya_margin_top {
+    margin: 30px 0; /* ボタン間の余白 */
 }
