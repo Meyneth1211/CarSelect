@@ -71,6 +71,22 @@ input[type="number"] {
     background-color: #2ecc71;
 }
 
+/* 削除ボタンスタイル */
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
 /* 戻るボタンスタイル */
 .back-button {
     display: block;
