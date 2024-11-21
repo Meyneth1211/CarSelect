@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_header.css">
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_signup.css">
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_top.css">
+    <link rel="stylesheet" href="../kanrisya_css/kanrisya_insert.css">
     <title>Car Select kanrisya</title>
 </head>
 <body>
