@@ -92,9 +92,10 @@ require_once '../DBconnect.php';
     <p>カラー</p>
       <div class="color-button">
         <input type="radio" id="black" name="color" value="ブラック">
-        <label for="option1" class="black">BLACK</label>
+        <label for="black" class="black">BLACK</label>
+        
         <input type="radio" id="white" name="color" value="ホワイト">
-        <label for="option2" class="white">WHITE</label>
+        <label for="white" class="white">WHITE</label>
       </div>
 
     <input type="submit" name="send" value="登録">
