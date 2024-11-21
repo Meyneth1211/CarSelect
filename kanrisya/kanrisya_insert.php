@@ -62,23 +62,23 @@ require_once '../DBconnect.php';
     <p>ボディタイプ</p>
     <div class="body-type">
         <label>
-            <input type="radio" name="brands" value="セダン">
+            <input type="radio" name="body-type" value="セダン">
             <img src="../img/セダン黒.png" alt="セダン">
         </label>
         <label>
-            <input type="radio" name="brands" value="SUV">
+            <input type="radio" name="body-type" value="SUV">
             <img src="../img/SUV黒.png" alt="SUV">
         </label>
         <label>
-            <input type="radio" name="brands" value="トラック">
+            <input type="radio" name="body-type" value="トラック">
             <img src="../img/トラック黒.png" alt="トラック">
         </label>
         <label>
-            <input type="radio" name="brands" value="コンパクト">
+            <input type="radio" name="body-type" value="コンパクト">
             <img src="../img/ワンボックスカー黒.png" alt="コンパクト">
         </label>
         <label>
-            <input type="radio" name="brands" value="スポーツカー">
+            <input type="radio" name="body-type" value="スポーツカー">
             <img src="../img/スポーツカー黒.png" alt="スポーツカー">
         </label>
     </div>
