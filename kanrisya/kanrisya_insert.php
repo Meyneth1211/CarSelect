@@ -66,11 +66,12 @@ require_once '../DBconnect.php';
         <textarea name="insert-detail" id=""></textarea><br><br>
 
     <p></p>
+      <div class="color-button">
         <input type="radio" id="black" name="options" value="black">
         <label for="option1" class="black">BLACK</label>
         <input type="radio" id="white" name="options" value="white">
         <label for="option2" class="white">WHITE</label>
-
+      </div>
     </form>
 </body>
 </html>
