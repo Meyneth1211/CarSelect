@@ -16,10 +16,10 @@
         echo '<p>'.$e.'</p>';
     }
     if(!empty($error)){
-        echo '<form class="nav-button" action="kanrisya_signup.php" method="post"><input class="nav-button" type="submit" value="戻る"></form>';
+        echo '<form class="nav-button" action="kanrisya_signup.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
         exit;
     }
-    echo '</div>';
+    
 
 //既に登録されているか確認の処理
 echo '<div class="container">';
