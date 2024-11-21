@@ -10,43 +10,43 @@
   <div class="title"><h2>ブランド</h2></div>
   <div class="checkbox-container">
   <label>
-    <input type="checkbox" name="brands[]" value="Toyota" >
+    <input type="checkbox" name="brands[]" value="'トヨタ'" >
     <img src="../img/Toyota.png" alt="Toyota" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Mazda">
+    <input type="checkbox" name="brands[]" value="'マツダ'">
     <img src="../img/Mazda.png" alt="Mazda" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Lexus">
+    <input type="checkbox" name="brands[]" value="'レクサス'">
     <img src="../img/Lexus.png" alt="Lexus" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Honda">
+    <input type="checkbox" name="brands[]" value="'ホンダ'">
     <img src="../img/Honda.png" alt="Honda" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Porsche">
+    <input type="checkbox" name="brands[]" value="'ポルシェ'">
     <img src="../img/Porsche.png" alt="Porsche" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Ferrari">
+    <input type="checkbox" name="brands[]" value="'フェラーリ'">
     <img src="../img/Ferrari.png" alt="Ferrari" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Lamborghini">
+    <input type="checkbox" name="brands[]" value="'ランボルギーニ'">
     <img src="../img/Lamborghini.png" alt="Lamborghini" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="BMW">
+    <input type="checkbox" name="brands[]" value="'BMW'">
     <img src="../img/BMW.png" alt="BMW" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Daihatsu">
+    <input type="checkbox" name="brands[]" value="'ダイハツ'">
     <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="Nissan">
+    <input type="checkbox" name="brands[]" value="'日産'">
     <img src="../img/Nissan.png" alt="Nissan" width="100px">
   </label>
 </div>
@@ -77,7 +77,7 @@
   <div class="title"><h2>ボディタイプ</h2></div>
   <div class="body-type">
     <label>
-      <input type="checkbox" name="bodytype[]" value="セダン">
+      <input type="checkbox" name="bodytype[]" value="'セダン'">
       <img src="../img/セダン.png" alt="セダン" width="30px">
     </label>
     <label>
@@ -104,11 +104,11 @@
 </div>
 <div class="color-options">
     <div class="color-brack">
-      <input type="checkbox" id="black" name="color[]" value="'Black'" />
+      <input type="checkbox" id="black" name="color[]" value="'ブラック'" />
       <label for="black">ブラック</label>
     </div>
     <div class="color-white">
-      <input type="checkbox" id="white" name="color[]" value="White" />
+      <input type="checkbox" id="white" name="color[]" value="'ホワイト'" />
       <label for="white">ホワイト</label>
     </div>
 </div>
