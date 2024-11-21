@@ -18,31 +18,31 @@ require_once '../DBconnect.php';
     <p>メーカー</p>
     <div class="radio-images">
         <label>
-            <input type="radio" name="brands" value="Toyota">
+            <input type="radio" name="brands" value="トヨタ">
              <img src="../img/Toyota.png" alt="Toyota">
         </label>
         <label>
-            <input type="radio" name="brands" value="Mazda">
+            <input type="radio" name="brands" value="マツダ">
             <img src="../img/Mazda.png" alt="Mazda">
         </label>
         <label>
-            <input type="radio" name="brands" value="Lexus">
+            <input type="radio" name="brands" value="レクサス">
             <img src="../img/Lexus.png" alt="Lexus">
         </label>
         <label>
-            <input type="radio" name="brands" value="Honda">
+            <input type="radio" name="brands" value="ホンダ">
             <img src="../img/Honda.png" alt="Honda">
         </label>
         <label>
-            <input type="radio" name="brands" value="Porsche">
+            <input type="radio" name="brands" value="ポルシェ">
             <img src="../img/Porsche.png" alt="Porsche">
         </label>
         <label>
-            <input type="radio" name="brands" value="Ferrari">
+            <input type="radio" name="brands" value="フェラーリ">
             <img src="../img/Ferrari.png" alt="Ferrari">
         </label>
         <label>
-            <input type="radio" name="brands" value="Lamborghini">
+            <input type="radio" name="brands" value="ランボルギーニ">
             <img src="../img/Lamborghini.png" alt="Lamborghini">
         </label>
         <label>
@@ -50,11 +50,11 @@ require_once '../DBconnect.php';
             <img src="../img/BMW.png" alt="BMW">
         </label>
         <label>
-            <input type="radio" name="brands" value="Daihatsu">
+            <input type="radio" name="brands" value="ダイハツ">
             <img src="../img/Daihatsu.png" alt="Daihatsu">
         </label>
         <label>
-            <input type="radio" name="brands" value="Nissan">
+            <input type="radio" name="brands" value="日産">
             <img src="../img/Nissan.png" alt="Nissan">
         </label>
     </div>
@@ -84,7 +84,7 @@ require_once '../DBconnect.php';
     </div>
     
     <p>値段</p>
-        <input type="text" name="insert-price"><br><br>
+        <input type="number" name="insert-price"><br><br>
     
     <p>詳細</p>
         <textarea name="insert-detail" id=""></textarea><br><br>
