@@ -24,3 +24,6 @@ $pdo = getDb();
         echo '<p style="color: red;">不正なアクセスです。</p>';
     }
     ?>
+
+</body>
+</html>
