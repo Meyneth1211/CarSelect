@@ -24,18 +24,26 @@ if (isset($_GET['edit_id'])) {
 
 // 更新処理
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $brand = $_POST['brand'];
     $car_name = $_POST['car_name'];
+    $brand = $_POST['brand'];
+    $price = $_POST['price'];
+    $body_type = $_POST['body_type'];
+    $car_detail = $_POST['car_detail'];
     $color = $_POST['color'];
     $stock = $_POST['stock'];
 
     $update_stmt = $pdo->prepare('
         UPDATE car 
-        SET brand = :brand, car_name = :car_name, color = :color, stock = :stock 
+        SET car_name = :car_name, brand = :brand, price = :price, 
+            body_type = :body_type, car_detail = :car_detail, 
+            color = :color, stock = :stock
         WHERE car_id = :car_id
     ');
-    $update_stmt->bindValue(':brand', $brand, PDO::PARAM_STR);
     $update_stmt->bindValue(':car_name', $car_name, PDO::PARAM_STR);
+    $update_stmt->bindValue(':brand', $brand, PDO::PARAM_STR);
+    $update_stmt->bindValue(':price', $price, PDO::PARAM_INT);
+    $update_stmt->bindValue(':body_type', $body_type, PDO::PARAM_STR);
+    $update_stmt->bindValue(':car_detail', $car_detail, PDO::PARAM_STR);
     $update_stmt->bindValue(':color', $color, PDO::PARAM_STR);
     $update_stmt->bindValue(':stock', $stock, PDO::PARAM_INT);
     $update_stmt->bindValue(':car_id', $car_id, PDO::PARAM_INT);
@@ -54,12 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <form method="post">
     <table class="edit-table">
         <tr>
+            <th>車名</th>
+            <td><input type="text" name="car_name" value="<?= htmlspecialchars($car['car_name'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+        <tr>
             <th>ブランド</th>
             <td><input type="text" name="brand" value="<?= htmlspecialchars($car['brand'], ENT_QUOTES, 'UTF-8') ?>" required></td>
         </tr>
         <tr>
-            <th>車名</th>
-            <td><input type="text" name="car_name" value="<?= htmlspecialchars($car['car_name'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+            <th>価格</th>
+            <td><input type="number" name="price" value="<?= htmlspecialchars($car['price'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+        <tr>
+            <th>ボディタイプ</th>
+            <td><input type="text" name="body_type" value="<?= htmlspecialchars($car['body_type'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+        <tr>
+            <th>車の詳細</th>
+            <td><input type="text" name="car_detail" value="<?= htmlspecialchars($car['car_detail'], ENT_QUOTES, 'UTF-8') ?>" required></td>
         </tr>
         <tr>
             <th>色</th>
@@ -71,5 +91,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
     </table>
     <button class="save-button" type="submit">更新確定</button>
-    <button class="back-button" type="button" onclick="location.href='car_list.php'">キャンセル</button>
+    <button class="back-button" type="button" onclick="location.href=\'car_list.php\'">キャンセル</button>
 </form>
