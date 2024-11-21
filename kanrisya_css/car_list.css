@@ -93,6 +93,7 @@
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    margin-left:10%;
 }
 
 .edit-button:hover {
