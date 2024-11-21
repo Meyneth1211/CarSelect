@@ -31,6 +31,10 @@ body {
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 20px;
+    display: inline-block; /* 各メッセージを独立させる */
+    width: 100%; /* 幅を統一して整列 */
+    box-sizing: border-box; /* パディング込みで幅を計算 */
+    text-align: center; /* メッセージの中央寄せ */
 }
 
 .message.success {
@@ -68,4 +72,9 @@ body {
 
 .nav-button:hover {
     background-color: #2980b9;
+}
+
+/* 追加: メッセージが複数の場合の余白調整 */
+.message + .message {
+    margin-top: 10px; /* メッセージ間のスペース */
 }
