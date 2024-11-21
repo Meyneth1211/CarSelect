@@ -3,6 +3,8 @@ require('kanrisya_session.php');
 require_once '../DBconnect.php';
 $pdo = getDb();
 
+
+if($_POST['send']){
 //フォームからのデータ取得
 $car_name = $_POST['car_name'];
 $brand = $_POST['brands'];
@@ -39,3 +41,5 @@ if($result){
     echo '<h2>商品の登録に失敗しました。</h2>';
     echo '<button type="button" onclick="location.href="https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert/"">再度登録する</button>';
 }
+}
+?>
