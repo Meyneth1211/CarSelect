@@ -25,7 +25,9 @@ $pdo = getDb();
         echo '</table>';
         echo '</form>';
         ?>
-        <button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
+        <div class="user_list_button">
+            <button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
+        </div>
     </div>
 </body>
 </html>
