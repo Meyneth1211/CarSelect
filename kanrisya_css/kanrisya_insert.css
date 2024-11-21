@@ -52,10 +52,8 @@
     text-align: center;
 }
 
-
- /* 選択されているボタンのスタイル */
-  input[type="radio"]:checked + label {
-    background-color: #4CAF50;
-    color: white;
-    border-color: #4CAF50;
+.color-button input[type="radio"] {
+  display: none;
 }
+
+ 
