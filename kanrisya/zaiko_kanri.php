@@ -11,7 +11,6 @@ $pdo = getDb();
 $sql = $pdo->query('SELECT brand, car_name FROM car');
 
 // 一覧表示用のHTML
-echo '<h1>車のブランドと名前一覧</h1>';
 echo '<table border="1">';
 echo '<tr>
         <th>brand</th>
