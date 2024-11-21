@@ -7,7 +7,9 @@
             <form class="kanrisya_login_form" action="kanrisya_signup_backend.php" method="post">
                 <input class="mail" name="mail" type="email" placeholder="Email" required>
                 <input class="pass" name="pass" type="password" placeholder="Password" required>
-                <input class="kanrisya_button_1" type="submit" value="登録">
+                <div class="kanrisya_margin_top">
+                    <input class="kanrisya_button_1" type="submit" value="登録">
+                </div>
             </form>
             <form class="kanrisya_login_form" action="kanrisya_login.php" method="post">
                     <input class="kanrisya_button_2" type="submit" value="ログイン画面へ戻る">
