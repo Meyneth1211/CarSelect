@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user_mail'])) 
     }
 }
 ?>
-<input type="button" onclick="location.href='user_list'" value="一覧画面へ戻る">
+<input type="button" onclick="location.href='zaiko_kanri'" value="一覧画面へ戻る">
 <input type="button" onclick="location.href='kanrisya_top'" value="トップページへ戻る">
 
 </body>
