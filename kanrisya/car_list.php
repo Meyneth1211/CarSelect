@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 ?>
 
-<h1>在庫管理画面です！</h1>
+<h1 class="page-title">在庫管理画面です！</h1>
 
 <?php
 
@@ -12,8 +12,8 @@ $pdo = getDb();
 $sql = $pdo->query('SELECT car_id, brand, car_name, color, stock FROM car');
 
 // 一覧表示用のHTML
-echo '<h1>車のブランドと名前一覧</h1>';
-echo '<table border="1">';
+echo '<h1 class="section-title">車のブランドと名前一覧</h1>';
+echo '<table class="car-table">';
 echo '<tr>
         <th>brand</th>
         <th>car_name</th>
@@ -25,27 +25,27 @@ echo '<tr>
 // 各行のデータを出力
 foreach ($sql as $row) {
     echo '<tr>';
-    echo '<td>' . htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') . '</td>';
-    echo '<td>' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
-    echo '<td>' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
-    echo '<td>' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '</td>';
-    echo '<td>';
+    echo '<td class="brand">' . htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td class="car-name">' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td class="color">' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td class="stock">' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td class="actions">';
     
     // ステッパーで在庫数を変更するフォーム
-    echo '<form style="display: inline;" method="post" action="update_stock.php">';
-    echo '<input type="number" name="stock" value="' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '" min="0" step="1"> ';
+    echo '<form class="stock-update-form" style="display: inline;" method="post" action="update_stock.php">';
+    echo '<input type="number" class="stock-input" name="stock" value="' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '" min="0" step="1"> ';
     echo '<input type="hidden" name="car_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">';
-    echo '<button type="submit">在庫更新</button>';
+    echo '<button class="update-button" type="submit">在庫更新</button>';
     echo '</form> ';
 
     // 編集ボタン
-    echo '<form style="display: inline;" method="get" action="zaiko_hensyuu.php">';
-    echo '<button type="submit" name="edit_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">編集</button>';
+    echo '<form class="edit-form" style="display: inline;" method="get" action="zaiko_hensyuu.php">';
+    echo '<button class="edit-button" type="submit" name="edit_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">編集</button>';
     echo '</form> ';
     
     // 削除ボタン
-    echo '<form style="display: inline;" method="post" action="car_delete.php">';
-    echo '<button type="submit" name="delete_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">削除</button>';
+    echo '<form class="delete-form" style="display: inline;" method="post" action="car_delete.php">';
+    echo '<button class="delete-button" type="submit" name="delete_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">削除</button>';
     echo '</form>';
     
     echo '</td>';
@@ -53,4 +53,3 @@ foreach ($sql as $row) {
 }
 echo '</table>';
 ?>
-<button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
