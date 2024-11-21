@@ -14,10 +14,10 @@ $sql = $pdo->query('SELECT car_id, brand, car_name, color, stock FROM car');
 // 一覧表示用のHTML
 echo '<table class="car-table">';
 echo '<tr>
-        <th>brand</th>
-        <th>car_name</th>
-        <th>color</th>
-        <th>stock</th>
+        <th>ブランド</th>
+        <th>車名</th>
+        <th>色</th>
+        <th>在庫数</th>
         <th>操作</th>
       </tr>';
 
