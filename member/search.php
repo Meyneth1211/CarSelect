@@ -54,19 +54,19 @@
   <!-- 価格 -->
   <div class="title"><h2>価格</h2></div>
 <div class="price-range">
-    <input type="radio" name="price" value="30" id="price-30" hidden>
+    <input type="radio" name="price" value="400" id="price-30" hidden>
     <button type="button" onclick="selectPrice('price-30', '～400万円', this)">～400万円</button>
 
-    <input type="radio" name="price" value="50" id="price-50" hidden>
+    <input type="radio" name="price" value="600" id="price-50" hidden>
     <button type="button" onclick="selectPrice('price-50', '～600万円', this)">～600万円</button>
 
-    <input type="radio" name="price" value="100" id="price-100" hidden>
+    <input type="radio" name="price" value="800" id="price-100" hidden>
     <button type="button" onclick="selectPrice('price-100', '～800万円', this)">～800万円</button>
 
-    <input type="radio" name="price" value="200" id="price-200" hidden>
+    <input type="radio" name="price" value="1000" id="price-200" hidden>
     <button type="button" onclick="selectPrice('price-200', '～1000万円', this)">～1000万円</button>
 
-    <input type="radio" name="price" value="200over" id="price-200over" hidden>
+    <input type="radio" name="price" value="1000over" id="price-200over" hidden>
     <button type="button" onclick="selectPrice('price-200over', '1000万円～', this)">1000万円～</button>
 </div>
 <!-- もし価格が選択されていなければこれを表示 -->
@@ -77,23 +77,23 @@
   <div class="title"><h2>ボディタイプ</h2></div>
   <div class="body-type">
     <label>
-      <input type="checkbox" name="bodytype[]" value="Sedan">
+      <input type="checkbox" name="bodytype[]" value="セダン">
       <img src="../img/セダン.png" alt="セダン" width="30px">
     </label>
     <label>
-      <input type="checkbox" name="bodytype[]" value="SUV">
+      <input type="checkbox" name="bodytype[]" value="'SUV'">
       <img src="../img/SUV.png" alt="SUV" width="30px">
     </label>
     <label>
-      <input type="checkbox" name="bodytype[]" value="Wagon">
+      <input type="checkbox" name="bodytype[]" value="'ワゴン'">
       <img src="../img/トラック.png" alt="ワゴン" width="25px">
     </label>
     <label>
-      <input type="checkbox" name="bodytype[]" value="Conpact">
-      <img src="../img/ワンボックスカー.png" alt="コンパクト" width="23x">
+      <input type="checkbox" name="bodytype[]" value="'コンパクト'">
+      <img src="../img/ワンボックスカー.png" alt="コンパクト" width="23px">
     </label>
     <label>
-      <input type="checkbox" name="bodytype[]" value="Light">
+      <input type="checkbox" name="bodytype[]" value="'スポーツカー'">
       <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
     </label>
   </div>
@@ -104,16 +104,17 @@
 </div>
 <div class="color-options">
     <div class="color-brack">
-      <input type="checkbox" id="black" name="color[]" value="Black" />
+      <input type="checkbox" id="black" name="color[]" value="'Black'" />
       <label for="black">ブラック</label>
     </div>
     <div class="color-white">
       <input type="checkbox" id="white" name="color[]" value="White" />
       <label for="white">ホワイト</label>
     </div>
-    <div class="submit">
+</div>
+
+<div class="submit">
       <input type="submit" value="この条件で絞り込む">
-    </div>
 </div>
 
 <!-- 絞り込み内容を一括送信するためここにform終了タグ -->
@@ -121,13 +122,22 @@
 
 <!-- 車のリスト -->
 <?php
-  if (!isset($_GET['s'])) {
-    die();
+  if (isset($_GET['s'])) {
+    if (isset($_GET['brands'])) {
+      $brands=$_GET['brands'];
+    }
+    if (isset($_GET['price'])) {
+      $price=$_GET['price'];
+    }
+    if (isset($_GET['bodytype'])) {
+      $bodytype=$_GET['bodytype'];
+    }
+    if (isset($_GET['color'])) {
+      $color=$_GET['color'];
+    }
   }
-  $brands=$_GET['brands'];
-  $price=$_GET['price'];
-  $bodytype=$_GET['bodytype'];
-  $color=$_GET['color'];
+  
+  
   var_dump($brands);
   echo '<br>';
   var_dump($price);
@@ -135,7 +145,10 @@
   var_dump($bodytype);
   echo '<br>';
   var_dump($color);
+  
+  
 ?>
+
   <div class="car-list">
     <div class="car-item">
       <img src="lexus-ux300e.jpg">
