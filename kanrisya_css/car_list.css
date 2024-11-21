@@ -52,7 +52,7 @@ input[type="number"] {
     border: 1px solid #ccc;
     text-align: center;
     font-size: 14px;
-    margin-right: 10px;
+    margin-right: 10%;
 }
 
 /* 更新ボタンスタイル */
@@ -65,6 +65,7 @@ input[type="number"] {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    margin-left: 10%;
 }
 
 .update-button:hover {
@@ -81,6 +82,7 @@ input[type="number"] {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    margin-left: 10%;
 }
 
 .delete-button:hover {
