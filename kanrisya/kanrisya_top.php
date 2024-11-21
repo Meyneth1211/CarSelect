@@ -18,11 +18,30 @@
         } else {
             // ログイン失敗時のエラーメッセージ表示
             echo '<div class="container"><div class="message success">EmailかPasswordが違います</div>';
-            echo '<a class="return-button" href="login.php">戻る</a></div>';
+            echo '<a class="return-button" href="kanrisya_login.php">戻る</a></div>';
             exit;
         }
     }
     $pdo = null;
+?>
+
+<?php
+    //メールアドレスとパスワードが入力されているか確認
+    $error = [];
+    if(empty($_SESSION['name'])){
+        echo '<div class="container">';
+        if(empty($_POST['mail'])){
+            $error[] = '<div class="message success">メールアドレスを入力してください</div>';
+        }
+        if(empty($_POST['pass'])){
+            $error[] = '<div class="message success">パスワードを入力してください</div>';
+        }
+        foreach($error as $e){
+            echo $e.'<br>';
+        }
+        echo '<form action="login.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
+        exit;
+    }
 ?>
 
 
