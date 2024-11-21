@@ -49,11 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $update_stmt->bindValue(':car_id', $car_id, PDO::PARAM_INT);
 
     if ($update_stmt->execute()) {
-        echo '<p>情報が正常に更新されました。</p>';
-        echo '<button onclick="location.href=\'car_list.php\'">在庫管理画面に戻る</button>';
+        echo '<div class="message success">情報が正常に編集されました。</div>>';
+        echo '<div class="button-group"><button class="nav-button" onclick="location.href=\'car_list.php\'">在庫管理画面に戻る</button></div>';
         exit;
     } else {
-        echo '<p>更新に失敗しました。</p>';
+        echo '<div class="message error">更新が失敗しました。</div>';
     }
 }
 ?>
