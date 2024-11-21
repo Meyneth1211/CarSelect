@@ -18,6 +18,7 @@ echo '<tr>
         <th>brand</th>
         <th>car_name</th>
         <th>color</th>
+        <th>stock</th>
         <th>操作</th>
       </tr>';
 
@@ -27,6 +28,7 @@ foreach ($sql as $row) {
     echo '<td>' . htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td>' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td>' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td>' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td>';
     // 編集ボタン
     echo '<form style="display: inline;" method="get" action="zaiko_hensyuu.php">';
