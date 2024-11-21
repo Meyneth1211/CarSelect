@@ -89,7 +89,7 @@ require_once '../DBconnect.php';
     <p>詳細</p>
         <textarea name="insert-detail" id=""></textarea><br><br>
 
-    <p></p>
+    <p>カラー</p>
       <div class="color-button">
         <input type="radio" id="black" name="color" value="ブラック">
         <label for="option1" class="black">BLACK</label>
