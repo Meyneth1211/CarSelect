@@ -12,7 +12,7 @@
 
         // ユーザーが存在する場合
         if ($user) {
-            $_SESSION['user_id'] = $user['admin_id']; // セッションにユーザーIDを保存
+            $_SESSION['id'] = $user['admin_id']; // セッションにユーザーIDを保存
             $_SESSION['mail'] = $user['admin_mail'];
             $_SESSION['pass'] = $user['admin_password'];
         } else {
