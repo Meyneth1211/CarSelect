@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require('kanrisya_header.php');
     require_once '../DBconnect.php';
     $pdo = getDb();
 
