@@ -29,9 +29,9 @@
     height: auto;
   }
 
-  /*カラーラジオボタンのスタイル変更*/
+  /*カラーラジオボタンのスタイル変更
   .black{
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     margin: 5px;
     border: 1px solid #ccc;
@@ -43,7 +43,7 @@
   }
 
 .white{
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     margin: 5px;
     border: 1px solid #ccc;
@@ -58,10 +58,34 @@
   color: #000000;
 }
 
-/* カラーボタンのラジオボタンを非表示にする */
+/* カラーボタンのラジオボタンを非表示にする 
 .color-button input[type="radio"] {
   display: none;
-}
+}*/
+
+    /* ラジオボタンを隠す */
+    input[type="radio"] {
+        display: none;
+    }
+
+    /* ラベルをボタン風にスタイリング */
+    label {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    /* 選択されているボタンのスタイル */
+    input[type="radio"]:checked + label {
+        background-color: #4CAF50;
+        color: white;
+        border-color: #4CAF50;
+    }
 
 /*ボディタイプのチェックボックスの幅*/
 .body-type {
