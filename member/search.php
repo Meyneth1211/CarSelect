@@ -54,19 +54,19 @@
   <!-- 価格 -->
   <div class="title"><h2>価格</h2></div>
 <div class="price-range">
-    <input type="radio" name="price" value="400" id="price-30" hidden>
+    <input type="radio" name="price" value="4000000" id="price-30" hidden>
     <button type="button" onclick="selectPrice('price-30', '～400万円', this)">～400万円</button>
 
-    <input type="radio" name="price" value="600" id="price-50" hidden>
+    <input type="radio" name="price" value="6000000" id="price-50" hidden>
     <button type="button" onclick="selectPrice('price-50', '～600万円', this)">～600万円</button>
 
-    <input type="radio" name="price" value="800" id="price-100" hidden>
+    <input type="radio" name="price" value="8000000" id="price-100" hidden>
     <button type="button" onclick="selectPrice('price-100', '～800万円', this)">～800万円</button>
 
-    <input type="radio" name="price" value="1000" id="price-200" hidden>
+    <input type="radio" name="price" value="10000000" id="price-200" hidden>
     <button type="button" onclick="selectPrice('price-200', '～1000万円', this)">～1000万円</button>
 
-    <input type="radio" name="price" value="1000over" id="price-200over" hidden>
+    <input type="radio" name="price" value="over" id="price-200over" hidden>
     <button type="button" onclick="selectPrice('price-200over', '1000万円～', this)">1000万円～</button>
 </div>
 <!-- もし価格が選択されていなければこれを表示 -->
@@ -124,20 +124,54 @@
 <!-- 車のリスト -->
 <?php
   if (isset($_GET['s'])) {
-    echo '検索リクエストを確認';
+    echo '検索リクエストを確認、条件部分のSQL文を初期化';
+    $suffix='';
+    $first=true;
     if (isset($_GET['brands'])) {
       echo 'brandsパラメータの存在を確認';
       $brands=$_GET['brands'];
+      $suffix.='brand IN(' . implode(',',$brands) . ') ';
+      $first=false;
     }
+
     if (isset($_GET['price'])) {
+      echo 'priceパラメータの存在を確認';
       $price=$_GET['price'];
+      if (!$first) {
+        $suffix.='AND ';
+      }
+      if ($price=='over') {
+        $suffix.='price >= 10000000 ';
+        $first=false;
+      }else{
+        $suffix.='price <= ' . $price;
+        $first=false;
+      }
     }
+
     if (isset($_GET['bodytype'])) {
+      echo 'bodytypeパラメータの存在を確認';
+      if (!$first) {
+        $suffix.='AND ';
+      }
       $bodytype=$_GET['bodytype'];
+      $suffix.='bodytype IN(' . implode(',',$bodytype) . ') ';
+      $first=false;
     }
     if (isset($_GET['color'])) {
+      echo 'colorパラメータの存在を確認';
+      if (!$first) {
+        $suffix.='AND ';
+      }
       $color=$_GET['color'];
+      $suffix.='color IN(' . implode(',',$color) . ')';
+      $first=false;
     }
+    if($first){
+      $suffix.='1=1';
+    }
+    
+    $suffix.=';';
   }
   
   var_dump($brands);
@@ -147,17 +181,11 @@
   var_dump($bodytype);
   echo '<br>';
   var_dump($color);
-  
-  $test=<<<TEST
-  １行目
-  ２行目
-  ３行目
-  終わり！
-  TEST;
-
-  echo $test;
+  echo '<br><br>';
 
   $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
+  $sql.= $suffix;
+  echo $sql;
 
 ?>
 
