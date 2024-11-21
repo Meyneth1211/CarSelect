@@ -11,7 +11,7 @@ $brand = $_POST['brands'];
 $body_type = $_POST['body-type'];
 $price = $_POST['insert-price'];
 $car_detail = $_POST['insert-detail'];
-$color = $_POST['color'];
+$color = $_POST['color'] ?? null;
 
 
 //エラーメッセージの表示
