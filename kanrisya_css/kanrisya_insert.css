@@ -1,0 +1,30 @@
+/*ブランドのチェックボックスの幅*/
+.rajio-images {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+/* ブランドのチェックボックスを非表示にする */
+.rajio-images input[type="rajio"] {
+    display: none;
+  }
+
+  .rajio-images label {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  /* ブランドのチェック時の画像に枠を追加する */
+  .rajio-images input[type="rajio"]:checked + img {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+  }
+
+  /* 画像のサイズ調整 */
+  .rajio-images img {
+    width: 80px; /* 必要に応じてサイズを調整 */
+    height: auto;
+  }
