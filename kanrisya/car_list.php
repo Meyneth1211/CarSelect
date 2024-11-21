@@ -38,7 +38,7 @@ foreach ($sql as $row) {
     echo '</form> ';
 
     // 編集ボタン
-    echo '<form class="edit-form" style="display: inline;" method="get" action="zaiko_hensyuu.php">';
+    echo '<form class="edit-form" style="display: inline;" method="get" action="car_hensyuu.php">';
     echo '<button class="edit-button" type="submit" name="edit_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">編集</button>';
     echo '</form> ';
     

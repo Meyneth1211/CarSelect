@@ -4,4 +4,4 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 ?>
 
-<h1>削除画面です！</h1>
+<h1>編集画面です！</h1>
