@@ -30,7 +30,12 @@ foreach ($sql as $row) {
     echo '<input type="number" name="stock[' . $row['car_id'] . ']" value="' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '" min="0" step="1">';
     echo '</td>';
     echo '<td>';
+    //更新ボタン
     echo '<button class="update-button" type="submit" name="update_stock" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">更新</button>';
+    // 削除ボタン
+    echo '<form style="display: inline;" method="post" action="car_delete.php">';
+    echo '<button type="submit" name="delete_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">削除</button>';
+    echo '</form>';
     echo '</td>';
     echo '</tr>';
 }
