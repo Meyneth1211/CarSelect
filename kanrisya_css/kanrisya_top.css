@@ -3,12 +3,11 @@
 }
 
 .top_button{
-    width: 50%;
+    width: 100%;
     margin: 0;
     margin-top: 30px;
-    display: grid;
     gap: 16px;
-    margin-top: 20px;
+    margin-top: 200px;
     text-align: center;
 }
 .top_button > input, .top_button > button{
@@ -19,8 +18,4 @@
 .top_button > input:hover{
     border: 2px solid #0ef;
     box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
-}
-
-.top_button1, .top_button2, .top_button3, .top_button4{
-    
 }
