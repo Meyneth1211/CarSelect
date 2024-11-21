@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <h1 class="page-title">車情報編集</h1>
-<form method="post">
+<form class="hensyuu_form" method="post">
     <table class="edit-table">
         <tr>
             <th>車名</th>

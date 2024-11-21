@@ -61,3 +61,25 @@
 .back-button:hover {
     background-color: #2980b9;
 }
+
+/* テキストボックスサイズの調整 */
+.edit-table td input[type="text"], 
+.edit-table td input[type="number"], 
+.edit-table td textarea {
+    width: 90%; /* テキストボックスとテキストエリアの幅を調整 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ボタンを中央に配置 */
+.hensyuu_form {
+    text-align: center; /* ボタンの中央寄せ */
+}
+
+.save-button, .back-button {
+    display: inline-block;
+    margin: 10px 5px; /* ボタン間の間隔を調整 */
+}
+
