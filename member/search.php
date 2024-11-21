@@ -124,7 +124,9 @@
 <!-- 車のリスト -->
 <?php
   if (isset($_GET['s'])) {
+    echo '検索リクエストを確認';
     if (isset($_GET['brands'])) {
+      echo 'brandsパラメータの存在を確認';
       $brands=$_GET['brands'];
     }
     if (isset($_GET['price'])) {
@@ -146,6 +148,17 @@
   echo '<br>';
   var_dump($color);
   
+  $test=<<<TEST
+  １行目
+  ２行目
+  ３行目
+  終わり！
+  TEST;
+
+  echo $test;
+
+  $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
+
 ?>
 
   <div class="car-list">
