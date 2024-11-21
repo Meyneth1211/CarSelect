@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
         <tr>
             <th>車の詳細</th>
-            <td><input type="text" size="20" name="car_detail" value="<?= htmlspecialchars($car['car_detail'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+            <td><textarea name="car_detail" value="<?= htmlspecialchars($car['car_detail'], ENT_QUOTES, 'UTF-8') ?>" required></textarea></td>
         </tr>
         <tr>
             <th>色</th>
