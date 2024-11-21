@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../kanrisya_css/user_delete.css">
     <link rel="stylesheet" href="../kanrisya_css/car_list.css">
     <link rel="stylesheet" href="../kanrisya_css/car_hensyuu.css">
+    <link rel="stylesheet" href="../kanrisya_css/kanrisya_login.css">
     <title>Car Select kanrisya</title>
 </head>
 <body>
