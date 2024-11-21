@@ -172,7 +172,7 @@
     }
     
     $suffix.=';';
-  }
+
   /*
   var_dump($brands);
   echo '<br>';
@@ -185,7 +185,10 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $result=$stmt->fetchall(PDO::FETCH_ASSOC);
-  var_dump($result);
+  //var_dump($result);
+  echo $result[0]['car_name'];
+  }
+  
 
 ?>
 
