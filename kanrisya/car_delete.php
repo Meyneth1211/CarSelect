@@ -27,8 +27,8 @@ $pdo = getDb();
         ?>
 
         <div class="button-group">
-            <input type="button" onclick="location.href='car_list'" value="一覧画面へ戻る">
-            <input type="button" onclick="location.href='kanrisya_top'" value="トップページへ戻る">
+            <input type="nav-button" onclick="location.href='car_list'" value="一覧画面へ戻る">
+            <input type="nav-button" onclick="location.href='kanrisya_top'" value="トップページへ戻る">
     </div>
     </div>
 </body>
