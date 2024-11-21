@@ -64,12 +64,12 @@
 }*/
 
     /* ラジオボタンを隠す */
-    input[type="radio"] {
+    .color-button input[type="radio"] {
         display: none;
     }
 
     /* ラベルをボタン風にスタイリング */
-    label {
+    .color-button label {
         display: inline-block;
         padding: 10px 20px;
         margin: 5px;
@@ -81,7 +81,7 @@
     }
 
     /* 選択されているボタンのスタイル */
-    input[type="radio"]:checked + label {
+    .color-button input[type="radio"]:checked + label {
         background-color: #4CAF50;
         color: white;
         border-color: #4CAF50;
