@@ -11,7 +11,7 @@ require_once '../DBconnect.php';
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="kanrisya_insert_back.php" method="post">
     <p>商品名</p>
         <input type="text" name="car_name"><br><br>
     
@@ -56,6 +56,30 @@ require_once '../DBconnect.php';
         <label>
             <input type="radio" name="brands" value="Nissan">
             <img src="../img/Nissan.png" alt="Nissan">
+        </label>
+    </div>
+
+    <p>ボディタイプ</p>
+    <div class="body-type">
+        <label>
+            <input type="radio" name="brands" value="セダン">
+            <img src="../img/セダン.png" alt="セダン">
+        </label>
+        <label>
+            <input type="radio" name="brands" value="SUV">
+            <img src="../img/SUV.png" alt="SUV">
+        </label>
+        <label>
+            <input type="radio" name="brands" value="トラック">
+            <img src="../img/トラック.png" alt="トラック">
+        </label>
+        <label>
+            <input type="radio" name="brands" value="コンパクト">
+            <img src="../img/ワンボックスカー.png" alt="コンパクト">
+        </label>
+        <label>
+            <input type="radio" name="brands" value="スポーツカー">
+            <img src="../img/スポーツカー.png" alt="スポーツカー">
         </label>
     </div>
     
