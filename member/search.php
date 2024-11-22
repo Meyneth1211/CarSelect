@@ -187,7 +187,7 @@
   $result=$stmt->fetchall(PDO::FETCH_ASSOC);
   //var_dump($result);
   foreach ($result as $detail => $value) {
-    echo '<h1>'.$value.'</h1>';
+    echo '<h1>'.$value['car_detail'].'</h1>';
   }
   }
   
