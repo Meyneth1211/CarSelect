@@ -25,6 +25,5 @@
 }
 
 .hidden:hover{
-    transform: scale(1.05); /*触れると大きくなる♡ */
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
 }
