@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="back">
-        <form action="kanrisya_logout.php" method="post"><input type="image"></form>
+        <form action="kanrisya_logout.php" method="post"><input type="image" src="../img/logout.png"></form>
         <h2><a class="logo_link" href="kanrisya_top">Car Select</a></h2>
     </div>
 
