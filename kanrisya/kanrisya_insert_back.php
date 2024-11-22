@@ -18,7 +18,7 @@ $isPrimarySelected = false;
 
 // アップロードされたファイルを処理
 if (!empty($_FILES['images']['name'][0])) {
-    $uploadDir = 'detail/'; // 保存先ディレクトリ
+    $uploadDir = '../img/detail/'; // 保存先ディレクトリ
     $errors = [];
     $uploadedFiles = [];
 
