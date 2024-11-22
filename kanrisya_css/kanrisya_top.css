@@ -1,7 +1,7 @@
 /* 全体のスタイル調整 */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #e9ecef; /* 薄いグレーの背景色 */
     margin: 0;
     padding: 0;
 }
@@ -10,55 +10,43 @@ body {
 .top_button {
     display: flex;
     justify-content: center; /* ボタンを中央揃え */
-    gap: 20px; /* ボタン間のスペース */
+    gap: 15px; /* ボタン間のスペース */
     margin-top: 50px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影で立体感を追加 */
-    border-radius: 8px;
+    padding: 15px;
+    background-color: #e9ecef; /* 背景色を統一 */
+    border: none;
 }
 
 /* ボタン共通スタイル */
 .top_button input {
     font-size: 18px;
-    padding: 15px 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* 青系の統一カラー */
+    padding: 15px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-/* 各ボタンの個別スタイル */
-.top_button1 {
-    background-color: #ff4d4d; /* 赤系カラー */
-    color: white;
-}
-
-.top_button2 {
-    background-color: #4CAF50; /* 緑系カラー */
-    color: white;
-}
-
-.top_button3 {
-    background-color: #3498db; /* 青系カラー */
-    color: white;
-}
-
-.top_button4 {
-    background-color: #ff9900; /* オレンジ系カラー */
-    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ボタンに立体感 */
 }
 
 /* ホバー時のエフェクト */
 .top_button input:hover {
+    background-color: #0056b3; /* ホバー時に濃い青色 */
     transform: scale(1.05); /* ボタンを少し拡大 */
-    opacity: 0.9; /* 色を若干暗く */
+}
+
+/* ボタンが押されたときのエフェクト */
+.top_button input:active {
+    transform: scale(1); /* 元のサイズに戻る */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 少し影を小さく */
 }
 
 /* モバイル対応 */
 @media (max-width: 768px) {
     .top_button {
-        flex-direction: column; /* ボタンを縦並び */
+        flex-direction: column; /* ボタンを縦並びに */
         align-items: center;
     }
 
