@@ -183,7 +183,6 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $images=$stmt->fetchall(PDO::FETCH_ASSOC);
-  var_dump($images);
 
   echo '<div class="car-list">';
   foreach ($cars as $row) {
@@ -191,7 +190,7 @@
       echo '<div class="car-item">';
         echo '<img src="' . $images[$c]['image'] . '">';
         echo '<div class="car-info">';
-          echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '"></a>';
+          echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '"><h3>' . $row['car_name'] . '</h3></a>';
           echo '<p>'.$row['price'].'円</p>';
         echo '</div>';
         echo '<div class="favorite-icon">♡</div>';
