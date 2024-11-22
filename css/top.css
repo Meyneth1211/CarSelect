@@ -13,11 +13,12 @@
     object-fit: contain;
 }
 
+/* 背景 */
 .car-logo-item {
-    width: 180px; /* 背景の幅 */
-    height: 180px; /* 背景の高さ */
-    background-color: #1c1c1c; /* 背景色を黒基調に */
-    border-radius: 10px; /* 角丸 */
+    width: 180px;
+    height: 180px; 
+    background-color: #1c1c1c; 
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +27,7 @@
 }
 
 .car-logo-item:hover {
-    transform: scale(1.05); /* ホバー時に少し拡大 */
+    transform: scale(1.05); /*触れると大きくなる♡ */
     box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
 }
 
