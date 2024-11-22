@@ -177,10 +177,7 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $result=$stmt->fetchall(PDO::FETCH_ASSOC);
-  //var_dump($result);
-  foreach ($result as $key => $value) {
-    echo '<h1>'.$key['car_detail'].'</h1>';
-  }
+  var_dump($result);
   }
   
 
