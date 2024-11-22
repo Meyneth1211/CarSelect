@@ -5,8 +5,8 @@ require_once '../DBconnect.php';  // データベース接続を読み込む
 $pdo = getDb();
 
 // ユーザーIDをGETパラメータから取得
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+if (isset($_GET['user_id'])) {
+    $user_id = $_GET['user_id'];
 
     // データベースからユーザー情報を取得
     $stmt = $pdo->prepare('SELECT * FROM user WHERE user_id = :user_id');
