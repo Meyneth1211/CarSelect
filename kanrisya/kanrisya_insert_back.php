@@ -30,7 +30,7 @@ if ($errors) {
     exit();
 }
 
-$stmt = $pdo->prepare('INSERT INTO cars (car_name, brand, body_type, price, car_detail, color) VALUES (?,?,?,?,?,?)');
+$stmt = $pdo->prepare('INSERT INTO car (car_name, brand, body_type, price, car_detail, color) VALUES (?,?,?,?,?,?)');
 $result = $stmt->execute([$car_name,$brand,$body_type,$price,$car_detail,$color]);
 $pdo = null;
 
