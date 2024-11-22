@@ -2,41 +2,40 @@
 /* ボタンコンテナのスタイル */
 .top_button {
     display: flex;
-    justify-content: center; /* ボタンを中央揃え */
+    justify-content: center; 
     gap: 50px; /* ボタン間のスペース */
     margin-top: 50px;
     padding: 200px;
     border: none;
-    background-color: #e9ecef;
 }
 
-/* ボタン共通スタイル */
+/* ボタン */
 .top_button input {
     font-size: 30px;
     font-weight: bold;
     color: white;
-    background-color: #007bff; /* 青系の統一カラー */
+    background-color: #007bff;
     padding: 35px 60px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ボタンに立体感 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
-/* ホバー時のエフェクト */
+/* 触れたとき */
 .top_button input:hover {
-    background-color: #0056b3; /* ホバー時に濃い青色 */
-    transform: scale(1.05); /* ボタンを少し拡大 */
+    background-color: #0056b3; 
+    transform: scale(1.05);
 }
 
-/* ボタンが押されたときのエフェクト */
+/* ボタンが押されたときト */
 .top_button input:active {
     transform: scale(1); /* 元のサイズに戻る */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 少し影を小さく */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* モバイル対応 */
+/* 一応モバイル対応 */
 @media (max-width: 768px) {
     .top_button {
         flex-direction: column; /* ボタンを縦並びに */
