@@ -1,89 +1,78 @@
 <?php
-session_start();
-require('../header/header.php');
+require('kanrisya_session.php');
 require_once '../DBconnect.php';
 $pdo = getDb();
 
-// セッションにユーザーIDがあるか確認
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+// 編集対象のuser_idを受け取る
+if (isset($_GET['edit_id'])) {
+    $user_id = $_GET['edit_id'];
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // フォーム送信時の更新処理
-        $user_mail = $_POST['user_mail'];
-        $user_password = $_POST['user_password'];
-        $user_address = $_POST['user_address'];
+    // データベースから該当ユーザーの情報を取得
+    $stmt = $pdo->prepare('SELECT * FROM user WHERE user_id = :user_id');
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // データベース更新
-        $sql = $pdo->prepare('UPDATE user SET user_mail = ?, user_password = ?, user_address = ? WHERE user_id = ?');
-        if ($sql->execute([$user_mail, $user_password, $user_address, $user_id])) {
-            $message = 'アカウント情報を更新しました。';
-        } else {
-            $message = '更新に失敗しました。もう一度お試しください。';
-        }
-    } else {
-        // 初期フォームのデータ取得
-        $sql = $pdo->prepare('SELECT user_mail, user_password, user_address FROM user WHERE user_id = ?');
-        $sql->execute([$user_id]);
-        $user = $sql->fetch(PDO::FETCH_ASSOC);
-
-        if (!$user) {
-            // データが取得できなかった場合
-            echo '<p class="error">アカウント情報が見つかりませんでした。<a href="login.php">ログインし直してください。</a></p>';
-            exit();
-        }
+    if (!$user) {
+        echo '<p>指定されたユーザーの情報が見つかりません。</p>';
+        exit;
     }
 } else {
-    // ユーザーIDがセッションに存在しない場合
-    echo '<div class="account-error-back"><div class="account-error-card">';
-    echo '<div class="account-message3">ログインしてください</div>';
-    echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="ログインする"></form></div></div>';
-    exit();
+    echo '<p>ユーザーIDが指定されていません。</p>';
+    exit;
+}
+
+// 更新処理
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user_name = $_POST['user_name'];
+    $user_mail = $_POST['user_mail'];
+    $user_password = $_POST['user_password'];
+    $user_address = $_POST['user_address'];
+
+    $update_stmt = $pdo->prepare('
+        UPDATE user 
+        SET user_name = :user_name, user_mail = :user_mail, 
+            user_password = :user_password, user_address = :user_address
+        WHERE user_id = :user_id
+    ');
+    $update_stmt->bindValue(':user_name', $user_name, PDO::PARAM_STR);
+    $update_stmt->bindValue(':user_mail', $user_mail, PDO::PARAM_STR);
+    $update_stmt->bindValue(':user_password', $user_password, PDO::PARAM_STR);
+    $update_stmt->bindValue(':user_address', $user_address, PDO::PARAM_STR);
+    $update_stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+
+    if ($update_stmt->execute()) {
+        echo '<div class="container">';
+        echo '<div class="message success">情報が正常に編集されました。</div>';
+        echo '<div class="button-group"><button class="nav-button" onclick="location.href=\'user_list.php\'">ユーザー一覧に戻る</button></div>';
+        exit;
+    } else {
+        echo '<div class="message error">更新が失敗しました。</div>';
+    }
+    echo '</div>';
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>アカウント編集</title>
-    <style>
-        /* デザインは省略（前回と同じ） */
-    </style>
-</head>
-<body>
-    <div class="edit-back">
-        <div class="edit-card">
-            <h2>アカウント編集</h2>
-
-            <?php if (isset($message)): ?>
-                <p class="message"><?= htmlspecialchars($message, ENT_QUOTES, 'UTF-8') ?></p>
-            <?php endif; ?>
-
-            <form action="account_update.php" method="post">
-                <div class="form-group">
-                    <label for="user_mail">メールアドレス</label>
-                    <input type="email" id="user_mail" name="user_mail" 
-                           value="<?= htmlspecialchars($user['user_mail'] ?? '', ENT_QUOTES, 'UTF-8') ?>" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="user_password">パスワード</label>
-                    <input type="password" id="user_password" name="user_password" 
-                           value="<?= htmlspecialchars($user['user_password'] ?? '', ENT_QUOTES, 'UTF-8') ?>" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="user_address">住所</label>
-                    <input type="text" id="user_address" name="user_address" 
-                           value="<?= htmlspecialchars($user['user_address'] ?? '', ENT_QUOTES, 'UTF-8') ?>" required>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit">更新する</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
-</html>
+<h1 class="page-title">ユーザー情報編集</h1>
+<form class="hensyuu_form" method="post">
+    <table class="edit-table">
+        <tr>
+            <th>ユーザー名</th>
+            <td><input type="text" name="user_name" value="<?= htmlspecialchars($user['user_name'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+        <tr>
+            <th>メールアドレス</th>
+            <td><input type="email" name="user_mail" value="<?= htmlspecialchars($user['user_mail'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+        <tr>
+            <th>パスワード</th>
+            <td><input type="password" name="user_password" value="<?= htmlspecialchars($user['user_password'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+        <tr>
+            <th>住所</th>
+            <td><input type="text" name="user_address" value="<?= htmlspecialchars($user['user_address'], ENT_QUOTES, 'UTF-8') ?>" required></td>
+        </tr>
+    </table>
+    <button class="save-button" type="submit">更新確定</button>
+    <button class="back-button" type="button" onclick="location.href='user_list.php'">キャンセル</button>
+</form>
