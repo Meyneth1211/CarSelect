@@ -1,5 +1,5 @@
 <?php
-    header('Location: https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_login.php');//他の画面に遷移したいとき。先頭に書く。
+    header('Location: https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_first_login.php');//他の画面に遷移したいとき。先頭に書く。
     session_start();
 
     $_SESSION = array();//空の配列を渡すセッション中身消す
