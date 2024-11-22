@@ -13,6 +13,33 @@ $price = $_POST['insert-price'];
 $car_detail = $_POST['insert-detail'];
 $color = $_POST['color'] ?? null;
 
+// アップロードされたファイルを処理
+if (!empty($_FILES['images']['name'][0])) {
+    $uploadDir = 'uploads/'; // 保存先ディレクトリ
+    $errors = [];
+    $uploadedFiles = [];
+
+foreach ($_FILES['images']['name'] as $key => $imageName) {
+        $tmpName = $_FILES['images']['tmp_name'][$key];
+        $fileSize = $_FILES['images']['size'][$key];
+        $fileError = $_FILES['images']['error'][$key];
+        $fileType = $_FILES['images']['type'][$key];
+
+        // ファイルを保存
+        $newFileName = uniqid() . '_' . basename($imageName); // 一意の名前を生成
+        $destination = $uploadDir . $newFileName;
+
+if (move_uploaded_file($tmpName, $destination)) {
+    // データベースに保存
+    $stmt = $pdo->prepare('INSERT INTO images (file_path) VALUES (:file_path)');
+    $stmt->execute([':file_path' => $destination]);
+    $uploadedFiles[] = $destination;
+} else {
+    $errors[] = "$imageName のアップロードに失敗しました。";
+}
+}
+
+
 
 //エラーメッセージの表示
 $errors = [];
@@ -28,6 +55,7 @@ if ($errors) {
         echo '<p style="color: red;">' . htmlspecialchars($error) . '</p>';
     }
     exit();
+}
 }
 
 $stmt = $pdo->prepare('INSERT INTO car (car_name, brand, body_type, price, car_detail, color) VALUES (?,?,?,?,?,?)');
