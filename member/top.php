@@ -48,24 +48,41 @@
     <li class="slider-item slider-item03"></li>
   </ul>
 
-<form action="search.php" method="post">
-
-
-  <div class="car-logo">
-    <input type="image" name="" value="Benz" src="../img/Benz.png" alt="Benz" width="150px" height="auto">
-    <input type="image" name="" value="Nissan" src="../img/Nissan.png" alt="Nissan" width="180px" height="auto">
-    <input type="image" name="" value="Mazda" src="../img/Mazda.png" alt="Mazda" width="170px" height="auto">
-    <input type="image" name="" value="Toyota" src="../img/Toyota.png" alt="Toyota" width="150px" height="auto">
-    <input type="image" name="" value="Honda" src="../img/Honda.png" alt="Honda" width="180px" height="auto">
-  </div>
-
-  <div class="car-logo2">
-    <input type="image" name="" value="Porsche" src="../img/Porsche.png" alt="Porsche" width="170px" height="auto">
-    <input type="image" name="" value="Lexus" src="../img/Lexus.png" alt="Lexus" width="170px" height="auto">
-    <input type="image" name="" value="Lamborghini" src="../img/Lamborghini.png" alt="Lamborghini" width="170px" height="auto">
-    <input type="image" name="" value="BMW" src="../img/BMW.png" alt="BMW" width="170px" height="auto">
-    <input type="image" name="" value="Ferrari" src="../img/Ferrari.png" alt="Ferrari" width="170px" height="auto">
-  </div>
+  <form action="search.php" method="post">
+    <div class="car-logo">
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Benz" src="../img/Benz.png" alt="Benz">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Nissan" src="../img/Nissan.png" alt="Nissan">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Mazda" src="../img/Mazda.png" alt="Mazda">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Toyota" src="../img/Toyota.png" alt="Toyota">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Honda" src="../img/Honda.png" alt="Honda">
+        </div>
+    </div>
+    <div class="car-logo2">
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Porsche" src="../img/Porsche.png" alt="Porsche">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Lexus" src="../img/Lexus.png" alt="Lexus">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Lamborghini" src="../img/Lamborghini.png" alt="Lamborghini">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="BMW" src="../img/BMW.png" alt="BMW">
+        </div>
+        <div class="car-logo-item">
+            <input type="image" name="brand" value="Ferrari" src="../img/Ferrari.png" alt="Ferrari">
+        </div>
+    </div>
 </form>
 
 
