@@ -183,7 +183,8 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $images=$stmt->fetchall(PDO::FETCH_ASSOC);
-  
+  var_dump($images);
+
   echo '<div class="car-list">';
   foreach ($cars as $row) {
     $c=0;
