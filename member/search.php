@@ -165,19 +165,13 @@
     
     $suffix.=';';
 
-  /*
-  var_dump($brands);
-  echo '<br>';
-  */
   $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
   $sql.= $suffix;
-  //echo $sql;
   require_once '../DBconnect.php';
   $pdo=getDB();
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $cars=$stmt->fetchall(PDO::FETCH_ASSOC);
-  //var_dump($result);
   $imageid=[];
   foreach ($cars as $row) {
     $imageid[]=$row['car_id'];
@@ -189,12 +183,24 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $images=$stmt->fetchall(PDO::FETCH_ASSOC);
-  echo $sql;
-  }
   
-
+  echo '<div class="car-list">';
+  foreach ($cars as $row) {
+    $c=0;
+      echo '<div class="car-item">';
+        echo '<img src="' . $images[$c]['image'] . '">';
+        echo '<div class="car-info">';
+          echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '"></a>';
+          echo '<p>'.$row['price'].'円</p>';
+        echo '</div>';
+        echo '<div class="favorite-icon">♡</div>';
+      echo '</div>';
+    $c++;
+  }
+  echo '</div>';
+  }
 ?>
-
+<!--
   <div class="car-list">
     <div class="car-item">
       <img src="lexus-ux300e.jpg">
@@ -214,6 +220,7 @@
     </div>
   </div>
 </div>
+-->
 <script src="../js/search.js"></script>
 </body>
 </html>
