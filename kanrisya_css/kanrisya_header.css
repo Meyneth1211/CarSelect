@@ -1,3 +1,4 @@
+/* 親要素 .back に relative を設定 */
 .back {
     font-size: 30px;
     font-family: "Georgia";
@@ -5,8 +6,19 @@
     color: #fff;
     padding: 1px;
     text-align: center;
+    position: relative; /* 子要素の配置を調整可能に */
 }
-.logo_link{
+
+/* ログアウトボタンの親要素を右端に移動 */
+.hidden {
+    position: absolute;
+    top: 50%; /* 縦中央揃え */
+    right: 10px; /* 右端に配置 */
+    transform: translateY(-50%); /* 縦位置を正確に調整 */
+}
+
+/* ロゴのリンク */
+.logo_link {
     text-decoration: none;
     color: #fff;
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 200px #0072ff;

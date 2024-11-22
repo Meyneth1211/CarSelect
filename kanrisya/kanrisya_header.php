@@ -18,8 +18,11 @@
 <body>
     <div class="back">
         <div class="hidden">
-            <form action="kanrisya_logout.php" method="post"><input type="image" src="../img/logout.png" width="50px" height="auto"></form>
+            <form action="kanrisya_logout.php" method="post">
+                <input type="image" src="../img/logout.png" width="50px" height="auto" alt="ログアウト">
+            </form>
         </div>
         <h2><a class="logo_link" href="kanrisya_top">Car Select</a></h2>
     </div>
+
 
