@@ -23,3 +23,8 @@
     color: #fff;
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 200px #0072ff;
 }
+
+.hidden:hover{
+    transform: scale(1.05); /*触れると大きくなる♡ */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
+}
