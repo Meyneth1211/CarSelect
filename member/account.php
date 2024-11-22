@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
     echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="ログインする"></form></div></div>';
 }
 ?>
-<div class="">
-    <input class="top_button1" type="button" onclick="location.href='account_update'" value="ユーザー情報編集">
+<div class="login-form">
+    <input class="button-2" type="button" onclick="location.href='account_update'" value="ユーザー情報編集">
 </div>
 </div></div>
