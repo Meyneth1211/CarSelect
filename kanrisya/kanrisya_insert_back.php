@@ -13,33 +13,41 @@ $price = $_POST['insert-price'];
 $car_detail = $_POST['insert-detail'];
 $color = $_POST['color'] ?? null;
 
+// メイン画像として設定されるもの
+$isPrimarySelected = false;
+
 // アップロードされたファイルを処理
 if (!empty($_FILES['images']['name'][0])) {
-    $uploadDir = 'uploads/'; // 保存先ディレクトリ
+    $uploadDir = 'detail/'; // 保存先ディレクトリ
     $errors = [];
     $uploadedFiles = [];
 
-foreach ($_FILES['images']['name'] as $key => $imageName) {
+    foreach ($_FILES['images']['name'] as $key => $imageName) {
         $tmpName = $_FILES['images']['tmp_name'][$key];
         $fileSize = $_FILES['images']['size'][$key];
         $fileError = $_FILES['images']['error'][$key];
         $fileType = $_FILES['images']['type'][$key];
 
+        // メイン画像フラグを取得
+        $isPrimary = isset($_POST['is_primary']) && $_POST['is_primary'] == $key ? 1 : 0;
+
         // ファイルを保存
         $newFileName = uniqid() . '_' . basename($imageName); // 一意の名前を生成
-        $destination = $uploadDir . $newFileName;
+        $car_image = $uploadDir . $newFileName;
 
-if (move_uploaded_file($tmpName, $destination)) {
-    // データベースに保存
-    $stmt = $pdo->prepare('INSERT INTO image (image) VALUES (:file_path)');
-    $stmt->execute([':file_path' => $destination]);
-    $uploadedFiles[] = $destination;
-} else {
-    $errors[] = "$imageName のアップロードに失敗しました。";
-}
-}
-
-
+        if (move_uploaded_file($tmpName, $destination)) {
+            // データベースに保存
+            if ($isPrimary == 1 && !$isPrimarySelected) {
+                $pdo->query('UPDATE images SET is_primary = 0 WHERE is_primary = 1');
+                $isPrimarySelected = true;
+            }
+            $stmt = $pdo->prepare('INSERT INTO image (image, is_primary) VALUES (?,?)');
+            $stmt->execute([$car_image,$isPrimary]);
+            $uploadedFiles[] = $car_image;
+        } else {
+            $errors[] = "$imageName のアップロードに失敗しました。";
+        }
+    }
 
 //エラーメッセージの表示
 $errors = [];
