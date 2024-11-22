@@ -39,7 +39,7 @@
         foreach($error as $e){
             echo $e.'<br>';
         }
-        echo '<form action="kanrisya_login.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
+        echo '<form action="kanrisya_first_login.php" method="post"><input class="nav-button" type="submit" value="戻る"></form></div>';
         exit;
     }
 ?>
