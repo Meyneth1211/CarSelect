@@ -19,7 +19,6 @@ if (isset($_SESSION['user_id'])) {
         echo '<p class="account-message2">メールアドレス: ' . $user['user_mail'] . '</p><br>';
         echo '<p class="account-message2">パスワード: ' . $user['user_password'] . '</p><br>';
         echo '<p class="account-message2">住所: ' . $user['user_address'] . '</p><br>';
-        echo '</div></div>';
     } else {
         echo 'アカウント情報が見つかりませんでした';
     }
@@ -32,3 +31,4 @@ if (isset($_SESSION['user_id'])) {
 <div class="">
     <input class="top_button1" type="button" onclick="location.href='account_update'" value="ユーザー情報編集">
 </div>
+</div></div>
