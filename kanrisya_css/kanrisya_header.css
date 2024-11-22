@@ -12,8 +12,8 @@
 /* ログアウトボタンの親要素を右端に移動 */
 .hidden {
     position: absolute;
-    top: 50%; /* 縦中央揃え */
-    right: 10px; /* 右端に配置 */
+    top: 54%; /* 縦中央揃え */
+    right: 50px; /* 右端に配置 */
     transform: translateY(-50%); /* 縦位置を正確に調整 */
 }
 
