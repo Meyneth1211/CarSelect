@@ -12,6 +12,9 @@
             <form class="kanrisya_login_form" action="kanrisya_signup.php" method="post">
                     <input class="kanrisya_button_2" type="submit" value="アカウント新規作成">
             </form>
+            <form class="kanrisya_login_form" action="kanrisya_top.php" method="post">
+                    <input class="kanrisya_button_2" type="submit" value="トップページへ戻る">
+            </form>
         </div>
     </div>
 </body>
