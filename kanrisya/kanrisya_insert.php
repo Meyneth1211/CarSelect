@@ -11,7 +11,7 @@ require_once '../DBconnect.php';
     <title>Document</title>
 </head>
 <body>
-    <form action="kanrisya_insert_back.php" method="post">
+    <form action="kanrisya_insert_back.php" method="post" enctype="multipart/form-data">
     <p>商品名</p>
         <input type="text" name="car_name"><br><br>
     
@@ -89,6 +89,11 @@ require_once '../DBconnect.php';
         <input type="radio" id="white" name="color" value="ホワイト">
         <label for="white" class="white">WHITE</label>
       </div>
+
+    <p>車の画像</p>
+        <div class="car-images">
+            <input type="file" name="car-images[]" multiple>
+        </div>
 
     <input type="submit" name="send" value="登録">
     </form>
