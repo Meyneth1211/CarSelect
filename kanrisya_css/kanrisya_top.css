@@ -1,29 +1,22 @@
-/* 全体のスタイル調整 */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e9ecef; /* 薄いグレーの背景色 */
-    margin: 0;
-    padding: 0;
-}
 
 /* ボタンコンテナのスタイル */
 .top_button {
     display: flex;
     justify-content: center; /* ボタンを中央揃え */
-    gap: 15px; /* ボタン間のスペース */
+    gap: 50px; /* ボタン間のスペース */
     margin-top: 50px;
-    padding: 15px;
-    background-color: #e9ecef; /* 背景色を統一 */
+    padding: 200px;
     border: none;
+    background-color: black;
 }
 
 /* ボタン共通スタイル */
 .top_button input {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     background-color: #007bff; /* 青系の統一カラー */
-    padding: 15px 20px;
+    padding: 35px 60px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
