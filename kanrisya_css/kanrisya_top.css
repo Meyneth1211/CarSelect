@@ -1,21 +1,68 @@
-.top_button{
-    display: flex;
-}
-
-.top_button{
-    width: 100%;
+/* 全体のスタイル調整 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     margin: 0;
-    margin-top: 30px;
-    gap: 16px;
-    margin-top: 200px;
-    text-align: center;
-}
-.top_button > input, .top_button > button{
-    width: 100%;
-    height: 100px;
+    padding: 0;
 }
 
-.top_button > input:hover{
-    border: 2px solid #0ef;
-    box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+/* ボタンコンテナのスタイル */
+.top_button {
+    display: flex;
+    justify-content: center; /* ボタンを中央揃え */
+    gap: 20px; /* ボタン間のスペース */
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影で立体感を追加 */
+    border-radius: 8px;
+}
+
+/* ボタン共通スタイル */
+.top_button input {
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 各ボタンの個別スタイル */
+.top_button1 {
+    background-color: #ff4d4d; /* 赤系カラー */
+    color: white;
+}
+
+.top_button2 {
+    background-color: #4CAF50; /* 緑系カラー */
+    color: white;
+}
+
+.top_button3 {
+    background-color: #3498db; /* 青系カラー */
+    color: white;
+}
+
+.top_button4 {
+    background-color: #ff9900; /* オレンジ系カラー */
+    color: white;
+}
+
+/* ホバー時のエフェクト */
+.top_button input:hover {
+    transform: scale(1.05); /* ボタンを少し拡大 */
+    opacity: 0.9; /* 色を若干暗く */
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .top_button {
+        flex-direction: column; /* ボタンを縦並び */
+        align-items: center;
+    }
+
+    .top_button input {
+        width: 80%; /* 幅を広げて押しやすく */
+    }
 }
