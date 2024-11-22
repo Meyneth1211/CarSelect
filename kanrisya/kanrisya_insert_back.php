@@ -38,14 +38,14 @@ if($result){
     echo '<button type="button" onclick="redirectToInsert()">続けて登録する</button>';
     echo '<script>
     function redirectToInsert() {
-        window.location.href = "https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php/";
+        window.location.href = "https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php";
     }
     </script>';
 }else{
     echo '<button type="button" onclick="redirectToInsert()">続けて登録する</button>';
     echo '<script>
     function redirectToInsert() {
-        window.location.href = "https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php/";
+        window.location.href = "https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php";
     }
     </script>';
 }
