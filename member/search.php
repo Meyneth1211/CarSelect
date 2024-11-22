@@ -85,14 +85,6 @@
       <img src="../img/SUV.png" alt="SUV" width="30px">
     </label>
     <label>
-      <input type="checkbox" name="bodytype[]" value="'ワゴン'">
-      <img src="../img/トラック.png" alt="ワゴン" width="25px">
-    </label>
-    <label>
-      <input type="checkbox" name="bodytype[]" value="'コンパクト'">
-      <img src="../img/ワンボックスカー.png" alt="コンパクト" width="23px">
-    </label>
-    <label>
       <input type="checkbox" name="bodytype[]" value="'スポーツカー'">
       <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
     </label>
@@ -185,10 +177,7 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $result=$stmt->fetchall(PDO::FETCH_ASSOC);
-  //var_dump($result);
-  foreach ($result as $car_detail => $value) {
-    echo '<h1>'.$value.'</h1>';
-  }
+  var_dump($result);
   }
   
 
