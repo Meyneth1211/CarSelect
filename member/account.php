@@ -19,7 +19,7 @@ if (isset($_SESSION['user_id'])) {
         echo '<p class="account-message2">メールアドレス: ' . $user['user_mail'] . '</p><br>';
         echo '<p class="account-message2">パスワード: ' . $user['user_password'] . '</p><br>';
         echo '<p class="account-message2">住所: ' . $user['user_address'] . '</p><br>';
-        echo '<div class="login-form"><input class="button-2" type="button" onclick="location.href='. 'account_update' .'" value="ユーザー情報編集"></div></div></div>';
+        echo '<form class="login-form" action="account_update.php" method="post"><input class="button-2" type="submit" value="アカウント編集"></form></div></div>';
     } else {
         echo 'アカウント情報が見つかりませんでした';
     }
