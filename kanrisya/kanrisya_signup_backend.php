@@ -31,7 +31,7 @@ if (isset($_POST['mail']) && isset($_POST['pass'])) {
     $sql3 = $pdo->prepare('SELECT * FROM admin WHERE admin_mail = ? AND admin_password = ?');
     $sql3->execute([$_POST['mail'], $_POST['pass']]);
 
-    echo '<form action="kanrisya_login.php" method="post">';
+    echo '<form action="kanrisya_first_login.php" method="post">';
     if ($sql3->rowCount() > 0) {
         echo '<div class="message success">既に登録されています</div>';
     } elseif ($sql->rowCount() > 0) {
