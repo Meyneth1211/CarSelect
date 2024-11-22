@@ -48,7 +48,7 @@
     <li class="slider-item slider-item03"></li>
   </ul>
 
-  <form action="search.php" method="post">
+  <form class="car-logo-back" action="search.php" method="post">
     <div class="car-logo">
         <div class="car-logo-item">
             <input type="image" name="brand" value="Benz" src="../img/Benz.png" alt="Benz">
