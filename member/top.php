@@ -52,7 +52,6 @@
 
 
   <div class="car-logo">
-    <input type="image" src="" alt="">
     <input type="image" name="" value="Benz" src="../img/Benz.png" alt="Benz" width="150px" height="auto">
     <input type="image" name="" value="Nissan" src="../img/Nissan.png" alt="Nissan" width="180px" height="auto">
     <input type="image" name="" value="Mazda" src="../img/Mazda.png" alt="Mazda" width="170px" height="auto">
