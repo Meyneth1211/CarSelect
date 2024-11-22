@@ -31,7 +31,7 @@ foreach ($_FILES['images']['name'] as $key => $imageName) {
 
 if (move_uploaded_file($tmpName, $destination)) {
     // データベースに保存
-    $stmt = $pdo->prepare('INSERT INTO images (file_path) VALUES (:file_path)');
+    $stmt = $pdo->prepare('INSERT INTO image (image) VALUES (:file_path)');
     $stmt->execute([':file_path' => $destination]);
     $uploadedFiles[] = $destination;
 } else {
