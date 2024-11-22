@@ -35,7 +35,7 @@ if (!empty($_FILES['images']['name'][0])) {
         $newFileName = uniqid() . '_' . basename($imageName); // 一意の名前を生成
         $car_image = $uploadDir . $newFileName;
 
-        if (move_uploaded_file($tmpName, $destination)) {
+        if (move_uploaded_file($tmpName, $car_image)) {
             // データベースに保存
             if ($isPrimary == 1 && !$isPrimarySelected) {
                 $pdo->query('UPDATE images SET is_primary = 0 WHERE is_primary = 1');
