@@ -178,9 +178,11 @@
   $stmt->execute();
   $result=$stmt->fetchall(PDO::FETCH_ASSOC);
   //var_dump($result);
+  $images=[];
   foreach ($result as $row) {
-    echo '<h1>'.$row['car_id'].'</h1>';
+    $images.=$row['car_id'];
   }
+  var_dump($images);
   }
   
 
