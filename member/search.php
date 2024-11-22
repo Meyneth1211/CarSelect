@@ -176,13 +176,18 @@
   $pdo=getDB();
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
-  $result=$stmt->fetchall(PDO::FETCH_ASSOC);
+  $cars=$stmt->fetchall(PDO::FETCH_ASSOC);
   //var_dump($result);
-  $images=[];
-  foreach ($result as $row) {
-    $images[]=$row['car_id'];
+  $imageid=[];
+  foreach ($cars as $row) {
+    $imageid[]=$row['car_id'];
   }
-  var_dump($images);
+  $sql='SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(?)';
+  $placeholder=implode(',',$imageid);
+  $stmt=$pdo->prepare($sql);
+  $stmt->execute($placeholder);
+  $images=$stmt->fetchall(PDO::FETCH_ASSOC);
+  echo $sql;
   }
   
 
