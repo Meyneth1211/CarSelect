@@ -185,8 +185,8 @@
   $images=$stmt->fetchall(PDO::FETCH_ASSOC);
 
   echo '<div class="car-list">';
+  $c=0;
   foreach ($cars as $row) {
-    $c=0;
       echo '<div class="car-item">';
         echo '<img src="' . $images[$c]['image'] . '">';
         echo '<div class="car-info">';
