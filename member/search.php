@@ -180,7 +180,7 @@
   //var_dump($result);
   $images=[];
   foreach ($result as $row) {
-    $images.=$row['car_id'];
+    $images[]=$row['car_id'];
   }
   var_dump($images);
   }
