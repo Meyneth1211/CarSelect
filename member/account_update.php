@@ -35,6 +35,7 @@ if (!$user) {
                 <input class="mail" type="email" id="user_mail" name="user_mail" value="<?php echo htmlspecialchars($user['user_mail'], ENT_QUOTES, 'UTF-8'); ?>" required>
                 <label class="account_address" for="user_address">住所</label>
                 <input class="address" type="text" id="user_address" name="user_address" value="<?php echo htmlspecialchars($user['user_address'], ENT_QUOTES, 'UTF-8'); ?>" required>
+                <span></span>
                 <input class="button-1" type="submit" value="確定">
             </form>
             <form class="create-form" action="account.php" method="post">
