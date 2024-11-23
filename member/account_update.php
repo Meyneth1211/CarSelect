@@ -25,17 +25,17 @@ if (!$user) {
 ?>
 
 
-    <div class="account-back">
-        <div class="account-card">
+    <div class="create">
+        <div class="create-card">
             <h1>アカウント情報編集</h1>
             <form class="create-form" action="account_backend.php" method="POST">
                 <label for="user_name">ユーザー名:</label>
-                <input type="text" id="user_name" name="user_name" value="<?php echo htmlspecialchars($user['user_name'], ENT_QUOTES, 'UTF-8'); ?>" required>
+                <input class="name" type="text" id="user_name" name="user_name" value="<?php echo htmlspecialchars($user['user_name'], ENT_QUOTES, 'UTF-8'); ?>" required>
                 <label for="user_mail">メールアドレス:</label>
-                <input type="email" id="user_mail" name="user_mail" value="<?php echo htmlspecialchars($user['user_mail'], ENT_QUOTES, 'UTF-8'); ?>" required>
+                <input class="mail" type="email" id="user_mail" name="user_mail" value="<?php echo htmlspecialchars($user['user_mail'], ENT_QUOTES, 'UTF-8'); ?>" required>
                 <label for="user_address">住所:</label>
-                <input type="text" id="user_address" name="user_address" value="<?php echo htmlspecialchars($user['user_address'], ENT_QUOTES, 'UTF-8'); ?>" required>
-                <input class="button-2" type="submit" value="確定">
+                <input class="address" type="text" id="user_address" name="user_address" value="<?php echo htmlspecialchars($user['user_address'], ENT_QUOTES, 'UTF-8'); ?>" required>
+                <input class="button-1" type="submit" value="確定">
             </form>
             <form class="create-form" action="account.php" method="post">
                 <input class="button-2" type="submit" value="戻る">
