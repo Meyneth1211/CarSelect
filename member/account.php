@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
         echo '<p class="account-message2">パスワード: ' . $user['user_password'] . '</p><br>';
         echo '<p class="account-message2">住所: ' . $user['user_address'] . '</p><br>';
         echo '<form class="login-form" action="account_update.php" method="get"><input class="button-2" type="submit" value="アカウント情報を編集する"></form>';
-        echo '<form class="create-form" action="top.php" method="post"><input class="button-2" type="submit" value="トップページへ戻る"></form></div></div>';
+        echo '<form class="create-form" action="top.php" method="post"><input class="button-1" type="submit" value="トップページへ戻る"></form></div></div>';
     } else {
         echo 'アカウント情報が見つかりませんでした';
     }
