@@ -19,7 +19,7 @@
             // ログイン失敗時のエラーメッセージ表示
             echo '<div class="error-back"><div class="error-card">';
             echo '<div class="error-message">EmailかPasswordが違います</div>';
-            echo '<div class="login-form"><a class="button-1" href="login.php">戻る</a></div></div></div>';
+            echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
             exit;
         }
     }
