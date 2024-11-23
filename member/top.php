@@ -18,7 +18,7 @@
         } else {
             // ログイン失敗時のエラーメッセージ表示
             echo '<div class="error-message">EmailかPasswordが違います</div>';
-            echo '<a class="button-1" href="login.php">戻る</a>';
+            echo '<div class="login-form"><a class="button-1" href="login.php">戻る</a></div>';
             exit;
         }
     }
