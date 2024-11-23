@@ -17,7 +17,7 @@
             $_SESSION['name'] = $user['user_name'];
         } else {
             // ログイン失敗時のエラーメッセージ表示
-            echo '<div class="error-back"><div class="error-card">';
+            echo '<div class="error-back"><div class="error-card2">';
             echo '<div class="error-message">EmailかPasswordが違います</div>';
             echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
             exit;
