@@ -2,3 +2,27 @@
     color: white;
 }
 
+.account-error-card3{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 70px 30px 44px;
+    border-radius: 1.25rem;
+    background-color: rgba(33, 4, 4, 0.562);
+    text-align: center;
+    border: 5px solid #333;
+}
+
+.account-error-card3:hover{
+    border: 5px solid #0ef;
+    box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+
+@media (width >= 500PX){
+    .account-error-card3{
+        margin: 0;
+        width: 400px;
+        height: 300px;
+    }
+}
