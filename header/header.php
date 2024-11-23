@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/Purchase_confirmed.css">
     <link rel="stylesheet" href="../css/account_update.css">
+    <link rel="stylesheet" href="../css/edit_success.css">
     <link href='https://fonts.googleapis.com/css?family=Brawler' rel='stylesheet'>
 </head>
 <body>
