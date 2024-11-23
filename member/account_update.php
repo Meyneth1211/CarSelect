@@ -32,7 +32,7 @@ if (!$user) {
 </head>
 <body>
     <h1>アカウント情報編集</h1>
-    <form action="account_backend.php" method="POST">
+    <form class="create-form" action="account_backend.php" method="POST">
         <label for="user_name">ユーザー名:</label>
         <input type="text" id="user_name" name="user_name" value="<?php echo htmlspecialchars($user['user_name'], ENT_QUOTES, 'UTF-8'); ?>" required>
         <br>
@@ -42,7 +42,7 @@ if (!$user) {
         <label for="user_address">住所:</label>
         <input type="text" id="user_address" name="user_address" value="<?php echo htmlspecialchars($user['user_address'], ENT_QUOTES, 'UTF-8'); ?>" required>
         <br>
-        <button type="submit">確定</button>
+        <input class="button-2" type="submit" value="戻る">
     </form>
     <form class="create-form" action="account.php" method="post">
         <input class="button-2" type="submit" value="戻る">
