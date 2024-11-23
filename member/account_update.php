@@ -27,7 +27,7 @@ if (!$user) {
 
     <div class="create">
         <div class="create-card">
-            <h1>アカウント情報編集</h1>
+            <h2>アカウント情報編集</h2>
             <form class="create-form" action="account_backend.php" method="POST">
                 <label for="user_name">ユーザー名:</label>
                 <input class="name" type="text" id="user_name" name="user_name" value="<?php echo htmlspecialchars($user['user_name'], ENT_QUOTES, 'UTF-8'); ?>" required>
