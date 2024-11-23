@@ -44,5 +44,8 @@ if (!$user) {
         <br>
         <button type="submit">確定</button>
     </form>
+    <form class="create-form" action="account.php" method="post">
+        <input class="button-2" type="submit" value="戻る">
+    </form>
 </body>
 </html>
