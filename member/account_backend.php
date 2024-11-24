@@ -15,18 +15,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // フォームデータを取得
     $user_name = $_POST['user_name'] ?? '';
     $user_mail = $_POST['user_mail'] ?? '';
+    $user_password = $_POST['user_password'] ?? '';
     $user_address = $_POST['user_address'] ?? '';
 
     // 必須項目のチェック
-    if (empty($user_name) || empty($user_mail) || empty($user_address)) {
+    if (empty($user_name) || empty($user_mail) || empty($user_password) || empty($user_address)) {
         echo "全ての項目を入力してください。";
         exit;
     }
 
     // データベースを更新
-    $sql = "UPDATE user SET user_name = ?, user_mail = ?, user_address = ? WHERE user_id = ?";
+    $sql = "UPDATE user SET user_name = ?, user_mail = ?, user_password, user_address = ? WHERE user_id = ?";
     $stmt = $pdo->prepare($sql);
-    $result = $stmt->execute([$user_name, $user_mail, $user_address, $user_id]);
+    $result = $stmt->execute([$user_name, $user_mail, $user_password, $user_address, $user_id]);
 
     if ($result) {
         // 更新成功時にリダイレクト
