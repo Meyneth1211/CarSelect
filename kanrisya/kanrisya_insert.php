@@ -91,15 +91,12 @@ require_once '../DBconnect.php';
       </div>
 
     <p>車の画像</p>
-        <div class="car-images">
-            <input type="file" name="images[]" required>
-            <label>
-                <input type="radio" name="is_primary" value="0" checked> その他の画像
-            </label>
-            <label>
-                <input type="radio" name="is_primary" value="1"> メイン画像
-            </label>
-        </div>
+        
+    <h3>メイン画像</h3>
+        <input type="file" name="main_image" required><br>
+
+        <h3>その他の画像</h3>
+        <input type="file" name="other_images[]" multiple><br><br>
 
     <input type="submit" name="send" value="登録">
     </form>
