@@ -144,21 +144,22 @@ input[type="checkbox"]:checked + label {
 /*ーーーーーーーーーーーーーーーー検索結果のcssーーーーーーーーーーーーーーーー*/
 .car-list {
   display: flex;
-  flex-wrap: wrap; /* カードを複数行で表示 */
-  gap: 16px;       /* カード間の隙間 */
+  flex-direction: column; /* 縦並び */
+  gap: 16px;              /* 各カード間の隙間 */
 }
 
 .car-item {
-  display: block;           /* aタグをブロック要素化 */
-  text-decoration: none;    /* デフォルトのリンク装飾を削除 */
-  color: inherit;           /* リンクの色を継承 */
-  border: 1px solid #ccc;   /* 枠線 */
-  border-radius: 8px;       /* 角を丸くする */
-  overflow: hidden;         /* 枠からはみ出た要素を隠す */
+  display: flex;          /* カード内を横並びにする */
+  align-items: center;    /* 中央揃え */
+  justify-content: space-between;
+  text-decoration: none;  /* デフォルトのリンク装飾を削除 */
+  color: inherit;         /* リンクの色を継承 */
+  border: 1px solid #ccc; /* 枠線を追加 */
+  border-radius: 8px;     /* 角を丸くする */
+  overflow: hidden;       /* はみ出た内容を隠す */
+  padding: 16px;          /* カード内の余白 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
   transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
-  width: 200px;             /* カードの幅を指定 */
-  text-align: center;       /* 中央揃え */
 }
 
 .car-item:hover {
@@ -167,32 +168,33 @@ input[type="checkbox"]:checked + label {
 }
 
 .car-item img {
-  width: 100%;              /* カードの幅に合わせる */
-  height: auto;             /* アスペクト比を保持 */
-  border-bottom: 1px solid #ccc; /* 画像下部に境界線 */
+  width: 120px;           /* 画像の幅を指定 */
+  height: auto;           /* アスペクト比を保持 */
+  border-radius: 8px;     /* 画像の角を丸くする */
+  margin-right: 16px;     /* 画像とテキストの間にスペース */
 }
 
 .car-info {
-  padding: 8px;             /* テキスト周囲に余白を追加 */
+  display: flex;
+  flex-direction: column; /* 縦並びに配置 */
+  flex-grow: 1;           /* 残りのスペースを占有 */
 }
 
 .car-info h3 {
-  margin: 8px 0;            /* タイトルの上下余白 */
-  font-size: 16px;          /* タイトルの文字サイズ */
+  margin: 0 0 8px;        /* 下部にスペース */
+  font-size: 18px;        /* タイトルの文字サイズ */
+  text-align: right;      /* 右寄せ */
 }
 
 .car-info p {
-  margin: 0;                /* パラグラフの余白を削除 */
-  color: #555;              /* テキスト色を薄める */
+  margin: 0;              /* パラグラフの余白を削除 */
+  color: #555;            /* テキスト色を薄める */
+  text-align: right;      /* 右寄せ */
 }
 
 .favorite-icon {
-  font-size: 20px;          /* アイコンのサイズ */
-  color: #f00;              /* 赤色に設定 */
-  margin-top: 8px;          /* 上に余白 */
+  font-size: 20px;        /* アイコンのサイズ */
+  color: #f00;            /* 赤色に設定 */
+  margin-left: 8px;       /* 画像と分離 */
+  align-self: flex-start; /* 上部に配置 */
 }
-
-
-
-
-
