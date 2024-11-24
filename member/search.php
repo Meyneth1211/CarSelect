@@ -185,19 +185,20 @@
   $images=$stmt->fetchall(PDO::FETCH_ASSOC);
 
   echo '<div class="car-list">';
-  $c=0;
+  $c = 0;
   foreach ($cars as $row) {
-      echo '<div class="car-item">';
-        echo '<img src="' . $images[$c]['image'] . '">';
-        echo '<div class="car-info">';
-          echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '"><h3>' . $row['car_name'] . '</h3></a>';
-          echo '<p>'.$row['price'].'円</p>';
-        echo '</div>';
-        echo '<div class="favorite-icon">♡</div>';
-      echo '</div>';
-    $c++;
+      echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
+          echo '<img src="' . $images[$c]['image'] . '" alt="' . $row['car_name'] . '">';
+          echo '<div class="car-info">';
+              echo '<h3>' . $row['car_name'] . '</h3>';
+              echo '<p>' . $row['price'] . '円</p>';
+          echo '</div>';
+          echo '<div class="favorite-icon">♡</div>';
+      echo '</a>'; // aタグを閉じる
+      $c++;
   }
   echo '</div>';
+
   }
 ?>
 <!--

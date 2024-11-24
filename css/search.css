@@ -141,6 +141,58 @@ input[type="checkbox"]:checked + label {
   color: white;
 }
 
+/*ーーーーーーーーーーーーーーーー検索結果のcssーーーーーーーーーーーーーーーー*/
+.car-list {
+  display: flex;
+  flex-wrap: wrap; /* カードを複数行で表示 */
+  gap: 16px;       /* カード間の隙間 */
+}
+
+.car-item {
+  display: block;           /* aタグをブロック要素化 */
+  text-decoration: none;    /* デフォルトのリンク装飾を削除 */
+  color: inherit;           /* リンクの色を継承 */
+  border: 1px solid #ccc;   /* 枠線 */
+  border-radius: 8px;       /* 角を丸くする */
+  overflow: hidden;         /* 枠からはみ出た要素を隠す */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
+  transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+  width: 200px;             /* カードの幅を指定 */
+  text-align: center;       /* 中央揃え */
+}
+
+.car-item:hover {
+  transform: translateY(-4px); /* ホバー時に少し浮き上がる */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.car-item img {
+  width: 100%;              /* カードの幅に合わせる */
+  height: auto;             /* アスペクト比を保持 */
+  border-bottom: 1px solid #ccc; /* 画像下部に境界線 */
+}
+
+.car-info {
+  padding: 8px;             /* テキスト周囲に余白を追加 */
+}
+
+.car-info h3 {
+  margin: 8px 0;            /* タイトルの上下余白 */
+  font-size: 16px;          /* タイトルの文字サイズ */
+}
+
+.car-info p {
+  margin: 0;                /* パラグラフの余白を削除 */
+  color: #555;              /* テキスト色を薄める */
+}
+
+.favorite-icon {
+  font-size: 20px;          /* アイコンのサイズ */
+  color: #f00;              /* 赤色に設定 */
+  margin-top: 8px;          /* 上に余白 */
+}
+
+
 
 
 
