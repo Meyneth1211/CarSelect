@@ -188,23 +188,20 @@ input[type="checkbox"]:checked + label {
 }
 
 .car-item {
-  display: flex;          /* カード内を横並びにする */
-  align-items: center;    /* 中央揃え */
-  justify-content: space-between;
-  text-decoration: none;  /* デフォルトのリンク装飾を削除 */
-  color: inherit;         /* リンクの色を継承 */
-  border: 1px solid #ccc; /* 枠線を追加 */
-  border-radius: 8px;     /* 角を丸くする */
-  overflow: hidden;       /* はみ出た内容を隠す */
-  padding: 16px;          /* カード内の余白 */
-  width: 60%;             /* 横幅を60%に指定 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
-  transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+  width: 600px;
+  height: 200px; 
+  background-color: #1c1c1c; 
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .car-item:hover {
-  transform: translateY(-4px); /* ホバー時に少し浮き上がる */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05); /*触れると大きくなる♡ */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
 }
 
 .car-item img {
