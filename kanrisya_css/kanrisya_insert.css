@@ -133,3 +133,30 @@ textarea {
   border-radius: 4px;
   border: 1px solid #ddd;
 }
+
+
+.insert-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.insert-table th, .edit-table td {
+  padding: 10px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.insert-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.insert-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.insert-table tr:hover {
+  background-color: #f1f1f1;
+}

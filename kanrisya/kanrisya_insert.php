@@ -12,10 +12,16 @@ require_once '../DBconnect.php';
 </head>
 <body>
     <form action="kanrisya_insert_back.php" method="post" enctype="multipart/form-data">
-    <h3>商品名</h3>
-        <input type="text" name="car_name"><br><br>
-    
-    <h3>メーカー</h3>
+        <h1>商品追加</h1>
+    <table class="insert-table">
+    <tr>
+        <th><h3>商品名</h3></th>
+        <td><input type="text" name="car_name"><br><br></td>
+    </tr>
+
+    <tr>
+    <th><h3>メーカー</h3></th>
+    <td>
     <div class="radio-images">
         <label>
             <input type="radio" name="brands" value="トヨタ">
@@ -57,9 +63,13 @@ require_once '../DBconnect.php';
             <input type="radio" name="brands" value="日産">
             <img src="../img/Nissan.png" alt="Nissan">
         </label>
+        </td>
     </div>
+    </tr>
 
-    <h3>ボディタイプ</h3>
+    <tr>
+    <th><h3>ボディタイプ</h3></th>
+    <td>
     <div class="body-type">
         <label>
             <input type="radio" name="body-type" value="セダン">
@@ -73,33 +83,46 @@ require_once '../DBconnect.php';
             <input type="radio" name="body-type" value="スポーツカー">
             <img src="../img/スポーツカー黒.png" alt="スポーツカー">
         </label>
+    </td>
     </div>
+    </tr>
     
-    <h3>値段</h3>
-        <input type="number" name="insert-price"><br><br>
-    
-    <h3>在庫数</h3>
-    <input type="number" name="insert-stock" class="stock-input" min="0" required>
+    <tr>
+    <th><h3>値段</h3></th>
+        <td><input type="number" name="insert-price"><br><br></td>
+    </tr>
 
-    <h3>詳細</h3>
-        <textarea name="insert-detail" id=""></textarea><br><br>
+    <tr>
+    <th><h3>在庫数</h3></th>
+        <td><input type="number" name="insert-stock" class="stock-input" min="0" required></td>
+    </tr>
 
-    <h3>カラー</h3>
-      <div class="color-button">
+    <tr>
+    <th><h3>詳細</h3></th>
+        <td><textarea name="insert-detail" id=""></textarea><br><br></td>
+    </tr>
+
+    <tr>
+    <th><h3>カラー</h3></th>
+      <td><div class="color-button">
         <input type="radio" id="black" name="color" value="ブラック">
         <label for="black" class="black">BLACK</label>
         
         <input type="radio" id="white" name="color" value="ホワイト">
         <label for="white" class="white">WHITE</label>
-      </div>
+      </div></td>
+    </tr>
 
-    <p>車の画像</p>
-        
-    <h3>メイン画像</h3>
-        <input type="file" name="main_image" required><br>
+    <tr>  
+    <th><h3>メイン画像</h3></th>
+        <td><input type="file" name="main_image" required><br></td>
+    </tr>
 
-    <h3>その他の画像</h3>
-        <input type="file" name="other_images[]" multiple><br><br>
+    <tr>
+    <th><h3>その他の画像</h3></th>
+        <td><input type="file" name="other_images[]" multiple><br><br></td>
+    </tr>
+    </table>
 
     <input type="submit" name="send" value="登録">
     <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">トップページへ戻る</button>
