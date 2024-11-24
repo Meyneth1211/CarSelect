@@ -141,6 +141,31 @@ input[type="checkbox"]:checked + label {
   color: white;
 }
 
+.search-submit input{
+  font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    padding: 35px 60px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+/* 触れたとき */
+.search-submit input:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05);
+}
+
+/* ボタンが押されたときト */
+.search-submit input:active {
+  transform: scale(1); /* 元のサイズに戻る */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /*ーーーーーーーーーーーーーーーー検索結果のcssーーーーーーーーーーーーーーーー*/
 .car-list {
   display: flex;
