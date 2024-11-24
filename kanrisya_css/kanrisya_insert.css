@@ -141,7 +141,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-.insert-table th, .edit-table td {
+.insert-table th, .insert-table td {
   padding: 10px 15px;
   text-align: left;
   border: 1px solid #ddd;
