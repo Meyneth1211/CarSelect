@@ -3,89 +3,78 @@ require('kanrisya_session.php');
 require_once '../DBconnect.php';
 $pdo = getDb();
 
+if ($_POST['send']) {
+    // フォームからのデータ取得
+    $car_name = $_POST['car_name'];
+    $brand = $_POST['brands'];
+    $body_type = $_POST['body-type'];
+    $price = $_POST['insert-price'];
+    $car_detail = $_POST['insert-detail'];
+    $color = $_POST['color'];
 
-if($_POST['send']){
-//フォームからのデータ取得
-$car_name = $_POST['car_name'];
-$brand = $_POST['brands'];
-$body_type = $_POST['body-type'];
-$price = $_POST['insert-price'];
-$car_detail = $_POST['insert-detail'];
-$color = $_POST['color'] ?? null;
-
-// メイン画像として設定されるもの
-$isPrimarySelected = false;
-
-// アップロードされたファイルを処理
-if (!empty($_FILES['images']['name'][0])) {
-    $uploadDir = '../img/detail/'; // 保存先ディレクトリ
+    // エラーメッセージの確認
     $errors = [];
-    $uploadedFiles = [];
+    if (!$car_name) $errors[] = '車名を入力してください。';
+    if (!$brand) $errors[] = 'メーカーを選択してください。';
+    if (!$body_type) $errors[] = 'ボディタイプを選択してください。';
+    if (!$price || !is_numeric($price)) $errors[] = '値段を正しく入力してください。';
+    if (!$color) $errors[] = '色を選択してください。';
 
-    foreach ($_FILES['images']['name'] as $key => $imageName) {
-        $tmpName = $_FILES['images']['tmp_name'][$key];
-        $fileSize = $_FILES['images']['size'][$key];
-        $fileError = $_FILES['images']['error'][$key];
-        $fileType = $_FILES['images']['type'][$key];
-
-        // メイン画像フラグを取得
-        $isPrimary = isset($_POST['is_primary']) && $_POST['is_primary'] == $key ? 1 : 0;
-
-        // ファイルを保存
-        $newFileName = uniqid() . '_' . basename($imageName); // 一意の名前を生成
-        $car_image = $uploadDir . $newFileName;
-
-        if (move_uploaded_file($tmpName, $car_image)) {
-            // データベースに保存
-            if ($isPrimary == 1 && !$isPrimarySelected) {
-                $pdo->query('UPDATE images SET is_primary = 0 WHERE is_primary = 1');
-                $isPrimarySelected = true;
-            }
-            $stmt = $pdo->prepare('INSERT INTO image (image, is_primary) VALUES (?,?)');
-            $stmt->execute([$car_image,$isPrimary]);
-            $uploadedFiles[] = $car_image;
-        } else {
-            $errors[] = "$imageName のアップロードに失敗しました。";
+    if ($errors) {
+        // エラーメッセージを表示
+        foreach ($errors as $error) {
+            echo '<p style="color: red;">' . htmlspecialchars($error) . '</p>';
         }
+        exit();
     }
 
-//エラーメッセージの表示
-$errors = [];
-if (!$car_name) $errors[] = '車名を入力してください。';
-if (!$brand) $errors[] = 'メーカーを選択してください。';
-if (!$body_type) $errors[] = 'ボディタイプを選択してください。';
-if (!$price || !is_numeric($price)) $errors[] = '値段を正しく入力してください。';
-if (!$color) $errors[] = '色を選択してください。';
+    // `car` テーブルにデータを挿入
+    $stmt = $pdo->prepare('INSERT INTO car (car_name, brand, body_type, price, car_detail, color) VALUES (?,?,?,?,?,?)');
+    $result = $stmt->execute([$car_name, $brand, $body_type, $price, $car_detail, $color]);
 
-if ($errors) {
-    // エラーメッセージを表示する！
-    foreach ($errors as $error) {
-        echo '<p style="color: red;">' . htmlspecialchars($error) . '</p>';
-    }
-    exit();
-}
-}
+    if ($result) {
+        // 挿入した `car_id` を取得
+        $car_id = $pdo->lastInsertId();
 
-$stmt = $pdo->prepare('INSERT INTO car (car_name, brand, body_type, price, car_detail, color) VALUES (?,?,?,?,?,?)');
-$result = $stmt->execute([$car_name,$brand,$body_type,$price,$car_detail,$color]);
-$pdo = null;
+        // アップロードディレクトリの指定
+        $uploadDir = '../img/detail/';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
 
-if($result){
-    echo '<button type="button" onclick="redirectToInsert()">続けて登録する</button>';
-    echo '<script>
-    function redirectToInsert() {
-        window.location.href = "https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php";
+        // メイン画像の処理
+        if (!empty($_FILES['main_image']['name'])) {
+            $mainImageName = uniqid() . '_' . basename($_FILES['main_image']['name']);
+            $mainImagePath = $uploadDir . $mainImageName;
+
+            if (move_uploaded_file($_FILES['main_image']['tmp_name'], $mainImagePath)) {
+                $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,1)');
+                $stmt->execute([$car_id, $mainImagePath]);
+            } else {
+                echo '<p style="color: red;">メイン画像のアップロードに失敗しました。</p>';
+            }
+        }
+
+        // その他の画像の処理
+        if (!empty($_FILES['other_images']['name'][0])) {
+            foreach ($_FILES['other_images']['name'] as $key => $otherImageName) {
+                $tmpName = $_FILES['other_images']['tmp_name'][$key];
+                $uniqueName = uniqid() . '_' . basename($otherImageName);
+                $otherImagePath = $uploadDir . $uniqueName;
+
+                if (move_uploaded_file($tmpName, $otherImagePath)) {
+                    $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,0)');
+                    $stmt->execute([$car_id, $otherImagePath]);
+                } else {
+                    echo '<p style="color: red;">その他の画像のアップロードに失敗しました: ' . htmlspecialchars($otherImageName) . '</p>';
+                }
+            }
+        }
+
+        echo '<h2>商品の登録が完了しました。</h2>';
+    } else {
+        echo '<h2>商品の登録に失敗しました。</h2>';
     }
-    </script>';
-}else{
-    echo '<button type="button" onclick="redirectToInsert()">続けて登録する</button>';
-    echo '<script>
-    function redirectToInsert() {
-        window.location.href = "https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php";
-    }
-    </script>';
+
+    $pdo = null;
 }
-}else{
-    echo '商品の登録に失敗しました。';
-}
-?>
