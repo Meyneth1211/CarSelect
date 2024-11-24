@@ -146,12 +146,14 @@ input[type="checkbox"]:checked + label {
   font-weight: bold;
   color: white;
   background-color: #333; /* 黒系の背景色 */
-  padding: 35px 60px;
+  padding: 20px 60px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+  margin-top: 60px;
 }
 
 /* ホバー時 */
