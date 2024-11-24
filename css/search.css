@@ -194,38 +194,41 @@ input[type="checkbox"]:checked + label {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* 両サイドの要素を均等配置 */
+  padding: 0 80px;               /* 左右に余白を追加 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .car-item:hover {
-  transform: scale(1.05); /*触れると大きくなる♡ */
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
+  transform: scale(1.05); /* 触れると大きくなる♡ */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
 }
 
 .car-item img {
   width: 120px;           /* 画像の幅を指定 */
   height: auto;           /* アスペクト比を保持 */
   border-radius: 8px;     /* 画像の角を丸くする */
-  margin-right: 16px;     /* 画像とテキストの間にスペース */
+  margin-right: 30px;     /* 画像とテキストの間に余白を広めに */
 }
 
 .car-info {
   display: flex;
   flex-direction: column; /* 縦並びに配置 */
-  flex-grow: 1;           /* 残りのスペースを占有 */
+  align-items: flex-end;  /* テキストを右揃え */
+  gap: 8px;               /* 各テキスト間の余白 */
 }
 
 .car-info h3 {
-  margin: 0 0 8px;        /* 下部にスペース */
-  font-size: 18px;        /* タイトルの文字サイズ */
+  margin: 0;              /* 余白を削除 */
+  font-size: 20px;        /* タイトルの文字サイズ */
   text-align: right;      /* 右寄せ */
 }
 
 .car-info p {
-  margin: 0;              /* パラグラフの余白を削除 */
-  color: #555;            /* テキスト色を薄める */
+  margin: 0;              /* 余白を削除 */
+  font-size: 18px;        /* 値段の文字サイズを調整 */
+  color: #aaa;            /* テキスト色をやや明るく */
   text-align: right;      /* 右寄せ */
 }
 
