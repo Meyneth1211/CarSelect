@@ -151,6 +151,7 @@ textarea {
   background-color: #f4f4f4;
   color: #333;
   font-weight: bold;
+  width: 200px;
 }
 
 .insert-table tr:nth-child(even) {
