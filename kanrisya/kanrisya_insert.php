@@ -79,7 +79,7 @@ require_once '../DBconnect.php';
         <input type="number" name="insert-price"><br><br>
     
     <h3>在庫数</h3>
-    <input type="number" name="insert-stock"  min="0" required>
+    <input type="number" name="insert-stock" class="stock-input" min="0" required>
 
     <h3>詳細</h3>
         <textarea name="insert-detail" id=""></textarea><br><br>
@@ -102,7 +102,7 @@ require_once '../DBconnect.php';
         <input type="file" name="other_images[]" multiple><br><br>
 
     <input type="submit" name="send" value="登録">
-    <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">次のページへ</button>
+    <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">トップページへ戻る</button>
     </form>
 </body>
 </html>
