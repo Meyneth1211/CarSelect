@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // データベースを更新
-    $sql = "UPDATE user SET user_name = ?, user_mail = ?, user_password, user_address = ? WHERE user_id = ?";
+    $sql = "UPDATE user SET user_name = ?, user_mail = ?, user_password = ?, user_address = ? WHERE user_id = ?";
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute([$user_name, $user_mail, $user_password, $user_address, $user_id]);
 
