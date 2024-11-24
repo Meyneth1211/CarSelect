@@ -102,7 +102,7 @@ require_once '../DBconnect.php';
         <input type="file" name="other_images[]" multiple><br><br>
 
     <input type="submit" name="send" value="登録">
-    <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php">次のページへ</button>
+    <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">次のページへ</button>
     </form>
 </body>
 </html>
