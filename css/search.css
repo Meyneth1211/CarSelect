@@ -194,6 +194,7 @@ input[type="checkbox"]:checked + label {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  border: 1px solid #ccc;
   justify-content: space-between; /* 両サイドの要素を均等配置 */
   padding: 0 80px;               /* 左右に余白を追加 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
