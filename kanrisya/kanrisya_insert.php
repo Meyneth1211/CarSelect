@@ -12,10 +12,15 @@ require_once '../DBconnect.php';
 </head>
 <body>
     <form action="kanrisya_insert_back.php" method="post" enctype="multipart/form-data">
-    <h3>商品名</h3>
-        <input type="text" name="car_name"><br><br>
-    
-    <h3>メーカー</h3>
+    <table class="car-insert">
+    <tr>
+        <th><h3>商品名</h3></th>
+        <td><input type="text" name="car_name"><br><br></td>
+    </tr>
+
+    <tr>
+    <th><h3>メーカー</h3></th>
+    <td>
     <div class="radio-images">
         <label>
             <input type="radio" name="brands" value="トヨタ">
@@ -57,7 +62,10 @@ require_once '../DBconnect.php';
             <input type="radio" name="brands" value="日産">
             <img src="../img/Nissan.png" alt="Nissan">
         </label>
+        </td>
     </div>
+    </tr>
+
 
     <h3>ボディタイプ</h3>
     <div class="body-type">
@@ -101,6 +109,7 @@ require_once '../DBconnect.php';
     <h3>その他の画像</h3>
         <input type="file" name="other_images[]" multiple><br><br>
 
+    </table>
     <input type="submit" name="send" value="登録">
     <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">トップページへ戻る</button>
     </form>
