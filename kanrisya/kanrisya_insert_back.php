@@ -11,6 +11,8 @@ if ($_POST['send']) {
     $price = $_POST['insert-price'];
     $car_detail = $_POST['insert-detail'];
     $color = $_POST['color'];
+    $stock = $_POST['insert-stock'];
+
 
     // エラーメッセージの確認
     $errors = [];
@@ -19,6 +21,7 @@ if ($_POST['send']) {
     if (!$body_type) $errors[] = 'ボディタイプを選択してください。';
     if (!$price || !is_numeric($price)) $errors[] = '値段を正しく入力してください。';
     if (!$color) $errors[] = '色を選択してください。';
+    if (!$stock || !is_numeric($stock)) $errors[] = '在庫数を正しく入力してください。';
 
     if ($errors) {
         // エラーメッセージを表示
@@ -29,8 +32,8 @@ if ($_POST['send']) {
     }
 
     // `car` テーブルにデータを挿入
-    $stmt = $pdo->prepare('INSERT INTO car (car_name, brand, body_type, price, car_detail, color) VALUES (?,?,?,?,?,?)');
-    $result = $stmt->execute([$car_name, $brand, $body_type, $price, $car_detail, $color]);
+    $stmt = $pdo->prepare('INSERT INTO car (car_name, brand, body_type, price, car_detail, color,stock) VALUES (?,?,?,?,?,?,?)');
+    $result = $stmt->execute([$car_name, $brand, $body_type, $price, $car_detail, $color,$stock]);
 
     if ($result) {
         // 挿入した `car_id` を取得

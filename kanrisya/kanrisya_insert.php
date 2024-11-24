@@ -12,10 +12,10 @@ require_once '../DBconnect.php';
 </head>
 <body>
     <form action="kanrisya_insert_back.php" method="post" enctype="multipart/form-data">
-    <p>商品名</p>
+    <h3>商品名</h3>
         <input type="text" name="car_name"><br><br>
     
-    <p>メーカー</p>
+    <h3>メーカー</h3>
     <div class="radio-images">
         <label>
             <input type="radio" name="brands" value="トヨタ">
@@ -59,7 +59,7 @@ require_once '../DBconnect.php';
         </label>
     </div>
 
-    <p>ボディタイプ</p>
+    <h3>ボディタイプ</h3>
     <div class="body-type">
         <label>
             <input type="radio" name="body-type" value="セダン">
@@ -75,13 +75,16 @@ require_once '../DBconnect.php';
         </label>
     </div>
     
-    <p>値段</p>
+    <h3>値段</h3>
         <input type="number" name="insert-price"><br><br>
     
-    <p>詳細</p>
+    <h3>在庫数</h3>
+    <input type="number" name="insert-stock"  min="0" required>
+
+    <h3>詳細</h3>
         <textarea name="insert-detail" id=""></textarea><br><br>
 
-    <p>カラー</p>
+    <h3>カラー</h3>
       <div class="color-button">
         <input type="radio" id="black" name="color" value="ブラック">
         <label for="black" class="black">BLACK</label>
@@ -95,10 +98,11 @@ require_once '../DBconnect.php';
     <h3>メイン画像</h3>
         <input type="file" name="main_image" required><br>
 
-        <h3>その他の画像</h3>
+    <h3>その他の画像</h3>
         <input type="file" name="other_images[]" multiple><br><br>
 
     <input type="submit" name="send" value="登録">
+    <button ></button>
     </form>
 </body>
 </html>
