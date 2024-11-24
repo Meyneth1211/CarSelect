@@ -193,7 +193,6 @@
               echo '<h3>' . $row['car_name'] . '</h3>';
               echo '<p>' . $row['price'] . '円</p>';
           echo '</div>';
-          echo '<div class="favorite-icon">♡</div>';
       echo '</a>'; // aタグを閉じる
       $c++;
   }
@@ -201,6 +200,7 @@
 
   }
 ?>
+<div class="null-box"></div>
 <!--
   <div class="car-list">
     <div class="car-item">
