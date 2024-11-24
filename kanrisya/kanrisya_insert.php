@@ -12,7 +12,7 @@ require_once '../DBconnect.php';
 </head>
 <body>
     <form action="kanrisya_insert_back.php" method="post" enctype="multipart/form-data">
-    <table class="car-insert">
+    <table class="insert-table">
     <tr>
         <th><h3>商品名</h3></th>
         <td><input type="text" name="car_name"><br><br></td>
