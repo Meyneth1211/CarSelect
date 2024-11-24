@@ -141,30 +141,37 @@ input[type="checkbox"]:checked + label {
   color: white;
 }
 
-.search-submit input{
+.search-submit input {
   font-size: 30px;
-    font-weight: bold;
-    color: white;
-    background-color: #007bff;
-    padding: 35px 60px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  font-weight: bold;
+  color: white;
+  background-color: #333; /* 黒系の背景色 */
+  padding: 35px 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 触れたとき */
+/* ホバー時 */
 .search-submit input:hover {
-  background-color: #0056b3; 
+  background-color: #555; /* 少し明るめの黒 */
   transform: scale(1.05);
 }
 
-/* ボタンが押されたときト */
+/* アクティブ時 */
 .search-submit input:active {
-  transform: scale(1); /* 元のサイズに戻る */
+  transform: scale(1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* フォーカス時 */
+.search-submit input:focus {
+  outline: none; /* デフォルトの青い枠を削除 */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* 白の光を追加 */
+}
+
 
 /*ーーーーーーーーーーーーーーーー検索結果のcssーーーーーーーーーーーーーーーー*/
 .car-list {
