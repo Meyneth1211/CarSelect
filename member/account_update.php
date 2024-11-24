@@ -26,7 +26,7 @@ if (!$user) {
 
 
     <div class="create">
-        <div class="create-card">
+        <div class="account-create-card">
             <h2>アカウント情報編集</h2>
             <form class="create-form" action="account_backend.php" method="POST">
                 <label class="account_name" for="user_name">ユーザー名</label>
