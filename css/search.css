@@ -146,6 +146,7 @@ input[type="checkbox"]:checked + label {
   display: flex;
   flex-direction: column; /* 縦並び */
   gap: 25px;              /* 各カード間の隙間 */
+  align-items: center;    /* 子要素を中央揃え */
 }
 
 .car-item {
@@ -158,7 +159,7 @@ input[type="checkbox"]:checked + label {
   border-radius: 8px;     /* 角を丸くする */
   overflow: hidden;       /* はみ出た内容を隠す */
   padding: 16px;          /* カード内の余白 */
-  width: 60%;
+  width: 60%;             /* 横幅を60%に指定 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
   transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
 }
