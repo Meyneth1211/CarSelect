@@ -34,7 +34,7 @@ if ($_POST['send']) {
 
     if ($result) {
         // 挿入した `car_id` を取得
-        $car_id = $pdo->lastInsertId();
+        $car_id = $pdo->lastInsertId();//lastInsertId()で直近でAUTO_INCREMENTされた主キーの値を取得する！
 
         // アップロードディレクトリの指定
         $uploadDir = '../img/detail/';
@@ -59,8 +59,8 @@ if ($_POST['send']) {
         if (!empty($_FILES['other_images']['name'][0])) {
             foreach ($_FILES['other_images']['name'] as $key => $otherImageName) {
                 $tmpName = $_FILES['other_images']['tmp_name'][$key];
-                $uniqueName = uniqid() . '_' . basename($otherImageName);
-                $otherImagePath = $uploadDir . $uniqueName;
+                $otherName = uniqid() . '_' . basename($otherImageName);
+                $otherImagePath = $uploadDir . $otherName;
 
                 if (move_uploaded_file($tmpName, $otherImagePath)) {
                     $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,0)');
@@ -72,6 +72,7 @@ if ($_POST['send']) {
         }
 
         echo '<h2>商品の登録が完了しました。</h2>';
+        echo '<button type="button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">続けて登録する</button>';
     } else {
         echo '<h2>商品の登録に失敗しました。</h2>';
     }
