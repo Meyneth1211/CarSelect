@@ -183,7 +183,7 @@ input[type="checkbox"]:checked + label {
 .car-list {
   display: flex;
   flex-direction: column; /* 縦並び */
-  gap: 25px;              /* 各カード間の隙間 */
+  gap: 50px;              /* 各カード間の隙間 */
   align-items: center;    /* 子要素を中央揃え */
 }
 
@@ -229,9 +229,3 @@ input[type="checkbox"]:checked + label {
   text-align: right;      /* 右寄せ */
 }
 
-.favorite-icon {
-  font-size: 20px;        /* アイコンのサイズ */
-  color: #f00;            /* 赤色に設定 */
-  margin-left: 8px;       /* 画像と分離 */
-  align-self: flex-start; /* 上部に配置 */
-}
