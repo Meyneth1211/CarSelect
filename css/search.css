@@ -233,3 +233,9 @@ input[type="checkbox"]:checked + label {
   text-align: right;      /* 右寄せ */
 }
 
+.car-not-found{
+  color: #fff;
+  margin-bottom: 100px;
+  font-size: 20px;
+}
+

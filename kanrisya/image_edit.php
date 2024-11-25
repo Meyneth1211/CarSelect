@@ -44,5 +44,5 @@ $images = $sql->fetchAll();
 </table>
 
 <div class="top-back-button">
-    <button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
+    <button class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
 </div>
