@@ -1,3 +1,9 @@
+.image-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
 .label-cell {
     text-align: left;
     font-weight: bold;
@@ -18,23 +24,9 @@
     height: auto;
     margin-right: 10px;
     display: inline-block;
-    border: 1px solid #ccc;
-    padding: 5px;
-    background-color: #fff;
-}
-.button-group, .top-back-button {
-    margin-top: 20px;
 }
 
-button.add-button, button.delete-button {
-    padding: 10px 15px;
-    font-size: 14px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button.add-button:hover, button.delete-button:hover {
-    background-color: #0056b3;
+.image-table th, .image-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
 }
