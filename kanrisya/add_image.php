@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         $fileTmpPath = $_FILES['image']['tmp_name'];
         $fileName = $_FILES['image']['name'];
-        $uploadDir = '../uploads/';
+
+        // アップロードディレクトリを絶対パスで指定
+        $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
         $uploadPath = $uploadDir . basename($fileName);
 
         // ディレクトリが存在するか確認
