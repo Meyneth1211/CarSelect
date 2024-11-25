@@ -12,7 +12,7 @@ require_once '../DBconnect.php';
 </head>
 <body>
     <form action="kanrisya_insert_back.php" method="post" enctype="multipart/form-data">
-        <h1>商品追加</h1>
+        <h1 class="syohinn-insert">商品追加</h1>
     <table class="insert-table">
     <tr>
         <th><h3>商品名</h3></th>
