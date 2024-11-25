@@ -17,14 +17,13 @@
             //DB接続し前述の車IDに一致する画像のURLを取得
             require_once '../DBconnect.php';
             $pdo=getDB();
-            $sql="select image from image where car_id = ? and is_primary = '1'";
+            $sql="SELECT COUNT(*) FROM image WHERE car_id = ?";
+            //$sql="SELECT image FROM image WHERE car_id = ? ORDER BY is_primary DESC";
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$item]);
-            $output=$stmt->fetchall(PDO::FETCH_ASSOC);
-            //var_dump($output);
-            foreach ($output as $row) {
-                echo '<img src="',$row['image'],'">';
-            }
+            $result=$stmt->fetch(PDO::FETCH_ASSOC);
+            $count=$result['count'];
+            echo '<h2>行数：'. $count .'</h2>';
             $pdo=null;
         ?>
     </div>
