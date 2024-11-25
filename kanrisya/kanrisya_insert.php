@@ -16,7 +16,7 @@ require_once '../DBconnect.php';
     <table class="insert-table">
     <tr>
         <th><h3>商品名</h3></th>
-        <td><input type="text" name="car_name" class="car_name" placeholder="ここに商品名を入力してください" required><br><br></td>
+        <td><input type="text" name="car_name" class="car_name" placeholder="商品名を入力してください" required><br><br></td>
     </tr>
 
     <tr>
@@ -89,17 +89,17 @@ require_once '../DBconnect.php';
     
     <tr>
     <th><h3>値段</h3></th>
-        <td><input type="number" name="insert-price" required><br><br></td>
+        <td><input type="number" name="insert-price" class="insert-price" placeholder="値段を設定してください" required><br><br></td>
     </tr>
 
     <tr>
     <th><h3>在庫数</h3></th>
-        <td><input type="number" name="insert-stock" class="insert-stock" min="0" required></td>
+        <td><input type="number" name="insert-stock" class="insert-stock" min="0" placeholder="在庫数を設定してください" required></td>
     </tr>
 
     <tr>
     <th><h3>詳細</h3></th>
-        <td><textarea name="insert-detail" id="" required></textarea><br><br></td>
+        <td><textarea name="insert-detail" id="" placeholder="商品の説明を入力してください" required></textarea><br><br></td>
     </tr>
 
     <tr>
