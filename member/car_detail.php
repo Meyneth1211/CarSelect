@@ -14,7 +14,6 @@
             //GETメソッドによる値受け渡し
             //URLのクエリパラメータからitemという変数名で車IDを取得
             $item=$_GET['item'];
-            //DB接続し前述の車IDに一致する画像のURLを取得
             require_once '../DBconnect.php';
             $pdo=getDB();
             $sql="SELECT COUNT(*) FROM image WHERE car_id = ?";
@@ -22,9 +21,13 @@
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$item]);
             $result=$stmt->fetch(PDO::FETCH_ASSOC);
-            var_dump($result);
             $count=$result['COUNT(*)'];
-            echo '<h2>行数：'. $count .'</h2>';
+            //echo '<h2>行数：'. $count .'</h2>';
+            echo '<ul class="slider">';
+                for ($i=1; $i <= $count; $i++) { 
+                    echo '<li class="slider-item slider-item'. $i .'"></li>';
+                    echo '<h2>'. $i .'回目</h2>';
+                }
             $pdo=null;
         ?>
     </div>
