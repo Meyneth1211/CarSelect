@@ -8,8 +8,8 @@ $pdo = getDb();
 
 <?php
 
-// SQLでデータを取得 (stockカラムを追加)
-$sql = $pdo->query('SELECT car_id, brand, car_name, color, stock FROM car');
+// SQLでデータを取得 (image_pathカラムを追加)
+$sql = $pdo->query('SELECT car_id, brand, car_name, color, stock, image_path FROM car');
 
 // 一覧表示用のHTML
 echo '<table class="car-table">';
@@ -18,6 +18,7 @@ echo '<tr>
         <th>車名</th>
         <th>色</th>
         <th>在庫数</th> <!-- Stock column header -->
+        <th>画像</th> <!-- 画像カラム -->
         <th>操作</th>
       </tr>';
 
@@ -28,13 +29,24 @@ foreach ($sql as $row) {
     echo '<td class="car-name">' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td class="color">' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
     
-    // Replace the stock display with the input form for updating stock
+    // 在庫数の入力フォーム
     echo '<td class="stock">';
     echo '<form class="stock-update-form" style="display: inline;" method="post" action="update_stock.php">';
     echo '<input type="number" class="stock-input" name="stock" value="' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '" min="0" step="1"> ';
     echo '<input type="hidden" name="car_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">';
     echo '<button class="update-button" type="submit">在庫更新</button>';
     echo '</form>';
+    echo '</td>';
+
+    // 画像表示
+    echo '<td class="image">';
+    if (!empty($row['image_path'])) {
+        // 画像がある場合、画像を表示
+        echo '<img src="' . htmlspecialchars($row['image_path'], ENT_QUOTES, 'UTF-8') . '" alt="Car Image" width="100" height="auto">';
+    } else {
+        // 画像がない場合は「画像なし」と表示
+        echo '画像なし';
+    }
     echo '</td>';
 
     echo '<td class="actions">';
@@ -44,6 +56,11 @@ foreach ($sql as $row) {
     echo '<button class="edit-button" type="submit" name="edit_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">編集</button>';
     echo '</form> ';
     
+    // 画像編集ボタン
+    echo '<form class="image-edit-form" style="display: inline;" method="get" action="image_edit.php">';
+    echo '<button class="image-edit-button" type="submit" name="edit_image_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">画像編集</button>';
+    echo '</form>';
+
     // 削除ボタン
     echo '<form class="delete-form" style="display: inline;" method="post" action="car_delete.php">';
     echo '<button class="delete-button" type="submit" name="delete_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">削除</button>';
