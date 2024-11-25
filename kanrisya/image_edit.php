@@ -3,21 +3,28 @@ require('kanrisya_session.php');
 require_once '../DBconnect.php';
 $pdo = getDb();
 
-// 表示対象の `car_id` を取得
-if (isset($_GET['car_id'])) {
+// car_idの取得を試みる
+if (isset($_GET['car_id']) && is_numeric($_GET['car_id'])) {
     $car_id = $_GET['car_id'];
 } else {
-    echo '車両IDが指定されていません。';
+    // エラー時の処理: メッセージを表示してトップページへ戻る
+    echo '<p>車両IDが指定されていません。</p>';
+    echo '<div class="top-back-button">';
+    echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
+    echo '</div>';
     exit;
 }
 
-// 該当する `car_id` の画像データを取得
+// 該当するcar_idの画像データを取得
 $sql = $pdo->prepare('SELECT * FROM image WHERE car_id = :car_id');
 $sql->execute([':car_id' => $car_id]);
 $images = $sql->fetchAll();
 
 if (!$images) {
-    echo '指定された車両に関連する画像が見つかりません。';
+    echo '<p>指定された車両に関連する画像が見つかりません。</p>';
+    echo '<div class="top-back-button">';
+    echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
+    echo '</div>';
     exit;
 }
 ?>
