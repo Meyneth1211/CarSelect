@@ -29,16 +29,6 @@ if (isset($_GET['edit_id'])) {
     exit;
 }
 
-// 画像削除処理
-if (isset($_POST['delete_image'])) {
-    $image_id = $_POST['delete_image'];
-    $delete_stmt = $pdo->prepare('DELETE FROM image WHERE image_id = :image_id');
-    $delete_stmt->bindValue(':image_id', $image_id, PDO::PARAM_INT);
-    $delete_stmt->execute();
-    header("Location: {$_SERVER['PHP_SELF']}?edit_id=$car_id");
-    exit;
-}
-
 // 更新処理
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     // 車情報の更新
@@ -77,6 +67,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             $update_img_stmt = $pdo->prepare('UPDATE image SET is_primary = 1 WHERE image_id = :image_id');
             $update_img_stmt->bindValue(':image_id', $selected_image_id, PDO::PARAM_INT);
             $update_img_stmt->execute();
+        }
+
+        // 削除する画像の処理
+        if (isset($_POST['delete_images']) && is_array($_POST['delete_images'])) {
+            foreach ($_POST['delete_images'] as $image_id) {
+                $delete_stmt = $pdo->prepare('DELETE FROM image WHERE image_id = :image_id');
+                $delete_stmt->bindValue(':image_id', $image_id, PDO::PARAM_INT);
+                $delete_stmt->execute();
+            }
         }
 
         // 新しい画像のアップロード処理
@@ -129,18 +128,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             <th>在庫数</th>
             <td><input type="number" name="stock" value="<?= htmlspecialchars($car['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" required></td>
         </tr>
+        <tr>
+            <th>画像削除</th>
+            <td>
+                <?php foreach ($images as $image): ?>
+                    <label>
+                        <input type="checkbox" name="delete_images[]" value="<?= $image['image_id'] ?>">
+                        <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="Car Image" width="100">
+                    </label>
+                <?php endforeach; ?>
+            </td>
+        </tr>
     </table>
-
-    <h2>画像管理</h2>
-    <div class="image-list">
-        <?php foreach ($images as $image): ?>
-            <div class="image-item">
-                <input type="radio" name="selected_image" value="<?= $image['image_id'] ?>" <?= $image['is_primary'] ? 'checked' : '' ?>>
-                <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="Car Image" width="150">
-                <button type="submit" name="delete_image" value="<?= $image['image_id'] ?>" onclick="return confirm('この画像を削除しますか？')">削除</button>
-            </div>
-        <?php endforeach; ?>
-    </div>
 
     <h3>新しい画像を追加</h3>
     <input type="file" name="new_image" accept="image/*">
