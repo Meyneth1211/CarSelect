@@ -149,7 +149,7 @@ textarea {
 
 .insert-table th, .insert-table td {
   padding: 10px 15px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #101010;
 }
 
