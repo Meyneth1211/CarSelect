@@ -129,21 +129,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             <td><input type="number" name="stock" value="<?= htmlspecialchars($car['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" required></td>
         </tr>
         <tr>
-            <th>画像削除</th>
+            <th>画像編集</th>
             <td>
-                <?php foreach ($images as $image): ?>
-                    <label>
-                        <input type="checkbox" name="delete_images[]" value="<?= $image['image_id'] ?>">
-                        <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="Car Image" width="100">
-                    </label>
-                <?php endforeach; ?>
+                <!-- 既存の画像一覧 -->
+                <div>
+                    <?php foreach ($images as $image): ?>
+                        <div style="margin-bottom: 10px;">
+                            <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="Car Image" width="100">
+                            <label>
+                                <input type="checkbox" name="delete_images[]" value="<?= $image['image_id'] ?>"> この画像を削除
+                            </label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <!-- 画像追加フォーム -->
+                <div style="margin-top: 10px;">
+                    <label>新しい画像を追加:</label>
+                    <input type="file" name="new_image" accept="image/*">
+                </div>
             </td>
         </tr>
     </table>
 
-    <h3>新しい画像を追加</h3>
-    <input type="file" name="new_image" accept="image/*">
-
     <button class="save-button" type="submit" name="save_changes">更新確定</button>
     <button class="back-button" type="button" onclick="location.href='car_list.php'">キャンセル</button>
 </form>
+
