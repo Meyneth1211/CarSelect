@@ -7,7 +7,7 @@ $pdo = getDb();
 if (isset($_GET['edit_id'])) {
     $car_id = $_GET['edit_id'];
 
-    // データベースから該当車の情報を取得
+    // 車情報を取得
     $stmt = $pdo->prepare('SELECT * FROM car WHERE car_id = :car_id');
     $stmt->bindValue(':car_id', $car_id, PDO::PARAM_INT);
     $stmt->execute();
@@ -18,7 +18,7 @@ if (isset($_GET['edit_id'])) {
         exit;
     }
 
-    // 該当車の画像情報を取得
+    // 画像情報を取得
     $img_stmt = $pdo->prepare('SELECT * FROM image WHERE car_id = :car_id');
     $img_stmt->bindValue(':car_id', $car_id, PDO::PARAM_INT);
     $img_stmt->execute();
@@ -29,8 +29,18 @@ if (isset($_GET['edit_id'])) {
     exit;
 }
 
+// 画像削除処理
+if (isset($_POST['delete_image'])) {
+    $image_id = $_POST['delete_image'];
+    $delete_stmt = $pdo->prepare('DELETE FROM image WHERE image_id = :image_id');
+    $delete_stmt->bindValue(':image_id', $image_id, PDO::PARAM_INT);
+    $delete_stmt->execute();
+    header("Location: {$_SERVER['PHP_SELF']}?edit_id=$car_id");
+    exit;
+}
+
 // 更新処理
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     // 車情報の更新
     $car_name = $_POST['car_name'];
     $brand = $_POST['brand'];
@@ -60,30 +70,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($update_stmt->execute()) {
         // 画像選択の更新
         if ($selected_image_id) {
-            // すべての画像のis_primaryを0にリセット
             $reset_stmt = $pdo->prepare('UPDATE image SET is_primary = 0 WHERE car_id = :car_id');
             $reset_stmt->bindValue(':car_id', $car_id, PDO::PARAM_INT);
             $reset_stmt->execute();
 
-            // 選択された画像のis_primaryを1に設定
             $update_img_stmt = $pdo->prepare('UPDATE image SET is_primary = 1 WHERE image_id = :image_id');
             $update_img_stmt->bindValue(':image_id', $selected_image_id, PDO::PARAM_INT);
             $update_img_stmt->execute();
         }
 
-        echo '<div class="container">';
-        echo '<div class="message success">情報が正常に編集されました。</div>';
-        echo '<div class="button-group"><button class="nav-button" onclick="location.href=\'car_list.php\'">在庫管理画面に戻る</button></div>';
-        echo '</div>';
+        // 新しい画像のアップロード処理
+        if (!empty($_FILES['new_image']['name'])) {
+            $image_path = '../img/uploads/' . basename($_FILES['new_image']['name']);
+            if (move_uploaded_file($_FILES['new_image']['tmp_name'], $image_path)) {
+                $add_img_stmt = $pdo->prepare('
+                    INSERT INTO image (car_id, image, is_primary) VALUES (:car_id, :image, 0)
+                ');
+                $add_img_stmt->bindValue(':car_id', $car_id, PDO::PARAM_INT);
+                $add_img_stmt->bindValue(':image', $image_path, PDO::PARAM_STR);
+                $add_img_stmt->execute();
+            }
+        }
+
+        header("Location: {$_SERVER['PHP_SELF']}?edit_id=$car_id");
         exit;
-    } else {
-        echo '<div class="message error">更新が失敗しました。</div>';
     }
 }
 ?>
 
 <h1 class="page-title">車情報編集</h1>
-<form class="hensyuu_form" method="post">
+<form class="hensyuu_form" method="post" enctype="multipart/form-data">
     <table class="edit-table">
         <tr>
             <th>車名</th>
@@ -115,16 +131,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </tr>
     </table>
 
-    <h2>画像選択</h2>
+    <h2>画像管理</h2>
     <div class="image-list">
         <?php foreach ($images as $image): ?>
             <div class="image-item">
                 <input type="radio" name="selected_image" value="<?= $image['image_id'] ?>" <?= $image['is_primary'] ? 'checked' : '' ?>>
                 <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="Car Image" width="150">
+                <button type="submit" name="delete_image" value="<?= $image['image_id'] ?>" onclick="return confirm('この画像を削除しますか？')">削除</button>
             </div>
         <?php endforeach; ?>
     </div>
 
-    <button class="save-button" type="submit">更新確定</button>
+    <h3>新しい画像を追加</h3>
+    <input type="file" name="new_image" accept="image/*">
+
+    <button class="save-button" type="submit" name="save_changes">更新確定</button>
     <button class="back-button" type="button" onclick="location.href='car_list.php'">キャンセル</button>
 </form>
