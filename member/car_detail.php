@@ -22,7 +22,7 @@
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$item]);
             $result=$stmt->fetch(PDO::FETCH_ASSOC);
-            $count=$result['count'];
+            $count=$result['count(*)'];
             echo '<h2>行数：'. $count .'</h2>';
             $pdo=null;
         ?>
