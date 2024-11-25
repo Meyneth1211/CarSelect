@@ -17,7 +17,7 @@ echo '<tr>
         <th>ブランド</th>
         <th>車名</th>
         <th>色</th>
-        <th>在庫数</th>
+        <th>在庫数</th> <!-- Stock column header -->
         <th>操作</th>
       </tr>';
 
@@ -27,16 +27,18 @@ foreach ($sql as $row) {
     echo '<td class="brand">' . htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td class="car-name">' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td class="color">' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
-    echo '<td class="stock">' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '</td>';
-    echo '<td class="actions">';
     
-    // ステッパーで在庫数を変更するフォーム
+    // Replace the stock display with the input form for updating stock
+    echo '<td class="stock">';
     echo '<form class="stock-update-form" style="display: inline;" method="post" action="update_stock.php">';
     echo '<input type="number" class="stock-input" name="stock" value="' . htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') . '" min="0" step="1"> ';
     echo '<input type="hidden" name="car_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">';
     echo '<button class="update-button" type="submit">在庫更新</button>';
-    echo '</form> ';
+    echo '</form>';
+    echo '</td>';
 
+    echo '<td class="actions">';
+    
     // 編集ボタン
     echo '<form class="edit-form" style="display: inline;" method="get" action="car_hensyuu.php">';
     echo '<button class="edit-button" type="submit" name="edit_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">編集</button>';
