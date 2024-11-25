@@ -41,7 +41,7 @@ foreach ($sql as $row) {
     // 画像編集ボタン
     echo '<td class="edit-form">';
     echo '<form class="edit-form" style="display: inline;" method="get" action="image_edit.php">';
-    echo '<button class="edit-button" type="submit" name="edit_image_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">画像編集</button>';
+    echo '<button class="edit-button" type="submit" name="car_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">画像編集</button>';
     echo '</form>';
     echo '</td>';
 
