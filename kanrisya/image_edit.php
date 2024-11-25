@@ -1,11 +1,7 @@
 <?php 
-// セッション開始とヘッダー読み込み
 session_start();
 require('kanrisya_session.php');
 require_once '../DBconnect.php';
-
-// 出力バッファリングを開始
-ob_start();
 
 $pdo = getDb();
 
@@ -49,31 +45,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
         $_SESSION['delete_message'] = '選択した画像が削除されました。';
     }
 
-    // リダイレクトの前にヘッダーを送信するためにバッファをクリア
-    header("Location: image_edit.php?car_id=$car_id");
+    // 削除後にメッセージ表示用ページにリダイレクト
+    header("Location: message_display.php");
     exit(); // リダイレクト後にスクリプトの実行を終了
 }
 ?>
 
 <h1 class="page-title">画像一覧</h1>
 
-<!-- 削除メッセージ表示 -->
-<?php if (isset($_SESSION['delete_message'])): ?>
-    <div class="message success">
-        <?= $_SESSION['delete_message'] ?>
-    </div>
-    <?php unset($_SESSION['delete_message']); ?> <!-- メッセージを表示後にセッションから削除 -->
-<?php endif; ?>
-
 <form method="POST">
     <table class="image-table">
         <tr>
-            <!-- 項目名 -->
             <td class="label-cell">メイン画像</td>
             <td class="image-cell">
                 <?php foreach ($images as $row): ?>
                     <?php if ($row['is_primary'] == 1): ?>
-                        <!-- メイン画像もチェックボックスとして表示 -->
                         <label>
                             <input type="checkbox" name="delete_images[]" value="<?= $row['image_id'] ?>" />
                             <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
@@ -87,7 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
             <td class="image-cell">
                 <?php foreach ($images as $row): ?>
                     <?php if ($row['is_primary'] == 0): ?>
-                        <!-- サブ画像もチェックボックスとして表示 -->
                         <label>
                             <input type="checkbox" name="delete_images[]" value="<?= $row['image_id'] ?>" />
                             <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
@@ -98,7 +83,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
         </tr>
     </table>
 
-    <!-- 画像削除ボタン -->
     <div>
         <button type="submit" class="delete-button">選択した画像を削除</button>
     </div>
