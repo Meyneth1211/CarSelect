@@ -21,20 +21,19 @@ $images = $sql->fetchAll();
 
 <table class="image-table">
     <tr>
-        <th>メイン画像</th>
-        <th>サブ画像</th>
-    </tr>
-    <tr>
-        <!-- メイン画像 -->
-        <td>
+        <!-- 項目名 -->
+        <td class="label-cell">メイン画像</td>
+        <td class="image-cell">
             <?php foreach ($images as $row): ?>
                 <?php if ($row['is_primary'] == 1): ?>
                     <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
                 <?php endif; ?>
             <?php endforeach; ?>
         </td>
-        <!-- サブ画像 -->
-        <td>
+    </tr>
+    <tr>
+        <td class="label-cell">サブ画像</td>
+        <td class="image-cell">
             <?php foreach ($images as $row): ?>
                 <?php if ($row['is_primary'] == 0): ?>
                     <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
