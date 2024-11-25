@@ -26,8 +26,8 @@
             echo '<ul class="slider">';
                 for ($i=1; $i <= $count; $i++) { 
                     echo '<li class="slider-item slider-item'. $i .'"></li>';
-                    echo '<h2>'. $i .'回目</h2>';
                 }
+            echo '</ul>';
             $pdo=null;
         ?>
     </div>
