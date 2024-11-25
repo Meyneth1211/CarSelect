@@ -16,7 +16,7 @@ require_once '../DBconnect.php';
     <table class="insert-table">
     <tr>
         <th><h3>商品名</h3></th>
-        <td><input type="text" name="car_name" class="car_name"><br><br></td>
+        <td><input type="text" name="car_name" class="car_name" placeholder="ここに商品名を入力してください" required><br><br></td>
     </tr>
 
     <tr>
@@ -24,43 +24,43 @@ require_once '../DBconnect.php';
     <td>
     <div class="radio-images">
         <label>
-            <input type="radio" name="brands" value="トヨタ">
+            <input type="radio" name="brands" value="トヨタ" required>
              <img src="../img/Toyota.png" alt="Toyota">
         </label>
         <label>
-            <input type="radio" name="brands" value="マツダ">
+            <input type="radio" name="brands" value="マツダ" required>
             <img src="../img/Mazda.png" alt="Mazda">
         </label>
         <label>
-            <input type="radio" name="brands" value="レクサス">
+            <input type="radio" name="brands" value="レクサス" required>
             <img src="../img/Lexus.png" alt="Lexus">
         </label>
         <label>
-            <input type="radio" name="brands" value="ホンダ">
+            <input type="radio" name="brands" value="ホンダ" required>
             <img src="../img/Honda.png" alt="Honda">
         </label>
         <label>
-            <input type="radio" name="brands" value="ポルシェ">
+            <input type="radio" name="brands" value="ポルシェ" required>
             <img src="../img/Porsche.png" alt="Porsche">
         </label>
         <label>
-            <input type="radio" name="brands" value="フェラーリ">
+            <input type="radio" name="brands" value="フェラーリ" required>
             <img src="../img/Ferrari.png" alt="Ferrari">
         </label>
         <label>
-            <input type="radio" name="brands" value="ランボルギーニ">
+            <input type="radio" name="brands" value="ランボルギーニ" required>
             <img src="../img/Lamborghini.png" alt="Lamborghini">
         </label>
         <label>
-            <input type="radio" name="brands" value="BMW">
+            <input type="radio" name="brands" value="BMW" required>
             <img src="../img/BMW.png" alt="BMW">
         </label>
         <label>
-            <input type="radio" name="brands" value="ダイハツ">
+            <input type="radio" name="brands" value="ダイハツ" required>
             <img src="../img/Daihatsu.png" alt="Daihatsu">
         </label>
         <label>
-            <input type="radio" name="brands" value="日産">
+            <input type="radio" name="brands" value="日産" required>
             <img src="../img/Nissan.png" alt="Nissan">
         </label>
         </td>
@@ -72,15 +72,15 @@ require_once '../DBconnect.php';
     <td>
     <div class="body-type">
         <label>
-            <input type="radio" name="body-type" value="セダン">
+            <input type="radio" name="body-type" value="セダン" required>
             <img src="../img/セダン黒.png" alt="セダン">
         </label>
         <label>
-            <input type="radio" name="body-type" value="SUV">
+            <input type="radio" name="body-type" value="SUV" required>
             <img src="../img/SUV黒.png" alt="SUV">
         </label>
         <label>
-            <input type="radio" name="body-type" value="スポーツカー">
+            <input type="radio" name="body-type" value="スポーツカー" required>
             <img src="../img/スポーツカー黒.png" alt="スポーツカー">
         </label>
     </td>
@@ -89,7 +89,7 @@ require_once '../DBconnect.php';
     
     <tr>
     <th><h3>値段</h3></th>
-        <td><input type="number" name="insert-price"><br><br></td>
+        <td><input type="number" name="insert-price" required><br><br></td>
     </tr>
 
     <tr>
@@ -99,16 +99,16 @@ require_once '../DBconnect.php';
 
     <tr>
     <th><h3>詳細</h3></th>
-        <td><textarea name="insert-detail" id=""></textarea><br><br></td>
+        <td><textarea name="insert-detail" id="" required></textarea><br><br></td>
     </tr>
 
     <tr>
     <th><h3>カラー</h3></th>
       <td><div class="color-button">
-        <input type="radio" id="black" name="color" value="ブラック">
+        <input type="radio" id="black" name="color" value="ブラック" required>
         <label for="black" class="black">BLACK</label>
         
-        <input type="radio" id="white" name="color" value="ホワイト">
+        <input type="radio" id="white" name="color" value="ホワイト" required>
         <label for="white" class="white">WHITE</label>
       </div></td>
     </tr>
@@ -120,7 +120,7 @@ require_once '../DBconnect.php';
 
     <tr>
     <th><h3>その他の画像</h3></th>
-        <td><input type="file" name="other_images[]" multiple><br><br></td>
+        <td><input type="file" name="other_images[]" multiple required><br><br></td>
     </tr>
     </table>
 
