@@ -1,5 +1,5 @@
-<?php 
-require('kanrisya_session.php'); 
+<?php
+require('kanrisya_session.php');
 require_once '../DBconnect.php';
 
 $pdo = getDb();
@@ -44,7 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
         $_SESSION['delete_message'] = '選択した画像が削除されました。';
     }
 
-    // 削除後にリダイレクト
+    // リダイレクトの前に出力を止める
+    ob_end_clean(); // 出力バッファリングをクリア
     header("Location: image_edit.php?car_id=$car_id");
     exit(); // リダイレクト後にスクリプトの実行を終了
 }
