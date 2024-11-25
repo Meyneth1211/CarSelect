@@ -16,7 +16,7 @@ require_once '../DBconnect.php';
     <table class="insert-table">
     <tr>
         <th><h3>商品名</h3></th>
-        <td><input type="text" name="car_name"><br><br></td>
+        <td><input type="text" name="car_name" class="car_name"><br><br></td>
     </tr>
 
     <tr>
