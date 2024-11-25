@@ -52,8 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
             <td class="image-cell">
                 <?php foreach ($images as $row): ?>
                     <?php if ($row['is_primary'] == 1): ?>
-                        <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
-                        <!-- メイン画像は削除しない -->
+                        <!-- メイン画像もチェックボックスとして表示 -->
+                        <label>
+                            <input type="checkbox" name="delete_images[]" value="<?= $row['image_id'] ?>" />
+                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
+                        </label>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </td>
@@ -63,10 +66,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
             <td class="image-cell">
                 <?php foreach ($images as $row): ?>
                     <?php if ($row['is_primary'] == 0): ?>
-                        <div>
-                            <input type="checkbox" name="delete_images[]" value="<?= $row['image_id'] ?>">
+                        <!-- サブ画像もチェックボックスとして表示 -->
+                        <label>
+                            <input type="checkbox" name="delete_images[]" value="<?= $row['image_id'] ?>" />
                             <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
-                        </div>
+                        </label>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </td>
