@@ -128,10 +128,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
             <th>在庫数</th>
             <td><input type="number" name="stock" value="<?= htmlspecialchars($car['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" required></td>
         </tr>
+        
+        <!-- 画像削除項目 -->
         <tr>
-            <th>画像編集</th>
+            <th>画像削除</th>
             <td>
-                <!-- 既存の画像一覧 -->
                 <div>
                     <?php foreach ($images as $image): ?>
                         <div style="margin-bottom: 10px;">
@@ -142,9 +143,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
                         </div>
                     <?php endforeach; ?>
                 </div>
+            </td>
+        </tr>
 
-                <!-- 画像追加フォーム -->
-                <div style="margin-top: 10px;">
+        <!-- 画像追加項目 -->
+        <tr>
+            <th>画像追加</th>
+            <td>
+                <div>
                     <label>新しい画像を追加:</label>
                     <input type="file" name="new_image" accept="image/*">
                 </div>
@@ -155,4 +161,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_changes'])) {
     <button class="save-button" type="submit" name="save_changes">更新確定</button>
     <button class="back-button" type="button" onclick="location.href='car_list.php'">キャンセル</button>
 </form>
-
