@@ -21,16 +21,27 @@ $images = $sql->fetchAll();
 
 <table class="image-table">
     <tr>
-        <th>画像</th>
+        <th>メイン画像</th>
+        <th>サブ画像</th>
     </tr>
-    <?php foreach ($images as $row): ?>
     <tr>
+        <!-- メイン画像 -->
         <td>
-            <!-- 画像の表示 -->
-            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="車両画像" class="car-image">
+            <?php foreach ($images as $row): ?>
+                <?php if ($row['is_primary'] == 1): ?>
+                    <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </td>
+        <!-- サブ画像 -->
+        <td>
+            <?php foreach ($images as $row): ?>
+                <?php if ($row['is_primary'] == 0): ?>
+                    <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
+                <?php endif; ?>
+            <?php endforeach; ?>
         </td>
     </tr>
-    <?php endforeach; ?>
 </table>
 
 <div class="top-back-button">
