@@ -139,6 +139,10 @@ textarea {
   text-align: left;
 }
 
+.insert-price{
+  width: 500px;
+  text-align: left;
+}
 
 .insert-table {
   width: 100%;
