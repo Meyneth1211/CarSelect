@@ -20,9 +20,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $uploadDir = '../uploads/';
         $uploadPath = $uploadDir . basename($fileName);
 
+        // ディレクトリが存在するか確認
+        if (!is_dir($uploadDir)) {
+            die('アップロード用のディレクトリが存在しません。');
+        }
+
+        // ディレクトリに書き込み権限があるか確認
+        if (!is_writable($uploadDir)) {
+            die('アップロード用のディレクトリに書き込み権限がありません。');
+        }
+
+        // ファイルをアップロード
         if (move_uploaded_file($fileTmpPath, $uploadPath)) {
+            // 画像データをデータベースに保存
             $sql = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?, ?, ?)');
             $sql->execute([$car_id, $uploadPath, $is_primary]);
+        } else {
+            die('画像のアップロードに失敗しました。');
+        }
+    } else {
+        // アップロードエラーがあった場合
+        if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+            die('ファイルのアップロードに失敗しました。エラーコード: ' . $_FILES['image']['error']);
         }
     }
 }
