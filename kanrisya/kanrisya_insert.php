@@ -123,9 +123,10 @@ require_once '../DBconnect.php';
         <td><input type="file" name="other_images[]" multiple required><br><br></td>
     </tr>
     </table>
-
-    <input type="submit" name="send" value="登録">
-    <button onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">トップページへ戻る</button>
+    <div class="kanrisya-insert-button">
+        <input class="save-button" type="submit" name="send" value="登録">
+        <button class="back-button" onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">トップページへ戻る</button>
+    </div>
     </form>
 </body>
 </html>
