@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
 
     // 削除後にリダイレクト
     header("Location: image_edit.php?car_id=$car_id");
-    exit();
+    exit(); // リダイレクト後にスクリプトの実行を終了
 }
 ?>
 
