@@ -172,6 +172,14 @@
   $stmt=$pdo->prepare($sql);
   $stmt->execute();
   $cars=$stmt->fetchall(PDO::FETCH_ASSOC);
+  if (empty($cars)) {
+    echo <<<ERR
+      <div class="car-not-found">
+        <h2>検索条件に一致する車が見つかりませんでした。</h2>
+      </div>
+    ERR;
+    die();
+  }
   $imageid=[];
   foreach ($cars as $row) {
     $imageid[]=$row['car_id'];
