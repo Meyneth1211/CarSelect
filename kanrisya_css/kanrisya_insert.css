@@ -134,11 +134,17 @@ textarea {
   border: 1px solid #ddd;
 }
 
+.car_name{
+  width: 500px;
+  text-align: center;
+}
+
 
 .insert-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .insert-table th, .insert-table td {
