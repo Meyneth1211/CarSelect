@@ -94,7 +94,7 @@ require_once '../DBconnect.php';
 
     <tr>
     <th><h3>在庫数</h3></th>
-        <td><input type="number" name="insert-stock" class="stock-input" min="0" required></td>
+        <td><input type="number" name="insert-stock" class="insert-stock" min="0" required></td>
     </tr>
 
     <tr>
