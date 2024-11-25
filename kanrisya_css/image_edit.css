@@ -25,3 +25,8 @@
     margin-right: 10px;
     display: inline-block;
 }
+
+.image-table th, .image-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
