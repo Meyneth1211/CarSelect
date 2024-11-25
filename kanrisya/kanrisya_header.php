@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../kanrisya_css/car_list.css">
     <link rel="stylesheet" href="../kanrisya_css/car_hensyuu.css">
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_login.css">
+    <link rel="stylesheet" href="../kanrisya_css/image_edit.css">
     <link rel="stylesheet" href="/carselect/assets/css/styles.css?v=<?php echo time(); ?>">
     <title>Car Select kanrisya</title>
 </head>
