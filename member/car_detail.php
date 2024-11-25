@@ -9,7 +9,7 @@
     <!-- ヘッダ呼び出し -->
     <?php require('../header/header.php'); ?>
 
-    <div class="car_image">
+    <div class="car-image">
         <?php
             //GETメソッドによる値受け渡し
             //URLのクエリパラメータからitemという変数名で車IDを取得
@@ -29,6 +29,11 @@
                 }
             echo '</ul>';
             $pdo=null;
+        ?>
+    </div>
+    <div class="car-info">
+        <?php
+            echo $count;
         ?>
     </div>
 </body>
