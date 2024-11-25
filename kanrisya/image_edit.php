@@ -20,6 +20,8 @@ $images = $sql->fetchAll();
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
     // チェックされた画像IDを取得
     $delete_ids = $_POST['delete_images'];
+    $delete_count = 0;
+
     foreach ($delete_ids as $image_id) {
         // 画像データの取得
         $sql = $pdo->prepare('SELECT image FROM image WHERE image_id = ?');
@@ -33,7 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
             // データベースから削除
             $sql = $pdo->prepare('DELETE FROM image WHERE image_id = ?');
             $sql->execute([$image_id]);
+            $delete_count++;
         }
+    }
+
+    // 削除が成功した場合、セッションにメッセージをセット
+    if ($delete_count > 0) {
+        $_SESSION['delete_message'] = '選択した画像が削除されました。';
     }
 
     // 削除後にリダイレクト
@@ -43,6 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_images'])) {
 ?>
 
 <h1 class="page-title">画像一覧</h1>
+
+<!-- 削除メッセージ表示 -->
+<?php if (isset($_SESSION['delete_message'])): ?>
+    <div class="message success">
+        <?= $_SESSION['delete_message'] ?>
+    </div>
+    <?php unset($_SESSION['delete_message']); ?> <!-- メッセージを表示後にセッションから削除 -->
+<?php endif; ?>
 
 <form method="POST">
     <table class="image-table">
