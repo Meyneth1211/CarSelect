@@ -59,28 +59,32 @@
 
 
     <!-- 価格 -->
-    <div class="title">
-      <h2>価格</h2>
-    </div>
-    <div class="price-range">
-      <input type="radio" name="price" value="4000000" id="price-30" hidden>
-      <button type="button" onclick="selectPrice('price-30', '～400万円', this)">～400万円</button>
+    <div class="price-tail">
+      <div class="search-price-card">
+        <div class="title">
+          <h2>価格</h2>
+        </div>
+        <div class="price-range">
+          <input type="radio" name="price" value="4000000" id="price-30" hidden>
+          <button type="button" onclick="selectPrice('price-30', '～400万円', this)">～400万円</button>
 
-      <input type="radio" name="price" value="6000000" id="price-50" hidden>
-      <button type="button" onclick="selectPrice('price-50', '～600万円', this)">～600万円</button>
+          <input type="radio" name="price" value="6000000" id="price-50" hidden>
+          <button type="button" onclick="selectPrice('price-50', '～600万円', this)">～600万円</button>
 
-      <input type="radio" name="price" value="8000000" id="price-100" hidden>
-      <button type="button" onclick="selectPrice('price-100', '～800万円', this)">～800万円</button>
+          <input type="radio" name="price" value="8000000" id="price-100" hidden>
+          <button type="button" onclick="selectPrice('price-100', '～800万円', this)">～800万円</button>
 
-      <input type="radio" name="price" value="10000000" id="price-200" hidden>
-      <button type="button" onclick="selectPrice('price-200', '～1000万円', this)">～1000万円</button>
+          <input type="radio" name="price" value="10000000" id="price-200" hidden>
+          <button type="button" onclick="selectPrice('price-200', '～1000万円', this)">～1000万円</button>
 
-      <input type="radio" name="price" value="over" id="price-200over" hidden>
-      <button type="button" onclick="selectPrice('price-200over', '1000万円～', this)">1000万円～</button>
-    </div>
-    <!-- もし価格が選択されていなければこれを表示 -->
-    <div class="select-color" id="selected-price">
-      <p>選択された価格: なし</p>
+          <input type="radio" name="price" value="over" id="price-200over" hidden>
+          <button type="button" onclick="selectPrice('price-200over', '1000万円～', this)">1000万円～</button>
+        </div>
+        <!-- もし価格が選択されていなければこれを表示 -->
+        <div class="select-color" id="selected-price">
+          <p>選択された価格: なし</p>
+        </div>
+      </div>
     </div>
 
 

@@ -92,6 +92,35 @@
       font-family:'メイリオ','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;
     }
 
+    .price-tail{
+      place-items: center;
+      margin-top: 12vh;
+    }
+    
+    .search-price-card{
+      position: relative;
+      z-index: 3;
+      width: 80%;
+      margin: 0 20px;
+      padding: 0px 30px 44px;
+      border-radius: 1.25rem;
+      background-color: rgba(33, 4, 4, 0.562);
+      text-align: center;
+      border: 5px solid #333;
+      transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
+    }
+    
+    .search-price-card:hover{
+      border: 5px solid #0ef;
+      box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+    }
+    
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーー☟ボディタイプーーーーーーーーーーーーーーーーーーーーーーーー */
+
 /*ボディタイプのチェックボックスの幅*/
 .body-type {
   margin-bottom: 10px;
