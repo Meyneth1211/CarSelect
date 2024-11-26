@@ -1,5 +1,5 @@
 /*すべてのtitle文字のスタイル*/
-.title h2{
+.title h2 {
   color: #fff;
   padding-top: 30px;
   padding-bottom: 30PX;
@@ -8,44 +8,55 @@
 /* ーーーーーーーーーーーーーーーー☟ブランドーーーーーーーーーーーーーーーーーー */
 
 
-.checkbox-container label{
-  margin: 6px; 
-} 
+.checkbox-container label {
+  margin: 6px;
+}
+
 /* チェックされた状態での画像のスタイル */
-.checkbox-container input[type="checkbox"]:checked + img {
-  border: 3px solid #0ef; /* 明るい青色のボーダー */
-  border-radius: 8px; /* 丸みを持たせたボーダー */
-  box-shadow: 0 4px 10px rgba(0, 239, 255, 0.6), 0 0 15px rgba(0, 239, 255, 0.4); /* 発光効果 */
-  transition: all 0.3s ease-in-out; /* アニメーション */
+.checkbox-container input[type="checkbox"]:checked+img {
+  border: 3px solid #0ef;
+  /* 明るい青色のボーダー */
+  border-radius: 8px;
+  /* 丸みを持たせたボーダー */
+  box-shadow: 0 4px 10px rgba(0, 239, 255, 0.6), 0 0 15px rgba(0, 239, 255, 0.4);
+  /* 発光効果 */
+  transition: all 0.3s ease-in-out;
+  /* アニメーション */
 }
 
 /* 画像のデフォルトサイズ調整 */
 .checkbox-container img {
-  width: 80px; /* 必要に応じてサイズを調整 */
+  width: 80px;
+  /* 必要に応じてサイズを調整 */
   height: auto;
-  border-radius: 8px; /* 丸みを持たせた画像 */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション */
+  border-radius: 8px;
+  /* 丸みを持たせた画像 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* アニメーション */
 }
 
 /* ホバー時のスタイル */
 .checkbox-container label:hover img {
-  transform: scale(1.1); /* 画像の拡大 */
-  box-shadow: 0 0 15px rgba(0, 239, 255, 0.8); /* 発光効果 */
+  transform: scale(1.1);
+  /* 画像の拡大 */
+  box-shadow: 0 0 15px rgba(0, 239, 255, 0.8);
+  /* 発光効果 */
 }
 
 /* チェックボックスを完全に隠す */
 .checkbox-container input[type="checkbox"] {
-  display: none; /* チェックボックスを完全に非表示にする */
+  display: none;
+  /* チェックボックスを完全に非表示にする */
 }
 
 
 /* ブランドの背景 */
-.bland-tail{
+.bland-tail {
   place-items: center;
   margin-top: 10vh;
 }
 
-.search-bland-card{
+.search-bland-card {
   position: relative;
   z-index: 3;
   width: 80%;
@@ -55,66 +66,77 @@
   background-color: rgba(33, 4, 4, 0.562);
   text-align: center;
   border: 5px solid #333;
-  transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+  /* 遷移時間を指定して、変化を遅く */
 }
 
-.search-bland-card:hover{
+.search-bland-card:hover {
   border: 5px solid #0ef;
   box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
-  /* ーーーーーーーーーーーーーーーーーーー☟値段ーーーーーーーーーーーーーーーーーーーーー */
+/* ーーーーーーーーーーーーーーーーーーー☟値段ーーーーーーーーーーーーーーーーーーーーー */
 
 
 
 
-   /* ボタンの基本スタイル */
-   .price-range button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: 1px solid #1c1b1b;
-    background-color: #f0f0f0be;
-    cursor: pointer;
-    border-radius: 4px;
-    color: #000000;
-    font-family:'メイリオ','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;
-  }
+/* ホバー時のスタイル */
+.price-range button:hover {
+  border: 2px solid #0ef;
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
 
-  /* 選択されているボタンにスタイルを追加 */
-  .price-range button.selected {
-    background-color: #ffffff;  /* ボタンの選択時の背景色 */
-    color: #000000;               /* 選択時の文字色 */
-    border-color: #000000;}
+/* ボタンの基本スタイル */
+.price-range button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 2px solid #1c1b1b;
+  background-color: #f0f0f0be;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #000000;
+  font-family: 'メイリオ', 'ヒラギノ角ゴ Pro W3', 'ＭＳ Ｐゴシック', sans-serif;
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+  /* 遷移時間を指定して、変化を遅く */
 
-    .select-color p{
-      color: #fff;
-      font-size: 10px;
-      font-family:'メイリオ','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',sans-serif;
-    }
+}
 
-    .price-tail{
-      place-items: center;
-      margin-top: 3vh;
-    }
-    
-    .search-price-card{
-      position: relative;
-      z-index: 3;
-      width: 60%;
-      margin: 0 20px;
-      padding: 0px 30px 44px;
-      border-radius: 1.25rem;
-      background-color: rgba(33, 4, 4, 0.562);
-      text-align: center;
-      border: 5px solid #333;
-      transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
-    }
-    
-    .search-price-card:hover{
-      border: 5px solid #0ef;
-      box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
-    }
-    
+/* 選択されているボタンにスタイルを追加 */
+.price-range button.selected {
+  border: 2px solid #0ef;
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+}
+
+.select-color p {
+  color: #fff;
+  font-size: 10px;
+  font-family: 'メイリオ', 'ヒラギノ角ゴ Pro W3', 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+.price-tail {
+  place-items: center;
+  margin-top: 3vh;
+}
+
+.search-price-card {
+  position: relative;
+  z-index: 3;
+  width: 60%;
+  margin: 0 20px;
+  padding: 0px 30px 44px;
+  border-radius: 1.25rem;
+  background-color: rgba(33, 4, 4, 0.562);
+  text-align: center;
+  border: 5px solid #333;
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+  /* 遷移時間を指定して、変化を遅く */
+}
+
+.search-price-card:hover {
+  border: 5px solid #0ef;
+  box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+
 
 
 
@@ -128,38 +150,50 @@
   align-items: center;
   gap: 90px;
 }
+
 /* チェックされた状態での画像のスタイル */
-.search-body-card input[type="checkbox"]:checked + img {
-  border: 3px solid #0ef; /* 明るい青色のボーダー */
-  border-radius: 8px; /* 丸みを持たせたボーダー */
-  box-shadow: 0 4px 10px rgba(0, 239, 255, 0.6), 0 0 15px rgba(0, 239, 255, 0.4); /* 発光効果 */
-  transition: all 0.3s ease-in-out; /* アニメーション */
+.search-body-card input[type="checkbox"]:checked+img {
+  border: 3px solid #0ef;
+  /* 明るい青色のボーダー */
+  border-radius: 8px;
+  /* 丸みを持たせたボーダー */
+  box-shadow: 0 4px 10px rgba(0, 239, 255, 0.6), 0 0 15px rgba(0, 239, 255, 0.4);
+  /* 発光効果 */
+  transition: all 0.3s ease-in-out;
+  /* アニメーション */
 }
 
 /* 画像のデフォルトサイズ調整 */
 .search-body-card img {
-  width: 80px; /* 必要に応じてサイズを調整 */
+  width: 80px;
+  /* 必要に応じてサイズを調整 */
   height: auto;
-  border-radius: 8px; /* 丸みを持たせた画像 */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション */
+  border-radius: 8px;
+  /* 丸みを持たせた画像 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* アニメーション */
 }
 
 /* ホバー時のスタイル */
 .search-body-card label:hover img {
-  transform: scale(1.1); /* 画像の拡大 */
-  box-shadow: 0 0 15px rgba(0, 239, 255, 0.8); /* 発光効果 */
+  transform: scale(1.1);
+  /* 画像の拡大 */
+  box-shadow: 0 0 15px rgba(0, 239, 255, 0.8);
+  /* 発光効果 */
 }
 
 /* チェックボックスを完全に隠す */
 .search-body-card input[type="checkbox"] {
-  display: none; /* チェックボックスを完全に非表示にする */
+  display: none;
+  /* チェックボックスを完全に非表示にする */
 }
-.body-tail{
+
+.body-tail {
   place-items: center;
   margin-top: 3vh;
 }
 
-.search-body-card{
+.search-body-card {
   position: relative;
   z-index: 3;
   width: 60%;
@@ -169,25 +203,32 @@
   background-color: rgba(33, 4, 4, 0.562);
   text-align: center;
   border: 5px solid #333;
-  transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+  /* 遷移時間を指定して、変化を遅く */
 }
 
-.search-body-card:hover{
+.search-body-card:hover {
   border: 5px solid #0ef;
   box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
 
 .body-type label {
   display: flex;
-  flex-direction: column; /* 縦方向に配置 */
-  align-items: center; /* 画像と文字を中央揃え */
-  margin: 10px; /* ラベル間のスペース */
+  flex-direction: column;
+  /* 縦方向に配置 */
+  align-items: center;
+  /* 画像と文字を中央揃え */
+  margin: 10px;
+  /* ラベル間のスペース */
 }
 
 .body-type span {
-  margin-top: 5px; /* 画像と文字の間に余白を追加 */
-  font-size: 14px; /* テキストのサイズを調整 */
-  color: #fff; /* テキストの色を設定 */
+  margin-top: 5px;
+  /* 画像と文字の間に余白を追加 */
+  font-size: 14px;
+  /* テキストのサイズを調整 */
+  color: #fff;
+  /* テキストの色を設定 */
 }
 
 /* ーーーーーーーーーーーーーーーーーーーーーーーー☟カラーーーーーーーーーーーーーーーーーーーーーーーーー */
@@ -195,27 +236,35 @@
 /*ここからテスト */
 
 .color-options {
-  display: flex; /* 子要素を横並びにする */
-  justify-content: center; /* 横方向の中央揃え */
-  gap: 20px; /* チェックボックス同士の間隔 */
-  margin: 20px 0; /* 上下に余白を追加 */
+  display: flex;
+  /* 子要素を横並びにする */
+  justify-content: center;
+  /* 横方向の中央揃え */
+  gap: 20px;
+  /* チェックボックス同士の間隔 */
+  margin: 20px 0;
+  /* 上下に余白を追加 */
 }
 
 .color-options input[type="checkbox"] {
-  display: none; /* チェックボックスを非表示にする */
+  display: none;
+  /* チェックボックスを非表示にする */
 }
 
 .color-options label {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px; /* 横幅を設定 */
-  height: 40px; /* 高さを設定 */
+  width: 150px;
+  /* 横幅を設定 */
+  height: 40px;
+  /* 高さを設定 */
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  border: 2px solid transparent; /* ボーダーのデフォルトを透明に */
+  border: 2px solid transparent;
+  /* ボーダーのデフォルトを透明に */
   transition: all 0.3s ease;
   text-align: center;
 }
@@ -239,12 +288,12 @@
   box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
 }
 
-.color-tail{
+.color-tail {
   place-items: center;
   margin-top: 3vh;
 }
 
-.search-color-card{
+.search-color-card {
   position: relative;
   z-index: 3;
   width: 60%;
@@ -254,10 +303,11 @@
   background-color: rgba(33, 4, 4, 0.562);
   text-align: center;
   border: 5px solid #333;
-  transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+  /* 遷移時間を指定して、変化を遅く */
 }
 
-.search-color-card:hover{
+.search-color-card:hover {
   border: 5px solid #0ef;
   box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
 }
@@ -265,11 +315,13 @@
 /* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
 
 /* チェック時のスタイル */
-input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked+label {
   background-color: gray;
   color: white;
-  border: 2px solid #0ef; /* チェック時にも枠線を変更 */
-  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef; /* チェック時にボックスシャドウ適用 */
+  border: 2px solid #0ef;
+  /* チェック時にも枠線を変更 */
+  box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
+  /* チェック時にボックスシャドウ適用 */
 }
 
 
@@ -277,7 +329,8 @@ input[type="checkbox"]:checked + label {
   font-size: 30px;
   font-weight: bold;
   color: white;
-  background-color: #333; /* 黒系の背景色 */
+  background-color: #333;
+  /* 黒系の背景色 */
   padding: 20px 60px;
   border: none;
   border-radius: 8px;
@@ -290,7 +343,8 @@ input[type="checkbox"]:checked + label {
 
 /* ホバー時 */
 .search-submit input:hover {
-  background-color: #555; /* 少し明るめの黒 */
+  background-color: #555;
+  /* 少し明るめの黒 */
   transform: scale(1.05);
 }
 
@@ -302,11 +356,13 @@ input[type="checkbox"]:checked + label {
 
 /* フォーカス時 */
 .search-submit input:focus {
-  outline: none; /* デフォルトの青い枠を削除 */
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* 白の光を追加 */
+  outline: none;
+  /* デフォルトの青い枠を削除 */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  /* 白の光を追加 */
 }
 
-.null-box{
+.null-box {
   margin-bottom: 100px;
 }
 
@@ -314,60 +370,79 @@ input[type="checkbox"]:checked + label {
 /*ーーーーーーーーーーーーーーーー検索結果のcssーーーーーーーーーーーーーーーー*/
 .car-list {
   display: flex;
-  flex-direction: column; /* 縦並び */
-  gap: 50px;              /* 各カード間の隙間 */
-  align-items: center;    /* 子要素を中央揃え */
+  flex-direction: column;
+  /* 縦並び */
+  gap: 50px;
+  /* 各カード間の隙間 */
+  align-items: center;
+  /* 子要素を中央揃え */
 }
 
 .car-item {
   width: 600px;
-  height: 200px; 
-  background-color: #1c1c1c; 
+  height: 200px;
+  background-color: #1c1c1c;
   border-radius: 10px;
   display: flex;
   align-items: center;
   border: 1px solid black;
-  justify-content: space-between; /* 両サイドの要素を均等配置 */
-  padding: 0 80px;               /* 左右に余白を追加 */
+  justify-content: space-between;
+  /* 両サイドの要素を均等配置 */
+  padding: 0 80px;
+  /* 左右に余白を追加 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .car-item:hover {
-  transform: scale(1.05); /* 触れると大きくなる♡ */
+  transform: scale(1.05);
+  /* 触れると大きくなる♡ */
   box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
 }
 
 .car-item img {
-  width: 120px;           /* 画像の幅を指定 */
-  height: auto;           /* アスペクト比を保持 */
-  border-radius: 8px;     /* 画像の角を丸くする */
-  margin-right: 30px;     /* 画像とテキストの間に余白を広めに */
+  width: 120px;
+  /* 画像の幅を指定 */
+  height: auto;
+  /* アスペクト比を保持 */
+  border-radius: 8px;
+  /* 画像の角を丸くする */
+  margin-right: 30px;
+  /* 画像とテキストの間に余白を広めに */
 }
 
 .car-info {
   display: flex;
-  flex-direction: column; /* 縦並びに配置 */
-  align-items: flex-end;  /* テキストを右揃え */
-  gap: 8px;               /* 各テキスト間の余白 */
+  flex-direction: column;
+  /* 縦並びに配置 */
+  align-items: flex-end;
+  /* テキストを右揃え */
+  gap: 8px;
+  /* 各テキスト間の余白 */
 }
 
 .car-info h3 {
-  margin: 0;              /* 余白を削除 */
-  font-size: 20px;        /* タイトルの文字サイズ */
-  text-align: right;      /* 右寄せ */
+  margin: 0;
+  /* 余白を削除 */
+  font-size: 20px;
+  /* タイトルの文字サイズ */
+  text-align: right;
+  /* 右寄せ */
 }
 
 .car-info p {
-  margin: 0;              /* 余白を削除 */
-  font-size: 18px;        /* 値段の文字サイズを調整 */
-  color: #aaa;            /* テキスト色をやや明るく */
-  text-align: right;      /* 右寄せ */
+  margin: 0;
+  /* 余白を削除 */
+  font-size: 18px;
+  /* 値段の文字サイズを調整 */
+  color: #aaa;
+  /* テキスト色をやや明るく */
+  text-align: right;
+  /* 右寄せ */
 }
 
-.car-not-found{
+.car-not-found {
   color: #fff;
   margin-bottom: 100px;
   font-size: 20px;
 }
-
