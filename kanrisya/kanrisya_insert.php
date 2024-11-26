@@ -125,7 +125,7 @@ require_once '../DBconnect.php';
     <tr>
     <th><h3>その他の画像</h3></th>
         <td>
-        <label for="main_image" class="file-upload">
+        <label for="other_images" class="file-upload">
             <img src="../img/image.png" alt="複数アップローボタン" class="upload-button-image">
         </label>
             <input type="file" id="other_images" name="other_images[]" multiple required style="display: none;"><br><br></td>
