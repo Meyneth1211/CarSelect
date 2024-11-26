@@ -198,18 +198,16 @@ textarea {
 
 .image-preview {
   margin-top: 10px;
-  width: 200px; /* プレビュー画像の最大幅 */
-  height: 200px; /* プレビュー画像の最大高さ */
-  border: 1px solid #ccc;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  gap: 10px;
+  flex-wrap: wrap; /* 複数画像が折り返されるようにする */
+  width: 100%;
 }
 
 .image-preview img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* 画像の見せ方を調整 */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
