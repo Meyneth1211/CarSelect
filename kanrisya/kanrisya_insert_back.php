@@ -89,8 +89,14 @@ if ($_POST['send']) {
 } else {
     var_dump($stmt->errorInfo());
     echo '<h2>商品の登録に失敗しました。</h2>';
+    echo '<button type="button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">もう一度登録する</button>';
     exit();
 }
 
-    $pdo = null;
+   
+}else{
+    echo 'エラーが発生しました。';
+    echo '<button type="button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">もう一度登録する</button>';
 }
+
+$pdo = null;
