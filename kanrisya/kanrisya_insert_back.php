@@ -83,6 +83,7 @@ if ($_POST['send']) {
 
         if($re1 and $re2){
             echo '<h2>商品の登録が完了しました。</h2>';
+            echo '<button type="button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">続けて登録する</button>';
         }
     }
 } else {
