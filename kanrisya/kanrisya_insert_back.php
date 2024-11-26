@@ -82,21 +82,27 @@ if ($_POST['send']) {
         }
 
         if($re1 and $re2){
+            echo '<div class="container">';
             echo '<div class="message success">商品の登録が完了しました。</div>';
             echo '<button type="button" class="nav-button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">続けて登録する</button>';
+            echo '</div>';
         }
     }
 } else {
     var_dump($stmt->errorInfo());
+    echo '<div class="container">';
     echo '<<div class="message error">商品の登録に失敗ました。</div>';
     echo '<button type="button" class="nav-button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">もう一度登録する</button>';
+    echo '</div>';
     exit();
 }
 
    
 }else{
+    echo '<div class="container">';
     echo '<div class="message error">商品が正常に削除されました。</div>';
     echo '<button type="button" class="nav-button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">もう一度登録する</button>';
+    echo '</div>';
 }
 
 $pdo = null;
