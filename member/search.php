@@ -42,8 +42,8 @@
     <img src="../img/BMW.png" alt="BMW" width="100px">
   </label>
   <label>
-    <input type="checkbox" name="brands[]" value="'ダイハツ'">
-    <img src="../img/Daihatsu.png" alt="Daihatsu" width="100px">
+    <input type="checkbox" name="brands[]" value="'ベンツ'">
+    <img src="../img/Benz.png" alt="Benz" width="100px">
   </label>
   <label>
     <input type="checkbox" name="brands[]" value="'日産'">
