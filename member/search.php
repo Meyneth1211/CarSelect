@@ -112,17 +112,21 @@
     </div>
 
     <!-- カラー -->
-    <div class="title">
-      <h2>カラー</h2>
-    </div>
-    <div class="color-options">
-      <div class="color-brack">
-        <input type="checkbox" id="black" name="color[]" value="'ブラック'" />
-        <label for="black">ブラック</label>
-      </div>
-      <div class="color-white">
-        <input type="checkbox" id="white" name="color[]" value="'ホワイト'" />
-        <label for="white">ホワイト</label>
+    <div class="color-tail">
+      <div class="search-color-tail">
+        <div class="title">
+          d>カラー</h2>
+        </div>
+        <div class="color-options">
+          <div class="color-brack">
+            <input type="checkbox" id="black" name="color[]" value="'ブラック'" />
+            <label for="black">ブラック</label>
+          </div>
+          <div class="color-white">
+            <input type="checkbox" id="white" name="color[]" value="'ホワイト'" />
+            <label for="white">ホワイト</label>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -130,6 +134,7 @@
       <input type="submit" value="この条件で絞り込む">
     </div>
   </div>
+
 
   <!-- 絞り込み内容を一括送信するためここにform終了タグ -->
 </form>
