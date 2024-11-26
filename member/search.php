@@ -89,22 +89,26 @@
 
 
     <!-- ボディタイプ -->
-    <div class="title">
-      <h2>ボディタイプ</h2>
-    </div>
-    <div class="body-type">
-      <label>
-        <input type="checkbox" name="bodytype[]" value="'セダン'">
-        <img src="../img/セダン.png" alt="セダン" width="30px">
-      </label>
-      <label>
-        <input type="checkbox" name="bodytype[]" value="'SUV'">
-        <img src="../img/SUV.png" alt="SUV" width="30px">
-      </label>
-      <label>
-        <input type="checkbox" name="bodytype[]" value="'スポーツカー'">
-        <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
-      </label>
+    <div class="body-tail">
+      <div class="search-body-card">
+        <div class="title">
+          d>ボディタイプ</h2>
+        </div>
+        <div class="body-type">
+          <label>
+            <input type="checkbox" name="bodytype[]" value="'セダン'">
+            <img src="../img/セダン.png" alt="セダン" width="30px">
+          </label>
+          <label>
+            <input type="checkbox" name="bodytype[]" value="'SUV'">
+            <img src="../img/SUV.png" alt="SUV" width="30px">
+          </label>
+          <label>
+            <input type="checkbox" name="bodytype[]" value="'スポーツカー'">
+            <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
+          </label>
+        </div>
+      </div>
     </div>
 
     <!-- カラー -->

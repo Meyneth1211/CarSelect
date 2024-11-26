@@ -151,8 +151,30 @@
   width: 65px; /* 必要に応じてサイズを調整 */
   height: auto;
 }
+.body-tail{
+  place-items: center;
+  margin-top: 5vh;
+}
 
+.search-body-card{
+  position: relative;
+  z-index: 3;
+  width: 60%;
+  margin: 0 20px;
+  padding: 0px 30px 44px;
+  border-radius: 1.25rem;
+  background-color: rgba(33, 4, 4, 0.562);
+  text-align: center;
+  border: 5px solid #333;
+  transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
+}
 
+.search-body-card:hover{
+  border: 5px solid #0ef;
+  box-shadow: 0 0 20px #0ef, inset 0 0 20px #0ef;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーー☟カラーーーーーーーーーーーーーーーーーーーーーーーーー */
 
 /*ここからテスト */
 
