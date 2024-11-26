@@ -121,7 +121,6 @@
 
 /* ーーーーーーーーーーーーーーーーーーーーーーーー☟ボディタイプーーーーーーーーーーーーーーーーーーーーーーーー */
 
-/*ボディタイプのチェックボックスの幅*/
 .body-type {
   margin-bottom: 10px;
   display: flex;
@@ -129,27 +128,31 @@
   align-items: center;
   gap: 90px;
 }
-/* ボディタイプのチェックボックスを非表示にする */
-.body-type input[type="checkbox"] {
-  display: none;
+/* チェックされた状態での画像のスタイル */
+.search-body-card input[type="checkbox"]:checked + img {
+  border: 3px solid #0ef; /* 明るい青色のボーダー */
+  border-radius: 8px; /* 丸みを持たせたボーダー */
+  box-shadow: 0 4px 10px rgba(0, 239, 255, 0.6), 0 0 15px rgba(0, 239, 255, 0.4); /* 発光効果 */
+  transition: all 0.3s ease-in-out; /* アニメーション */
 }
 
-.body-type label {
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-}
-
-/* ボディタイプのチェック時の画像に枠を追加する */
-.body-type input[type="checkbox"]:checked + img {
-  border: 2px solid #e71313;
-  border-radius: 4px;
-}
-
-/* 画像のサイズ調整 */
-.body-type img {
-  width: 65px; /* 必要に応じてサイズを調整 */
+/* 画像のデフォルトサイズ調整 */
+.search-body-card img {
+  width: 80px; /* 必要に応じてサイズを調整 */
   height: auto;
+  border-radius: 8px; /* 丸みを持たせた画像 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション */
+}
+
+/* ホバー時のスタイル */
+.search-body-card label:hover img {
+  transform: scale(1.1); /* 画像の拡大 */
+  box-shadow: 0 0 15px rgba(0, 239, 255, 0.8); /* 発光効果 */
+}
+
+/* チェックボックスを完全に隠す */
+.search-body-card input[type="checkbox"] {
+  display: none; /* チェックボックスを完全に非表示にする */
 }
 .body-tail{
   place-items: center;
