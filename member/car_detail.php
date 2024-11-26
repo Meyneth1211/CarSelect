@@ -30,14 +30,36 @@
             echo '</ul>';
         ?>
     </div>
+    <form action="#" method="post">
     <div class="car-info">
         <?php
             $sql='SELECT * FROM car WHERE car_id = ?';
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$item]);
             $info=$stmt->fetch(PDO::FETCH_ASSOC);
-            var_dump($info);
+            echo '<div class="car-name">';
+                echo '<h2>'. $info['car_name'] .'</h2>';
+            echo '</div>';
+            echo '<div class="car-price">';
+                echo '<h3>'. $info['price'] .'円</h3>';
+            echo '</div>';
+            echo '<div class="purchase">';
+                if ($info['stock'] < 1) {
+                    echo '<input type="submit" value="在庫切れ" disabled>';
+                }elseif ($info['stock'] >= 1) {
+                    echo '<input type="submit" value="購入">';
+                }
+            echo '</div><br><br>';
+            $feature=explode(',',$info['car_detail']);
+            echo '<div class="car-detail">';
+                echo '<ul>';
+                foreach ($feature as $row) {
+                    echo '<li>'. $row . '</li>';
+                }
+                echo '</ul>';
+            echo '</div>';
         ?>
     </div>
+    </form>
 </body>
 </html>
