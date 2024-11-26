@@ -47,9 +47,9 @@
 .search-bland-card{
   position: relative;
   z-index: 3;
-  width: 100%;
+  width: 90%;
   margin: 0 20px;
-  padding: 70px 30px 44px;
+  padding: 0px 30px 44px;
   border-radius: 1.25rem;
   background-color: rgba(33, 4, 4, 0.562);
   text-align: center;
