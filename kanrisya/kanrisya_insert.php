@@ -119,7 +119,7 @@ require_once '../DBconnect.php';
         <label for="main_image" class="file-upload">
             <img src="../img/image.png" alt="アップローボタン" class="upload-button-image">
         </label>
-        <input type="file" id="main_image" name="main_image" required style="display: none;"><br>
+        <input type="file" id="main_image" name="main_image" accept="image/*" required style="display: none;"><br>
         <div id="main_image_preview" class="image-preview">
             <p>ここに画像が表示されます</p>
         </div>
@@ -132,7 +132,7 @@ require_once '../DBconnect.php';
         <label for="other_images" class="file-upload">
             <img src="../img/image.png" alt="複数アップローボタン" class="upload-button-image">
         </label>
-            <input type="file" id="other_images" name="other_images[]" multiple required style="display: none;"><br><br>
+            <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple required style="display: none;"><br><br>
             <div id="other_images_preview" class="image-preview">
             <p>ここにその他の画像が表示されます</p>
         </div>
