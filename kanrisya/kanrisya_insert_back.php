@@ -85,8 +85,6 @@ if ($_POST['send']) {
             echo '<h2>商品の登録が完了しました。</h2>';
         }
     }
-
-    echo '<h2>商品の登録が完了しました。</h2>';
 } else {
     var_dump($stmt->errorInfo());
     echo '<h2>商品の登録に失敗しました。</h2>';
