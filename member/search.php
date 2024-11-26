@@ -113,9 +113,9 @@
 
     <!-- カラー -->
     <div class="color-tail">
-      <div class="search-color-tail">
+      <div class="search-color-card">
         <div class="title">
-          d>カラー</h2>
+          <h2>カラー</h2>
         </div>
         <div class="color-options">
           <div class="color-brack">
