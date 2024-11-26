@@ -6,36 +6,32 @@
 
 /* ーーーーーーーーーーーーーーーー☟ブランドーーーーーーーーーーーーーーーーーー */
 
-/*ブランドのチェックボックスの幅*/
-.checkbox-container {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-/* ブランドのチェックボックスを非表示にする */
+/* チェックされた状態での画像のスタイル */
+.checkbox-container input[type="checkbox"]:checked + img {
+  border: 3px solid #0ef; /* 明るい青色のボーダー */
+  border-radius: 8px; /* 丸みを持たせたボーダー */
+  box-shadow: 0 4px 10px rgba(0, 239, 255, 0.6), 0 0 15px rgba(0, 239, 255, 0.4); /* 発光効果 */
+  transition: all 0.3s ease-in-out; /* アニメーション */
+}
+
+/* 画像のデフォルトサイズ調整 */
+.checkbox-container img {
+  width: 80px; /* 必要に応じてサイズを調整 */
+  height: auto;
+  border-radius: 8px; /* 丸みを持たせた画像 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション */
+}
+
+/* ホバー時のスタイル */
+.checkbox-container label:hover img {
+  transform: scale(1.1); /* 画像の拡大 */
+  box-shadow: 0 0 15px rgba(0, 239, 255, 0.8); /* 発光効果 */
+}
+
+/* チェックボックスを完全に隠す */
 .checkbox-container input[type="checkbox"] {
-    display: none;
-  }
-
-  .checkbox-container label {
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-  }
-
-  /* ブランドのチェック時の画像に枠を追加する */
-  .checkbox-container input[type="checkbox"]:checked + img {
-    border: 2px solid #007bff;
-    border-radius: 4px;
-  }
-
-  /* 画像のサイズ調整 */
-  .checkbox-container img {
-    width: 80px; /* 必要に応じてサイズを調整 */
-    height: auto;
-  }
+  display: none; /* チェックボックスを完全に非表示にする */
+}
 
 
   /* ーーーーーーーーーーーーーーーーーーー☟値段ーーーーーーーーーーーーーーーーーーーーー */
