@@ -413,20 +413,12 @@ input[type="checkbox"]:checked+label {
   /* 画像とテキストの間に余白を広めに */
 }
 
-.car-info {
-  display: flex;
-  flex-direction: column;
-  /* 縦並びに配置 */
-  align-items: flex-end;
-  /* テキストを右揃え */
-  gap: 8px;
-  /* 各テキスト間の余白 */
-}
+
 
 .car-info h3 {
   margin: 0;
   /* 余白を削除 */
-  font-size: 20px;
+  font-size: 60px;
   /* タイトルの文字サイズ */
   text-align: right;
   /* 右寄せ */
@@ -435,7 +427,7 @@ input[type="checkbox"]:checked+label {
 .car-info p {
   margin: 0;
   /* 余白を削除 */
-  font-size: 18px;
+  font-size: 40px;
   /* 値段の文字サイズを調整 */
   color: #aaa;
   /* テキスト色をやや明るく */
@@ -443,9 +435,7 @@ input[type="checkbox"]:checked+label {
   /* 右寄せ */
 }
 
-.search-car-date{
-  margin-right: 80px;
-}
+
 
 .car-not-found {
   color: #fff;
