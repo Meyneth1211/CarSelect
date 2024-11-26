@@ -42,7 +42,7 @@
 /* ブランドの背景 */
 .bland-tail{
   place-items: center;
-  margin-top: 12vh;
+  margin-top: 10vh;
 }
 
 .search-bland-card{
@@ -94,7 +94,7 @@
 
     .price-tail{
       place-items: center;
-      margin-top: 12vh;
+      margin-top: 5vh;
     }
     
     .search-price-card{
