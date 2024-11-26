@@ -234,8 +234,8 @@ if (isset($_GET['s'])) {
     echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
     echo '<img src="' . $images[$c]['image'] . '" alt="' . $row['car_name'] . '">';
     echo '<div class="car-info">';
-    echo '<h3>' . $row['car_name'] . '</h3>';
-    echo '<p>' . $row['price'] . '円</p>';
+    echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
+    echo '<p>' . $row['price'] . '円</p></div>';
     echo '</div>';
     echo '</a>'; // aタグを閉じる
     $c++;

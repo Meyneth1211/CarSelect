@@ -443,6 +443,10 @@ input[type="checkbox"]:checked+label {
   /* 右寄せ */
 }
 
+.search-car-date{
+  margin-right: 80px;
+}
+
 .car-not-found {
   color: #fff;
   margin-bottom: 100px;
