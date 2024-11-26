@@ -235,8 +235,8 @@ if (isset($_GET['s'])) {
     echo '<img src="' . $images[$c]['image'] . '" alt="' . $row['car_name'] . '">';
     echo '<div class="car-info">';
     echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
-    echo '<p>' . $row['price'] . '円</p></div>';
-    echo '</div>';
+    echo '<p>' . $row['price'] . '円</p>';
+    echo '</div></div>';
     echo '</a>'; // aタグを閉じる
     $c++;
   }
