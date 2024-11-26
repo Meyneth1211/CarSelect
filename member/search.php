@@ -98,18 +98,22 @@
           <label>
             <input type="checkbox" name="bodytype[]" value="'セダン'">
             <img src="../img/セダン.png" alt="セダン" width="30px">
+            <span>セダン</span>
           </label>
           <label>
             <input type="checkbox" name="bodytype[]" value="'SUV'">
             <img src="../img/SUV.png" alt="SUV" width="30px">
+            <span>SUV</span>
           </label>
           <label>
             <input type="checkbox" name="bodytype[]" value="'スポーツカー'">
             <img src="../img/スポーツカー.png" alt="スポーツカー" width="40px">
+            <span>スポーツカー</span>
           </label>
         </div>
       </div>
     </div>
+
 
     <!-- カラー -->
     <div class="color-tail">
