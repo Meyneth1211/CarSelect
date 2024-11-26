@@ -144,6 +144,16 @@ textarea {
   text-align: left;
 }
 
+.insert-table td input[type="text"], 
+.insert-table td input[type="number"], 
+.insert-table td textarea {
+    width: 90%; /* テキストボックスとテキストエリアの幅を調整 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
 .insert-table {
   width: 100%;
   border-collapse: collapse;
