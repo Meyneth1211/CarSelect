@@ -182,3 +182,16 @@ textarea {
   text-align: center;
 }
 
+.file-upload {
+  cursor: pointer; /* マウスオーバーでポインタを表示 */
+}
+
+.upload-button-image {
+  width: 100px; /* 画像の横幅 */
+  height: auto; /* 自動で高さを調整 */
+  transition: transform 0.2s; /* ホバー時のアニメーション */
+}
+
+.upload-button-image:hover {
+  transform: scale(1.1); /* ホバー時に拡大 */
+}
