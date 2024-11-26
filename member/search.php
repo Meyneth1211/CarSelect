@@ -92,7 +92,7 @@
     <div class="body-tail">
       <div class="search-body-card">
         <div class="title">
-          d>ボディタイプ</h2>
+          <h2>ボディタイプ</h2>
         </div>
         <div class="body-type">
           <label>
