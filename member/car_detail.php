@@ -34,9 +34,9 @@
     <div class="car-info">
         <?php
             $sql='SELECT * FROM car WHERE car_id = ?';
-            $stmt=$pdo->prepare($sql);
-            $stmt->execute([$item]);
-            $info=$stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt2=$pdo->prepare($sql);
+            $stmt2->execute([$item]);
+            $info=$stmt2->fetch(PDO::FETCH_ASSOC);
             var_dump($info);
         ?>
     </div>
