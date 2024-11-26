@@ -55,6 +55,7 @@
   background-color: rgba(33, 4, 4, 0.562);
   text-align: center;
   border: 5px solid #333;
+  transition: border 0.5s ease, box-shadow 0.5s ease; /* 遷移時間を指定して、変化を遅く */
 }
 
 .search-bland-card:hover{
