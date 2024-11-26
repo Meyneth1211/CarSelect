@@ -51,7 +51,7 @@ if ($_POST['send']) {
         $mainImagePath = $uploadDir . $mainImageName;
 
         if (move_uploaded_file($_FILES['main_image']['tmp_name'], $mainImagePath)) {
-            $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,1)');
+           $re1 = $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,1)');
             if (!$stmt->execute([$car_id, $mainImagePath])) {
                 var_dump($stmt->errorInfo());
                 exit(); // デバッグ用
@@ -60,7 +60,7 @@ if ($_POST['send']) {
             echo '<p style="color: red;">メイン画像のアップロードに失敗しました。</p>';
             exit();
         }
-    
+    }
 
     // その他の画像処理
     if (!empty($_FILES['other_images']['name'][0])) {
@@ -70,7 +70,7 @@ if ($_POST['send']) {
             $otherImagePath = $uploadDir . $otherName;
 
             if (move_uploaded_file($tmpName, $otherImagePath)) {
-                $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,0)');
+              $re2 = $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,0)');
                 if (!$stmt->execute([$car_id, $otherImagePath])) {
                     var_dump($stmt->errorInfo());
                     exit(); // デバッグ用
@@ -80,10 +80,13 @@ if ($_POST['send']) {
                 exit();
             }
         }
+
+        if($re1 and $re2){
+            echo '<h2>商品の登録が完了しました。</h2>';
+        }
     }
 
     echo '<h2>商品の登録が完了しました。</h2>';
-}
 } else {
     var_dump($stmt->errorInfo());
     echo '<h2>商品の登録に失敗しました。</h2>';
