@@ -94,7 +94,7 @@
 
     .price-tail{
       place-items: center;
-      margin-top: 5vh;
+      margin-top: 3vh;
     }
     
     .search-price-card{
@@ -153,7 +153,7 @@
 }
 .body-tail{
   place-items: center;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 .search-body-card{
@@ -225,7 +225,7 @@
 
 .color-tail{
   place-items: center;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 .search-color-card{
