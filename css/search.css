@@ -392,6 +392,8 @@ input[type="checkbox"]:checked+label {
   /* 左右に余白を追加 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none; /* リンクの下線を削除 */
+  color: inherit; /* 親の文字色を継承 */
 }
 
 .car-item:hover {
