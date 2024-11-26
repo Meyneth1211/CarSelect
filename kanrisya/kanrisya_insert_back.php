@@ -60,7 +60,7 @@ if ($_POST['send']) {
             echo '<p style="color: red;">メイン画像のアップロードに失敗しました。</p>';
             exit();
         }
-    }
+    
 
     // その他の画像処理
     if (!empty($_FILES['other_images']['name'][0])) {
@@ -83,6 +83,7 @@ if ($_POST['send']) {
     }
 
     echo '<h2>商品の登録が完了しました。</h2>';
+}
 } else {
     var_dump($stmt->errorInfo());
     echo '<h2>商品の登録に失敗しました。</h2>';
