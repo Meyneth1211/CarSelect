@@ -144,5 +144,6 @@ require_once '../DBconnect.php';
         <button class="back-button" onclick="location.href='https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_top.php';">トップページへ戻る</button>
     </div>
     </form>
+    <script src="../kanrisya_js/kanrisya_insert.js"></script>
 </body>
 </html>
