@@ -70,9 +70,9 @@
 
     /* 選択されているボタンのスタイル */
     .color-button input[type="radio"]:checked + label {
-        background-color: #4CAF50;
-        color: white;
-        border-color: #4CAF50;
+        background-color: #666866;
+        color: rgb(0, 0, 0);
+        border-color: #6a6e6b;
     }
 
 /*ボディタイプのチェックボックスの幅*/
