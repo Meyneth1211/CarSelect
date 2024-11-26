@@ -115,12 +115,20 @@ require_once '../DBconnect.php';
 
     <tr>  
     <th><h3>メイン画像</h3></th>
-        <td><input type="file" name="main_image" required><br></td>
+        <td>
+        <label for="main_image" class="file-upload">
+            <img src="../img/image.png" alt="アップローボタン" class="upload-button">
+        </label>
+        <input type="file" name="main_image" required><br></td>
     </tr>
 
     <tr>
     <th><h3>その他の画像</h3></th>
-        <td><input type="file" name="other_images[]" multiple required><br><br></td>
+        <td>
+        <label for="main_image" class="file-upload">
+            <img src="../img/image.png" alt="アップローボタン" class="upload-button-image">
+        </label>
+            <input type="file" name="other_images[]" multiple required><br><br></td>
     </tr>
     </table>
     <div class="kanrisya-insert-button">
