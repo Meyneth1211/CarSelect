@@ -121,12 +121,12 @@
 /*テキストエリアのサイズ固定*/
 textarea {
   resize: none;
-  width:300px;
+  width:1000px;
   height:100px;
 }
 
 .insert-stock {
-  width: 500px;
+  width: 1000px;
   padding: 5px;
   font-size: 14px;
   text-align: left;
@@ -135,12 +135,12 @@ textarea {
 }
 
 .car_name{
-  width: 500px;
+  width: 1000px;
   text-align: left;
 }
 
 .insert-price{
-  width: 500px;
+  width: 1000px;
   text-align: left;
 }
 
