@@ -33,7 +33,11 @@
     </div>
     <div class="car-info">
         <?php
-            echo $count;
+            $sql='SELECT * FROM car WHERE car_id = ?';
+            $stmt=$pdo->prepare($sql);
+            $stmt->execute([$item]);
+            $info=$stmt->fetch(PDO::FETCH_ASSOC);
+            var_dump($info);
         ?>
     </div>
 </body>
