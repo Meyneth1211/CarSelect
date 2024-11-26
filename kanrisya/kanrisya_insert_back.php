@@ -45,40 +45,49 @@ if ($_POST['send']) {
             mkdir($uploadDir, 0777, true);
         }
 
-        // メイン画像の処理
-        if (!empty($_FILES['main_image']['name'])) {
-            $mainImageName = uniqid() . '_' . basename($_FILES['main_image']['name']);
-            $mainImagePath = $uploadDir . $mainImageName;
+        // メイン画像処理
+    if (!empty($_FILES['main_image']['name'])) {
+        $mainImageName = uniqid() . '_' . basename($_FILES['main_image']['name']);
+        $mainImagePath = $uploadDir . $mainImageName;
 
-            if (move_uploaded_file($_FILES['main_image']['tmp_name'], $mainImagePath)) {
-                $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,1)');
-                $stmt->execute([$car_id, $mainImagePath]);
-            } else {
-                echo '<p style="color: red;">メイン画像のアップロードに失敗しました。</p>';
+        if (move_uploaded_file($_FILES['main_image']['tmp_name'], $mainImagePath)) {
+            $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,1)');
+            if (!$stmt->execute([$car_id, $mainImagePath])) {
+                var_dump($stmt->errorInfo());
+                exit(); // デバッグ用
             }
+        } else {
+            echo '<p style="color: red;">メイン画像のアップロードに失敗しました。</p>';
+            exit();
         }
-
-        // その他の画像の処理
-        if (!empty($_FILES['other_images']['name'][0])) {
-            foreach ($_FILES['other_images']['name'] as $key => $otherImageName) {
-                $tmpName = $_FILES['other_images']['tmp_name'][$key];
-                $otherName = uniqid() . '_' . basename($otherImageName);
-                $otherImagePath = $uploadDir . $otherName;
-
-                if (move_uploaded_file($tmpName, $otherImagePath)) {
-                    $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,0)');
-                    $stmt->execute([$car_id, $otherImagePath]);
-                } else {
-                    echo '<p style="color: red;">その他の画像のアップロードに失敗しました: ' . htmlspecialchars($otherImageName) . '</p>';
-                }
-            }
-        }
-
-        echo '<h2>商品の登録が完了しました。</h2>';
-        echo '<button type="button" onclick="location.href=\'https://aso2301389.hippy.jp/carselect/kanrisya/kanrisya_insert.php\'">続けて登録する</button>';
-    } else {
-        echo '<h2>商品の登録に失敗しました。</h2>';
     }
+
+    // その他の画像処理
+    if (!empty($_FILES['other_images']['name'][0])) {
+        foreach ($_FILES['other_images']['name'] as $key => $otherImageName) {
+            $tmpName = $_FILES['other_images']['tmp_name'][$key];
+            $otherName = uniqid() . '_' . basename($otherImageName);
+            $otherImagePath = $uploadDir . $otherName;
+
+            if (move_uploaded_file($tmpName, $otherImagePath)) {
+                $stmt = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?,?,0)');
+                if (!$stmt->execute([$car_id, $otherImagePath])) {
+                    var_dump($stmt->errorInfo());
+                    exit(); // デバッグ用
+                }
+            } else {
+                echo '<p style="color: red;">その他の画像のアップロードに失敗しました: ' . htmlspecialchars($otherImageName) . '</p>';
+                exit();
+            }
+        }
+    }
+
+    echo '<h2>商品の登録が完了しました。</h2>';
+} else {
+    var_dump($stmt->errorInfo());
+    echo '<h2>商品の登録に失敗しました。</h2>';
+    exit();
+}
 
     $pdo = null;
 }
