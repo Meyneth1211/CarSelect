@@ -453,6 +453,15 @@ input[type="checkbox"]:checked+label {
   /* テキスト色をやや明るく */
   text-align: right;
   /* 右寄せ */
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.car-info .separator {
+  width: 100%; /* 線の幅を全体に広げる */
+  height: 2px; /* 線の太さ */
+  background: linear-gradient(to right, #0ef, #08f); /* グラデーション効果 */
+  border-radius: 1px; /* 丸みを追加 */
+  margin: 4px 0; /* 上下の余白 */
 }
 
 
