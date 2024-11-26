@@ -1,7 +1,8 @@
 /*すべてのtitle文字のスタイル*/
 .title h2{
   color: #fff;
-  padding-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30PX;
 }
 
 /* ーーーーーーーーーーーーーーーー☟ブランドーーーーーーーーーーーーーーーーーー */
@@ -47,7 +48,7 @@
 .search-bland-card{
   position: relative;
   z-index: 3;
-  width: 90%;
+  width: 80%;
   margin: 0 20px;
   padding: 0px 30px 44px;
   border-radius: 1.25rem;
