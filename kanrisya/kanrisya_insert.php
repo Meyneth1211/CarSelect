@@ -119,7 +119,7 @@ require_once '../DBconnect.php';
         <label for="main_image" class="file-upload">
             <img src="../img/image.png" alt="アップローボタン" class="upload-button-image">
         </label>
-        <input type="file" id="main_image" name="main_image" accept="image/*" required style="display: none;"><br>
+        <input type="file" id="main_image" name="main_image" accept="image/*" style="display: none;" required><br>
         <div id="main_image_preview" class="image-preview">
             <p>ここに画像が表示されます</p>
         </div>
