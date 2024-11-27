@@ -1,15 +1,12 @@
-.image-cell {
-    display: flex;
-    gap: 10px; /* 画像間のスペース */
-}
-
-.car-editimage {
-    width: 100px;
+.edit_image-checkbox img {
+    width: 150px;
     height: auto;
+    border: 2px solid transparent; /* デフォルトは透明 */
+    cursor: pointer;
+    transition: border-color 0.2s;
 }
 
-.sub-image-wrapper {
-    display: flex;
-    flex-direction: column; /* チェックボックスを画像の下に表示 */
-    align-items: center;
+.edit_image-checkbox input[type="checkbox"]:checked + img {
+    border-color: #007BFF; /* 選択された時の枠色 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
 }
