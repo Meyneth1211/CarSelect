@@ -71,3 +71,6 @@ if (!empty($images)) {
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
 </form>
+<script src="../kanrisya_js/kanrisya_insert.js">
+</body>
+</html>
