@@ -251,7 +251,7 @@ if (isset($_GET['s'])) {
   require_once '../DBconnect.php';
   $pdo = getDB();
   $stmt = $pdo->prepare($sql);
-  $stmt->execute($brand);
+  $stmt->execute([$brand]);
   $cars = $stmt->fetchall(PDO::FETCH_ASSOC);
   if (empty($cars)) {
     echo <<<ERR
