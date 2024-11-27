@@ -43,9 +43,8 @@
                     $info = $stmt->fetch(PDO::FETCH_ASSOC);
                     echo '<div class="car-info">';
                     echo '<div class="search-car-date"><h3>' . $info['car_name'] . '</h3>';
-                    echo '</div>';
-                    echo '<div class="car-price">';
-                    echo '<h3>' . $info['price'] . '円</h3>';
+                    echo '<div class="separator"></div>';
+                    echo '<p>' . $info['price'] . '円</p>';
                     echo '</div></div>';
                     echo '<div class="purchase">';
                     if ($info['stock'] < 1) {
