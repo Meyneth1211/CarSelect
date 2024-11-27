@@ -17,7 +17,7 @@ $sql->execute([$car_id]);
 $images = $sql->fetchAll();
 ?>
 
-<form action="../kanrisya/image_update.php" method="POST">
+<form action="../kanrisya/image_update.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
     
     <h1 class="page-title">画像一覧</h1>
@@ -35,6 +35,7 @@ $images = $sql->fetchAll();
                         </label>
                     <?php endif; ?>
                 <?php endforeach; ?>
+                <input type="file" name="main_image" accept="image/*" required>
             </td>
         </tr>
         <tr>
@@ -49,6 +50,7 @@ $images = $sql->fetchAll();
                         </label>
                     <?php endif; ?>
                 <?php endforeach; ?>
+                <input type="file" name="other_images[]" accept="image/*" multiple>
             </td>
         </tr>
     </table>
