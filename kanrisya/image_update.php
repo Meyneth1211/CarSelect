@@ -34,43 +34,38 @@ if (!empty($images)) {
     <title>商品画像更新画面</title>
 </head>
 <body>
-<form action="../kanrisya/image_update.php" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
-    
-    <h1 class="page-title">画像一覧</h1>
-
+<form action="image_update_back.php" method="POST" enctype="multipart/form-data">
     <table class="image-table">
         <tr>
-            <td class="label-cell">メイン画像</td>
-            <td class="image-cell">
-                <?php foreach ($images as $row): ?>
-                    <?php if ($row['is_primary'] == 1): ?>
-                        <label class="image-checkbox">
-                            <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>" hidden>
-                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
-                        </label>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-            </td>
-        </tr>
-        <tr>
-            <td class="label-cell">サブ画像</td>
-            <td class="image-cell">
-                <?php foreach ($images as $row): ?>
-                    <?php if ($row['is_primary'] == 0): ?>
-                        <label class="image-checkbox">
-                            <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>" hidden>
-                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
-                        </label>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-            </td>
+                <th>
+                    <h3>メイン画像</h3>
+                </th>
+                <td>
+                    <label for="main_image" class="file-upload">
+                        <img src="../img/image.png" alt="アップローボタン" class="upload-button-image">
+                    </label>
+                    <input type="file" id="main_image" name="main_image" accept="image/*" style="display: none;" required><br>
+                    <div id="main_image_preview" class="image-preview">
+                        <p>ここに画像が表示されます</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <h3>その他の画像</h3>
+                </th>
+                <td>
+                    <label for="other_images" class="file-upload">
+                        <img src="../img/image.png" alt="複数アップローボタン" class="upload-button-image">
+                    </label>
+                    <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple required style="display: none;"><br><br>
+                    <div id="other_images_preview" class="image-preview">
+                        <p>ここにその他の画像が表示されます</p>
+                    </div>
+                </td>
         </tr>
     </table>
-
-    <h2>新しい画像をアップロード</h2>
-    <input type="file" name="new_images[]" multiple>
-    
     <div class="top-back-button">
         <button type="submit" class="updateButton">画像を更新する</button>
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
