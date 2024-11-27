@@ -14,6 +14,8 @@ if ($car_id) {
     $stmt->execute([$car_id]);
     $image = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    echo '<div class="kounyuu">';
+    echo '<div class="kounyuu-card">';
     if ($image) {
         // 画像を表示
         echo '<div class="primary-image">';
@@ -26,10 +28,6 @@ if ($car_id) {
     echo '<p>car_idが送信されていません。</p>';
 }
 ?>
-
-
-    <div class="kounyuu">
-        <div class="kounyuu-card">
             <form class="kounyuu1-form" action="car_detail.php" method="post">
                 <input class="kounyuu-button1" type="submit" value="戻る">
             </form>
