@@ -1,0 +1,15 @@
+.image-cell {
+    display: flex;
+    gap: 10px; /* 画像間のスペース */
+}
+
+.car-image {
+    width: 100px;
+    height: auto;
+}
+
+.sub-image-wrapper {
+    display: flex;
+    flex-direction: column; /* チェックボックスを画像の下に表示 */
+    align-items: center;
+}
