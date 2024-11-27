@@ -9,13 +9,14 @@ $pdo = getDb();
 <?php
 
 // SQLでデータを取得 (image_pathカラムを追加)
-$sql = $pdo->query('SELECT car_id, brand, car_name, color, stock FROM car');
+$sql = $pdo->query('SELECT car_id, brand, car_name, body_type, color, stock FROM car');
 
 // 一覧表示用のHTML
 echo '<table class="car-table">';
 echo '<tr>
         <th>ブランド</th>
         <th>車名</th>
+        <th>ボディタイプ</th>
         <th>色</th>
         <th>在庫数</th> <!-- Stock column header -->
         <th>画像</th> <!-- 画像カラム -->
@@ -27,6 +28,7 @@ foreach ($sql as $row) {
     echo '<tr>';
     echo '<td class="brand">' . htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td class="car-name">' . htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') . '</td>';
+    echo '<td class="body_type">' . htmlspecialchars($row['body_type'], ENT_QUOTES, 'UTF-8') . '</td>';
     echo '<td class="color">' . htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') . '</td>';
     
     // 在庫数の入力フォーム
