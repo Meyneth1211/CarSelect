@@ -31,7 +31,10 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
                 <label for="main_image" class="file-upload">
                     <img src="../img/image.png" alt="アップロード" class="upload-button-image">
                 </label>
-                <input type="file" id="main_image" name="main_image" accept="image/*" required>
+                <input type="file" id="main_image" name="main_image" accept="image/*" style="display: none;" required>
+                <div id="main_image_preview" class="image-preview">
+                        <p>ここに画像が表示されます</p>
+                </div>
             </td>
         </tr>
 
@@ -41,7 +44,10 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
                 <label for="other_images" class="file-upload">
                     <img src="../img/image.png" alt="アップロード" class="upload-button-image">
                 </label>
-                <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple>
+                <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple required style="display: none;">
+                <div id="other_images_preview" class="image-preview">
+                        <p>ここにその他の画像が表示されます</p>
+                </div>
             </td>
         </tr>
     </table>
@@ -51,3 +57,4 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
 </form>
+<script src="../kanrisya_js/kanrisya_insert.js"></script>
