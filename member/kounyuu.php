@@ -1,15 +1,31 @@
-<?php require('../header/header.php'); ?>
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $car_id = $_POST['car_id'] ?? null;
-    if ($car_id) {
-        echo '受け取った car_id: ' . htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8');
-        // car_id を利用した処理を記述
+// DB接続
+require_once '../DBconnect.php';
+$pdo = getDB();
+
+// POSTデータからcar_idを取得
+$car_id = $_POST['car_id'] ?? null;
+
+if ($car_id) {
+    // データベースから条件に一致する画像を取得
+    $sql = 'SELECT image FROM image WHERE car_id = ? AND is_primary = 1';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$car_id]);
+    $image = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($image) {
+        // 画像を表示
+        echo '<div class="primary-image">';
+        echo '<img src="' . htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') . '" alt="Primary Car Image" />';
+        echo '</div>';
     } else {
-        echo 'car_id が送信されていません。';
+        echo '<p>該当する画像が見つかりませんでした。</p>';
     }
+} else {
+    echo '<p>car_idが送信されていません。</p>';
 }
 ?>
+
 
     <div class="kounyuu">
         <div class="kounyuu-card">
