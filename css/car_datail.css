@@ -59,14 +59,15 @@
 
 /* Purchase button */
 .purchase input[type="submit"] {
-    background-color: #ffcc00; /* Yellow button for 'purchase' */
+    background-color: red; /* Yellow button for 'purchase' */
     color: #121212;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 30px;
+    padding: 10px 120px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 40px;
 }
 
 .purchase input[type="submit"]:disabled {
