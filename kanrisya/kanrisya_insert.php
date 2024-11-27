@@ -74,14 +74,17 @@ require_once '../DBconnect.php';
         <label>
             <input type="radio" name="body-type" value="セダン" required>
             <img src="../img/セダン黒.png" alt="セダン">
+            <span>セダン</span>
         </label>
         <label>
             <input type="radio" name="body-type" value="SUV" required>
             <img src="../img/SUV黒.png" alt="SUV">
+            <span>SUV</span>
         </label>
         <label>
             <input type="radio" name="body-type" value="スポーツカー" required>
             <img src="../img/スポーツカー黒.png" alt="スポーツカー">
+            <span>スポーツカー</span>
         </label>
     </td>
     </div>
