@@ -50,8 +50,9 @@
   </ul>
 
   <form class="car-logo-back" action="search.php" method="get">
-    <input type="hidden" name="s">
-    <input type="hidden" name="brands" id="sendbrand" value="">
+    <!-- トップページからのブランド検索であることを通知する変数 -->
+    <input type="hidden" name="b">
+    <input type="hidden" name="brand" id="sendbrand" value="">
     <div class="car-logo">
         <div class="car-logo-item">
             <input type="image" name="stub" value="ベンツ" src="../img/Benz.png" alt="Benz" onclick="setBrandInfo('ベンツ')">

@@ -3,7 +3,7 @@
 <!-- formタグはここより開始 action欄を空にすることでこのページ自身に送信 -->
 <form action="" method="get">
 
-  <!-- 検索のリクエストが行われたことを判定する変数 -->
+  <!-- 絞り込み検索のリクエストが行われたことを判定する変数 -->
   <input type="hidden" name="s">
   <div class="search">
     <!-- ブランド -->
@@ -152,16 +152,14 @@
 <!-- 車のリスト -->
 <?php
 if (isset($_GET['s'])) {
-  //echo '検索リクエストを確認、条件部分のSQL文を初期化';
+  echo '絞り込み検索リクエストを確認、条件部分のSQL文を初期化';
   $suffix = '';
   $first = true;
   if (isset($_GET['brands'])) {
     //echo 'brandsパラメータの存在を確認';
     $brands = $_GET['brands'];
-    $brands = "'".$brands[0]."'";
     $suffix .= 'brand IN(' . implode(',', $brands) . ') ';
     $first = false;
-    var_dump($brands);
   }
 
   if (isset($_GET['price'])) {
@@ -205,11 +203,53 @@ if (isset($_GET['s'])) {
 
   $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
   $sql .= $suffix;
-  echo $sql;
   require_once '../DBconnect.php';
   $pdo = getDB();
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
+  $cars = $stmt->fetchall(PDO::FETCH_ASSOC);
+  if (empty($cars)) {
+    echo <<<ERR
+      <div class="car-not-found">
+        <h2>検索条件に一致する車が見つかりませんでした。</h2>
+      </div>
+    ERR;
+    die();
+  }
+  $imageid = [];
+  foreach ($cars as $row) {
+    $imageid[] = $row['car_id'];
+  }
+  $sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
+  $placeholder = implode(',', $imageid);
+  $sql .= $placeholder;
+  $sql .= ');';
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $images = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+  echo '<div class="car-list">';
+  $c = 0;
+  foreach ($cars as $row) {
+    echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
+    echo '<img src="' . $images[$c]['image'] . '" alt="' . $row['car_name'] . '">';
+    echo '<div class="car-info">';
+    echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
+    echo '<div class="separator"></div>';
+    echo '<p>' . $row['price'] . '円</p>';
+    echo '</div></div>';
+    echo '</a>'; // aタグを閉じる
+    $c++;
+  }
+  echo '</div>';
+}elseif (isset($_GET['b'])) {
+  echo 'トップページからのブランド検索リクエストを確認';
+  $brand=$_GET['brand'];
+  $sql = 'SELECT car_id, car_name, price FROM car WHERE brand = ?';
+  require_once '../DBconnect.php';
+  $pdo = getDB();
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute($brand);
   $cars = $stmt->fetchall(PDO::FETCH_ASSOC);
   if (empty($cars)) {
     echo <<<ERR
