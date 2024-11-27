@@ -61,11 +61,6 @@
     display: inline-block;
 }
 
-/* Car detail list styling */
-.car-detail ul {
-    list-style-type: none;
-    padding: 0;
-}
 
 .car-syousai {
     margin: 8px 0;
