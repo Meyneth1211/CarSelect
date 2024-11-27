@@ -19,12 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- car_id を 次のページに渡す -->
             <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
 
-            <div class="kounyuu1-form">
-                <p><input class="kounyuu-button1" type="submit" value="送信"></p>
+            <div class="c-button">
+                <p><input class="card-button" type="submit" value="送信"></p>
             </div>
         </form>
-        <form action="kounyuu2-form" method="post">
-            <p><input class="kounyuu-button2" type="submit" value="戻る"></p>
+        <form action="car_detail" method="post">
+            <p><input class="card-button" type="submit" value="戻る"></p>
         </form>
     </div>
 </div>
