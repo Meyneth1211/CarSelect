@@ -57,7 +57,7 @@
                     echo '<div class="car-detail">';
                     echo '<ul>';
                     foreach ($feature as $row) {
-                        echo '<li>' . $row . '</li>';
+                        echo '<div class="car-syousai"><li>' . $row . '</li></div>';
                     }
                     echo '</ul>';
                     echo '</div>';
