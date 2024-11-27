@@ -41,7 +41,7 @@
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute([$item]);
                     $info = $stmt->fetch(PDO::FETCH_ASSOC);
-                    echo '<div class="car-name">';
+                    echo '<div class="car-info">';
                     echo '<div class="search-car-date"><h2>' . $info['car_name'] . '</h2></div>';
                     echo '</div>';
                     echo '<div class="car-price">';
