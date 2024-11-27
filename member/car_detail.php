@@ -50,6 +50,7 @@
                     if ($info['stock'] < 1) {
                         echo '<input type="submit" value="在庫切れ" disabled>';
                     } elseif ($info['stock'] >= 1) {
+                        echo '<input type="hidden" name="car_id" value="' .$item . '">';
                         echo '<input type="submit" value="購入">';
                     }
                     echo '</div><br><br>';

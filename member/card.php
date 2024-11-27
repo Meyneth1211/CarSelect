@@ -3,14 +3,13 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $car_id = $_POST['car_id'] ?? null;
     if ($car_id) {
-        echo "受け取ったcar_id: " . htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8');
-        // 次の処理を実行
+        // car_id を利用した処理を記述
+        echo 'Received car_id: ' . htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8');
     } else {
-        echo "car_idが送信されていません。";
+        echo 'car_id が送信されていません。';
     }
-} else {
-    echo "リクエストメソッドがPOSTではありません。";
 }
+
 ?>
 <div class="card">
     <div class="card-card">
@@ -23,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p class="mclass">有効期限<input class="card-kigen" type="text" name="cardkigen1" maxlength="2" size="4" required>/<input class="card-kigen2" type="text" maxlength="2" size="4" required></p>
             </div>
             <div class="c-button">
-                <p><input class="card-button" type="submit" value="送信"></p>
+                <p><input class="card-button" type="submit" name="<? $_POST['car_id'] ?>" value="送信"></p>
             </div>
         </form>
     </div>
