@@ -51,7 +51,7 @@
 
   <form class="car-logo-back" action="search.php" method="get">
     <input type="hidden" name="s">
-    <input type="hidden" name="brands[]" id="sendbrand" value="">
+    <input type="hidden" name="brands" id="sendbrand" value="">
     <div class="car-logo">
         <div class="car-logo-item">
             <input type="image" name="stub" value="ベンツ" src="../img/Benz.png" alt="Benz" onclick="setBrandInfo('ベンツ')">

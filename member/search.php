@@ -205,6 +205,7 @@ if (isset($_GET['s'])) {
 
   $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
   $sql .= $suffix;
+  echo $sql;
   require_once '../DBconnect.php';
   $pdo = getDB();
   $stmt = $pdo->prepare($sql);
