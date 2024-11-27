@@ -39,24 +39,33 @@
 
 
 
+/* 親要素を中央揃えにする設定 */
+.purchase {
+    display: flex; /* フレックスボックスを有効化 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* ボタン自体のスタイル */
 .purchase input[type="submit"] {
-    display: block; /* 常に表示されるように設定 */
+    display: block;
     background-color: red;
     color: white;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 20px 150px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
     z-index: 10;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* アニメーションを設定*/
 }
 
 .purchase input[type="submit"]:hover {
-    background-color: yellow;
-    color: black;
+    transform: scale(1.1); /* サイズを10%拡大 */
 }
-
 
 
 
