@@ -54,36 +54,36 @@
     <input type="hidden" name="brands[]" id="sendbrand" value="">
     <div class="car-logo">
         <div class="car-logo-item">
-            <input type="image" name="stub" value="ベンツ" src="../img/Benz.png" alt="Benz" onclick="setBrandInfo('ベンツ')">
+            <input type="image" name="stub" value="ベンツ" src="../img/Benz.png" alt="Benz" onclick="setBrandInfo(''ベンツ'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="日産" src="../img/Nissan.png" alt="Nissan" onclick="setBrandInfo('日産')">
+            <input type="image" name="stub" value="日産" src="../img/Nissan.png" alt="Nissan" onclick="setBrandInfo(''日産'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="マツダ" src="../img/Mazda.png" alt="Mazda" onclick="setBrandInfo('マツダ')">
+            <input type="image" name="stub" value="マツダ" src="../img/Mazda.png" alt="Mazda" onclick="setBrandInfo(''マツダ'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="トヨタ" src="../img/Toyota.png" alt="Toyota" onclick="setBrandInfo('トヨタ')">
+            <input type="image" name="stub" value="トヨタ" src="../img/Toyota.png" alt="Toyota" onclick="setBrandInfo(''トヨタ'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="ホンダ" src="../img/Honda.png" alt="Honda" onclick="setBrandInfo('ホンダ')">
+            <input type="image" name="stub" value="ホンダ" src="../img/Honda.png" alt="Honda" onclick="setBrandInfo(''ホンダ'')">
         </div>
     </div>
     <div class="car-logo2">
         <div class="car-logo-item">
-            <input type="image" name="stub" value="ポルシェ" src="../img/Porsche.png" alt="Porsche" onclick="setBrandInfo('ポルシェ')">
+            <input type="image" name="stub" value="ポルシェ" src="../img/Porsche.png" alt="Porsche" onclick="setBrandInfo(''ポルシェ'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="レクサス" src="../img/Lexus.png" alt="Lexus" onclick="setBrandInfo('レクサス')">
+            <input type="image" name="stub" value="レクサス" src="../img/Lexus.png" alt="Lexus" onclick="setBrandInfo(''レクサス'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="ランボルギーニ" src="../img/Lamborghini.png" alt="Lamborghini" onclick="setBrandInfo('ランボルギーニ')">
+            <input type="image" name="stub" value="ランボルギーニ" src="../img/Lamborghini.png" alt="Lamborghini" onclick="setBrandInfo(''ランボルギーニ'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="BMW" src="../img/BMW.png" alt="BMW" onclick="setBrandInfo('BMW')">
+            <input type="image" name="stub" value="BMW" src="../img/BMW.png" alt="BMW" onclick="setBrandInfo(''BMW'')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="フェラーリ" src="../img/Ferrari.png" alt="Ferrari" onclick="setBrandInfo('フェラーリ')">
+            <input type="image" name="stub" value="フェラーリ" src="../img/Ferrari.png" alt="Ferrari" onclick="setBrandInfo(''フェラーリ'')">
         </div>
     </div>
 </form>
