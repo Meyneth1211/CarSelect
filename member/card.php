@@ -1,16 +1,11 @@
 <?php require('../header/header.php'); ?>
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $car_id = $_POST['car_id'] ?? null;
-    if ($car_id) {
-        // car_id を利用した処理を記述
-        echo 'Received car_id: ' . htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8');
-    } else {
-        echo 'car_id が送信されていません。';
-    }
 }
-
 ?>
+
 <div class="card">
     <div class="card-card">
         <form class="card-form" action="kounyuu.php" method="post">
@@ -21,12 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p class="mclass">カード名義<input class="card-name" type="text" name="cardname" maxlength="50" required></p>
                 <p class="mclass">有効期限<input class="card-kigen" type="text" name="cardkigen1" maxlength="2" size="4" required>/<input class="card-kigen2" type="text" maxlength="2" size="4" required></p>
             </div>
+            <!-- car_id を 次のページに渡す -->
+            <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
+
             <div class="c-button">
-                <p><input class="card-button" type="submit" name="<? $_POST['car_id'] ?>" value="送信"></p>
+                <p><input class="card-button" type="submit" value="送信"></p>
             </div>
         </form>
     </div>
 </div>
 </body>
-
 </html>
