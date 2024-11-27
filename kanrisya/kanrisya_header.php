@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../kanrisya_css/kanrisya_login.css">
     <link rel="stylesheet" href="../kanrisya_css/image_edit.css">
     <link rel="stylesheet" href="/carselect/assets/css/styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../kanrisya_css/car_imageedit.css">
     <title>Car Select kanrisya</title>
 </head>
 <body>
