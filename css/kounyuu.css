@@ -87,14 +87,20 @@
     background: #10449A;
 }
 
+.kounyuu-card img{
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+}
+
 @media (width >= 500PX){
     body{
         padding: 0;
     }
     .kounyuu-card{
         margin: 0;
-        width: 600px;
-        height: 500px;
+        width: 80%;
+        height: 820px;
     }
 }
 
