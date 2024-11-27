@@ -29,7 +29,7 @@ $images = $sql->fetchAll();
             <td class="image-cell">
                 <?php foreach ($images as $row): ?>
                     <?php if ($row['is_primary'] == 1): ?>
-                        <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
+                        <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-editimage">
                         <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>">
                         <label>編集対象</label>
                     <?php endif; ?>
@@ -43,7 +43,7 @@ $images = $sql->fetchAll();
                 <?php foreach ($images as $row): ?>
                     <?php if ($row['is_primary'] == 0): ?>
                         <div class="sub-image-wrapper">
-                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
+                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-editimage">
                             <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>">
                         </div>
                     <?php endif; ?>
