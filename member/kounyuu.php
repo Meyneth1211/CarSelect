@@ -1,3 +1,4 @@
+<?php require('../header/header.php'); ?>
 <?php
 // DB接続
 require_once '../DBconnect.php';
