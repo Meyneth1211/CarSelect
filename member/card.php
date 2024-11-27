@@ -1,4 +1,17 @@
 <?php require('../header/header.php'); ?>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $car_id = $_POST['car_id'] ?? null;
+    if ($car_id) {
+        echo "受け取ったcar_id: " . htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8');
+        // 次の処理を実行
+    } else {
+        echo "car_idが送信されていません。";
+    }
+} else {
+    echo "リクエストメソッドがPOSTではありません。";
+}
+?>
 <div class="card">
     <div class="card-card">
         <form class="card-form" action="kounyuu.php" method="post">
