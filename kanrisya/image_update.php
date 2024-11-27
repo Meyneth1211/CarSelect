@@ -3,6 +3,12 @@ require('kanrisya_session.php');
 require_once '../DBconnect.php';
 
 $pdo = getDb();
+// car_idの取得
+if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
+    $car_id = $_POST['car_id'];
+} else {
+    die('車両IDが指定されていません。');
+}
 
 // 画像データの取得
 $sql = $pdo->prepare('SELECT * FROM image WHERE car_id = ?');
