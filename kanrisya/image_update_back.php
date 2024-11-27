@@ -15,7 +15,7 @@ if (isset($_FILES['main_image']) && $_FILES['main_image']['error'] == 0) {
     // メイン画像のアップロード処理
     $main_image = $_FILES['main_image']['tmp_name'];
     $main_image_name = basename($_FILES['main_image']['name']);
-    $main_image_path = '../uploads/' . $main_image_name;
+    $main_image_path = '../img/detail/' . $main_image_name;
 
     if (move_uploaded_file($main_image, $main_image_path)) {
         // メイン画像の更新
@@ -30,7 +30,7 @@ if (isset($_FILES['other_images']) && count($_FILES['other_images']['tmp_name'])
     $other_images_names = $_FILES['other_images']['name'];
 
     foreach ($other_images as $key => $tmp_name) {
-        $image_path = '../uploads/' . basename($other_images_names[$key]);
+        $image_path = '../img/detail/' . basename($other_images_names[$key]);
 
         if (move_uploaded_file($tmp_name, $image_path)) {
             // サブ画像を追加
