@@ -42,7 +42,7 @@
                     $stmt->execute([$item]);
                     $info = $stmt->fetch(PDO::FETCH_ASSOC);
                     echo '<div class="car-name">';
-                    echo '<h2>' . $info['car_name'] . '</h2>';
+                    echo '<div class="search-car-date"><h2>' . $info['car_name'] . '</h2></div>';
                     echo '</div>';
                     echo '<div class="car-price">';
                     echo '<h3>' . $info['price'] . '円</h3>';
