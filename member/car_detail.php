@@ -30,7 +30,7 @@
             echo '</ul>';
         ?>
     </div>
-    <form action="#" method="post">
+    <form action="card.php" method="post">
     <div class="car-info">
         <?php
             $sql='SELECT * FROM car WHERE car_id = ?';
