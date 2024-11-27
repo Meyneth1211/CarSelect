@@ -31,7 +31,7 @@ $images = $sql->fetchAll();
                     <?php if ($row['is_primary'] == 1): ?>
                         <label class="edit_image-checkbox">
                             <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>" hidden>
-                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
+                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="editcar-image">
                         </label>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -45,7 +45,7 @@ $images = $sql->fetchAll();
                     <?php if ($row['is_primary'] == 0): ?>
                         <label class="edit_image-checkbox">
                             <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>" hidden>
-                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
+                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="editcar-image">
                         </label>
                     <?php endif; ?>
                 <?php endforeach; ?>
