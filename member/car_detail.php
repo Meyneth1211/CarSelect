@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>車の詳細 - Car Select</title>
 </head>
+
 <body>
     <!-- ヘッダ呼び出し -->
     <?php require('../header/header.php'); ?>
 
-    <div class="car-image">
-        <?php
-            //GETメソッドによる値受け渡し
-            //URLのクエリパラメータからitemという変数名で車IDを取得
-            $item=$_GET['item'];
-            require_once '../DBconnect.php';
-            $pdo=getDB();
-            $sql="SELECT COUNT(*) FROM image WHERE car_id = ?";
-            //$sql="SELECT image FROM image WHERE car_id = ? ORDER BY is_primary DESC";
-            $stmt=$pdo->prepare($sql);
-            $stmt->execute([$item]);
-            $result=$stmt->fetch(PDO::FETCH_ASSOC);
-            $count=$result['COUNT(*)'];
-            //echo '<h2>行数：'. $count .'</h2>';
-            echo '<ul class="slider">';
-                for ($i=1; $i <= $count; $i++) { 
-                    echo '<li class="slider-item slider-item'. $i .'"></li>';
-                }
-            echo '</ul>';
-        ?>
-    </div>
-    <form action="card.php" method="post">
-    <div class="car-info">
-        <?php
-            $sql='SELECT * FROM car WHERE car_id = ?';
-            $stmt=$pdo->prepare($sql);
-            $stmt->execute([$item]);
-            $info=$stmt->fetch(PDO::FETCH_ASSOC);
-            echo '<div class="car-name">';
-                echo '<h2>'. $info['car_name'] .'</h2>';
-            echo '</div>';
-            echo '<div class="car-price">';
-                echo '<h3>'. $info['price'] .'円</h3>';
-            echo '</div>';
-            echo '<div class="purchase">';
-                if ($info['stock'] < 1) {
-                    echo '<input type="submit" value="在庫切れ" disabled>';
-                }elseif ($info['stock'] >= 1) {
-                    echo '<input type="submit" value="購入">';
-                }
-            echo '</div><br><br>';
-            $feature=explode(',',$info['car_detail']);
-            echo '<div class="car-detail">';
-                echo '<ul>';
-                foreach ($feature as $row) {
-                    echo '<li>'. $row . '</li>';
+    <div class="car_detail_tail">
+        <div class="car_detail_card">
+            <div class="car-image">
+                <?php
+                //GETメソッドによる値受け渡し
+                //URLのクエリパラメータからitemという変数名で車IDを取得
+                $item = $_GET['item'];
+                require_once '../DBconnect.php';
+                $pdo = getDB();
+                $sql = "SELECT COUNT(*) FROM image WHERE car_id = ?";
+                //$sql="SELECT image FROM image WHERE car_id = ? ORDER BY is_primary DESC";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([$item]);
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $count = $result['COUNT(*)'];
+                //echo '<h2>行数：'. $count .'</h2>';
+                echo '<ul class="slider">';
+                for ($i = 1; $i <= $count; $i++) {
+                    echo '<li class="slider-item slider-item' . $i . '"></li>';
                 }
                 echo '</ul>';
-            echo '</div>';
-        ?>
+                ?>
+            </div>
+            <form action="card.php" method="post">
+                <div class="car-info">
+                    <?php
+                    $sql = 'SELECT * FROM car WHERE car_id = ?';
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute([$item]);
+                    $info = $stmt->fetch(PDO::FETCH_ASSOC);
+                    echo '<div class="car-name">';
+                    echo '<h2>' . $info['car_name'] . '</h2>';
+                    echo '</div>';
+                    echo '<div class="car-price">';
+                    echo '<h3>' . $info['price'] . '円</h3>';
+                    echo '</div>';
+                    echo '<div class="purchase">';
+                    if ($info['stock'] < 1) {
+                        echo '<input type="submit" value="在庫切れ" disabled>';
+                    } elseif ($info['stock'] >= 1) {
+                        echo '<input type="submit" value="購入">';
+                    }
+                    echo '</div><br><br>';
+                    $feature = explode(',', $info['car_detail']);
+                    echo '<div class="car-detail">';
+                    echo '<ul>';
+                    foreach ($feature as $row) {
+                        echo '<li>' . $row . '</li>';
+                    }
+                    echo '</ul>';
+                    echo '</div>';
+                    ?>
+                </div>
+            </form>
+        </div>
     </div>
-    </form>
 </body>
+
 </html>
