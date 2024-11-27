@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>車の詳細 - Car Select</title>
-    <link rel="stylesheet" href="../css/style_for_car_detail.php?item=42" type="text/css">
+    <?php
+        $car=$_GET['item'];
+        echo '<link rel="stylesheet" href="../css/style_for_car_detail.php?item=' . $car .'" type="text/css">';
+    ?>
 </head>
 
 <body>
@@ -68,6 +71,8 @@
             </form>
         </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="../js/slide.js"></script>
 </body>
 
