@@ -31,7 +31,7 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
                 <label for="main_image" class="file-upload">
                     <img src="../img/image.png" alt="アップロード" class="upload-button-image">
                 </label>
-                <input type="file" id="main_image" name="main_image" accept="image/*" style="display: none;">
+                <input type="file" id="main_image" name="main_image" accept="image/*" required>
             </td>
         </tr>
 
@@ -41,7 +41,7 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
                 <label for="other_images" class="file-upload">
                     <img src="../img/image.png" alt="アップロード" class="upload-button-image">
                 </label>
-                <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple style="display: none;">
+                <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple>
             </td>
         </tr>
     </table>
