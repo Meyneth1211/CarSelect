@@ -4,7 +4,7 @@
 }
 
 .editcar-image {
-    width: 150px; /* 画像の幅を統一 */
+    width: 500px; /* 画像の幅を統一 */
     height: auto; /* 高さは自動調整 */
     object-fit: contain; /* 縦横比を維持して画像をフィット */
     border: 2px solid transparent;
