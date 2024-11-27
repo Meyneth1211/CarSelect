@@ -1,0 +1,114 @@
+
+
+/* Car detail container */
+.car_detail_tail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Card container for car details */
+.car_detail_card {
+    background-color: #1f1f1f; /* Darker background for the card */
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%; /* Adjust width for better responsiveness */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Car image slider */
+.car-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slider-item {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+/* Car information styling */
+.car-info {
+    color: #e0e0e0; /* Light text for car details */
+    padding: 10px;
+}
+
+/* Car name styling */
+.car-name h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Car price styling */
+.car-price h3 {
+    font-size: 28px;
+    color: #ffcc00; /* Yellow color for price */
+}
+
+/* Purchase button */
+.purchase input[type="submit"] {
+    background-color: #ffcc00; /* Yellow button for 'purchase' */
+    color: #121212;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.purchase input[type="submit"]:disabled {
+    background-color: #666; /* Gray color for disabled button */
+    cursor: not-allowed;
+}
+
+.purchase input[type="submit"]:hover:not(:disabled) {
+    background-color: #e5b700; /* Hover effect for the button */
+}
+
+/* Car detail list styling */
+.car-detail ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.car-detail li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Additional styling for responsive design */
+@media (max-width: 768px) {
+    .car_detail_card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .slider-item {
+        height: 200px;
+    }
+
+    .car-name h2 {
+        font-size: 24px;
+    }
+
+    .car-price h3 {
+        font-size: 22px;
+    }
+}
