@@ -1,4 +1,26 @@
-<?php require('kanrisya_header.php'); ?>
+<?php require('kanrisya_header.php');
+// car_idの取得
+if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
+    $car_id = $_POST['car_id'];
+} else {
+    die('車両IDが指定されていません。');
+}
+
+// 画像データの取得
+$sql = $pdo->prepare('SELECT * FROM image WHERE car_id = ?');
+$sql->execute([$car_id]);
+$images = $sql->fetchAll(); // 結果を配列として取得
+
+// データがあるか確認
+if (!empty($images)) {
+    foreach ($images as $row) {
+        // 画像データの処理
+        echo htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8');
+    }
+} else {
+    echo "画像データが見つかりません。";
+}
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
