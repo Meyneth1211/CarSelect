@@ -1,17 +1,4 @@
-<?php require('kanrisya_header.php'); 
-// car_idの取得とバリデーション
-if (isset($_GET['car_id']) && is_numeric($_GET['car_id'])) {
-    $car_id = $_GET['car_id'];
-} else {
-    die('車両IDが指定されていません。');
-}
-
-// 対象車両の画像データを取得
-$sql = $pdo->prepare('SELECT image_id, image, is_primary FROM image WHERE car_id = ?');
-$sql->execute([$car_id]);
-$images = $sql->fetchAll();
-?>
-?>
+<?php require('kanrisya_header.php'); ?>
 
 <!DOCTYPE html>
 <html lang="ja">
