@@ -42,11 +42,11 @@
                     $stmt->execute([$item]);
                     $info = $stmt->fetch(PDO::FETCH_ASSOC);
                     echo '<div class="car-info">';
-                    echo '<div class="search-car-date"><h2>' . $info['car_name'] . '</h2></div>';
+                    echo '<div class="search-car-date"><h3>' . $info['car_name'] . '</h3>';
                     echo '</div>';
                     echo '<div class="car-price">';
                     echo '<h3>' . $info['price'] . '円</h3>';
-                    echo '</div>';
+                    echo '</div></div>';
                     echo '<div class="purchase">';
                     if ($info['stock'] < 1) {
                         echo '<input type="submit" value="在庫切れ" disabled>';
