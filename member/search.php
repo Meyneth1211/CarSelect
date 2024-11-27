@@ -158,6 +158,7 @@ if (isset($_GET['s'])) {
   if (isset($_GET['brands'])) {
     //echo 'brandsパラメータの存在を確認';
     $brands = $_GET['brands'];
+    $brands = "'".$brands."'";
     $suffix .= 'brand IN(' . implode(',', $brands) . ') ';
     $first = false;
     var_dump($brands);
