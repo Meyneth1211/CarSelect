@@ -245,6 +245,7 @@ if (isset($_GET['s'])) {
 }elseif (isset($_GET['b'])) {
   echo 'トップページからのブランド検索リクエストを確認';
   $brand=$_GET['brand'];
+  $brand= "'". $brand . "'";
   $sql = 'SELECT car_id, car_name, price FROM car WHERE brand = ?';
   require_once '../DBconnect.php';
   $pdo = getDB();
