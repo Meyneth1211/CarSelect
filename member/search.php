@@ -160,6 +160,7 @@ if (isset($_GET['s'])) {
     $brands = $_GET['brands'];
     $suffix .= 'brand IN(' . implode(',', $brands) . ') ';
     $first = false;
+    var_dump($brands);
   }
 
   if (isset($_GET['price'])) {
