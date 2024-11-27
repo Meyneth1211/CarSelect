@@ -1,38 +1,36 @@
-<?php
-require('kanrisya_session.php'); 
-require_once '../DBconnect.php';
-
-$pdo = getDb();
-
-// car_idの取得とバリデーション
-if (isset($_GET['car_id']) && is_numeric($_GET['car_id'])) {
-    $car_id = $_GET['car_id'];
-} else {
-    die('車両IDが指定されていません。');
-}
-
-// 対象車両の画像データを取得
-$sql = $pdo->prepare('SELECT image_id, image, is_primary FROM image WHERE car_id = ?');
-$sql->execute([$car_id]);
-$images = $sql->fetchAll();
-?>
-
 <form action="../kanrisya/image_update.php" method="POST">
     <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
     
     <h1 class="page-title">画像一覧</h1>
 
     <table class="image-table">
-        <?php foreach ($images as $row): ?>
-            <tr>
-                <td class="label-cell"><?= $row['is_primary'] == 1 ? 'メイン画像' : 'サブ画像' ?></td>
-                <td class="image-cell">
-                    <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= $row['is_primary'] == 1 ? 'メイン画像' : 'サブ画像' ?>" class="car-image">
-                    <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>">
-                    <label>編集対象</label>
-                </td>
-            </tr>
-        <?php endforeach; ?>
+        <tr>
+            <!-- メイン画像 -->
+            <td class="label-cell">メイン画像</td>
+            <td class="image-cell">
+                <?php foreach ($images as $row): ?>
+                    <?php if ($row['is_primary'] == 1): ?>
+                        <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="メイン画像" class="car-image">
+                        <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>">
+                        <label>編集対象</label>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </td>
+        </tr>
+        <tr>
+            <!-- サブ画像 -->
+            <td class="label-cell">サブ画像</td>
+            <td class="image-cell">
+                <?php foreach ($images as $row): ?>
+                    <?php if ($row['is_primary'] == 0): ?>
+                        <div class="sub-image-wrapper">
+                            <img src="<?= htmlspecialchars($row['image'], ENT_QUOTES, 'UTF-8') ?>" alt="サブ画像" class="car-image">
+                            <input type="checkbox" name="selected_images[]" value="<?= htmlspecialchars($row['image_id'], ENT_QUOTES, 'UTF-8') ?>">
+                        </div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </td>
+        </tr>
     </table>
 
     <div class="top-back-button">
