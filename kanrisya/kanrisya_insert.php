@@ -56,8 +56,8 @@ require_once '../DBconnect.php';
             <img src="../img/BMW.png" alt="BMW">
         </label>
         <label>
-            <input type="radio" name="brands" value="ダイハツ" required>
-            <img src="../img/Daihatsu.png" alt="Daihatsu">
+            <input type="radio" name="brands" value="ベンツ" required>
+            <img src="../img/Benz.png" alt="Benz">
         </label>
         <label>
             <input type="radio" name="brands" value="日産" required>
