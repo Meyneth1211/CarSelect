@@ -35,27 +35,30 @@
 
 
 
-/* Purchase button */
+
+
+
+
 .purchase input[type="submit"] {
-    background-color: red; /* Yellow button for 'purchase' */
-    color: #121212;
-    font-size: 30px;
-    padding: 10px 120px;
+    display: block; /* 常に表示されるように設定 */
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 40px;
+    position: relative;
+    z-index: 10;
 }
 
-.purchase input[type="submit"]:disabled {
-    background-color: #666; /* Gray color for disabled button */
-    cursor: not-allowed;
+.purchase input[type="submit"]:hover {
+    background-color: yellow;
+    color: black;
 }
 
-.purchase input[type="submit"]:hover:not(:disabled) {
-    background-color: #e5b700; /* Hover effect for the button */
-}
+
+
 
 .car-detail{
     display: inline-block;
