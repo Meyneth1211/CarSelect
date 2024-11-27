@@ -1,6 +1,6 @@
 .edit_image-checkbox input[type="checkbox"]:checked + img {
-    border-color: #007BFF; /* 選択された時の枠色 */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
+    border-color: #e00000; /* 選択された時の枠色 */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
 }
 
 .editcar-image {
