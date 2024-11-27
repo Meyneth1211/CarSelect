@@ -10,3 +10,11 @@
     border-color: #007BFF; /* 選択された時の枠色 */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.7);
 }
+
+.editcar-image {
+    width: 150px; /* 画像の幅を統一 */
+    height: auto; /* 高さは自動調整 */
+    object-fit: contain; /* 縦横比を維持して画像をフィット */
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
