@@ -53,36 +53,36 @@
     <input type="hidden" name="s">
     <div class="car-logo">
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="ベンツ" src="../img/Benz.png" alt="Benz">
+            <input type="image" name="brand" value="ベンツ" src="../img/Benz.png" alt="Benz">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="日産" src="../img/Nissan.png" alt="Nissan">
+            <input type="image" name="brand" value="日産" src="../img/Nissan.png" alt="Nissan">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="マツダ" src="../img/Mazda.png" alt="Mazda">
+            <input type="image" name="brand" value="マツダ" src="../img/Mazda.png" alt="Mazda">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="トヨタ" src="../img/Toyota.png" alt="Toyota">
+            <input type="image" name="brand" value="トヨタ" src="../img/Toyota.png" alt="Toyota">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="ホンダ" src="../img/Honda.png" alt="Honda">
+            <input type="image" name="brand" value="ホンダ" src="../img/Honda.png" alt="Honda">
         </div>
     </div>
     <div class="car-logo2">
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="ポルシェ" src="../img/Porsche.png" alt="Porsche">
+            <input type="image" name="brand" value="ポルシェ" src="../img/Porsche.png" alt="Porsche">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="レクサス" src="../img/Lexus.png" alt="Lexus">
+            <input type="image" name="brand" value="レクサス" src="../img/Lexus.png" alt="Lexus">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="ランボルギーニ" src="../img/Lamborghini.png" alt="Lamborghini">
+            <input type="image" name="brand" value="ランボルギーニ" src="../img/Lamborghini.png" alt="Lamborghini">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="BMW" src="../img/BMW.png" alt="BMW">
+            <input type="image" name="brand" value="BMW" src="../img/BMW.png" alt="BMW">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="brands[]" value="フェラーリ" src="../img/Ferrari.png" alt="Ferrari">
+            <input type="image" name="brand" value="フェラーリ" src="../img/Ferrari.png" alt="Ferrari">
         </div>
     </div>
 </form>
