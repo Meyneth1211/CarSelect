@@ -68,6 +68,7 @@
             </form>
         </div>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="../js/slide.js"></script>
 </body>
 
