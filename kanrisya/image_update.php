@@ -1,4 +1,8 @@
 <?php require('kanrisya_header.php');
+require('kanrisya_session.php'); 
+require_once '../DBconnect.php';
+
+$pdo = getDb();
 // car_idの取得
 if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     $car_id = $_POST['car_id'];
