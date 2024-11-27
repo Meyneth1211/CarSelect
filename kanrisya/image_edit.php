@@ -1,5 +1,4 @@
 <?php
-require('kanrisya_header.php');
 require('kanrisya_session.php'); 
 require_once '../DBconnect.php';
 
