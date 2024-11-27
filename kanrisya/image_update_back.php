@@ -4,50 +4,41 @@ require_once '../DBconnect.php';
 
 $pdo = getDb();
 
-// car_idと選択された画像IDを受け取る
+// car_idと画像IDを受け取る
 if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     $car_id = $_POST['car_id'];
 } else {
     die('車両IDが指定されていません。');
 }
 
-if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
-    $selected_image_ids = $_POST['selected_images'];
-} else {
-    die('画像が選択されていません。');
+if (isset($_FILES['main_image']) && $_FILES['main_image']['error'] == 0) {
+    // メイン画像のアップロード処理
+    $main_image = $_FILES['main_image']['tmp_name'];
+    $main_image_name = basename($_FILES['main_image']['name']);
+    $main_image_path = '../uploads/' . $main_image_name;
+
+    if (move_uploaded_file($main_image, $main_image_path)) {
+        // メイン画像の更新
+        $sql = $pdo->prepare('UPDATE image SET image = ? WHERE car_id = ? AND is_primary = 1');
+        $sql->execute([$main_image_path, $car_id]);
+    }
 }
 
+if (isset($_FILES['other_images']) && count($_FILES['other_images']['tmp_name']) > 0) {
+    // サブ画像のアップロード処理
+    $other_images = $_FILES['other_images']['tmp_name'];
+    $other_images_names = $_FILES['other_images']['name'];
+
+    foreach ($other_images as $key => $tmp_name) {
+        $image_path = '../uploads/' . basename($other_images_names[$key]);
+
+        if (move_uploaded_file($tmp_name, $image_path)) {
+            // サブ画像を追加
+            $sql = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?, ?, 0)');
+            $sql->execute([$car_id, $image_path]);
+        }
+    }
+}
+
+echo "画像の更新が完了しました。";
 ?>
-
-<form action="image_update_back.php" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
-    
-    <h2>新しい画像をアップロード</h2>
-    
-    <table class="image-table">
-        <tr>
-            <td class="label-cell">メイン画像</td>
-            <td>
-                <label for="main_image" class="file-upload">
-                    <img src="../img/image.png" alt="アップロード" class="upload-button-image">
-                </label>
-                <input type="file" id="main_image" name="main_image" accept="image/*" required>
-            </td>
-        </tr>
-
-        <tr>
-            <td class="label-cell">サブ画像</td>
-            <td>
-                <label for="other_images" class="file-upload">
-                    <img src="../img/image.png" alt="アップロード" class="upload-button-image">
-                </label>
-                <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple>
-            </td>
-        </tr>
-    </table>
-
-    <div class="top-back-button">
-        <button type="submit" class="updateButton">画像を更新する</button>
-        <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
-    </div>
-</form>
