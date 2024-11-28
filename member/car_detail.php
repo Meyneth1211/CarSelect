@@ -48,7 +48,7 @@
                     echo '<div class="car-info">';
                     echo '<div class="search-car-date"><h3>' . $info['car_name'] . '</h3>';
                     echo '<div class="separator"></div>';
-                    echo '<p>' . $info['price'] . '円</p>';
+                    echo '<p>¥' . number_format($info['price']) . '</p>';
                     echo '</div></div>';
                     echo '<div class="purchase">';
                     if ($info['stock'] < 1) {
