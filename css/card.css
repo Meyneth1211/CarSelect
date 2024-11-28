@@ -48,6 +48,10 @@
     width: 65%;
     height: 40px;
 }
+.card-button2{
+    width: 65%;
+    height: 40px;
+}
 .card-form input{
     border: 2px solid #333;
     font-family: inherit;
