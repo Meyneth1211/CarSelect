@@ -50,10 +50,14 @@ $images = $sql->fetchAll();
             </td>
         </tr>
     </table>
-        
+
     <div class="top-back-button">
-        <button type="button" onclick="location.href='image_delete_confirm.php'">選択した画像を削除する</button>
-        <button type="submit" class="updateButton">選択した画像を更新する</button>
+        <!-- 画像更新ボタン: car_idとselected_imagesをPOST送信 -->
+        <button type="submit" name="action" value="update" class="updateButton">選択した画像を更新する</button>
+        
+        <!-- 画像削除ボタン: car_idとselected_imagesをPOST送信 -->
+        <button type="submit" name="action" value="delete" class="deleteButton">選択した画像を削除する</button>
+        
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
 </form>
