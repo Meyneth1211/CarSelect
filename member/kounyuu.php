@@ -29,26 +29,6 @@ if ($car_id) {
 }
 
 
-$sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
-$sql .= $placeholder;
-$sql .= ');';
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$images = $stmt->fetchall(PDO::FETCH_ASSOC);
-
-echo '<div class="car-list">';
-$c = 0;
-foreach ($cars as $row) {
-  echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
-  echo '<div class="car-info">';
-  echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
-  echo '<div class="separator"></div>';
-  echo '<p>' . $row['price'] . '円</p>';
-  echo '</div></div>';
-  echo '</a>'; // aタグを閉じる
-  $c++;
-}
-echo '</div>';
 
 
 ?>
