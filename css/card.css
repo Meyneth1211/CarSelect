@@ -44,7 +44,11 @@
     gap: 16px;
     margin-top: 20px;
 }
-.card-button{
+.card-button1{
+    width: 65%;
+    height: 40px;
+}
+.card-button2{
     width: 65%;
     height: 40px;
 }
@@ -103,10 +107,16 @@
     margin-left: 95px;
 }
 
-.card-button{
+.card-button1{
     background-color: red;
     color: #fff;
     margin-top: 20px;
+}
+
+.kounyuu-button2 {
+    margin-top: 30px;
+    background-color: rgba(33, 4, 4, 0.562);
+    color: #fff;
 }
 
 .p-color p{

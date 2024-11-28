@@ -28,6 +28,9 @@ if ($car_id) {
     echo '<p>car_idが送信されていません。</p>';
 }
 ?>
+
+
+
             <form class="kounyuu1-form" action="car_detail.php" method="post">
                 <input class="kounyuu-button1" type="submit" value="戻る">
             </form>

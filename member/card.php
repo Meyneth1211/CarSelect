@@ -20,10 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
 
             <div class="c-button">
-                <p><input class="card-button" type="submit" value="送信"></p>
+                <p><input class="card-button1" type="submit" value="送信"></p>
             </div>
         </form>
-        
+        <form class="cardd-form" action="car_detail.php" method="post">
+                <p><input class="card-button2" type="submit" value="戻る"></p>
+            </form>
     </div>
 </div>
 </body>
