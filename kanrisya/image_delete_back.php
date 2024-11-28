@@ -11,29 +11,31 @@ if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     die('車両IDが指定されていません。');
 }
 
-// 削除確認された画像IDを受け取る
-if (isset($_POST['confirm_delete_images']) && !empty($_POST['confirm_delete_images'])) {
-    $confirm_delete_image_ids = $_POST['confirm_delete_images'];
+// 画像IDの取得とバリデーション
+if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
+    $selected_image_ids = explode(',', $_POST['selected_images']);
 } else {
     die('削除する画像が選択されていません。');
 }
 
-// 削除された画像を1枚ずつ処理
-foreach ($confirm_delete_image_ids as $image_id) {
-    // 画像ファイルのパスを取得
+// 画像削除処理
+foreach ($selected_image_ids as $image_id) {
+    // 画像情報を取得
     $sql = $pdo->prepare('SELECT image FROM image WHERE image_id = ?');
     $sql->execute([$image_id]);
     $image = $sql->fetchColumn();
 
-    if ($image && file_exists($image)) {
-        // ファイルシステムから画像を削除
-        unlink($image);
-    }
+    if ($image) {
+        // 画像ファイルを削除
+        if (file_exists($image)) {
+            unlink($image); // ファイル削除
+        }
 
-    // データベースから画像を削除
-    $sql_delete = $pdo->prepare('DELETE FROM image WHERE image_id = ?');
-    $sql_delete->execute([$image_id]);
+        // DBから画像レコードを削除
+        $delete_sql = $pdo->prepare('DELETE FROM image WHERE image_id = ?');
+        $delete_sql->execute([$image_id]);
+    }
 }
 
-echo "選択した画像の削除が完了しました。";
+echo "選択された画像が削除されました。";
 ?>
