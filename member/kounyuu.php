@@ -28,6 +28,22 @@ if ($car_id) {
     echo '<p>car_idが送信されていません。</p>';
 }
 ?>
+
+<?php
+
+    $sql = 'SELECT * FROM car WHERE car_id = ?';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$item]);
+    $info = $stmt->fetch(PDO::FETCH_ASSOC);
+    echo '<div class="car-info">';
+    echo '<div class="search-car-date"><h3>' . $info['car_name'] . '</h3>';
+    echo '<div class="separator"></div>';
+    echo '<p>' . $info['price'] . '円</p>';
+    echo '</div></div>';
+    echo '<div class="purchase">';
+
+?>
+
             <form class="kounyuu1-form" action="car_detail.php" method="post">
                 <input class="kounyuu-button1" type="submit" value="戻る">
             </form>
