@@ -36,6 +36,7 @@ if ($car_id) {
         // car_nameとpriceを表示
         echo '<div class="car-info">';
         echo '<p>車名: ' . htmlspecialchars($car_info['car_name'], ENT_QUOTES, 'UTF-8') . '</p>';
+        echo '<div class="separator"></div>';
         echo '<p>価格: ¥' . number_format($car_info['price']) . '</p>';
         echo '</div>';
     } else {
