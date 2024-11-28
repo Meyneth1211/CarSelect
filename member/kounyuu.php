@@ -8,14 +8,21 @@ $pdo = getDB();
 $car_id = $_POST['car_id'] ?? null;
 
 if ($car_id) {
-    // データベースから条件に一致する画像を取得
+    // データベースから画像を取得
     $sql = 'SELECT image FROM image WHERE car_id = ? AND is_primary = 1';
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$car_id]);
     $image = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    // carテーブルからcar_nameとpriceを取得
+    $car_sql = 'SELECT car_name, price FROM car WHERE car_id = ?';
+    $car_stmt = $pdo->prepare($car_sql);
+    $car_stmt->execute([$car_id]);
+    $car_info = $car_stmt->fetch(PDO::FETCH_ASSOC);
+
     echo '<div class="kounyuu">';
     echo '<div class="kounyuu-card">';
+
     if ($image) {
         // 画像を表示
         echo '<div class="primary-image">';
@@ -24,24 +31,28 @@ if ($car_id) {
     } else {
         echo '<p>該当する画像が見つかりませんでした。</p>';
     }
+
+    if ($car_info) {
+        // car_nameとpriceを表示
+        echo '<div class="car-info">';
+        echo '<p>車名: ' . htmlspecialchars($car_info['car_name'], ENT_QUOTES, 'UTF-8') . '</p>';
+        echo '<p>価格: ¥' . number_format($car_info['price']) . '</p>';
+        echo '</div>';
+    } else {
+        echo '<p>該当する車情報が見つかりませんでした。</p>';
+    }
 } else {
     echo '<p>car_idが送信されていません。</p>';
 }
-
-
-
-
 ?>
 
-
-
-            <form class="kounyuu1-form" action="car_detail.php" method="post">
-                <input class="kounyuu-button1" type="submit" value="戻る">
-            </form>
-            <form class="kounyuu2-form" action="Purchase_confirmed.php" method="post">
-                <input class="kounyuu-button2" type="submit" value="購入確定">
-            </form>
-        </div>
-    </div>
+<form class="kounyuu1-form" action="car_detail.php" method="post">
+    <input class="kounyuu-button1" type="submit" value="戻る">
+</form>
+<form class="kounyuu2-form" action="Purchase_confirmed.php" method="post">
+    <input class="kounyuu-button2" type="submit" value="購入確定">
+</form>
+</div>
+</div>
 </body>
 </html>
