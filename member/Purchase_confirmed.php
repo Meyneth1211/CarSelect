@@ -1,5 +1,5 @@
 <?php require('../header/header.php'); ?>
-<?php
+<h1?php
 // DB接続
 require_once '../DBconnect.php';
 $pdo = getDB();
@@ -18,7 +18,7 @@ if ($car_id) {
     echo '<div class="Purchase_confirmed">';
     // 更新された行数を確認
     if ($stmt->rowCount() > 0) {
-        $message = '<h1>ご注文が完了しました</h1>';
+        $message = 'ご注文が完了しました!';
     } else {
         $message = '在庫が不足しています。';
     }
@@ -26,7 +26,7 @@ if ($car_id) {
     $message = 'car_idが送信されていません。';
 }
 ?>
-        <p><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></p>
+        <h1><?php echo htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></h1>
         <form class="Purchase-form" action="top.php" method="post">
             <input class="topback-button" type="submit" value="トップページに戻る">
         </form>
