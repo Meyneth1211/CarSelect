@@ -4,6 +4,7 @@ require_once '../DBconnect.php';
 
 $pdo = getDb();
 
+if ($_POST['action'] == 'update') {
 // car_idと選択された画像IDを受け取る
 if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     $car_id = $_POST['car_id'];
@@ -11,15 +12,10 @@ if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     die('車両IDが指定されていません。');
 }
 
-// actionの取得
-$action = $_POST['action'] ?? '';
-
-// 画像の更新処理（actionがupdateの場合）
-if ($action == 'update') {
 if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
     $selected_image_ids = $_POST['selected_images'];
 } else {
-    die('画像が選択されていません。');
+    die('更新する画像が選択されていません。');
 }
 }
 ?>
