@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p><input class="card-button" type="submit" value="送信"></p>
             </div>
         </form>
-        <form action="car_detail" method="post">
-            <p><input class="card-button" type="submit" value="戻る"></p>
-        </form>
+        <div class="c-button"></div>
+            <button type="button" class="back-button" onclick="location.href='car_detail.php'">戻る</button>
+        <div class="top-back-button">
     </div>
 </div>
 </body>
