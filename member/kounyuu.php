@@ -30,7 +30,6 @@ if ($car_id) {
 
 
 $sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
-$placeholder = implode(',', $imageid);
 $sql .= $placeholder;
 $sql .= ');';
 $stmt = $pdo->prepare($sql);
