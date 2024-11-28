@@ -288,27 +288,6 @@ if (isset($_GET['s'])) {
 }
 ?>
 <div class="null-box"></div>
-<!--
-  <div class="car-list">
-    <div class="car-item">
-      <img src="lexus-ux300e.jpg">
-      <div class="car-info">
-        <h3>UX300e</h3>
-        <p>7,000,000円</p>
-      </div>
-      <div class="favorite-icon">♡</div>
-    </div>
-    <div class="car-item">
-      <img src="lexus-ux300e.jpg">
-      <div class="car-info">
-        <h3>UX300e</h3>
-        <p>7,000,000円</p>
-      </div>
-      <div class="favorite-icon">♡</div>
-    </div>
-  </div>
-</div>
--->
 <script src="../js/search.js"></script>
 </body>
 
