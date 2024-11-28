@@ -11,6 +11,12 @@ if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     die('車両IDが指定されていません。');
 }
 
+
+// actionの取得
+$action = $_POST['action'] ?? '';
+
+// 画像の更新処理（actionがdeleteの場合）
+if ($action == 'delete') {
 // 画像IDの取得とバリデーション
 if (isset($_POST['selected_images']) && is_array($_POST['selected_images'])) {
     $selected_image_ids = $_POST['selected_images'];
@@ -26,7 +32,7 @@ foreach ($selected_image_ids as $image_id) {
     // 画像IDを確認表示
     echo "<p>画像ID: " . htmlspecialchars($image_id, ENT_QUOTES, 'UTF-8') . "</p>";
 }
-
+}
 ?>
 
 <form action="image_delete_back.php" method="POST">
