@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         <form class="cardd-form" action="car_detail.php" method="post">
                 <p><input class="card-button2" type="submit" value="戻る"></p>
-            </form>
+        </form>
     </div>
 </div>
 </body>

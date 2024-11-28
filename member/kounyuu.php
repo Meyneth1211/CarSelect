@@ -51,6 +51,7 @@ if ($car_id) {
     <input class="kounyuu-button1" type="submit" value="戻る">
 </form>
 <form class="kounyuu2-form" action="Purchase_confirmed.php" method="post">
+    <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
     <input class="kounyuu-button2" type="submit" value="購入確定">
 </form>
 </div>
