@@ -11,12 +11,17 @@ if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     die('車両IDが指定されていません。');
 }
 
+// actionの取得
+$action = $_POST['action'] ?? '';
+
+// 画像の更新処理（actionがupdateの場合）
+if ($action == 'update') {
 if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
     $selected_image_ids = $_POST['selected_images'];
 } else {
     die('画像が選択されていません。');
 }
-
+}
 ?>
 
 <form action="image_update_back.php" method="POST" enctype="multipart/form-data">
