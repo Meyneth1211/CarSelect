@@ -1,5 +1,5 @@
 <?php require('../header/header.php'); ?>
-<h1?php
+<?php
 // DB接続
 require_once '../DBconnect.php';
 $pdo = getDB();
