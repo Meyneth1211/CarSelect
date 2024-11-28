@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 
 $pdo = getDb();
 
-// car_idの取得とバリデーション
+// car_idと選択された画像IDを受け取る
 if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     $car_id = $_POST['car_id'];
 } else {
@@ -16,48 +16,50 @@ $action = $_POST['action'] ?? '';
 
 // 画像の更新処理（actionがupdateの場合）
 if ($action == 'update') {
-    if (isset($_POST['selected_images']) && is_array($_POST['selected_images'])) {
-        $selected_image_ids = $_POST['selected_images'];
-
-        // ここで画像更新処理を行う
-        foreach ($selected_image_ids as $image_id) {
-            // 画像の更新処理のコードをここに追加
-            // 例えば、新しい画像をアップロードした場合、DBを更新するなど
-        }
-
-        echo "選択された画像が更新されました。";
-    } else {
-        echo "更新する画像が選択されていません。";
-    }
+if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
+    $selected_image_ids = $_POST['selected_images'];
+} else {
+    die('画像が選択されていません。');
 }
-
-// 画像削除処理（actionがdeleteの場合）
-if ($action == 'delete') {
-    if (isset($_POST['selected_images']) && is_array($_POST['selected_images'])) {
-        $selected_image_ids = $_POST['selected_images'];
-
-        // 画像削除処理
-        foreach ($selected_image_ids as $image_id) {
-            // 画像情報を取得
-            $sql = $pdo->prepare('SELECT image FROM image WHERE image_id = ?');
-            $sql->execute([$image_id]);
-            $image = $sql->fetchColumn();
-
-            if ($image) {
-                // 画像ファイルを削除
-                if (file_exists($image)) {
-                    unlink($image); // ファイル削除
-                }
-
-                // DBから画像レコードを削除
-                $delete_sql = $pdo->prepare('DELETE FROM image WHERE image_id = ?');
-                $delete_sql->execute([$image_id]);
-            }
-        }
-
-        echo "選択された画像が削除されました。";
-    } else {
-        echo "削除する画像が選択されていません。";
-    }
 }
 ?>
+
+<form action="image_update_back.php" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
+    
+    <h2>新しい画像をアップロード</h2>
+    
+    <table class="image-table">
+        <tr>
+            <td class="label-cell">メイン画像</td>
+            <td>
+                <label for="main_image" class="file-upload">
+                    <img src="../img/image.png" alt="アップロード" class="upload-button-image">
+                </label>
+                <input type="file" id="main_image" name="main_image" accept="image/*" style="display: none;" required>
+                <div id="main_image_preview" class="image-preview">
+                        <p>ここに画像が表示されます</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label-cell">サブ画像</td>
+            <td>
+                <label for="other_images" class="file-upload">
+                    <img src="../img/image.png" alt="アップロード" class="upload-button-image">
+                </label>
+                <input type="file" id="other_images" name="other_images[]" accept="image/*" multiple required style="display: none;">
+                <div id="other_images_preview" class="image-preview">
+                        <p>ここにその他の画像が表示されます</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="top-back-button">
+        <button type="submit" class="updateButton">画像を更新する</button>
+        <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
+    </div>
+</form>
+<script src="../kanrisya_js/kanrisya_insert.js"></script>
