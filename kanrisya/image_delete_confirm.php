@@ -1,6 +1,3 @@
-
-php
-コードをコピーする
 <?php
 require('kanrisya_session.php');
 require_once '../DBconnect.php';
