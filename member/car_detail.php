@@ -52,10 +52,10 @@
                     echo '</div></div>';
                     echo '<div class="purchase">';
                     if ($info['stock'] < 1) {
-                        echo '<input type="submit" value="在庫切れ" disabled>';
+                        echo '<input type="submit" value="在庫切れ" disabled><br>';
                     } elseif ($info['stock'] >= 1) {
                         echo '<input type="hidden" name="car_id" value="' .$item . '">';
-                        echo '<input type="submit" value="購入">';
+                        echo '<input type="submit" value="購入"><br>';
                     }
                     echo '<form class="cardd-form" action="search.php" method="get">';
                     echo '<p><input class="card-button2" type="submit" onclick="history.back();" value="戻る"></p>';
