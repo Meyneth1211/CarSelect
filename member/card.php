@@ -24,8 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </form>
         <form class="cardd-form" action="car_detail.php" method="get">
-            <input type="hidden" name="item" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
-            <p><input class="card-button2" type="submit" value="戻る"></>
+            <p><input class="card-button2" type="submit" onclick="history.back();" value="戻る"></p>
         </form>
 
     </div>

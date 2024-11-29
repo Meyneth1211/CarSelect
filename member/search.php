@@ -152,7 +152,7 @@
 <!-- 車のリスト -->
 <?php
 if (isset($_GET['s'])) {
-  echo '絞り込み検索リクエストを確認、条件部分のSQL文を初期化';
+  //echo '絞り込み検索リクエストを確認、条件部分のSQL文を初期化';
   $suffix = '';
   $first = true;
   if (isset($_GET['brands'])) {
