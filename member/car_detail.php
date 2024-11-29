@@ -56,8 +56,10 @@
                     } elseif ($info['stock'] >= 1) {
                         echo '<input type="hidden" name="car_id" value="' .$item . '">';
                         echo '<input type="submit" value="購入">';
-                        
                     }
+                    echo '<form class="cardd-form" action="search.php" method="get">';
+                    echo '<p><input class="card-button2" type="submit" onclick="history.back();" value="戻る"></p>';
+                    echo  '</form>';
                     echo '</div><br><br>';
                     $feature = explode(',', $info['car_detail']);
                     echo '<div class="car-detail">';
