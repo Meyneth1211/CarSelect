@@ -50,15 +50,15 @@
                     echo '<div class="separator"></div>';
                     echo '<p>¥' . number_format($info['price']) . '</p>';
                     echo '</div></div>';
-                    echo '<div class="purchase">';
+                    echo '<div class="button-container">';
+                    echo '<button type="button" class="back-button" onclick="location.href=\'search.php\'">戻る</button>';
                     if ($info['stock'] < 1) {
-                        echo '<input type="submit" value="在庫切れ" disabled><br>';
-                    } elseif ($info['stock'] >= 1) {
-                        echo '<input type="hidden" name="car_id" value="' .$item . '">';
-                        echo '<input type="submit" value="購入"><br>';
+                        echo '<input type="submit" value="在庫切れ" disabled>';
+                    } else {
+                        echo '<input type="hidden" name="car_id" value="' . $item . '">';
+                        echo '<input type="submit" value="購入">';
                     }
-                    echo '<div class="kounyuu1-form"><button type="button" class="kounyuu-button1" onclick="location.href=\'search.php\'">戻る</button></div>';
-                    echo '</div><br><br>';
+                    echo '</div>';
                     $feature = explode(',', $info['car_detail']);
                     echo '<div class="car-detail">';
                     echo '<ul>';
