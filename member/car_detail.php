@@ -57,7 +57,7 @@
                         echo '<input type="hidden" name="car_id" value="' .$item . '">';
                         echo '<input type="submit" value="購入"><br>';
                     }
-                    echo '<button type="button" class="back-button" onclick="location.href=\'search.php\'">戻る</button>';
+                    echo '<div class="kounyuu1-form"><button type="button" class="kounyuu-button1" onclick="location.href=\'search.php\'">戻る</button></div>';
                     echo '</div><br><br>';
                     $feature = explode(',', $info['car_detail']);
                     echo '<div class="car-detail">';
