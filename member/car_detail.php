@@ -58,8 +58,10 @@
                         echo '<input type="submit" value="購入">';
                         
                     }
-                    // ☟テスト 
-                    echo '<input type="submit" value="購入">';
+                    echo '<form class="cardd-form" action="car_detail.php" method="get">';
+                    echo '<input type="hidden" name="item" value="' . htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') . '">';
+                    echo '<p><input class="card-button2" type="submit" value="戻る"></p>';
+                    echo '</form>';
                     echo '</div><br><br>';
                     $feature = explode(',', $info['car_detail']);
                     echo '<div class="car-detail">';
