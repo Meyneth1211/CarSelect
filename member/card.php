@@ -1,6 +1,6 @@
 <?php require('../header/header.php'); ?>
 
-<p?php
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $car_id = $_POST['car_id'] ?? null;
 }
