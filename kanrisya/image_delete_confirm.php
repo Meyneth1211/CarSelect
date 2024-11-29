@@ -42,7 +42,7 @@ $selected_images = $sql->fetchAll();
         <tr>
             <td><?= htmlspecialchars($image['image_id'], ENT_QUOTES, 'UTF-8') ?></td>
             <td>
-                <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="画像プレビュー" style="width: 100px; height: auto;">
+                <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="画像プレビュー" style="width: 400px; height: 150px; object-fit: cover;">
             </td>
             <td><?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?></td>
         </tr>
