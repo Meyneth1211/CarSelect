@@ -17,7 +17,7 @@ $sql->execute([$car_id]);
 $images = $sql->fetchAll();
 ?>
 
-<form action="image_update.php" method="POST">
+<form id="imageForm" action="image_update.php" method="POST">
     <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
 
     <h1 class="page-title">画像一覧</h1>
@@ -52,12 +52,21 @@ $images = $sql->fetchAll();
     </table>
 
     <div class="top-back-button">
-        <!-- 画像更新ボタン: car_idとselected_imagesをPOST送信 -->
-        <button type="submit" name="action" value="update" class="updateButton">選択した画像を更新する</button>
-        
-        <!-- 画像削除ボタン: car_idとselected_imagesをPOST送信 -->
-        <button type="submit" name="action" value="delete" class="deleteButton">選択した画像を削除する</button>
-        
+        <!-- 更新ボタン: JavaScriptでフォームのactionを設定 -->
+        <button type="button" class="updateButton" onclick="submitForm('image_update.php')">選択した画像を更新する</button>
+
+        <!-- 削除ボタン: JavaScriptでフォームのactionを設定 -->
+        <button type="button" class="deleteButton" onclick="submitForm('image_delete_confirm.php')">選択した画像を削除する</button>
+
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
 </form>
+
+<script>
+    // JavaScriptでフォームの送信先を動的に変更
+    function submitForm(actionUrl) {
+        const form = document.getElementById('imageForm');
+        form.action = actionUrl;
+        form.submit();
+    }
+</script>
