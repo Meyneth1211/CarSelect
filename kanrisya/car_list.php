@@ -55,7 +55,7 @@ foreach ($sql as $row) {
     echo '</form> ';
     
     // 削除ボタン
-    echo '<form class="delete-form" style="display: inline;" method="post" action="car_delete.php">';
+    echo '<form class="delete-form" style="display: inline;" method="post" action="car_delete_confirm.php">';
     echo '<button class="delete-button" type="submit" name="delete_id" value="' . htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') . '">削除</button>';
     echo '</form>';
     
