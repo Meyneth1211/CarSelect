@@ -51,7 +51,7 @@ $selected_images = $sql->fetchAll();
 </table>
 
 <!-- 削除確認ボタン -->
-<form action="image_delete.php" method="POST">
+<form action="image_delete_back.php" method="POST">
     <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
     <input type="hidden" name="selected_images" value="<?= htmlspecialchars(implode(',', $selected_image_ids), ENT_QUOTES, 'UTF-8') ?>">
 
