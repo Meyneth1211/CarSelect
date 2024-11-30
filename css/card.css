@@ -71,7 +71,7 @@
     color: #fff;
     border: 2px solid #333;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 25px;
     padding: 0 16px;
     border-radius: 1.25rem;
     transition: all 0.375s;
@@ -122,51 +122,66 @@
     }
     .card-card{
         margin: 0;
-        width: 600px;
-        height: 500px;
+        width: 700px;
+        height: 580px;
     }
 }
 
-/* ボタンを囲むコンテナ */
+
+
+
+
+
+/* ボタンをまとめる親要素 */
 .card-button-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 90px; /* ボタン間の間隔 */
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
-/* 送信ボタンのスタイル */
-.card-send-button {
-    background-color: #ff3333;
-    color: white;
-    font-size: 20px;
+/* 共通のボタンスタイル */
+.card-button-container button,
+.card-button-container input[type="submit"] {
+    display: inline-block;
+    padding: 10px 70px; /* ボタンサイズを大きく */
+    font-size: 20px; /* テキストサイズを大きく */
     font-weight: bold;
-    padding: 15px 80px;
+    color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: all 0.3s ease; /* アニメーション */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* 黒系の影を追加 */
 }
 
-.card-send-button:hover {
-    background-color: #e60000;
-    transform: scale(1.1);
+/* 購入ボタン */
+.card-button-container input[type="submit"] {
+    background: linear-gradient(135deg, #ff0000, #cc0000); /* 赤系のグラデーション */
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6); /* 赤系の影 */
 }
 
-/* 戻るボタンのスタイル */
+.card-button-container input[type="submit"]:hover {
+    transform: scale(1.1); /* 拡大 */
+    background: linear-gradient(135deg, #cc0000, #ff0000); /* 色反転 */
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.8); /* 強調された影 */
+}
+
+/* 戻るボタン */
 .card-back-button {
-    background-color: #333333;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 80px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    background: linear-gradient(135deg, #333333, #1a1a1a); /* 黒系のグラデーション */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* 黒系の影 */
 }
 
 .card-back-button:hover {
-    background-color: #555555;
-    transform: scale(1.1);
+    transform: scale(1.1); /* 拡大 */
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* 色反転 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* 強調された影 */
+}
+
+/* ボタンに角を丸く */
+.card-button-container button,
+.card-button-container input[type="submit"] {
+    border-radius: 20px;
 }
