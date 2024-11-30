@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+
 <div class="card">
     <div class="card-card">
         <form class="card-form" action="kounyuu.php" method="post">
@@ -19,14 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- car_id を 次のページに渡す -->
             <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
 
-            <div class="card-button1">
-                <p><input class="card-button1" type="submit" value="送信"></p>
+            <div class="button-container">
+                <input type="submit" class="send-button" value="送信">
+                <button type="button" class="back-button" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">戻る</button>
             </div>
         </form>
-        <form class="card-button2" action="car_detail.php" method="get">
-            <input type="button" class="kounyuu-button1" value="戻る" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">
-        </form>
-
     </div>
 </div>
 </body>
