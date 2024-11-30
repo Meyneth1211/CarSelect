@@ -7,7 +7,7 @@ $pdo = getDb();
     <?php
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['car-delete'])) {
             // 削除するcar_idを取得
-            $deleteId = $_POST['delete_id'];
+            $deleteId = $_POST['car-delete'];
 
             // 削除クエリを準備
             $deleteSql = $pdo->prepare('DELETE FROM car WHERE car_id = ?');
