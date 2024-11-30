@@ -9,7 +9,7 @@ $pdo = getDb();
 <?php
         // ユーザー一覧の表示
         $sql = $pdo->query('SELECT user_name, user_mail, user_address FROM user');
-        echo '<form method="post" action="user_delete.php">';
+        echo '<form method="post" action="user_delete_confirm.php">';
         echo '<table class="user-table">';
         echo '<tr><th>名前</th><th>メールアドレス</th><th>住所</th><th>操作</th></tr>';
         foreach ($sql as $row) {
