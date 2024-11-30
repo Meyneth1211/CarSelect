@@ -53,7 +53,7 @@ if ($car_id) {
     <input class="kounyuu-button2" type="submit" value="購入確定">
 </form>
 <form class="kounyuu1-form" action="car_detail.php" method="post">
-    <button type="button" class="kounyuu-button1" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">戻る</button>
+    <input type="button" class="kounyuu-button1" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">戻る</input>
 </form>
 </div>
 </div>
