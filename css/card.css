@@ -52,33 +52,12 @@
     width: 65%;
     height: 40px;
 }
-.card-form input{
-    border: 2px solid #333;
-    font-family: inherit;
-    font-size: 15px;
-    padding: 0 16px;
-    border-radius: 1.25rem;
-    transition: all 0.375s;
-}
+
 .card-form input:hover{
     border: 2px solid #0ef;
     box-shadow: 0 0 10px #0ef, inset 0 0 10px #0ef;
 }
-.card-form button{
-    cursor: pointer;
-    width: 100%;
-    padding: 0 16px;
-    border-radius: 1.25rem;
-    background: #216ce7;
-    color: #f9f9f9;
-    border: 0;
-    font-family: inherit;
-    font-size: lrem;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 2px;
-    transition: all 0.375s;
-}
+
 
 .mclass{
     margin-top: 20px;
@@ -90,6 +69,12 @@
 .card-no, .card-name, .card-cord, .card-kigen, .card-kigen2{
     background-color: #18191F;
     color: #fff;
+    border: 2px solid #333;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.375s;
 }
 
 .card-no{
@@ -140,4 +125,48 @@
         width: 600px;
         height: 500px;
     }
+}
+
+/* ボタンを囲むコンテナ */
+.card-button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* 送信ボタンのスタイル */
+.card-send-button {
+    background-color: #ff3333;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card-send-button:hover {
+    background-color: #e60000;
+    transform: scale(1.1);
+}
+
+/* 戻るボタンのスタイル */
+.card-back-button {
+    background-color: #333333;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card-back-button:hover {
+    background-color: #555555;
+    transform: scale(1.1);
 }

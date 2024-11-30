@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
 
             <div class="card-button-container">
-                <input type="submit" class="card-send-button" value="送信">
                 <button type="button" class="card-back-button" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">戻る</button>
+                <input type="submit" class="card-send-button" value="送信">
             </div>
         </form>
     </div>
