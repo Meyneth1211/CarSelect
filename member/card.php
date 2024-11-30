@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p><input class="card-button1" type="submit" value="送信"></p>
             </div>
         </form>
-        <form class="cardd-form" action="car_detail.php" method="get">
-            <input type="button" class="kounuuu-button1" value="戻る" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">
+        <form class="kounyuu1-form" action="car_detail.php" method="get">
+            <input type="button" class="kounyuu-button1" value="戻る" onclick="location.href='car_detail.php?item=<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>'">
         </form>
 
     </div>
