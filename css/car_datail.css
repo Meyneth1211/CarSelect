@@ -34,6 +34,59 @@
 }
 
 
+/* ボタンをまとめる親要素 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 90px; /* ボタン間の間隔 */
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* 共通のボタンスタイル */
+.button-container button,
+.button-container input[type="submit"] {
+    display: inline-block;
+    padding: 20px 130px; /* ボタンサイズを大きく */
+    font-size: 20px; /* テキストサイズを大きく */
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* アニメーション */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* 黒系の影を追加 */
+}
+
+/* 購入ボタン */
+.button-container input[type="submit"] {
+    background: linear-gradient(135deg, #ff0000, #cc0000); /* 赤系のグラデーション */
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.6); /* 赤系の影 */
+}
+
+.button-container input[type="submit"]:hover {
+    transform: scale(1.1); /* 拡大 */
+    background: linear-gradient(135deg, #cc0000, #ff0000); /* 色反転 */
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.8); /* 強調された影 */
+}
+
+/* 戻るボタン */
+.back-button {
+    background: linear-gradient(135deg, #333333, #1a1a1a); /* 黒系のグラデーション */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* 黒系の影 */
+}
+
+.back-button:hover {
+    transform: scale(1.1); /* 拡大 */
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* 色反転 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* 強調された影 */
+}
+
+/* ボタンに角を丸く */
+.button-container button,
+.button-container input[type="submit"] {
+    border-radius: 20px;
+}
 
 
 
