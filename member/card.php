@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </form>
         <form class="cardd-form" action="car_detail.php" method="get">
-            <button type="button" class="back-button" onclick="location.href=\'search.php\'">戻る</button>
+            <button type="button" class="back-button" onclick="location.href=car_detail.php">戻る</button>
         </form>
 
     </div>
