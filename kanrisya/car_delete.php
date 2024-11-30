@@ -5,7 +5,7 @@ $pdo = getDb();
 ?>
     <div class="container">
     <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['car-delete'])) {
             // 削除するcar_idを取得
             $deleteId = $_POST['delete_id'];
 
