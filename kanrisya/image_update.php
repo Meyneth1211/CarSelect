@@ -57,7 +57,7 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
     </table>
 
     <div class="top-back-button">
-        <button type="submit" class="updateButton">画像を更新する</button>
+        <button type="submit" class="save-button">画像を更新する</button>
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
 </form>
