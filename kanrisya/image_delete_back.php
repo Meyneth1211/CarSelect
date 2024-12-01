@@ -40,6 +40,7 @@ foreach ($selected_image_ids as $image_id) {
         $delete_sql = $pdo->prepare('DELETE FROM image WHERE image_id = ?');
         $delete_imageresult = $delete_sql->execute([$image_id]);
     }
+}
     if($delete_imageresult){
         echo '<div class="container">';
         echo '<div class="message success">選択された画像が削除されました</div>';
@@ -47,5 +48,4 @@ foreach ($selected_image_ids as $image_id) {
         echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
         echo '</div>';
     }
-}
 ?>
