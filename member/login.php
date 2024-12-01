@@ -30,7 +30,6 @@
                 $_SESSION['id'] = $result['user_id'];
                 $_SESSION['name'] = $result['user_name'];
                 var_dump($result);
-                //header('Location: ./top.php');
             }else {
                 echo '<div class="error-back"><div class="error-card2">';
                 echo '<div class="error-message">メールアドレスかパスワードが間違っています</div>';
