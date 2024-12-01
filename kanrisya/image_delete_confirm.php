@@ -34,7 +34,6 @@ $selected_images = $sql->fetchAll();
         <tr>
             <th>画像ID</th>
             <th>プレビュー</th>
-            <th>画像パス</th>
         </tr>
     </thead>
     <tbody>
@@ -44,7 +43,6 @@ $selected_images = $sql->fetchAll();
             <td>
                 <img src="<?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?>" alt="画像プレビュー" style="width: 400px; height: auto; object-fit: cover;">
             </td>
-            <td><?= htmlspecialchars($image['image'], ENT_QUOTES, 'UTF-8') ?></td>
         </tr>
         <?php endforeach; ?>
     </tbody>
