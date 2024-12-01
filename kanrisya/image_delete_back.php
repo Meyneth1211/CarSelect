@@ -44,7 +44,7 @@ foreach ($selected_image_ids as $image_id) {
     if($delete_imageresult){
         echo '<div class="container">';
         echo '<div class="message success">選択された画像が削除されました</div>';
-        echo '<button type="button" class="save-button" onclick="history.back();">一覧画面へ戻る</button>';
+        echo '<button type="button" class="save-button" onclick="location.href=\'car_list.php\'">一覧画面へ戻る</button>';
         echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
         echo '</div>';
     }
