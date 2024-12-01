@@ -52,9 +52,9 @@ $images = $sql->fetchAll();
     </table>
 
     <div class="top-back-button">
-        <button type="button" class="updateButton" onclick="submitForm('image_update.php')">選択した画像を更新する</button>
+        <button type="button" class="save-button" onclick="submitForm('image_update.php')">選択した画像を更新する</button>
 
-        <button type="button" class="deleteButton" onclick="submitForm('image_delete_confirm.php')">選択した画像を削除する</button>
+        <button type="button" class="delete-confirm-button" onclick="submitForm('image_delete_confirm.php')">選択した画像を削除する</button>
 
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
