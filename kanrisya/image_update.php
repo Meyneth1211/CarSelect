@@ -11,6 +11,7 @@ if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
     die('車両IDが指定されていません。');
 }
 
+// 選択された画像情報を取得する（例としてサブ画像のIDを取得）
 if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
     $selected_image_ids = $_POST['selected_images'];
 } else {
@@ -25,10 +26,16 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
 
 <form action="image_update_back.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="car_id" value="<?= htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8') ?>">
+
+    <!-- 選択されたサブ画像IDをhiddenフィールドで送信 -->
+    <?php foreach ($selected_image_ids as $image_id): ?>
+        <input type="hidden" name="selected_sub_image_ids[]" value="<?= htmlspecialchars($image_id, ENT_QUOTES, 'UTF-8') ?>">
+    <?php endforeach; ?>
     
     <h2>新しい画像をアップロード</h2>
     
     <table class="image-table">
+        <!-- メイン画像 -->
         <tr>
             <td class="label-cell">メイン画像</td>
             <td>
@@ -42,6 +49,7 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
             </td>
         </tr>
 
+        <!-- サブ画像 -->
         <tr>
             <td class="label-cell">サブ画像</td>
             <td>
@@ -61,4 +69,5 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
         <button type="button" class="back-button" onclick="location.href='car_list.php'">商品一覧へ戻る</button>
     </div>
 </form>
+
 <script src="../kanrisya_js/kanrisya_insert.js"></script>
