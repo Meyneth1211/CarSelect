@@ -22,10 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
     <div class="container">
         <div class="message error">この商品を削除しますか？</div>
         <input type="hidden" name="delete_id" value="<?= htmlspecialchars($carId, ENT_QUOTES, 'UTF-8') ?>">
-    <div class="button-group">
         <input type="submit" class="delete-confirm-button" name="car-delete" value="削除する">
         <button type="button" class="back-button" onclick="history.back();">戻る</button>
-    </div>
     </div>
 </form>
 </body>
