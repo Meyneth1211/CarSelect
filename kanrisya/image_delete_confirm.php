@@ -25,7 +25,7 @@ $selected_images = $sql->fetchAll();
 
 ?>
 
-<h1>画像削除確認</h1>
+<div class="container">
 <p>選択された画像を削除しますか？</p>
 
 <!-- 選択された画像を表形式で表示 -->
@@ -56,7 +56,8 @@ $selected_images = $sql->fetchAll();
     <input type="hidden" name="selected_images" value="<?= htmlspecialchars(implode(',', $selected_image_ids), ENT_QUOTES, 'UTF-8') ?>">
 
     <div style="margin-top: 20px;">
-        <button type="submit" name="action" value="delete">削除する</button>
-        <button type="button" onclick="history.back();">キャンセル</button>
+        <button type="submit" class="delete-confirm-button" name="action" value="delete">削除する</button>
+        <button type="button" class="back-button" onclick="history.back();">キャンセル</button>
     </div>
+</form>
 </form>
