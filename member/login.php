@@ -26,7 +26,7 @@
             $stmt=$pdo->prepare($sql);
             $stmt->execute([$_POST['mail'], $_POST['pass']]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            if($result){
+            if(!empty($result)){
                 $_SESSION['id'] = $result['user_id'];
                 $_SESSION['name'] = $result['user_name'];
                 header('Location: ./top.php');
