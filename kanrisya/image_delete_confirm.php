@@ -26,8 +26,7 @@ $selected_images = $sql->fetchAll();
 ?>
 
 <div class="container">
-<p>選択された画像を削除しますか？</p>
-
+<div class="message error">このユーザーを削除しますか？</div>
 <!-- 選択された画像を表形式で表示 -->
 <table border="1" cellspacing="0" cellpadding="5">
     <thead>
