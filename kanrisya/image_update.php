@@ -19,6 +19,7 @@ if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
     echo '<button type="button" class="save-button" onclick="history.back();">画像を選択する</button>';
     echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
     echo '</div>';
+    exit;
 }
 ?>
 
