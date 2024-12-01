@@ -55,8 +55,6 @@
             echo '<div class="user-info">';
                 echo '<p>こんにちは、ゲストさん</p>';
             echo '</div>';
-            session_unset();
-            session_destroy();
         }
     ?>
 
