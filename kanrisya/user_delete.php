@@ -33,10 +33,8 @@ $pdo = getDb();
     }
     ?>
 
-    <div class="button-group">
         <button class="save-button" onclick="location.href='user_list.php'">一覧画面へ戻る</button>
-        <button class="nav-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
-    </div>
+        <button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
 </div>
 </body>
 </html>
