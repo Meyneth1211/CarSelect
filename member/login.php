@@ -5,7 +5,7 @@
             <div class="login">
                 <div class="login-card">
                     <h2>ログイン</h2>
-                    <form class="login-form" action="top.php" method="post">
+                    <form class="login-form" action="login.php" method="post">
                         <input class="mail" name="mail" type="text" placeholder="Email">
                         <input class="pass" name="pass" type="password" placeholder="Password">
                         <div class="top"></div>
@@ -30,7 +30,6 @@
                 $_SESSION['id'] = $result['user_id'];
                 $_SESSION['name'] = $result['user_name'];
                 var_dump($result);
-                //header('Location: ./top.php');
             }else {
                 echo '<div class="error-back"><div class="error-card2">';
                 echo '<div class="error-message">メールアドレスかパスワードが間違っています</div>';
