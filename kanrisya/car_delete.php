@@ -29,10 +29,8 @@ $pdo = getDb();
         echo '<p style="color: red;">不正なアクセスです。</p>';
     }
     ?>
-        <div class="button-group">
             <button class="save-button" onclick="location.href='car_list.php'">一覧画面へ戻る</button>
-            <button class="nav-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
-        </div>
+            <button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
     </div>
 </body>
 </html>
