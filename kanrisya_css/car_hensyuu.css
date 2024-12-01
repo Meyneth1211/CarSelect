@@ -58,7 +58,7 @@
     transition: background-color 0.3s ease;
 }
 
-.delete-button {
+.delete-confirm-button {
     background-color: #ff0000;
     color: white;
     border: none;
