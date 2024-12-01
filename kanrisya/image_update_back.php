@@ -44,7 +44,7 @@ if (isset($_FILES['other_images']) && count($_FILES['other_images']['tmp_name'])
         }
     }
 
-    if($main_image_path & $subresult){
+    if($mainresult & $subresult){
         echo '<div class="container">';
         echo '<div class="message success">選択された画像が更新されました</div>';
         echo '<button type="button" class="save-button" onclick="location.href=\'car_list.php\'">一覧画面へ戻る</button>';
