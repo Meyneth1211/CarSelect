@@ -11,7 +11,7 @@
                 <div class="top"></div>
                 <input class="button-1" type="submit" value="登録">
             </form>
-            <form class="create-form" action="login.php" method="post">
+            <form class="create-form" action="login.php" method="get">
                     <input class="button-2" type="submit" value="ログイン画面へ戻る">
             </form>
         </div>
