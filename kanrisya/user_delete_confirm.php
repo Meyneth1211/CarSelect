@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user_mail'])) 
 
 <h1>ユーザー削除確認</h1>
 <div class="container">
-<div class="message error">この商品を削除しますか？</div>
+<div class="message error">このユーザーを削除しますか？</div>
 <p>メールアドレス: <?= htmlspecialchars($userMail, ENT_QUOTES, 'UTF-8') ?></p>
 <form action="user_delete.php" method="post">
     <input type="hidden" name="delete_user_mail" value="<?= htmlspecialchars($userMail, ENT_QUOTES, 'UTF-8') ?>">
