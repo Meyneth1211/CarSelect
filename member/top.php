@@ -1,4 +1,5 @@
 <?php
+/*
     session_start();
     require('../header/header.php');
     require_once '../DBconnect.php';
@@ -24,8 +25,10 @@
         }
     }
     $pdo = null;
+*/
 ?>
 <?php
+/*
     //メールアドレスとパスワードが入力されているか確認
     $error = [];
     if(empty($_SESSION['name'])){
@@ -42,6 +45,7 @@
         echo '<form class="login-form" action="login.php" method="post"><input class="button-1" type="submit" value="戻る"></form></div></div>';
         exit;
     }
+*/
 ?>
   <ul class="slider">
     <li class="slider-item slider-item01"></li>

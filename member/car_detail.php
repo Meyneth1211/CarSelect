@@ -1,3 +1,4 @@
+<?php require('../header/header.php'); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -12,9 +13,6 @@
 </head>
 
 <body>
-    <!-- ヘッダ呼び出し -->
-    <?php require('../header/header.php'); ?>
-
     <div class="car_detail_tail">
         <div class="car_detail_card">
             <div class="car-image">

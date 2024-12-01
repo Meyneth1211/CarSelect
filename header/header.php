@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -44,6 +45,20 @@
     <div class="back">
         <h2><a class="logo_link" href="top.php">Car Select</a></h2>
     </div>
+
+    <?php
+        if (!empty($_SESSION['name'])) {
+            echo '<div class="user-info">';
+                echo '<p>こんにちは、'. $_SESSION['name'] .'さん</p>';
+            echo '</div>';
+        }else {
+            echo '<div class="user-info">';
+                echo '<p>こんにちは、ゲストさん</p>';
+            echo '</div>';
+            session_unset();
+            session_destroy();
+        }
+    ?>
 
     <script>
         // ハンバーガーメニューの動作
