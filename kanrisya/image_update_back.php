@@ -28,26 +28,32 @@ if (isset($_FILES['main_image']) && $_FILES['main_image']['error'] == 0) {
     }
 }
 
-// サブ画像のアップロード処理
+//サブ画像のアップロード処理
 if (isset($_FILES['other_images']) && !empty($_FILES['other_images']['tmp_name'][0])) {
     $other_images = $_FILES['other_images']['tmp_name'];
     $other_images_names = $_FILES['other_images']['name'];
 
-    // 古いサブ画像を削除
-    $sql_delete_existing = $pdo->prepare('DELETE FROM image WHERE car_id = ? AND is_primary = 0');
-    $sql_delete_existing->execute([$car_id]);
+    // 送信された選択済みのサブ画像IDを取得（フォームから渡す必要あり）
+    if (isset($_POST['selected_sub_image_ids']) && !empty($_POST['selected_sub_image_ids'])) {
+        $selected_sub_image_ids = $_POST['selected_sub_image_ids'];
 
+        // 選択されたサブ画像だけを削除
+        $placeholders = implode(',', array_fill(0, count($selected_sub_image_ids), '?'));
+        $sql_delete_existing = $pdo->prepare("DELETE FROM image WHERE car_id = ? AND image_id IN ($placeholders)");
+        $sql_delete_existing->execute(array_merge([$car_id], $selected_sub_image_ids));
+    }
+
+    // 新しいサブ画像をアップロードして追加
     foreach ($other_images as $key => $tmp_name) {
         $image_path = '../img/detail/' . basename($other_images_names[$key]);
 
         if (move_uploaded_file($tmp_name, $image_path)) {
-            // 新しいサブ画像を追加
             $sql_insert = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?, ?, 0)');
             $subresult = $sql_insert->execute([$car_id, $image_path]);
         } else {
             echo '<div class="message error">サブ画像のアップロードに失敗しました: ' . htmlspecialchars($other_images_names[$key]) . '</div>';
             $subresult = false;
-            break; // 中断
+            break; // 処理中断
         }
     }
 }
