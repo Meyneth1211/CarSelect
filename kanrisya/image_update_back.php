@@ -20,7 +20,7 @@ if (isset($_FILES['main_image']) && $_FILES['main_image']['error'] == 0) {
     if (move_uploaded_file($main_image, $main_image_path)) {
         // メイン画像の更新
         $sql = $pdo->prepare('UPDATE image SET image = ? WHERE car_id = ? AND is_primary = 1');
-        $sql->execute([$main_image_path, $car_id]);
+        $mainresult = $sql->execute([$main_image_path, $car_id]);
     }
 }
 
@@ -40,8 +40,16 @@ if (isset($_FILES['other_images']) && count($_FILES['other_images']['tmp_name'])
         if (move_uploaded_file($tmp_name, $image_path)) {
             // 新しいサブ画像を追加
             $sql_insert = $pdo->prepare('INSERT INTO image (car_id, image, is_primary) VALUES (?, ?, 0)');
-            $sql_insert->execute([$car_id, $image_path]);
+            $subresult = $sql_insert->execute([$car_id, $image_path]);
         }
+    }
+
+    if($main_image_path & $subresult){
+        echo '<div class="container">';
+        echo '<div class="message success">選択された画像が更新されました</div>';
+        echo '<button type="button" class="save-button" onclick="location.href=\'car_list.php\'">一覧画面へ戻る</button>';
+        echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
+        echo '</div>';
     }
 }
 ?>
