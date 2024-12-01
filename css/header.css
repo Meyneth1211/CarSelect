@@ -100,9 +100,8 @@ nav:not(.hidden) {
     transform: translateX(0); /* メニューを表示 */
 }
 
-/* ユーザー情報表示用テスト
+/* ユーザー情報表示用テスト */
 .user-info{
     color: white;
     right: 60px;
 }
-/*
