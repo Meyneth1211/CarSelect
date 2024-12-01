@@ -1,4 +1,5 @@
 <?php
+require('../header/header.php');
 /*
     session_start();
     require('../header/header.php');
