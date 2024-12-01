@@ -14,7 +14,11 @@ if (isset($_POST['car_id']) && is_numeric($_POST['car_id'])) {
 if (isset($_POST['selected_images']) && !empty($_POST['selected_images'])) {
     $selected_image_ids = $_POST['selected_images'];
 } else {
-    die('更新する画像が選択されていません。');
+    echo '<div class="container">';
+    echo '<div class="message error">更新する画像が選択されていません</div>';
+    echo '<button type="button" class="save-button" onclick="history.back();">画像を選択する</button>';
+    echo '<button class="back-button" onclick="location.href=\'kanrisya_top.php\'">トップページへ戻る</button>';
+    echo '</div>';
 }
 ?>
 
