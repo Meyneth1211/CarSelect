@@ -28,7 +28,7 @@ if (isset($_SESSION['user_id'])) {
 } else {
     echo '<div class="account-error-back"><div class="account-error-card">';
     echo '<div class="account-message3">ログインしてください</div>';
-    echo '<form class="login-form" action="login.php" method="post"><input class="button-2" type="submit" value="ログインする"></form></div></div>';
+    echo '<form class="login-form" action="login.php" method="get"><input class="button-2" type="submit" value="ログインする"></form></div></div>';
 }
 ?>
 
