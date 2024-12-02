@@ -56,27 +56,18 @@
 
 
         <div class="account_logo_button">
-
             <a class="account_icon" href="#">
                 <img class="account_icon_img" src="../img/Benz.png" alt="">
             </a>
-            <ul>
-                <li>ログイン中</li>
-            </ul>
-
-            <?php
-            if (!empty($_SESSION['name'])) {
-                echo '<div class="user-info">';
-                echo '';
-                echo '<p>こんにちは、' . $_SESSION['name'] . 'さん</p>';
-                echo '</div>';
-            } else {
-                echo '<div class="user-info">';
-                echo '<p>こんにちは、ゲストさん</p>';
-                echo '</div>';
-            }
-            ?>
+            <div class="dropdown">
+                <?php if (!empty($_SESSION['name'])): ?>
+                    <p>こんにちは、<?php echo $_SESSION['name']; ?>さん</p>
+                <?php else: ?>
+                    <p>こんにちは、ゲストさん</p>
+                <?php endif; ?>
+            </div>
         </div>
+
 
 
     </div>
