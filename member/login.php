@@ -19,7 +19,6 @@
         FORM;
     }elseif ($_SERVER['REQUEST_METHOD']==='POST') {
         if(!empty($_POST['mail']) && !empty($_POST['pass'])) {
-            session_start();
             require_once '../DBconnect.php';
             $pdo = getDb();
             $sql='SELECT user_id, user_name FROM user WHERE user_mail = ? AND user_password = ?';
@@ -27,6 +26,7 @@
             $stmt->execute([$_POST['mail'], $_POST['pass']]);
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             if(!empty($result)){
+                session_start();
                 $_SESSION['id'] = $result['user_id'];
                 $_SESSION['name'] = $result['user_name'];
                 header('Location: top.php');
