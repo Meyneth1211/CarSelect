@@ -4,11 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /*全画面背景*/
 body {
     text-align: center;
     background: #18191f;
-   
+
 }
 
 
@@ -21,24 +22,24 @@ body {
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
 }
 
-.header_back{
-        background-color: #000000;
-	    padding: 35px;
+.header_back {
+    background-color: #000000;
+    padding: 35px;
 }
 
-.logo_link{
+.logo_link {
     text-decoration: none;
     color: #fff;
     /*text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 200px #0072ff;*/
 }
 
-.account_icon_img{
-	width: 50px;
-	height: auto;
+.account_icon_img {
+    width: 50px;
+    height: auto;
 }
 
 .account_icon {
-     position: absolute;
+    position: absolute;
     top: 45px;
     right: 60px;
     cursor: pointer;
@@ -46,7 +47,8 @@ body {
 }
 
 .dropdown {
-    visibility: hidden; /* 非表示にするがレイアウトは維持 */
+    visibility: hidden;
+    /* 非表示にするがレイアウトは維持 */
     position: absolute;
     top: 60px;
     right: 0;
@@ -60,17 +62,42 @@ body {
     width: 200px;
     opacity: 0;
     transform: translateY(-20px);
-    transition: all 0.7s ease-in-out; /* 1.5秒でアニメーション */
+    transition: all 0.7s ease-in-out;
+    /* 1.5秒でアニメーション */
 }
 
 .account_icon:hover .dropdown {
-    visibility: visible; /* 表示状態にする */
-    opacity: 1; /* 徐々に表示 */
-    transform: translateY(0); /* 滑らかに下りてくる */
+    visibility: visible;
+    /* 表示状態にする */
+    opacity: 1;
+    /* 徐々に表示 */
+    transform: translateY(0);
+    /* 滑らかに下りてくる */
 }
 
-.url_login{
+.url_login {
     text-decoration: none;
+    padding-bottom: 3px;
+    /* テキストと下線の間隔 */
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    /* 下線の初期位置 */
+    background-size: 0 1px;
+    /* 下線のサイズ（横幅、高さ） */
+    transition: background-size 0.3s;
+    color: #FFF;
+    transition: letter-spacing 0.5s;
+
+}
+
+.url_login:hover {
+    background-position: bottom left;
+    /* 下線のホバー時位置 */
+    background-size: 100% 1px;
+    /* 下線の横幅を100%にする */
+    letter-spacing: 0.2em;
+    /* 字間の設定 */
 }
 
 
@@ -88,7 +115,8 @@ body {
     top: 45px;
     left: 60px;
     cursor: pointer;
-    z-index: 9999; /* メニューが他の要素より上に表示されるように */
+    z-index: 9999;
+    /* メニューが他の要素より上に表示されるように */
 }
 
 
@@ -115,8 +143,10 @@ nav {
     justify-content: flex-start;
     z-index: 9998;
     align-items: center;
-    transform: translateX(-100%); /* デフォルトでメニューを非表示にする */
-    transition: transform 0.5s ease-in-out; /* スライドイン・アウトのアニメーション */
+    transform: translateX(-100%);
+    /* デフォルトでメニューを非表示にする */
+    transition: transform 0.5s ease-in-out;
+    /* スライドイン・アウトのアニメーション */
     background-color: rgba(33, 4, 4, 0.562);
 }
 
@@ -134,30 +164,32 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     display: inline-block;
-	transition: all .3s ease 0s;
-	text-decoration: none;
+    transition: all .3s ease 0s;
+    text-decoration: none;
 }
 
 /*↓これ追加*/
-.nenu-link:hover{
+.nenu-link:hover {
     cursor: pointer;
     transform: scale(1.2);
 }
 
-.nenu-link{
-	display: inline-block;
-	transition: all .3s ease 0s;
-	text-decoration: none;
+.nenu-link {
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
 }
+
 /*☝追加*/
 
 /* メニューが表示される時*/
 nav:not(.hidden) {
-    transform: translateX(0); /* メニューを表示 */
+    transform: translateX(0);
+    /* メニューを表示 */
 }
 
 /* ユーザー情報表示用テスト */
-.user-info{
+.user-info {
     color: white;
     right: 60px;
 }
