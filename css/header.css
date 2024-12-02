@@ -15,14 +15,13 @@ body {
 .back {
     font-size: 50px;
     font-family: "Brawler";
-    background-color: #000000;
     color: #fff;
-    padding: 35px;
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
 }
 
 .header_back{
-    
+        background-color: #000000;
+	    padding: 35px;
 }
 
 .logo_link{
