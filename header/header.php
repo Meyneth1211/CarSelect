@@ -54,12 +54,12 @@
             </div>
         </div>
 
-        
+
         <div class="account_logo_button">
 
-            <form action="">
-                <input type="image" src="../img/Benz.png">
-            </form>
+            <a class="account_icon" href="#">
+                <img class="account_icon_img" src="../img/Benz.png" alt="">
+            </a>
             <ul>
                 <li>ログイン中</li>
             </ul>
