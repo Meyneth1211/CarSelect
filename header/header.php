@@ -57,7 +57,7 @@
 
         <div class="account_logo_button">
             <a class="account_icon" href="#">
-                <img class="account_icon_img" src="../img/Benz.png" alt="">
+                <img class="account_icon_img" src="../img/Benz.png" alt="Account Icon">
             </a>
             <div class="dropdown">
                 <?php if (!empty($_SESSION['name'])): ?>
@@ -67,6 +67,7 @@
                 <?php endif; ?>
             </div>
         </div>
+
 
 
 
