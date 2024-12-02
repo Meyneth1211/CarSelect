@@ -45,9 +45,7 @@
 
     <div class="back">
         <div class="logo_logo"><a class="logo_link" href="top.php">Car Select</a></div>
-    </div>
-
-    <?php
+        <?php
         if (!empty($_SESSION['name'])) {
             echo '<div class="user-info">';
                 echo '<p>こんにちは、'. $_SESSION['name'] .'さん</p>';
@@ -58,6 +56,9 @@
             echo '</div>';
         }
     ?>
+    </div>
+
+
 
     <script>
         // ハンバーガーメニューの動作
