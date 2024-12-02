@@ -43,7 +43,7 @@
     </nav>
 
     <div class="back">
-        <h2><a class="logo_link" href="top.php">Car Select</a></h2>
+        <div class="logo_logo"><a class="logo_link" href="top.php">Car Select</a></div>
     </div>
 
     <?php
