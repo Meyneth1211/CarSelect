@@ -31,12 +31,14 @@
                 $_SESSION['name'] = $result['user_name'];
                 header('Location: top.php');
             }else {
+                require('../header/header.php');
                 echo '<div class="error-back"><div class="error-card2">';
                 echo '<div class="error-message">メールアドレスかパスワードが間違っています</div>';
                 echo '<form class="login-form" action="login.php" method="get"><input class="button-1" type="submit" value="戻る"></form></div></div>';
             }
             $pdo=null;
         }else {
+            require('../header/header.php');
             $error = [];
             echo '<div class="error-back"><div class="error-card">';
             if(empty($_POST['mail'])){
