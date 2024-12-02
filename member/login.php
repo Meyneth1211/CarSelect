@@ -18,7 +18,7 @@
             </div>
         FORM;
     }elseif ($_SERVER['REQUEST_METHOD']==='POST') {
-        if (!empty($_POST['mail']) && !empty($_POST['pass'])) {
+        if(!empty($_POST['mail']) && !empty($_POST['pass'])) {
             session_start();
             require_once '../DBconnect.php';
             $pdo = getDb();
@@ -36,6 +36,19 @@
                 echo '<form class="login-form" action="login.php" method="get"><input class="button-1" type="submit" value="戻る"></form></div></div>';
             }
             $pdo=null;
+        }else {
+            $error = [];
+            echo '<div class="error-back"><div class="error-card">';
+            if(empty($_POST['mail'])){
+                $error[] = '<div class="error-message">メールアドレスを入力してください</div>';
+            }
+            if(empty($_POST['pass'])){
+                $error[] = '<div class="error-message">パスワードを入力してください</div>';
+            }
+            foreach($error as $e){
+                echo $e.'<br>';
+            }
+            echo '<form class="login-form" action="login.php" method="get"><input class="button-1" type="submit" value="戻る"></form></div></div>';
         }
     }
 ?>
