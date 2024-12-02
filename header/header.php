@@ -64,7 +64,7 @@
                     <?php if (!empty($_SESSION['name'])): ?>
                         <p><?php echo $_SESSION['name']; ?>様<br>ログイン中</p>
                     <?php else: ?>
-                        <p>ゲスト<br><a href="login.php">ログインする</a></p>
+                        <p>ゲスト<br><a class="url_login" href="login.php">ログインする</a></p>
                     <?php endif; ?>
                 </div>
             </div>
