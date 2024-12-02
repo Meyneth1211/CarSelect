@@ -46,15 +46,28 @@
     </nav>
 
     <div class="header_back">
+
+
         <div class="back">
             <div class="logo_logo">
                 <a class="logo_link" href="top.php">Car Select</a>
             </div>
         </div>
+
+        
         <div class="account_logo_button">
+
+            <form action="">
+                <input type="image" src="../img/Benz.png">
+            </form>
+            <ul>
+                <li>ログイン中</li>
+            </ul>
+
             <?php
             if (!empty($_SESSION['name'])) {
                 echo '<div class="user-info">';
+                echo '';
                 echo '<p>こんにちは、' . $_SESSION['name'] . 'さん</p>';
                 echo '</div>';
             } else {
@@ -64,6 +77,8 @@
             }
             ?>
         </div>
+
+
     </div>
 
 
