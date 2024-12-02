@@ -58,7 +58,7 @@
         <div class="account_logo_button">
             <div class="account_icon">
                 <a href="account.php">
-                    <img class="account_icon_img" src="../img/Benz.png" alt="Account Icon">
+                    <img class="account_icon_img" src="../img/画像__5_negate.png" alt="Account Icon">
                 </a>
                 <div class="dropdown">
                     <?php if (!empty($_SESSION['name'])): ?>
