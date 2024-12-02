@@ -36,7 +36,7 @@ if(isset($_POST['name']) AND isset($_POST['mail']) AND isset($_POST['pass'])){
     //ユーザーが登録されているか確認
     $sql3 = $pdo->prepare('SELECT * FROM user WHERE user_mail = ? AND user_password = ? AND user_name = ?');
     $sql3->execute([$_POST['mail'], $_POST['pass'], $_POST['name']]);
-    echo '<form class="login-form" action="login.php" method="post">';
+    echo '<form class="login-form" action="login.php" method="get">';
     if($sql3->rowCount() > 0){
         echo '<div class="error-message">既に登録されています</div>';
         echo '<input class="button-1" type="submit" value="ログイン画面へ戻る">';
