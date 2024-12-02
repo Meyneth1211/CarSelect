@@ -96,7 +96,7 @@ body {
     /* 下線のホバー時位置 */
     background-size: 100% 1px;
     /* 下線の横幅を100%にする */
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     /* 字間の設定 */
 }
 
