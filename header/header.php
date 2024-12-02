@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="../css/car_datail.css">
     <link href='https://fonts.googleapis.com/css?family=Brawler' rel='stylesheet'>
 </head>
+
 <body>
     <!-- ハンバーガーメニュー -->
     <div class="menu-toggle" id="menuToggle">
@@ -43,20 +45,27 @@
         </ul>
     </nav>
 
-    <div class="back">
-        <div class="logo_logo"><a class="logo_link" href="top.php">Car Select</a></div>
-        <?php
-        if (!empty($_SESSION['name'])) {
-            echo '<div class="user-info">';
-                echo '<p>こんにちは、'. $_SESSION['name'] .'さん</p>';
-            echo '</div>';
-        }else {
-            echo '<div class="user-info">';
+    <div class="header_back">
+        <div class="back">
+            <div class="logo_logo">
+                <a class="logo_link" href="top.php">Car Select</a>
+            </div>
+        </div>
+        <div class="account_logo_button">
+            <?php
+            if (!empty($_SESSION['name'])) {
+                echo '<div class="user-info">';
+                echo '<p>こんにちは、' . $_SESSION['name'] . 'さん</p>';
+                echo '</div>';
+            } else {
+                echo '<div class="user-info">';
                 echo '<p>こんにちは、ゲストさん</p>';
-            echo '</div>';
-        }
-    ?>
+                echo '</div>';
+            }
+            ?>
+        </div>
     </div>
+
 
 
 
@@ -64,7 +73,7 @@
         // ハンバーガーメニューの動作
         const menuToggle = document.getElementById('menuToggle');
         const menu = document.getElementById('menu');
-        
+
         menuToggle.addEventListener('click', () => {
             menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
         });
