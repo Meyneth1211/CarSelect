@@ -57,12 +57,14 @@
 
         <div class="account_logo_button">
             <div class="account_icon">
-                <img class="account_icon_img" src="../img/Benz.png" alt="Account Icon">
+                <a href="account.php">
+                    <img class="account_icon_img" src="../img/Benz.png" alt="Account Icon">
+                </a>
                 <div class="dropdown">
                     <?php if (!empty($_SESSION['name'])): ?>
                         <p><?php echo $_SESSION['name']; ?>様<br>ログイン中</p>
                     <?php else: ?>
-                        <p>ゲスト<br><a href="#">ログインする</a></p>
+                        <p>ゲスト<br><a href="login.php">ログインする</a></p>
                     <?php endif; ?>
                 </div>
             </div>
