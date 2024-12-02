@@ -60,9 +60,9 @@
                 <img class="account_icon_img" src="../img/Benz.png" alt="Account Icon">
                 <div class="dropdown">
                     <?php if (!empty($_SESSION['name'])): ?>
-                        <p>こんにちは、<?php echo $_SESSION['name']; ?>さん</p>
+                        <p><?php echo $_SESSION['name']; ?>様<br>ログイン中</p>
                     <?php else: ?>
-                        <p>こんにちは、ゲストさん</p>
+                        <p>ゲスト</p>
                     <?php endif; ?>
                 </div>
             </div>
