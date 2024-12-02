@@ -36,7 +36,13 @@
                 echo '</ul>';
                 ?>
             </div>
-            <form action="card.php" method="post">
+            <?php
+                if (empty($_SESSION['id'])) {
+                    echo '<form action="guest_purchase.php" method="post">';
+                }else {
+                    echo '<form action="card.php" method="post">';
+                }
+            ?>
                 <div class="car-info">
                     <?php
                     $sql = 'SELECT * FROM car WHERE car_id = ?';
