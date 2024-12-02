@@ -4,8 +4,8 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 
 // セッションにユーザーIDがあるか確認
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+if (!empty($_SESSION['id'])) {
+    $user_id = $_SESSION['id'];
 
     // ユーザー情報を取得
     $sql = $pdo->prepare('SELECT user_name, user_mail, user_password, user_address FROM user WHERE user_id = ?');
