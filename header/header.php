@@ -56,17 +56,18 @@
 
 
         <div class="account_logo_button">
-            <a class="account_icon" href="#">
+            <div class="account_icon">
                 <img class="account_icon_img" src="../img/Benz.png" alt="Account Icon">
-            </a>
-            <div class="dropdown">
-                <?php if (!empty($_SESSION['name'])): ?>
-                    <p>こんにちは、<?php echo $_SESSION['name']; ?>さん</p>
-                <?php else: ?>
-                    <p>こんにちは、ゲストさん</p>
-                <?php endif; ?>
+                <div class="dropdown">
+                    <?php if (!empty($_SESSION['name'])): ?>
+                        <p>こんにちは、<?php echo $_SESSION['name']; ?>さん</p>
+                    <?php else: ?>
+                        <p>こんにちは、ゲストさん</p>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
+
 
 
 
