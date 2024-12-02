@@ -39,6 +39,7 @@
             <li><a class="nenu-link" href="../member/account.php">ACCOUNT</a></li>
             <li><a class="nenu-link" href="../member/logout.php">LOGOUT</a></li>
             <li><a class="nenu-link" href="../member/logout.php">LOGIN</a></li>
+            <li><a class="nenu-link" href="../member/signup.php">SIGNUP</a></li>
         </ul>
     </nav>
 
