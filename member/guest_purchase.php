@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="hidden" name="car_id" value="<?php echo htmlspecialchars($car_id, ENT_QUOTES, 'UTF-8'); ?>">
                 <input class="guestbutton" type="submit" value="登録">
             </form>
-            <div class="guestcreate-form">
-                <a class="guestbutton" href="">会員登録する</a>
-            </div>
+            <form class="login-form" action="signup.php" method="post">
+                <input class="button-2" type="submit" value="アカウント新規作成">
+            </form>
         </div>
     </div>
 </body>
