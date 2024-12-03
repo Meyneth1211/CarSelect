@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../kanrisya_css/image_edit.css">
     <link rel="stylesheet" href="/carselect/assets/css/styles.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../kanrisya_css/car_imageedit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Brawler&display=swap" rel="stylesheet">
     <title>Car Select kanrisya</title>
 </head>
 <body>
