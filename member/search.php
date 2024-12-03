@@ -271,7 +271,7 @@ if (isset($_GET['s'])) {
   $stmt->execute();
   $images = $stmt->fetchall(PDO::FETCH_ASSOC);
 
-  echo '<div class="car-list">';
+  echo '<div class="car-list" id="car-list">';
   $c = 0;
   foreach ($cars as $row) {
     echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
