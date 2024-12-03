@@ -1,13 +1,22 @@
-/* 親要素 .back に relative を設定 */
 .back {
-    font-size: 30px;
+    font-size: 50px;
     font-family: "Brawler";
-    background-color: #000000;
     color: #fff;
-    padding: 1px;
-    text-align: center;
-    position: relative; /* 子要素の配置を調整可能に */
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
 }
+
+.header_back {
+    background-color: #000000;
+    padding: 35px;
+}
+
+.logo_link {
+    text-decoration: none;
+    color: #fff;
+    /*text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 200px #0072ff;*/
+}
+
+
 
 /* ログアウトボタンの親要素を右端に移動 */
 .hidden {
@@ -17,12 +26,6 @@
     transform: translateY(-50%); /* 縦位置を正確に調整 */
 }
 
-/* ロゴのリンク */
-.logo_link {
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 200px #0072ff;
-}
 
 .hidden:hover{
     opacity: 0.8;
