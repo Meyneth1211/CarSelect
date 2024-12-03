@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 
 // セッションから user_id を取得
-$user_id = $_SESSION['user_id'] ?? null;
+$user_id = $_SESSION['id'] ?? null;
 
 if (!$user_id) {
     echo "ログインしてください。";
