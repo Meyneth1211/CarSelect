@@ -242,6 +242,16 @@ if (isset($_GET['s'])) {
     $c++;
   }
   echo '</div>';
+
+  echo <<<SCROLL
+      <script>
+          window.onload = function() {
+              const target = document.getElementById('search-submit');
+              target.scrollIntoView({ behavior: 'smooth' });
+          };
+      </script>
+  SCROLL;
+  
 }elseif (isset($_GET['b'])) {
   $brand=$_GET['brand'];
   //$brand= "'". $brand . "'";
