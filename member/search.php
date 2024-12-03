@@ -140,7 +140,7 @@
       </div>
     </div>
 
-    <div class="search-submit">
+    <div class="search-submit" id="search-submit">
       <input type="submit" value="この条件で絞り込む">
     </div>
   </div>
