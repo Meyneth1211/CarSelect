@@ -62,7 +62,7 @@
                 </a>
                 <div class="dropdown">
                     <?php if (!empty($_SESSION['name'])): ?>
-                        <p><?php echo $_SESSION['name']; ?>様<br>ログイン中</p>
+                        <p><?php echo $_SESSION['name']; ?>様<br><a class="url_login" href="logout.php">ログアウト</a></p>
                     <?php else: ?>
                         <p>ゲスト<br><a class="url_login" href="login.php">ログインする</a></p>
                     <?php endif; ?>
