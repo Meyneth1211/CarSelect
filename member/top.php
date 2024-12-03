@@ -54,7 +54,7 @@ require('../header/header.php');
     <li class="slider-item slider-item03"></li>
   </ul>
 
-  <form class="car-logo-back" action="search.php#search-submit" method="get">
+  <form class="car-logo-back" action="search.php" method="get">
     <!-- トップページからのブランド検索であることを通知する変数 -->
     <input type="hidden" name="b">
     <input type="hidden" name="brand" id="sendbrand" value="">

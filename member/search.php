@@ -285,6 +285,16 @@ if (isset($_GET['s'])) {
     $c++;
   }
   echo '</div>';
+
+  echo <<<SCROLL
+      <script>
+          window.onload = function() {
+              const target = document.getElementById('search-submit');
+              target.scrollIntoView({ behavior: 'smooth' });
+          };
+      </script>
+  SCROLL;
+
 }
 ?>
 <div class="null-box"></div>
