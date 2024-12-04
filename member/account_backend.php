@@ -1,5 +1,4 @@
 <?php
-require('../header/header.php');
 require_once '../DBconnect.php';
 $pdo = getDb();
 
@@ -7,6 +6,7 @@ $pdo = getDb();
 $user_id = $_SESSION['id'] ?? null;
 
 if (!$user_id) {
+    require('../header/header.php');
     echo "ログインしてください。";
     exit;
 }
@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 必須項目のチェック
     if (empty($user_name) || empty($user_mail) || empty($user_password) || empty($user_address)) {
+        require('../header/header.php');
         echo "全ての項目を入力してください。";
         exit;
     }
@@ -34,9 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         header("Location: edit_success.php");
         exit;
     } else {
+        require('../header/header.php');
         echo "更新に失敗しました。もう一度お試しください。";
     }
 } else {
+    require('../header/header.php');
     echo "無効なリクエストです。";
 }
 ?>
