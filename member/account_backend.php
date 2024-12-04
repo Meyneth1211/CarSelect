@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($result) {
         // 更新成功時にリダイレクト
+        $_SESSION['name'] = $user_name;
         echo '<script>window.location.href = "edit_success.php";</script>';
         exit;
     } else {
