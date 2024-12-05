@@ -7,7 +7,7 @@ function getFavList($user){
     $stmt=$pdo->prepare($sql);
     $stmt->execute([$user]);
     $list=$stmt->fetchall(PDO::FETCH_ASSOC);
-    if($list){
+    if(!$list){
         $pdo=null;
         return false;
     }else{
