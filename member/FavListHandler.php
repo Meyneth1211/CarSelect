@@ -45,8 +45,4 @@ function delFavItem($user, $car){
     return $result;
 }
 
-//testcode
-$test=getFavList(26);
-var_dump($test);
-
 ?>
