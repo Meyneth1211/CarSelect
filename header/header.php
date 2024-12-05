@@ -37,7 +37,7 @@
         <ul>
             <li><a class="nenu-link" href="../member/top.php">TOP</a></li>
             <li><a class="nenu-link" href="../member/search.php">SEARCH</a></li>
-            <li><a class="nenu-link" href="#">FAVORITE</a></li>
+            <li><a class="nenu-link" href="../member/favorites.php">FAVORITE</a></li>
             <li><a class="nenu-link" href="../member/account.php">ACCOUNT</a></li>
             <li><a class="nenu-link" href="../member/logout.php">LOGOUT</a></li>
             <li><a class="nenu-link" href="../member/logout.php">LOGIN</a></li>
