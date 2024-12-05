@@ -1,5 +1,5 @@
 <?php
-require_once '../DBConnect.php';
+require_once '../DBconnect.php';
 
 function getFavList($user){
     $pdo=getDB();
