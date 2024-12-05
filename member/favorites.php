@@ -9,10 +9,8 @@ if (empty($_SESSION['id'])) {
             <h1>お気に入り</h1>
         </div>
     EOM;
-    echo $_SESSION['id'];
     $favlist=getFavList($_SESSION['id']);
     var_dump($favlist);
-    
 }
 
 
