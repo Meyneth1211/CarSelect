@@ -6,9 +6,10 @@ if (empty($_SESSION['id'])) {
     require_once('./FavListHandler.php');
     echo <<<EOM
         <div class="favorite-title">
-            '<h1>お気に入り</h1>'
+            <h1>お気に入り</h1>
         </div>
     EOM;
+    echo $_SESSION['id'];
     $favlist=getFavList($_SESSION['id']);
     var_dump($favlist);
     
