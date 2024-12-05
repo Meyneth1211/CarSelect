@@ -1,8 +1,8 @@
 <?php
+require('../header/header.php');
 if (empty($_SESSION['id'])) {
-    header('Location: login.php');
+    echo '<script>window.location.href = "login.php";</script>';
 } else {
-    require('../header/header.php');
     require_once('./FavListHandler.php');
     echo <<<EOM
         <div class="favorite-title">
@@ -12,7 +12,6 @@ if (empty($_SESSION['id'])) {
     $favlist=getFavList($_SESSION['id']);
     var_dump($favlist);
     
-
 }
 
 
