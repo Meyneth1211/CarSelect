@@ -4,13 +4,52 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 ?>
 
-<h1 class="page-title">在庫管理画面です！</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在庫管理</title>
+</head>
+<body>
+  <h1 class="paji-title">在庫管理画面</h1>
+
+<div class="brand-buttons">
+  <form method="POST" action="">
+    <button type="submit" class="brand-button" name="selectedBrand" value="">全て表示</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="トヨタ">トヨタ</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="マツダ">マツダ</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="ホンダ">ホンダ</button>    
+    <button type="submit" class="brand-button" name="selectedBrand" value="日産">日産</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="ポルシェ">ポルシェ</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="フェラーリ">フェラーリ</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="ランボルギーニ">ランボルギー二</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="BMW">BMW</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="ベンツ">ベンツ</button>
+    <button type="submit" class="brand-button" name="selectedBrand" value="レクサス">レクサス</button>
+  </form>
+</div>
+</body>
+</html>
 
 <?php
 
-// SQLでデータを取得 (image_pathカラムを追加)
-$sql = $pdo->query('SELECT car_id, brand, car_name, body_type, color, stock FROM car');
-  
+// postで受け取ったブランド名がNULLなら全て表示、NULLでない場合そのブランドの在庫を表示する
+if(isset($_POST['selectedBrand']) == null){
+$slectedBrand = isset($_POST['selectedBrand']);  
+$sql = $pdo->prepare('select from car where car_name = ?');
+$sql->execute([$slectedBrand]);
+}else{
+  $stmt = $pdo->query("SLECT * FROM car");
+  $spl = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+?>
+
+<h2 class="page-title">
+  <?= htmlspecialchars($slectedBrand ? $slectedBrand . 'の在庫一覧' : '全ての在庫',ENT_QUOTES, 'UTF-8')?>
+</h2>
+
+<?php
 // 一覧表示用のHTML
 echo '<table class="car-table">';
 echo '<tr>
