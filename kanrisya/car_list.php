@@ -66,22 +66,22 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
         <td><?= htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') ?></td>
         <td>
           <form method="post" action="update_stock.php" style="display: inline;">
-            <input type="number" name="stock" value="<?= htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" step="1">
+            <input type="number" name="stock-input" value="<?= htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" step="1">
             <input type="hidden" name="car_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">
-            <button type="submit">在庫更新</button>
+            <button type="submit" class="update-button">在庫更新</button>
           </form>
         </td>
         <td>
           <form method="get" action="image_edit.php" style="display: inline;">
-            <button type="submit" name="car_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">画像編集</button>
+            <button type="submit" class="edit-button" name="car_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">画像編集</button>
           </form>
         </td>
         <td>
           <form method="get" action="car_hensyuu.php" style="display: inline;">
-            <button type="submit" name="edit_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">編集</button>
+            <button type="submit" class="edit-button" name="edit_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">編集</button>
           </form>
           <form method="post" action="car_delete_confirm.php" style="display: inline;">
-            <button type="submit" name="delete_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">削除</button>
+            <button type="submit" class="delete-button" name="delete_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">削除</button>
           </form>
         </td>
       </tr>
@@ -89,7 +89,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   </table>
 
   <div class="top-back-button">
-    <button onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
+    <button class="back-button" onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
   </div>
 </body>
 </html>
