@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 require('kanrisya_session.php'); 
 require_once '../DBconnect.php';
 $pdo = getDb();
@@ -6,7 +6,7 @@ $pdo = getDb();
 // ブランド名の取得
 $selectedBrand = isset($_POST['selectedBrand']) ? $_POST['selectedBrand'] : null;
 
-// SQLクエリ
+// postで受け取ったブランド名がNULLなら全て表示、NULLでない場合そのブランドの在庫を表示する
 if ($selectedBrand) {
     $sql = $pdo->prepare('SELECT * FROM car WHERE brand = ?');
     $sql->execute([$selectedBrand]);
@@ -31,7 +31,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
       <button type="submit" name="selectedBrand" value="">全て表示</button>
       <button type="submit" name="selectedBrand" value="トヨタ">トヨタ</button>
       <button type="submit" name="selectedBrand" value="マツダ">マツダ</button>
-      <!-- 他のブランドボタン -->
+      <!-- 他のブランドボタンをここに追加 -->
     </form>
   </div>
 
@@ -41,13 +41,14 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   </h2>
 
   <!-- テーブル表示 -->
-  <table class="car-table">
+  <table class="car-table" border="1">
     <tr>
       <th>ブランド</th>
       <th>車名</th>
       <th>ボディタイプ</th>
       <th>色</th>
       <th>在庫数</th>
+      <th>画像編集</th>
       <th>操作</th>
     </tr>
     <?php foreach ($cars as $row): ?>
@@ -56,12 +57,32 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
         <td><?= htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') ?></td>
         <td><?= htmlspecialchars($row['body_type'], ENT_QUOTES, 'UTF-8') ?></td>
         <td><?= htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') ?></td>
-        <td><?= htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') ?></td>
         <td>
-          <!-- 操作ボタン -->
+          <form method="post" action="update_stock.php" style="display: inline;">
+            <input type="number" name="stock" value="<?= htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" step="1">
+            <input type="hidden" name="car_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">
+            <button type="submit">在庫更新</button>
+          </form>
+        </td>
+        <td>
+          <form method="get" action="image_edit.php" style="display: inline;">
+            <button type="submit" name="car_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">画像編集</button>
+          </form>
+        </td>
+        <td>
+          <form method="get" action="car_hensyuu.php" style="display: inline;">
+            <button type="submit" name="edit_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">編集</button>
+          </form>
+          <form method="post" action="car_delete_confirm.php" style="display: inline;">
+            <button type="submit" name="delete_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">削除</button>
+          </form>
         </td>
       </tr>
     <?php endforeach; ?>
   </table>
+
+  <div class="top-back-button">
+    <button onclick="location.href='kanrisya_top.php'">トップページへ戻る</button>
+  </div>
 </body>
 </html>
