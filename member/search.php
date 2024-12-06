@@ -151,6 +151,7 @@
 
 <!-- 車のリスト -->
 <?php
+//以下絞り込み検索のSQL文を組み立てるコード
 if (isset($_GET['s'])) {
   //echo '絞り込み検索リクエストを確認、条件部分のSQL文を初期化';
   $suffix = '';
@@ -201,6 +202,8 @@ if (isset($_GET['s'])) {
 
   $suffix .= ';';
 
+  //以上絞り込み検索のSQL文を組み立てるコード
+  //以下条件に合致する車の情報を取得するコード
   $sql = 'SELECT car_id, car_name, price FROM car WHERE ';
   $sql .= $suffix;
   require_once '../DBconnect.php';
@@ -216,6 +219,8 @@ if (isset($_GET['s'])) {
     ERR;
     die();
   }
+  //以上条件に合致する車の情報を取得するコード
+  //以下取得した車情報からメイン画像を取得するコード
   $imageid = [];
   foreach ($cars as $row) {
     $imageid[] = $row['car_id'];
@@ -227,7 +232,8 @@ if (isset($_GET['s'])) {
   $stmt = $pdo->prepare($sql);
   $stmt->execute();
   $images = $stmt->fetchall(PDO::FETCH_ASSOC);
-
+  //以上取得した車情報からメイン画像を取得するコード
+  //以下検索結果を実際に画面に出力するコード
   echo '<div class="car-list">';
   $c = 0;
   foreach ($cars as $row) {
@@ -242,7 +248,8 @@ if (isset($_GET['s'])) {
     $c++;
   }
   echo '</div>';
-
+  //以上検索結果を実際に画面に出力するコード
+  //他ページからの検索処理時に検索結果の場所に自動スクロールさせるJS
   echo <<<SCROLL
       <script>
           window.onload = function() {
@@ -252,9 +259,9 @@ if (isset($_GET['s'])) {
       </script>
   SCROLL;
   
+//以下トップページからのブランド検索時の検索処理
 }elseif (isset($_GET['b'])) {
   $brand=$_GET['brand'];
-  //$brand= "'". $brand . "'";
   $sql = 'SELECT car_id, car_name, price FROM car WHERE brand = ? ;';
   require_once '../DBconnect.php';
   $pdo = getDB();
