@@ -66,7 +66,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
         <td><?= htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') ?></td>
         <td>
           <form method="post" action="update_stock.php" style="display: inline;">
-            <input type="number" name="stock-input" value="<?= htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" step="1">
+            <input type="number" class="stock-input" name="stock" value="<?= htmlspecialchars($row['stock'], ENT_QUOTES, 'UTF-8') ?>" min="0" step="1">
             <input type="hidden" name="car_id" value="<?= htmlspecialchars($row['car_id'], ENT_QUOTES, 'UTF-8') ?>">
             <button type="submit" class="update-button">在庫更新</button>
           </form>
