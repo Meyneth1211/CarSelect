@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 
 // ブランド名の取得
-$selectedBrand = isset($_POST['selectedBrand']) ? $_POST['selectedBrand'] :null;
+$selectedBrand = isset($_POST['selectedBrand']) ? $_POST['selectedBrand'] : null;
 // postで受け取ったブランド名がNULLなら全て表示、NULLでない場合そのブランドの在庫を表示する
 if ($selectedBrand) {
     $sql = $pdo->prepare('SELECT * FROM car WHERE brand = ?');
@@ -43,7 +43,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
 
   <!-- タイトル -->
   <h2 class="page-title">
-    <?= htmlspecialchars($selectedBrand ? $selectedBrand . 'の在庫一覧' : '全ての在庫', ENT_QUOTES, 'UTF-8') ?>
+    <?= htmlspecialchars($selectedBrand ? $selectedBrand . 'の在庫一覧' : '全ての在庫一覧', ENT_QUOTES, 'UTF-8') ?>
   </h2>
 
   <!-- テーブル表示 -->
