@@ -28,10 +28,17 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   <!-- ブランド選択ボタン -->
   <div class="brand-buttons">
     <form method="POST" action="">
-      <button type="submit" name="selectedBrand" value="">全て表示</button>
-      <button type="submit" name="selectedBrand" value="トヨタ">トヨタ</button>
-      <button type="submit" name="selectedBrand" value="マツダ">マツダ</button>
-      <!-- 他のブランドボタンをここに追加 -->
+      <button type="submit" class="brand-button" name="selectedBrand" value="">全て表示</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="トヨタ">トヨタ</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="マツダ">マツダ</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="ホンダ">ホンダ</button>    
+      <button type="submit" class="brand-button" name="selectedBrand" value="日産">日産</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="ポルシェ">ポルシェ</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="フェラーリ">フェラーリ</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="ランボルギーニ">ランボルギー二</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="BMW">BMW</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="ベンツ">ベンツ</button>
+      <button type="submit" class="brand-button" name="selectedBrand" value="レクサス">レクサス</button>
     </form>
   </div>
 
