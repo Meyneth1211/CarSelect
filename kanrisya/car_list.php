@@ -4,7 +4,7 @@ require_once '../DBconnect.php';
 $pdo = getDb();
 
 // ブランド名の取得
-$selectedBrand = isset($_POST['selectedBrand']) ? $_POST['selectedBrand'] :false ;
+$selectedBrand = isset($_POST['selectedBrand']) ? $_POST['selectedBrand'] :null;
 // postで受け取ったブランド名がNULLなら全て表示、NULLでない場合そのブランドの在庫を表示する
 if ($selectedBrand) {
     $sql = $pdo->prepare('SELECT * FROM car WHERE brand = ?');
