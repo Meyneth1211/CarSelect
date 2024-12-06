@@ -40,7 +40,7 @@ $slectedBrand = isset($_POST['selectedBrand']);
 $sql = $pdo->prepare('select from car where car_name = ?');
 $sql->execute([$slectedBrand]);
 }else{
-  $stmt = $pdo->query("SLECT * FROM car");
+  $stmt = $pdo->query("SELECT * FROM car");
   $spl = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 ?>
