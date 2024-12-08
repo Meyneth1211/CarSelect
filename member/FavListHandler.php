@@ -16,7 +16,7 @@ function getFavList($user){
         //$sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
         $placeholder = implode(',', $list);
         $sql .= $placeholder;
-        $sql .= ') AS image FROM car WHERE car_id IN(';
+        $sql .= ')) AS image FROM car WHERE car_id IN(';
         $sql .= $placeholder;
         $sql .= ');';
         echo $sql;
