@@ -81,20 +81,21 @@
 
 
     <script>
-        $(function() {
-            $('.btn-trigger').on('click', function() {
-                $(this).toggleClass('active');
-                return false;
+        // $(function() {
+        //     $('.btn-trigger').on('click', function() {
+        //         $(this).toggleClass('active');
+        //         return false;
+        //     });
+        // });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('menu');
+
+            // ハンバーガーメニューのクリックイベント
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active'); // ハンバーガーメニューアイコンのアニメーション
+                menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
             });
-        });
-    </script>
-
-    <script>
-        // ハンバーガーメニューの動作
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('menu');
-
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
         });
     </script>
