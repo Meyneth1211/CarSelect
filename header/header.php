@@ -27,10 +27,10 @@
 <body>
     <!-- ハンバーガーメニュー -->
      <section>
-        <div class="menu-toggle" id="menuToggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="btn-trigger" id="btn19">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </section>
 
