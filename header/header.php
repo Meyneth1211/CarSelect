@@ -26,11 +26,13 @@
 
 <body>
     <!-- ハンバーガーメニュー -->
-    <div class="menu-toggle" id="menuToggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+     <section>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </section>
 
     <!-- メニュー classを追加-->
     <nav id="menu" class="hidden">
