@@ -26,7 +26,7 @@
 
 <body>
     <!-- ハンバーガーメニュー -->
-     <section>
+    <section>
         <div class="btn-trigger" id="btn19">
             <span></span>
             <span></span>
@@ -80,6 +80,14 @@
 
 
 
+    <script>
+        $(function() {
+            $('.btn-trigger').on('click', function() {
+                $(this).toggleClass('active');
+                return false;
+            });
+        });
+    </script>
 
     <script>
         // ハンバーガーメニューの動作
