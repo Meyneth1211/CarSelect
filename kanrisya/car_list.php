@@ -30,6 +30,9 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
       border: 1px solid #ddd;
       border-radius: 5px;
       transition: background-color 0.3s, color 0.3s;
+     }
+
+     .brand-buttons{
       text-align: center;
      }
 
