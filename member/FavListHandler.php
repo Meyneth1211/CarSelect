@@ -3,20 +3,16 @@ require_once '../DBconnect.php';
 
 function getFavList($user){
     $pdo=getDB();
-    $sql='SELECT * FROM favorite WHERE user_id = ?';
+    $sql='SELECT car_id FROM favorite WHERE user_id = ?';
     $stmt=$pdo->prepare($sql);
     $stmt->execute([$user]);
-    $list=$stmt->fetchall(PDO::FETCH_ASSOC);
+    $list=$stmt->fetch(PDO::FETCH_COLUMN);
     if(!$list){
         $pdo=null;
         return false;
     }else{
-        $image = [];
-        foreach ($list as $row) {
-            $image[]=$row['car_id'];
-        }
         $sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
-        $placeholder = implode(',', $image);
+        $placeholder = implode(',', $list);
         $sql .= $placeholder;
         $sql .= ');';
         $stmt = $pdo->prepare($sql);
