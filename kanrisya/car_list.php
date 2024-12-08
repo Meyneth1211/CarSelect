@@ -22,7 +22,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   <title>在庫管理</title>
   <style>
      .list-brand-button {
-      background: none;
+      background: gainsboro;
       border: none;
       cursor: pointer;
       padding: 5px 10px;
