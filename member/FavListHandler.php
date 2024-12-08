@@ -6,7 +6,7 @@ function getFavList($user){
     $sql='SELECT car_id FROM favorite WHERE user_id = ?';
     $stmt=$pdo->prepare($sql);
     $stmt->execute([$user]);
-    $list=$stmt->fetch(PDO::FETCH_COLUMN);
+    $list=$stmt->fetchall(PDO::FETCH_COLUMN);
     var_dump($list);
     if(!$list){
         $pdo=null;
