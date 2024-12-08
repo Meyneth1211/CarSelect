@@ -69,7 +69,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   </h2>
 
   <!-- テーブル表示 -->
-  <table class="car-table" border="1">
+  <table class="car-table">
     <tr>
       <th>ブランド</th>
       <th>車名</th>
