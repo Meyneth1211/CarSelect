@@ -11,15 +11,19 @@ function getFavList($user){
         $pdo=null;
         return false;
     }else{
-        $sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
+        $sql = 'SELECT car_id, car_name, price, (SELECT image FROM image WHERE image.is_primary = 1 AND image.car_id IN(';
+        //$sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
         $placeholder = implode(',', $list);
         $sql .= $placeholder;
+        $sql .= ') AS image FROM car WHERE car_id IN(';
+        $sql .= $placeholder;
         $sql .= ');';
+        echo $sql;
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        $images = $stmt->fetchall(PDO::FETCH_ASSOC);
+        $fav = $stmt->fetchall(PDO::FETCH_ASSOC);
         $pdo=null;
-        return [$list,$images];
+        return $fav;
     }
 }
 
@@ -40,5 +44,7 @@ function delFavItem($user, $car){
     $pdo=null;
     return $result;
 }
+
+$fav=getFavList(26);
 
 ?>
