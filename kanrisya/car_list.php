@@ -20,6 +20,23 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>在庫管理</title>
+  <style>
+     .list-brand-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+     }
+
+     .list-brand-button:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <h1 class="page-title">在庫管理画面</h1>
@@ -27,17 +44,17 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
   <!-- ブランド選択ボタン -->
   <div class="brand-buttons">
     <form method="POST" action="">
-      <button type="submit" class="brand-button" name="selectedBrand" value="">全て表示</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="トヨタ">トヨタ</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="マツダ">マツダ</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="ホンダ">ホンダ</button>    
-      <button type="submit" class="brand-button" name="selectedBrand" value="日産">日産</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="ポルシェ">ポルシェ</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="フェラーリ">フェラーリ</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="ランボルギーニ">ランボルギー二</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="BMW">BMW</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="ベンツ">ベンツ</button>
-      <button type="submit" class="brand-button" name="selectedBrand" value="レクサス">レクサス</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="">全て表示</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="トヨタ">トヨタ</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="マツダ">マツダ</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="ホンダ">ホンダ</button>    
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="日産">日産</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="ポルシェ">ポルシェ</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="フェラーリ">フェラーリ</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="ランボルギーニ">ランボルギー二</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="BMW">BMW</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="ベンツ">ベンツ</button>
+      <button type="submit"  class="list-brand-button" name="selectedBrand" value="レクサス">レクサス</button>
     </form>
   </div>
 
