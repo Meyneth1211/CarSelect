@@ -27,7 +27,7 @@
 <body>
     <!-- ハンバーガーメニュー -->
     <section>
-        <div class="btn-trigger" id="btn01">
+        <div class="menuToggle" id="menuToggle">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
