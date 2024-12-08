@@ -124,7 +124,7 @@ body {
 /* ---------------------------ハンバーガーメニューのスタイル------------------------------------------- */
 .menu-toggle {
     position: absolute;
-    top: 45px;
+    top: 52px;
     left: 60px;
     cursor: pointer;
     z-index: 9999;
