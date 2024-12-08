@@ -17,10 +17,12 @@ body {
 /*ーーーーーーーーーーーーーーーーヘッターーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 .back {
     font-size: 50px;
+    font-weight: 600;
     font-family: "Brawler";
     color: #fff;
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
 }
+
 
 .header_back {
     background-color: #000000;
@@ -31,7 +33,17 @@ body {
     text-decoration: none;
     color: #fff;
     text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 20px #0072ff;
+    transition: all 0.5s ease-in-out;
 }
+
+.logo_link:hover{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 70px #0072ff, 0 0 110px #0072ff, 0 0 60px #0072ff, 0 0 60px #0072ff;
+}
+
+
 
 .account_icon_img {
     width: 50px;
