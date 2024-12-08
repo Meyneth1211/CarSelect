@@ -28,9 +28,9 @@
     <!-- ハンバーガーメニュー -->
     <section>
         <div class="btn-trigger" id="btn01">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
     </section>
 
