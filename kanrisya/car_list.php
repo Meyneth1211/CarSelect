@@ -84,7 +84,7 @@ $cars = $sql->fetchAll(PDO::FETCH_ASSOC);
       <tr>
         <td><?= htmlspecialchars($row['brand'], ENT_QUOTES, 'UTF-8') ?></td>
         <td><?= htmlspecialchars($row['car_name'], ENT_QUOTES, 'UTF-8') ?></td>
-        <td><?= htmlspecialchars($row['price'], flags: flags: ENT_QUOTES, 'UTF-8') ?></td>
+        <td><?= htmlspecialchars($row['price'],  ENT_QUOTES, 'UTF-8') ?></td>
         <td><?= htmlspecialchars($row['body_type'], ENT_QUOTES, 'UTF-8') ?></td>
         <td><?= htmlspecialchars($row['color'], ENT_QUOTES, 'UTF-8') ?></td>
         <td>
