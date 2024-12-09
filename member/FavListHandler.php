@@ -51,5 +51,6 @@ function delFavItem($user, $car){
 }
 
 $fav=getFavList(26);
+var_dump($fav);
 
 ?>
