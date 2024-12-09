@@ -47,9 +47,14 @@ function chkFavItem($user, $car){
     $pdo=getDB();
     $sql='SELECT * FROM favorite WHERE user_id = ? AND car_id = ?';
     $stmt=$pdo->prepare($sql);
-    $result=$stmt->execute([$user,$car]);
+    $stmt->execute([$user,$car]);
+    $result=$stmt->fetch(PDO::FETCH_ASSOC);
     $pdo=null;
-    return $result;
+    if (empty($result)) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 echo chkFavItem(26,90);
