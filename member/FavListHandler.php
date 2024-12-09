@@ -57,7 +57,9 @@ function chkFavItem($user, $car){
     }
 }
 
-echo chkFavItem(26,90);
-echo chkFavItem(26,105);
+$v1=chkFavItem(26,90);
+$v2=chkFavItem(26,105);
+echo $v1;
+echo $v2;
 
 ?>
