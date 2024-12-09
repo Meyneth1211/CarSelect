@@ -45,7 +45,7 @@ function delFavItem($user, $car){
 
 function chkFavItem($user, $car){
     $pdo=getDB();
-    $sql='SELECT FROM favorite WHERE user_id = ? AND car_id = ?';
+    $sql='SELECT * FROM favorite WHERE user_id = ? AND car_id = ?';
     $stmt=$pdo->prepare($sql);
     $result=$stmt->execute([$user,$car]);
     $pdo=null;
