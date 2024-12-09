@@ -296,6 +296,11 @@ if (isset($_GET['s'])) {
     echo '<div class="car-info">';
     echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
     echo '<div class="separator"></div>';
+    if (chkFavItem($_SESSION['id'],$row['car_id'])) {
+      
+    } else {
+      # code...
+    }
     echo '<p>¥' . number_format($row['price']) . '</p>';
     echo '</div></div>';
     echo '</a>'; // aタグを閉じる
