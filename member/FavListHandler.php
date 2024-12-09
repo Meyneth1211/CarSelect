@@ -59,7 +59,7 @@ function chkFavItem($user, $car){
 
 $v1=chkFavItem(26,90);
 $v2=chkFavItem(26,105);
-echo $v1;
-echo $v2;
+var_dump($v1);
+var_dump($v2);
 
 ?>
