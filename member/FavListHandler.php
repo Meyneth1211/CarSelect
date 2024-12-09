@@ -12,6 +12,7 @@ function getFavList($user){
         $pdo=null;
         return false;
     }else{
+        /*
         $sql = 'SELECT car_id, car_name, price, (SELECT image FROM image WHERE image.is_primary = 1 AND image.car_id IN(';
         //$sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
         $placeholder = implode(',', $list);
@@ -19,9 +20,12 @@ function getFavList($user){
         $sql .= ')) AS image FROM car WHERE car_id IN(';
         $sql .= $placeholder;
         $sql .= ');';
+        */
+        $sql = 'SELECT car.car_id, car.car_name, car.price, image.image FROM car INNER JOIN image ON car.car_id = image.car_id WHERE car.car_id IN(?) AND image.is_primary = 1;';
         echo $sql;
+        $placeholder = implode(',', $list);
         $stmt = $pdo->prepare($sql);
-        $stmt->execute();
+        $stmt->execute([$placeholder]);
         $fav = $stmt->fetchall(PDO::FETCH_ASSOC);
         $pdo=null;
         return $fav;
