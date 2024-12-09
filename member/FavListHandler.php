@@ -21,11 +21,13 @@ function getFavList($user){
         $sql .= $placeholder;
         $sql .= ');';
         */
-        $sql = 'SELECT car.car_id, car.car_name, car.price, image.image FROM car INNER JOIN image ON car.car_id = image.car_id WHERE car.car_id IN(?) AND image.is_primary = 1;';
-        echo $sql;
         $placeholder = implode(',', $list);
+        $sql = 'SELECT car.car_id, car.car_name, car.price, image.image FROM car INNER JOIN image ON car.car_id = image.car_id WHERE car.car_id IN(';
+        $sql .= $placeholder;
+        $sql .= ') AND image.is_primary = 1;';
+        echo $sql;
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$placeholder]);
+        $stmt->execute();
         $fav = $stmt->fetchall(PDO::FETCH_ASSOC);
         $pdo=null;
         return $fav;
