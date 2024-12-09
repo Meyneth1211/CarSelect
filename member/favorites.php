@@ -13,7 +13,6 @@ if (empty($_SESSION['id'])) {
             <h1>お気に入り</h1>
         </div>
         EOM;
-        //var_dump($favlist);
         echo '<div class="car-list">';
         foreach ($favlist as $row) {
             echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
