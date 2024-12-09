@@ -3,27 +3,28 @@ require_once '../DBconnect.php';
 
 function getFavList($user){
     $pdo=getDB();
-    $sql='SELECT * FROM favorite WHERE user_id = ?';
+    $sql='SELECT car_id FROM favorite WHERE user_id = ?';
     $stmt=$pdo->prepare($sql);
     $stmt->execute([$user]);
-    $list=$stmt->fetchall(PDO::FETCH_ASSOC);
+    $list=$stmt->fetchall(PDO::FETCH_COLUMN);
+    var_dump($list);
     if(!$list){
         $pdo=null;
         return false;
     }else{
-        $image = [];
-        foreach ($list as $row) {
-            $image[]=$row['car_id'];
-        }
-        $sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
-        $placeholder = implode(',', $image);
+        $sql = 'SELECT car_id, car_name, price, (SELECT image FROM image WHERE image.is_primary = 1 AND image.car_id IN(';
+        //$sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
+        $placeholder = implode(',', $list);
+        $sql .= $placeholder;
+        $sql .= ')) AS image FROM car WHERE car_id IN(';
         $sql .= $placeholder;
         $sql .= ');';
+        echo $sql;
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        $images = $stmt->fetchall(PDO::FETCH_ASSOC);
+        $fav = $stmt->fetchall(PDO::FETCH_ASSOC);
         $pdo=null;
-        return [$list,$images];
+        return $fav;
     }
 }
 
@@ -44,5 +45,7 @@ function delFavItem($user, $car){
     $pdo=null;
     return $result;
 }
+
+$fav=getFavList(26);
 
 ?>

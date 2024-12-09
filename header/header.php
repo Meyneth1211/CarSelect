@@ -26,11 +26,13 @@
 
 <body>
     <!-- ハンバーガーメニュー -->
-    <div class="menu-toggle" id="menuToggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+    <section>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </section>
 
     <!-- メニュー classを追加-->
     <nav id="menu" class="hidden">
@@ -78,13 +80,22 @@
 
 
 
-
     <script>
-        // ハンバーガーメニューの動作
-        const menuToggle = document.getElementById('menuToggle');
-        const menu = document.getElementById('menu');
+        // $(function() {
+        //     $('.btn-trigger').on('click', function() {
+        //         $(this).toggleClass('active');
+        //         return false;
+        //     });
+        // });
 
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('menu');
+
+            // ハンバーガーメニューのクリックイベント
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active'); // ハンバーガーメニューアイコンのアニメーション
+                menu.classList.toggle('hidden'); // メニューの表示・非表示切り替え
+            });
         });
     </script>
