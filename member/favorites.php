@@ -20,6 +20,7 @@ if (empty($_SESSION['id'])) {
             echo '<div class="car-info">';
             echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
             echo '<div class="separator"></div>';
+            echo '<p>' . number_format($row['price']) . '円</p>';
             if (chkFavItem($_SESSION['id'],$row['car_id'])) {
                 echo '<form action="FavListEditer.php" method="post">';
                   echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
@@ -39,7 +40,6 @@ if (empty($_SESSION['id'])) {
                   echo '</button>';
                 echo '</form>';
             }
-            echo '<p>' . number_format($row['price']) . '円</p>';
             echo '</div></div>';
             echo '</a>'; // aタグを閉じる
         }
