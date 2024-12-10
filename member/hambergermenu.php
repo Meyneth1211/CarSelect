@@ -53,7 +53,38 @@
 }
 
 .menu-list li {
+  position: relative;
   text-align: center;
+}
+
+.menu-list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(to right, #fff, #666, #fff);
+}
+
+.menu-list li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-list li:last-child::before {
+  display: none; /* 最後の項目には線を表示しない */
+}
+
+.menu-list li:last-child::after {
+  display: none; /* 最後の項目の円を非表示 */
 }
 
 .menu-list a {
