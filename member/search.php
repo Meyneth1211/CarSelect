@@ -343,7 +343,7 @@ if (isset($_GET['s'])) {
         echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
         echo '<input type="hidden" name="action" value="add">';
         echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
-          echo '<button type="submit">';
+          echo '<button type="submit" class="iine">';
             echo '&#9825;<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
           echo '</button>';
         echo '</form>';
