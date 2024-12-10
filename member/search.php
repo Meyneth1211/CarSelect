@@ -350,7 +350,7 @@ if (isset($_GET['s'])) {
     }
     } else {
       echo '<form action="login.php" method="get">';
-        echo '<button type="submit">';
+        echo '<button type="submit" class="iine2">';
           echo '♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
         echo '</button>';
       echo '</form>';
