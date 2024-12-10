@@ -334,7 +334,7 @@ if (isset($_GET['s'])) {
           echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
           echo '<input type="hidden" name="action" value="del">';
           echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
-          echo '<button type="submit" class="iine2">';
+          echo '<button type="submit" class="iine">';
             echo '<span style="color:#FF0000">&hearts;</span><!-- <img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
           echo '</button>';
         echo '</form>';
@@ -350,7 +350,7 @@ if (isset($_GET['s'])) {
     }
     } else {
       echo '<form action="login.php" method="get">';
-        echo '<button type="submit" class="iine2">';
+        echo '<button type="submit" class="iine">';
           echo '♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
         echo '</button>';
       echo '</form>';
