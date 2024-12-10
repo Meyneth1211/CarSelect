@@ -20,9 +20,10 @@ content:"";
 display:block;
 height:0.5em;
 width:0.5em;
-border:1px solid #fff;
+border:1px solid #666;
 margin-top:-0.1em;
 transform:rotate(45deg);
+background:#fff;
 }
 li:before{
 position:absolute;
