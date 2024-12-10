@@ -12,6 +12,7 @@ if (empty($_SESSION['id'])) {
         echo '<form class="login-form" action="top.php" method="get"><input class="button-2" type="submit" value="トップページへ戻る"></form></div></div>';
     } else {
         echo <<<EOM
+        <div class="favorite-back-card">
         <div class="favorite-title">
             <h1>お気に入り</h1>
         </div>
@@ -46,6 +47,7 @@ if (empty($_SESSION['id'])) {
             echo '</div></div>';
             echo '</a>'; // aタグを閉じる
         }
+        echo '</div>';
         echo '</div>';
     }
     
