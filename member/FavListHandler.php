@@ -7,19 +7,16 @@ function getFavList($user){
     $stmt=$pdo->prepare($sql);
     $stmt->execute([$user]);
     $list=$stmt->fetchall(PDO::FETCH_COLUMN);
-    var_dump($list);
+    //var_dump($list);
     if(!$list){
         $pdo=null;
         return false;
     }else{
-        $sql = 'SELECT car_id, car_name, price, (SELECT image FROM image WHERE image.is_primary = 1 AND image.car_id IN(';
-        //$sql = 'SELECT car_id, image FROM image WHERE is_primary = 1 AND car_id IN(';
         $placeholder = implode(',', $list);
+        $sql = 'SELECT car.car_id, car.car_name, car.price, image.image FROM car INNER JOIN image ON car.car_id = image.car_id WHERE car.car_id IN(';
         $sql .= $placeholder;
-        $sql .= ')) AS image FROM car WHERE car_id IN(';
-        $sql .= $placeholder;
-        $sql .= ');';
-        echo $sql;
+        $sql .= ') AND image.is_primary = 1;';
+        //echo $sql;
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $fav = $stmt->fetchall(PDO::FETCH_ASSOC);
@@ -46,6 +43,20 @@ function delFavItem($user, $car){
     return $result;
 }
 
-$fav=getFavList(26);
+function chkFavItem($user, $car){
+    $pdo=getDB();
+    $sql='SELECT * FROM favorite WHERE user_id = ? AND car_id = ?';
+    $stmt=$pdo->prepare($sql);
+    $stmt->execute([$user,$car]);
+    $result=$stmt->fetch(PDO::FETCH_ASSOC);
+    $pdo=null;
+    if (empty($result)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
 
 ?>
