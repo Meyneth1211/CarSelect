@@ -300,21 +300,21 @@ if (isset($_GET['s'])) {
     echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
     echo '<div class="separator"></div>';
     if (chkFavItem($_SESSION['id'],$row['car_id'])) {
-      echo <<<LIKED
-        <form action="/submit" method="post">
-          <button type="submit">
-            ♥<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
-          </button>
-        </form>
-      LIKED;
+        echo '<form action="FavListEditer.php" method="post">';
+          echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
+          echo '<input type="hidden" name="action" value="del">';
+          echo '<button type="submit">';
+            echo '♥<!-- <img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
+          echo '</button>';
+        echo '</form>';
     } else {
-      echo <<<UNLIKED
-        <form action="/submit" method="post">
-          <button type="submit">
-            ♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
-          </button>
-        </form>
-      UNLIKED;
+        echo '<form action="FavListEditer.php" method="post">';
+        echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
+        echo '<input type="hidden" name="action" value="add">';
+          echo '<button type="submit">';
+            echo '♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
+          echo '</button>';
+        echo '</form>';
     }
     echo '<p>¥' . number_format($row['price']) . '</p>';
     echo '</div></div>';

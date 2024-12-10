@@ -57,15 +57,6 @@ function chkFavItem($user, $car){
     }
 }
 
-if ($_SERVER['REQUEST_METHOD']==='POST') {
-    if (empty($_SESSION['id']) || empty($_POST['car_id'])) {
-        header('Location: top.php');
-    } else {
-        # code...
-    }
-} else {
-    header('Location: top.php');
-}
 
 
 ?>
