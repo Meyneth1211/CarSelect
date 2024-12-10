@@ -478,11 +478,7 @@ input[type="checkbox"]:checked+label {
     padding: 0;            /* 余白を消す */
     margin: 0;             /* マージンを消す */
     cursor: pointer;       /* カーソルをポインタに変更 */
-  }
-
-  .iine span {
-    font-size: 24px;       /* ハートのサイズを調整 */
-    color: #FF0000;        /* ハートの色を指定 */
+    margin-top: 30px;
   }
 
   .iine:focus {

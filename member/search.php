@@ -335,7 +335,7 @@ if (isset($_GET['s'])) {
           echo '<input type="hidden" name="action" value="del">';
           echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
           echo '<button type="submit" class="iine">';
-            echo '<i class="fas fa-heart" style="color:#FF0000; font-size:24px;"></i><!-- <img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
+            echo '<i class="fas fa-heart" style="color:#FF0000;"></i><!-- <img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
           echo '</button>';
         echo '</form>';
     } else {
@@ -344,7 +344,7 @@ if (isset($_GET['s'])) {
         echo '<input type="hidden" name="action" value="add">';
         echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
           echo '<button type="submit" class="iine">';
-            echo '<i class="far fa-heart" style="color:#FF0000; font-size:24px;"></i><!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
+            echo '<i class="far fa-heart" style="color:#FF0000;"></i><!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
           echo '</button>';
         echo '</form>';
     }
