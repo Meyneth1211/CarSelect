@@ -303,7 +303,7 @@ if (isset($_GET['s'])) {
       echo <<<LIKED
         <form action="/submit" method="post">
           <button type="submit">
-            ♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
+            ♥<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
           </button>
         </form>
       LIKED;
@@ -311,7 +311,7 @@ if (isset($_GET['s'])) {
       echo <<<UNLIKED
         <form action="/submit" method="post">
           <button type="submit">
-            ♥<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
+            ♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
           </button>
         </form>
       UNLIKED;
