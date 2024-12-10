@@ -11,7 +11,7 @@
     <input type="hidden" name="brand" id="sendbrand" value="">
     <div class="car-logo">
         <div class="car-logo-item">
-            <input type="image" name="stub" value="ベンツ" src="../img/Benz.png" alt="Benz" onclick="setBrandInfo('ベンツ')">
+            <input type="image" name="stub" value="レクサス" src="../img/Lexus.png" alt="Lexus" onclick="setBrandInfo('レクサス')">
         </div>
         <div class="car-logo-item">
             <input type="image" name="stub" value="日産" src="../img/Nissan.png" alt="Nissan" onclick="setBrandInfo('日産')">
@@ -31,7 +31,7 @@
             <input type="image" name="stub" value="ポルシェ" src="../img/Porsche.png" alt="Porsche" onclick="setBrandInfo('ポルシェ')">
         </div>
         <div class="car-logo-item">
-            <input type="image" name="stub" value="レクサス" src="../img/Lexus.png" alt="Lexus" onclick="setBrandInfo('レクサス')">
+            <input type="image" name="stub" value="ベンツ" src="../img/Benz.png" alt="Benz" onclick="setBrandInfo('ベンツ')">
         </div>
         <div class="car-logo-item">
             <input type="image" name="stub" value="ランボルギーニ" src="../img/Lamborghini.png" alt="Lamborghini" onclick="setBrandInfo('ランボルギーニ')">
