@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul{
+ul{
 padding:0;
 list-style:none;
 }
 li{
 padding:0.5em 0 0 1em;
-border-top:1px solid #666;
+border-top:3px solid #fff;
 position:relative;
 }
 li:before,
