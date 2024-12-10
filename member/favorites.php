@@ -6,7 +6,10 @@ if (empty($_SESSION['id'])) {
     require_once('./FavListHandler.php');
     $favlist=getFavList($_SESSION['id']);
     if (empty($favlist)) {
-        echo 'お気に入りリストに車が登録されていません。';
+        //echo 'お気に入りリストに車が登録されていません。';
+        echo '<div class="account-error-back"><div class="account-error-card">';
+        echo '<div class="account-message3">お気に入りリストに車が登録されていません。</div>';
+        echo '<form class="login-form" action="top.php" method="get"><input class="button-2" type="submit" value="トップページへ戻る"></form></div></div>';
     } else {
         echo <<<EOM
         <div class="favorite-title">
