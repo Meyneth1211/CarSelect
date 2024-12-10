@@ -1,8 +1,4 @@
-.favorite-title h1 {
-    color: black;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+
 
 .favorite-back-card {
     background-color: #333;
@@ -51,4 +47,42 @@
     /* 画像の角を丸くする */
     margin-right: 30px;
     /* 画像とテキストの間に余白を広めに */
+}
+
+
+
+.favorite-title h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  /* 太字で存在感を強調 */
+  color: #0ef;
+  /* ネオンのメインカラー */
+  text-shadow:
+    0 0 0px #0ef,
+    0 0 20px #0af,
+    0 0 40px #08f,
+    0 0 80px #06c,
+    /* ホバー時の広がりを強調 */
+    0 0 100px #05a;
+  /* より鮮やかに */
+  color: #fff;
+  /* ホバー時に色を白にして輝きを強調 */
+  transition: text-shadow 0.5s ease;
+  /* ホバーで変化するアニメーション */
+}
+
+.favorite-title h1:hover {
+  text-shadow:
+    0 0 10px #0ef,
+    0 0 20px #0af,
+    0 0 40px #08f,
+    0 0 80px #06c,
+    /* ホバー時の広がりを強調 */
+    0 0 100px #05a;
+  /* より鮮やかに */
+  color: #fff;
+  /* ホバー時に色を白にして輝きを強調 */
 }
