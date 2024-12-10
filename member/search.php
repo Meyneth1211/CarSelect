@@ -1,4 +1,7 @@
-<?php require('../header/header.php'); ?>
+<?php 
+require('../header/header.php'); 
+require 'FavListHandler.php';
+?>
 
 <!-- formタグはここより開始 action欄を空にすることでこのページ自身に送信 -->
 <form action="" method="get">
