@@ -57,9 +57,15 @@ function chkFavItem($user, $car){
     }
 }
 
-$v1=chkFavItem(26,110);
-$v2=chkFavItem(26,105);
-var_dump($v1);
-var_dump($v2);
+if ($_SERVER['REQUEST_METHOD']==='POST') {
+    if (empty($_SESSION['id']) || empty($_POST['car_id'])) {
+        header('Location: top.php');
+    } else {
+        # code...
+    }
+} else {
+    header('Location: top.php');
+}
+
 
 ?>

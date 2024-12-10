@@ -297,9 +297,21 @@ if (isset($_GET['s'])) {
     echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
     echo '<div class="separator"></div>';
     if (chkFavItem($_SESSION['id'],$row['car_id'])) {
-      
+      echo <<<LIKED
+        <form action="/submit" method="post">
+          <button type="submit">
+            ♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
+          </button>
+        </form>
+      LIKED;
     } else {
-      # code...
+      echo <<<UNLIKED
+        <form action="/submit" method="post">
+          <button type="submit">
+            ♥<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->
+          </button>
+        </form>
+      UNLIKED;
     }
     echo '<p>¥' . number_format($row['price']) . '</p>';
     echo '</div></div>';
