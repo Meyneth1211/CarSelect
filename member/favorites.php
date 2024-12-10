@@ -19,7 +19,7 @@ if (empty($_SESSION['id'])) {
         EOM;
         echo '<div class="car-list">';
         foreach ($favlist as $row) {
-            echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item">'; // aタグを全体に適用
+            echo '<a href="https://aso2301389.hippy.jp/carselect/member/car_detail?item=' . $row['car_id'] . '" class="car-item2">'; // aタグを全体に適用
             echo '<img src="' . $row['image'] . '" alt="' . $row['car_name'] . '">';
             echo '<div class="car-info">';
             echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
