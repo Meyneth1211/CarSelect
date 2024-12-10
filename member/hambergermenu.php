@@ -20,10 +20,10 @@ content:"";
 display:block;
 height:0.5em;
 width:0.5em;
-border:1px solid #666;
+border:3px solid #fff;
 margin-top:-0.1em;
 transform:rotate(45deg);
-background:#fff;
+border-color: white;
 }
 li:before{
 position:absolute;
