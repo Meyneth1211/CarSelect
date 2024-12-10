@@ -303,6 +303,7 @@ if (isset($_GET['s'])) {
         echo '<form action="FavListEditer.php" method="post">';
           echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
           echo '<input type="hidden" name="action" value="del">';
+          echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
           echo '<button type="submit">';
             echo '♥<!-- <img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
           echo '</button>';
@@ -311,6 +312,7 @@ if (isset($_GET['s'])) {
         echo '<form action="FavListEditer.php" method="post">';
         echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
         echo '<input type="hidden" name="action" value="add">';
+        echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
           echo '<button type="submit">';
             echo '♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
           echo '</button>';
