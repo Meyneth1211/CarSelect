@@ -245,6 +245,25 @@ if (isset($_GET['s'])) {
     echo '<div class="car-info">';
     echo '<div class="search-car-date"><h3>' . $row['car_name'] . '</h3>';
     echo '<div class="separator"></div>';
+    if (chkFavItem($_SESSION['id'],$row['car_id'])) {
+      echo '<form action="FavListEditer.php" method="post">';
+        echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
+        echo '<input type="hidden" name="action" value="del">';
+        echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
+        echo '<button type="submit">';
+          echo '♥<!-- <img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
+        echo '</button>';
+      echo '</form>';
+    } else {
+      echo '<form action="FavListEditer.php" method="post">';
+      echo '<input type="hidden" name="car_id" value="'.$row['car_id'].'">';
+      echo '<input type="hidden" name="action" value="add">';
+      echo '<input type="hidden" name="url" value="'. $_SERVER['REQUEST_URI'].'">';
+        echo '<button type="submit">';
+          echo '♡<!--<img src="icon.png" alt="Submit" style="width: 24px; height: 24px;"> -->';
+        echo '</button>';
+      echo '</form>';
+    }
     echo '<p>' . number_format($row['price']) . '円</p>';
     echo '</div></div>';
     echo '</a>'; // aタグを閉じる
