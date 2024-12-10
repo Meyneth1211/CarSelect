@@ -475,10 +475,9 @@ input[type="checkbox"]:checked+label {
   .iine {
     background: none;      /* ボタンの背景を消す */
     border: none;          /* ボタンの枠線を消す */
-    padding: 0;            /* 余白を消す */
-    margin: 0;             /* マージンを消す */
     cursor: pointer;       /* カーソルをポインタに変更 */
     margin-top: 30px;
+    margin-left: 300px;
     font-size: 40px;
   }
 
