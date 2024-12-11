@@ -15,6 +15,7 @@ if (empty($_SESSION['id'])) {
         <div class="favorite-back-card">
         <div class="favorite-title">
             <h1>Favorite</h1>
+            <div class="separator2"></div>
         </div>
         EOM;
         echo '<div class="car-list">';
