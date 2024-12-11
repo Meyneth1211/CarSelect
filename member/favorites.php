@@ -14,7 +14,7 @@ if (empty($_SESSION['id'])) {
         echo <<<EOM
         <div class="favorite-back-card">
         <div class="favorite-title">
-            <h1>お気に入り</h1>
+            <h1>Favorite</h1>
         </div>
         EOM;
         echo '<div class="car-list">';
