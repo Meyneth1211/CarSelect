@@ -2,25 +2,25 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の動画と画像
-				{ src: './img/img_01.jpg',//動画が再生されなかった場合の代替画像
+				{ src: '../img/rekusasu_top.jpg',//動画が再生されなかった場合の代替画像
 				 video:{
 					 src: [//mp4で動画が再生されない時のことを考えて複数の形式の動画を設定
-						 './video/movie.mp4',
-						 './video/movie.webm',
-						 './video/movie.ogv'
+						 '../video/videoslide.mp4',
+						 '../video/videoslide.ogv',
+						 '../video/videoslide.webm'
 					 ],
 					 loop: false,//動画を繰り返さない
 					 mute: true,//動画の音を鳴らさない
 				 }
 				},
-				{src: './img/img_02.jpg'},
-				{src: './img/img_03.jpg'}
+				{src: '../img/rekusasu_top.jpg'},
+				{src: './img/'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-				{ src: './img/img_sp_01.jpg' },
-				{ src: './img/img_sp_02.jpg' },
-				{ src: './img/img_sp_03.jpg' }
+				{ src: '../img/rekusasu_top.jpg' },
+				{ src: '../img/画像 (5).png' },
+				{ src: '../img/slide6.jpg' }
 			];
 }
 
