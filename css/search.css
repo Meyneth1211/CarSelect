@@ -517,7 +517,7 @@ input[type="checkbox"]:checked+label {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
 }
 
