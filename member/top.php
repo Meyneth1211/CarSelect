@@ -1,9 +1,5 @@
 <?php require('../header/header.php'); ?>
-  <ul class="slider">
-    <li class="slider-item slider-item01"></li>
-    <li class="slider-item slider-item02"></li>
-    <li class="slider-item slider-item03"></li>
-  </ul>
+    <div id="slider"></div>
 
   <form class="car-logo-back" action="search.php" method="get">
     <!-- トップページからのブランド検索であることを通知する変数 -->
