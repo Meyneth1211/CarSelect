@@ -512,7 +512,7 @@ input[type="checkbox"]:checked+label {
   right: 20px;
   padding: 10px 15px;
   font-size: 14px;
-  background-color: rgba(33, 4, 4, 0.562);
+  background-color: #1C1C1C;
   color: white;
   border: none;
   border-radius: 5px;
@@ -522,5 +522,5 @@ input[type="checkbox"]:checked+label {
 }
 
 #back-to-top:hover {
-  background-color: black;
+  background-color: rgba(33, 4, 4, 0.562);
 }
