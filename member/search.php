@@ -372,6 +372,11 @@ if (isset($_GET['s'])) {
 
 }
 ?>
+
+
+<!-- ページ最上部へ戻るボタン -->
+<button id="back-to-top" style="display: none;">↑ Top</button>
+
 <div class="null-box"></div>
 <script src="../js/search.js"></script>
 </body>

@@ -20,3 +20,24 @@ function selectPrice(id, priceLabel, buttonElement) {
     document.getElementById('selected-price').innerText = `選択された価格: ${priceLabel}`;
     document.getElementById('selected-price').style.color = "#fff";  // フォント色の変更
   }
+
+//ページ最上部へ戻るボタン
+// ボタンの要素を取得
+const backToTopButton = document.getElementById('back-to-top');
+
+// スクロール時にボタンの表示を切り替え
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // 300px以上スクロールしたら表示
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+// ボタンをクリックした際にページ上部にスクロール
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // スムーズなスクロール
+  });
+});
