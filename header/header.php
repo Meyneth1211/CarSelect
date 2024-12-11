@@ -45,7 +45,7 @@
             <li><a class="nenu-link" href="../member/favorites.php">FAVORITE</a></li>
             <li><a class="nenu-link" href="../member/account.php">ACCOUNT</a></li>
             <?php
-            if (empty($_SESSION['id'])) {
+            if (!empty($_SESSION['id'])) {
                 echo '<li><a class="nenu-link" href="../member/logout.php">LOGOUT</a></li>';
             } else {
                 echo '<li><a class="nenu-link" href="../member/login.php">LOGIN</a></li>';
