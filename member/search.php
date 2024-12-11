@@ -386,7 +386,7 @@ const backToTopButton = document.getElementById('back-to-top');
 
 // スクロール時にボタンの表示を切り替え
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) { // 300px以上スクロールしたら表示
+  if (window.scrollY > 1000) { // 1000px以上スクロールしたら表示
     backToTopButton.style.display = 'block';
   } else {
     backToTopButton.style.display = 'none';
