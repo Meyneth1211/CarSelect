@@ -14,7 +14,7 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 				 }
 				},
 				{src: '../img/rekusasu_top.jpg'},
-				{src: './img/'}
+				{src:  '../img/画像 (5).png' }
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
