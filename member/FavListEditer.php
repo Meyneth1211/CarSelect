@@ -7,10 +7,10 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
     } else {
         if ($_POST['action']=='add') {
             addFavItem($_SESSION['id'],$_POST['car_id']);
-            echo '<script>window.location.href = "'. $_POST['url'].'";</script>';
+            echo '<script>window.location.href = "'. $_POST['url'].'#search-submit'.'";</script>';
         }elseif ($_POST['action']=='del') {
             delFavItem($_SESSION['id'],$_POST['car_id']);
-            echo '<script>window.location.href = "'. $_POST['url'].'";</script>';
+            echo '<script>window.location.href = "'. $_POST['url'].'#search-submit'.'";</script>';
         }
     }
 } else {
