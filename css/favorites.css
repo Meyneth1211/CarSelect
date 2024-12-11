@@ -84,10 +84,11 @@
 }
 
 .separator2 {
-  width: 100%;
+  width: 40%;
   /* 線の幅を全体に広げる */
   height: 2px;
   /* 線の太さ */
+  margin: 0px auto;
   background: linear-gradient(to right, #0ef, #08f);
   /* グラデーション効果 */
   border-radius: 1px;
