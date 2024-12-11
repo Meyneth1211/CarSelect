@@ -1,60 +1,56 @@
-
-
 .favorite-back-card {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    width: 95%;
-    text-align: center;
-    margin: 80px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    padding-bottom: 100px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 95%;
+  text-align: center;
+  margin: 80px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding-bottom: 100px;
 }
 
 .car-item2 {
-    width: 95%;
-    height: 400px;
-    background-color: #1c1c1c;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    justify-content: space-between;
-    /* 両サイドの要素を均等配置 */
-    padding: 0 80px;
-    /* 左右に余白を追加 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-decoration: none;
-    /* リンクの下線を削除 */
-    color: inherit;
-    /* 親の文字色を継承 */
+  width: 95%;
+  height: 400px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  justify-content: space-between;
+  /* 両サイドの要素を均等配置 */
+  padding: 0 80px;
+  /* 左右に余白を追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  /* リンクの下線を削除 */
+  color: inherit;
+  /* 親の文字色を継承 */
 }
 
 .car-item2:hover {
-    transform: scale(1.05);
-    /* 触れると大きくなる♡ */
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+  /* 触れると大きくなる♡ */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 1);
 }
 
 .car-item2 img {
-    width: 550px;
-    /* 画像の幅を指定 */
-    height: auto;
-    /* アスペクト比を保持 */
-    border-radius: 8px;
-    /* 画像の角を丸くする */
-    margin-right: 30px;
-    /* 画像とテキストの間に余白を広めに */
+  width: 550px;
+  /* 画像の幅を指定 */
+  height: auto;
+  /* アスペクト比を保持 */
+  border-radius: 8px;
+  /* 画像の角を丸くする */
+  margin-right: 30px;
+  /* 画像とテキストの間に余白を広めに */
 }
 
 
 
 .favorite-title h1 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-text-align: center;
+  margin-top: 30px;
   font-size: 50px;
   font-weight: bold;
   /* 太字で存在感を強調 */
@@ -96,6 +92,5 @@ text-align: center;
   /* グラデーション効果 */
   border-radius: 1px;
   /* 丸みを追加 */
-  margin: 4px 0;
-  /* 上下の余白 */
+  margin-bottom: 40px;
 }
