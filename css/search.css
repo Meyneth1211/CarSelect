@@ -415,6 +415,9 @@ input[type="checkbox"]:checked+label {
   /* 画像とテキストの間に余白を広めに */
 }
 
+.car-list form{
+  text-align: right;
+}
 
 
 .car-info h3 {
@@ -467,6 +470,10 @@ input[type="checkbox"]:checked+label {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
+.car-info{
+  width: 440px;
+}
+
 .car-info .separator {
   width: 100%;
   /* 線の幅を全体に広げる */
@@ -495,8 +502,8 @@ input[type="checkbox"]:checked+label {
   /* ボタンの枠線を消す */
   cursor: pointer;
   /* カーソルをポインタに変更 */
-  margin-top: 30px;
-  margin-left: 400px;
+  /* margin-top: 30px; */
+  /* margin-left: 400px; */
   font-size: 40px;
 }
 
