@@ -470,9 +470,9 @@ input[type="checkbox"]:checked+label {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
-.car-info{
+/* .car-info{
   width: 440px;
-}
+} */
 
 .car-info .separator {
   width: 100%;
