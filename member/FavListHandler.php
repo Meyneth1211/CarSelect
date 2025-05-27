@@ -57,6 +57,4 @@ function chkFavItem($user, $car){
     }
 }
 
-
-
 ?>
